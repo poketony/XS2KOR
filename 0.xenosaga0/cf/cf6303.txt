@@ -1,0 +1,16 @@
+#scn
+
+map E2_MOM18
+act bos005
+act cre006
+act chaos00
+act momo00
+act shion00
+act kosmos01
+act jr00
+act ziggy00
+bgm 
+mapse	CF_MOM_A
+
+#end
+ 

@@ -1,0 +1,17 @@
+#scn
+
+map E2_OLM15
+act org00
+act bos010
+act chaos00
+act momo00
+act shion00
+act kosmos00
+act jr00
+act ziggy00
+act jin00
+bgm 
+mapse	CF_OLM,CF_OLM15
+
+#end
+ 

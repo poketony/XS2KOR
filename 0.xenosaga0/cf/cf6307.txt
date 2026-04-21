@@ -1,0 +1,18 @@
+#scn
+
+map E2_SUI08
+act pcr02a
+act pcr03
+act pcr05
+act pcr05_sh01
+act pcr05_mg01
+act uma010
+act uma010
+act jr00
+act chaos00
+mobj mobj037
+bgm 
+mapse	CF_SUI,CF_SUI08
+
+#end
+ 

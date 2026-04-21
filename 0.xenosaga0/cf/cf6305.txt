@@ -1,0 +1,11 @@
+#scn
+
+map E2_SYD02
+act shion00
+act vma003
+act vma003
+bgm 
+mapse	CF_SYD,CF_SYD02
+
+#end
+ 

@@ -1,0 +1,15 @@
+#scn
+
+map E2_OLM05
+act pelegri00
+act bos011
+act pcr02a
+act pcr03
+act pcr05
+act pcr05_sh01
+act pcr05_mg01
+mobj mobj038
+bgm 
+
+#end
+ 

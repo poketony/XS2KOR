@@ -1,0 +1,19 @@
+#scn
+
+map E2_MOM05
+act yuri01
+act yuriev00
+act jr01
+act gaignun02
+act albelt01
+act shion00
+act gfgm00
+act gfgf00
+mobj mobj158
+mobj mobj158
+mobj mobj158
+bgmvol	60
+bgm 109_deepzone
+
+#end
+ 

@@ -1,0 +1,14 @@
+#scn
+
+save	3
+
+map CFEVE10
+map CFEVE03
+act gaignun03
+act gfgass300
+act pelegri00
+mobj mobj199
+bgm 
+
+#end
+ 

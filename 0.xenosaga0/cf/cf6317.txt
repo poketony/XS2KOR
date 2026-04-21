@@ -1,0 +1,15 @@
+#scn
+
+map E2_MIL15
+act gno016
+act gno019
+act momo00
+act shion00
+act kosmos00
+act jr00
+act gno019
+act gno019
+bgm 
+
+#end
+ 

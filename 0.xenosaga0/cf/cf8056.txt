@@ -1,0 +1,13 @@
+#scn
+
+map E2_SUI01
+act pcr02a
+act pcr03
+act pcr05
+act pcr05_sh01
+act pcr05_mg01
+bgmvol 0
+bgm 009_lost_jerusalem
+
+#end
+ 

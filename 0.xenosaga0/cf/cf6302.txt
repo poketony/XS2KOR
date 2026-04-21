@@ -1,0 +1,13 @@
+#scn
+
+map E2_MID09
+act chaos02
+act momo01
+act jr02
+act ziggy00
+act bos003
+act bos004
+bgm 
+
+#end
+ 

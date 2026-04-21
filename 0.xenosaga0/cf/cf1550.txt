@@ -1,0 +1,37 @@
+#scn
+
+bgm		106_milchia2nd
+map		E2_MIL05
+mapse	CF_MIL,CF_MIL05
+act		BOY6_01
+act		MOUTH_00
+act		DOCTOR_00
+act		OLDF1_00
+act		KIDM2_01
+act		MAN3_00
+mobj 	MOBJ083
+mobj 	MOBJ086
+mobj 	MOBJ087
+mobj 	MOBJ088
+mobj 	MOBJ089
+mobj 	MOBJ090
+mobj 	MOBJ091
+mobj 	MOBJ092
+mobj 	MOBJ093
+mobj 	MOBJ094
+mobj 	MOBJ095
+mot		MOTION_EXT17
+mot		MOTION_EXT22
+effect	ce500_021
+effect	ce501_021
+effect	ce052_001
+effect	ce052_002
+effect	ce052_003
+
+
+foot		flo,car,tur
+
+
+#end
+
+テスト用

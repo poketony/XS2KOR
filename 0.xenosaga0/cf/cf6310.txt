@@ -1,0 +1,17 @@
+#scn
+
+map E2_OMG18
+act bos015
+act chaos00
+act momo00
+act shion00
+act kosmos00
+act jr00
+act ziggy00
+act jin00
+mobj mobj232
+bgm 
+mapse	CF_OMG,CF_OMG18
+
+#end
+ 

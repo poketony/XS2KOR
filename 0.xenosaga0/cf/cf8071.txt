@@ -1,0 +1,14 @@
+#scn
+
+map E2_KML02
+mobj mobj037
+act chaos01
+act canan01
+act pcr05
+act pcr05_sh01
+act pcr05_mg01
+bgmvol 0
+bgm 001_milchia
+
+#end
+ 

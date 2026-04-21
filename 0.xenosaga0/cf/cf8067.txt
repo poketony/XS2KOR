@@ -1,0 +1,13 @@
+#scn
+
+map E2_JSY01
+act jr00
+act albelt01
+act albelt01
+mobj mobj060
+
+bgmvol	0
+bgm 012_lasdan
+
+#end
+ 

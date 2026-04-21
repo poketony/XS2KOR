@@ -1,0 +1,14 @@
+#scn
+
+map E2_OMG09
+act bos014
+act pcr02a
+act pcr03
+act pcr05
+act pcr05_sh01
+act pcr05_mg01
+bgm 
+mapse	CF_OMG,CF_OMG09
+
+#end
+ 

@@ -1,0 +1,13 @@
+#scn
+
+map E2_MID05
+act uma004
+act uso003
+act uso003
+act uso003
+act uso003
+bgm 
+mapse	CF_MID,CF_MID05
+
+#end
+ 

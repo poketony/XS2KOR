@@ -1,0 +1,17 @@
+#scn
+
+map E2_UMN01
+act momo00
+act yuri00
+act jr00
+act ziggy00
+act gaignun00
+act shelley00
+act umnm00
+act umnf00
+act umnm00
+bgmvol 60
+bgm 108_UMN_center
+
+#end
+ 

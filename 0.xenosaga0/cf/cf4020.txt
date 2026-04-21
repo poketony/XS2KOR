@@ -1,0 +1,40 @@
+#scn
+
+bgm		103_kukai
+map		E2_KUK02
+mapse	CF_KUK,CF_KUK02
+act		MAN2_01
+act		WOMAN3_00
+act		BOY1_00
+act		BOY4_01
+act		MAN4_00
+act		GIRL2_01
+act		OLDM1_01
+act		WOMAN1_01
+act		KIDM2_01
+act		GIRL3_01
+act		BOY1_01
+act		WOMAN3_01
+act		WOMAN4_01
+mobj 	MOBJ082
+mobj 	MOBJ101
+mobj 	MOBJ102
+effect ce012_002
+effect ce012_999
+effect ce052_015
+effect ce052_016
+mot MOTION_EXT03
+mot MOTION_EXT05
+mot MOTION_EXT07
+mot MOTION_EXT16
+mot MOTION_EXT10
+mot MOTION_EXT12
+mot MOTION_EXT14
+
+foot 		iro,sto,car,woo
+
+#end
+
+
+
+テスト用

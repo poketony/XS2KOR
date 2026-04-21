@@ -1,0 +1,15 @@
+#scn
+
+map E2_OLM09
+act bos004
+act bos003
+act pcr02a
+act pcr03
+act pcr05
+act pcr05_sh01
+act pcr05_mg01
+bgm 
+mapse	CF_OLM,CF_OLM09
+
+#end
+ 

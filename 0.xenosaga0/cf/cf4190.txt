@@ -1,0 +1,8 @@
+#scn
+
+bgm		103_kukai
+map			E2_KUK19
+mapse		CF_KUK
+foot 		woo
+
+#end

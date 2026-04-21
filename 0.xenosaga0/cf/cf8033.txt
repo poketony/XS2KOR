@@ -1,0 +1,16 @@
+#scn
+
+map E2_UMN03
+act shion00
+act jr00
+act chaos00
+act ziggy00
+act momo00
+act allen01
+mobj mobj178
+
+bgmvol	60
+bgm 108_UMN_center
+
+#end
+ 

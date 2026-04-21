@@ -1,0 +1,23 @@
+#scn
+
+map E2_MIL07
+act jin00
+act chaos00
+act shion03
+act jr00
+act master00
+mobj mobj135
+mobj mobj135
+mobj mobj135
+mobj mobj066
+mobj mobj066
+mobj mobj066
+mobj mobj043
+mobj mobj043
+mobj mobj043
+mobj mobj099
+bgmvol 60
+bgm 111_moby-dick
+
+#end
+ 
