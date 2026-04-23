@@ -154,20 +154,25 @@ def cmd_extract(sb_path):
 
 def patch_bytecode_refs(sb_data, code_start, code_end, old_rel, new_rel):
     """
-    바이트코드(code_start~code_end)에서 old_rel(u16)을 찾아 new_rel로 패치.
+    바이트코드(code_start~code_end)에서 텍스트 참조 opcode(0x0028 + subtype 0x0006/0x0004)
+    인수 위치의 old_rel(u16)만 찾아 new_rel로 패치.
     반환: 패치된 위치 수
     """
-    old_bytes = struct.pack('<H', old_rel)
-    new_bytes = struct.pack('<H', new_rel)
+    import struct as _struct
+    old_bytes = _struct.pack('<H', old_rel)
+    new_bytes = _struct.pack('<H', new_rel)
     count = 0
     pos = code_start
     while pos < code_end - 1:
         if sb_data[pos:pos+2] == old_bytes:
-            sb_data[pos:pos+2] = new_bytes
-            count += 1
-            pos += 2
-        else:
-            pos += 1
+            # 앞 4바이트 확인: opcode=0x0028, subtype=0x0006 or 0x0004
+            if pos >= 4:
+                op      = _struct.unpack_from('<H', sb_data, pos - 4)[0]
+                subtype = _struct.unpack_from('<H', sb_data, pos - 2)[0]
+                if op == 0x0028 and subtype == 0x0006:
+                    sb_data[pos:pos+2] = new_bytes
+                    count += 1
+        pos += 2
     return count
 
 
