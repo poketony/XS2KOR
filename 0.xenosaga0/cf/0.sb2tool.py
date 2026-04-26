@@ -169,7 +169,7 @@ def patch_bytecode_refs(sb_data, code_start, code_end, old_rel, new_rel):
             if pos >= 4:
                 op      = _struct.unpack_from('<H', sb_data, pos - 4)[0]
                 subtype = _struct.unpack_from('<H', sb_data, pos - 2)[0]
-                if op == 0x0028 and subtype == 0x0006:
+                if op in (0x0028, 0x0019) and subtype == 0x0006:
                     sb_data[pos:pos+2] = new_bytes
                     count += 1
         pos += 2
