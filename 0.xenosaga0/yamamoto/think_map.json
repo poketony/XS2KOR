@@ -1,0 +1,699 @@
+{
+  "think000.sb": [],
+  "think001.sb": [
+    {
+      "scene": "E2_KML02.bin",
+      "offset": 0
+    }
+  ],
+  "think002.sb": [
+    {
+      "scene": "E2_KML03.bin",
+      "offset": 0
+    }
+  ],
+  "think003.sb": [
+    {
+      "scene": "E2_KML04.bin",
+      "offset": 0
+    }
+  ],
+  "think004.sb": [
+    {
+      "scene": "E2_KML05.bin",
+      "offset": 0
+    }
+  ],
+  "think005.sb": [
+    {
+      "scene": "E2_EVE80.bin",
+      "offset": 0
+    }
+  ],
+  "think006.sb": [
+    {
+      "scene": "E2_KML06.bin",
+      "offset": 0
+    }
+  ],
+  "think007.sb": [
+    {
+      "scene": "E2_MID01.bin",
+      "offset": 0
+    }
+  ],
+  "think008.sb": [
+    {
+      "scene": "E2_MID02.bin",
+      "offset": 0
+    }
+  ],
+  "think009.sb": [
+    {
+      "scene": "E2_MID03.bin",
+      "offset": 0
+    }
+  ],
+  "think010.sb": [
+    {
+      "scene": "E2_MID04.bin",
+      "offset": 0
+    }
+  ],
+  "think011.sb": [
+    {
+      "scene": "E2_EVE63.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_MID05.bin",
+      "offset": 0
+    }
+  ],
+  "think012.sb": [
+    {
+      "scene": "E2_EVE64.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_MID06.bin",
+      "offset": 0
+    }
+  ],
+  "think013.sb": [
+    {
+      "scene": "E2_MID07.bin",
+      "offset": 0
+    }
+  ],
+  "think014.sb": [
+    {
+      "scene": "E2_MID08.bin",
+      "offset": 0
+    }
+  ],
+  "think015.sb": [
+    {
+      "scene": "E2_EVE65.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_MID09.bin",
+      "offset": 0
+    }
+  ],
+  "think016.sb": [
+    {
+      "scene": "E2_EVE75.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_MIL15.bin",
+      "offset": 0
+    }
+  ],
+  "think017.sb": [
+    {
+      "scene": "E2_MIL16.bin",
+      "offset": 0
+    }
+  ],
+  "think018.sb": [
+    {
+      "scene": "E2_MOM11.bin",
+      "offset": 0
+    }
+  ],
+  "think019.sb": [
+    {
+      "scene": "E2_MOM13.bin",
+      "offset": 0
+    }
+  ],
+  "think020.sb": [
+    {
+      "scene": "E2_MOM14.bin",
+      "offset": 0
+    }
+  ],
+  "think021.sb": [
+    {
+      "scene": "E2_MOM15.bin",
+      "offset": 0
+    }
+  ],
+  "think022.sb": [
+    {
+      "scene": "E2_MOM16.bin",
+      "offset": 0
+    }
+  ],
+  "think023.sb": [
+    {
+      "scene": "E2_EVE81.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_MOM17.bin",
+      "offset": 0
+    }
+  ],
+  "think024.sb": [
+    {
+      "scene": "E2_EVE66.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_MOM18.bin",
+      "offset": 0
+    }
+  ],
+  "think025.sb": [
+    {
+      "scene": "E2_MOM21.bin",
+      "offset": 0
+    }
+  ],
+  "think026.sb": [
+    {
+      "scene": "E2_MOM23.bin",
+      "offset": 0
+    }
+  ],
+  "think027.sb": [
+    {
+      "scene": "E2_MOM24.bin",
+      "offset": 0
+    }
+  ],
+  "think028.sb": [
+    {
+      "scene": "E2_MOM25.bin",
+      "offset": 0
+    }
+  ],
+  "think029.sb": [
+    {
+      "scene": "E2_MOM26.bin",
+      "offset": 0
+    }
+  ],
+  "think030.sb": [
+    {
+      "scene": "E2_MOM27.bin",
+      "offset": 0
+    }
+  ],
+  "think031.sb": [
+    {
+      "scene": "E2_EVE82.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_MOM28.bin",
+      "offset": 0
+    }
+  ],
+  "think032.sb": [
+    {
+      "scene": "E2_EVE67.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_SYD02.bin",
+      "offset": 0
+    }
+  ],
+  "think033.sb": [
+    {
+      "scene": "E2_SYD03.bin",
+      "offset": 0
+    }
+  ],
+  "think034.sb": [
+    {
+      "scene": "E2_SYD07.bin",
+      "offset": 0
+    }
+  ],
+  "think035.sb": [
+    {
+      "scene": "E2_SYD08.bin",
+      "offset": 0
+    }
+  ],
+  "think036.sb": [
+    {
+      "scene": "E2_SYD10.bin",
+      "offset": 0
+    }
+  ],
+  "think037.sb": [
+    {
+      "scene": "E2_SYD11.bin",
+      "offset": 0
+    }
+  ],
+  "think038.sb": [
+    {
+      "scene": "E2_SYD12.bin",
+      "offset": 0
+    }
+  ],
+  "think042.sb": [
+    {
+      "scene": "E2_OLM02.bin",
+      "offset": 0
+    }
+  ],
+  "think043.sb": [
+    {
+      "scene": "E2_EVE70.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_OLM05.bin",
+      "offset": 0
+    }
+  ],
+  "think044.sb": [
+    {
+      "scene": "E2_OLM06.bin",
+      "offset": 0
+    }
+  ],
+  "think045.sb": [
+    {
+      "scene": "E2_OLM08.bin",
+      "offset": 0
+    }
+  ],
+  "think046.sb": [
+    {
+      "scene": "E2_EVE68.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_OLM09.bin",
+      "offset": 0
+    }
+  ],
+  "think047.sb": [
+    {
+      "scene": "E2_OLM10.bin",
+      "offset": 0
+    }
+  ],
+  "think048.sb": [
+    {
+      "scene": "E2_OLM13.bin",
+      "offset": 0
+    }
+  ],
+  "think049.sb": [
+    {
+      "scene": "E2_EVE69.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_OLM15.bin",
+      "offset": 0
+    }
+  ],
+  "think050.sb": [
+    {
+      "scene": "E2_SUI02.bin",
+      "offset": 0
+    }
+  ],
+  "think051.sb": [
+    {
+      "scene": "E2_SUI03.bin",
+      "offset": 0
+    }
+  ],
+  "think052.sb": [
+    {
+      "scene": "E2_SUI04.bin",
+      "offset": 0
+    }
+  ],
+  "think053.sb": [
+    {
+      "scene": "E2_SUI05.bin",
+      "offset": 0
+    }
+  ],
+  "think054.sb": [
+    {
+      "scene": "E2_SUI06.bin",
+      "offset": 0
+    }
+  ],
+  "think055.sb": [
+    {
+      "scene": "E2_SUI07.bin",
+      "offset": 0
+    }
+  ],
+  "think056.sb": [
+    {
+      "scene": "E2_EVE71.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_SUI08.bin",
+      "offset": 0
+    }
+  ],
+  "think057.sb": [
+    {
+      "scene": "E2_SUI09.bin",
+      "offset": 0
+    }
+  ],
+  "think058.sb": [
+    {
+      "scene": "E2_SUI10.bin",
+      "offset": 0
+    }
+  ],
+  "think059.sb": [
+    {
+      "scene": "E2_RAV01.bin",
+      "offset": 0
+    }
+  ],
+  "think060.sb": [
+    {
+      "scene": "E2_RAV03.bin",
+      "offset": 0
+    }
+  ],
+  "think061.sb": [
+    {
+      "scene": "E2_RAV05.bin",
+      "offset": 0
+    }
+  ],
+  "think062.sb": [
+    {
+      "scene": "E2_RAV06.bin",
+      "offset": 0
+    }
+  ],
+  "think063.sb": [
+    {
+      "scene": "E2_RAV08.bin",
+      "offset": 0
+    }
+  ],
+  "think064.sb": [
+    {
+      "scene": "E2_RAV12.bin",
+      "offset": 0
+    }
+  ],
+  "think065.sb": [
+    {
+      "scene": "E2_EVE83.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_RAV13.bin",
+      "offset": 0
+    }
+  ],
+  "think066.sb": [
+    {
+      "scene": "E2_OMG02.bin",
+      "offset": 0
+    }
+  ],
+  "think067.sb": [
+    {
+      "scene": "E2_OMG03.bin",
+      "offset": 0
+    }
+  ],
+  "think068.sb": [
+    {
+      "scene": "E2_OMG04.bin",
+      "offset": 0
+    }
+  ],
+  "think069.sb": [
+    {
+      "scene": "E2_OMG05.bin",
+      "offset": 0
+    }
+  ],
+  "think070.sb": [
+    {
+      "scene": "E2_OMG06.bin",
+      "offset": 0
+    }
+  ],
+  "think071.sb": [
+    {
+      "scene": "E2_OMG07.bin",
+      "offset": 0
+    }
+  ],
+  "think072.sb": [
+    {
+      "scene": "E2_OMG08.bin",
+      "offset": 0
+    }
+  ],
+  "think073.sb": [
+    {
+      "scene": "E2_EVE72.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_OMG09.bin",
+      "offset": 0
+    }
+  ],
+  "think074.sb": [
+    {
+      "scene": "E2_OMG10.bin",
+      "offset": 0
+    }
+  ],
+  "think075.sb": [
+    {
+      "scene": "E2_OMG11.bin",
+      "offset": 0
+    }
+  ],
+  "think076.sb": [
+    {
+      "scene": "E2_OMG12.bin",
+      "offset": 0
+    }
+  ],
+  "think077.sb": [
+    {
+      "scene": "E2_OMG13.bin",
+      "offset": 0
+    }
+  ],
+  "think078.sb": [
+    {
+      "scene": "E2_OMG14.bin",
+      "offset": 0
+    }
+  ],
+  "think079.sb": [
+    {
+      "scene": "E2_OMG15.bin",
+      "offset": 0
+    }
+  ],
+  "think080.sb": [
+    {
+      "scene": "E2_OMG16.bin",
+      "offset": 0
+    }
+  ],
+  "think081.sb": [
+    {
+      "scene": "E2_EVE73.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_OMG18.bin",
+      "offset": 0
+    }
+  ],
+  "think082.sb": [
+    {
+      "scene": "E2_EVE84.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_OMG19.bin",
+      "offset": 0
+    }
+  ],
+  "think083.sb": [
+    {
+      "scene": "E2_EXA01.bin",
+      "offset": 0
+    }
+  ],
+  "think084.sb": [
+    {
+      "scene": "E2_EXA02.bin",
+      "offset": 0
+    }
+  ],
+  "think085.sb": [
+    {
+      "scene": "E2_EXA03.bin",
+      "offset": 0
+    }
+  ],
+  "think086.sb": [
+    {
+      "scene": "E2_EXA04.bin",
+      "offset": 0
+    }
+  ],
+  "think087.sb": [
+    {
+      "scene": "E2_EXA07.bin",
+      "offset": 0
+    }
+  ],
+  "think088.sb": [
+    {
+      "scene": "E2_EXB02.bin",
+      "offset": 0
+    }
+  ],
+  "think089.sb": [
+    {
+      "scene": "E2_EXB03.bin",
+      "offset": 0
+    }
+  ],
+  "think090.sb": [
+    {
+      "scene": "E2_EXB04.bin",
+      "offset": 0
+    }
+  ],
+  "think091.sb": [
+    {
+      "scene": "E2_EXB05.bin",
+      "offset": 0
+    }
+  ],
+  "think092.sb": [
+    {
+      "scene": "E2_EXB06.bin",
+      "offset": 0
+    }
+  ],
+  "think093.sb": [
+    {
+      "scene": "E2_EXB07.bin",
+      "offset": 0
+    }
+  ],
+  "think094.sb": [
+    {
+      "scene": "E2_EXC02.bin",
+      "offset": 0
+    }
+  ],
+  "think095.sb": [
+    {
+      "scene": "E2_EXC03.bin",
+      "offset": 0
+    }
+  ],
+  "think096.sb": [
+    {
+      "scene": "E2_EXC04.bin",
+      "offset": 0
+    }
+  ],
+  "think097.sb": [
+    {
+      "scene": "E2_EXC05.bin",
+      "offset": 0
+    }
+  ],
+  "think098.sb": [
+    {
+      "scene": "E2_EXC06.bin",
+      "offset": 0
+    }
+  ],
+  "think099.sb": [
+    {
+      "scene": "E2_EXC07.bin",
+      "offset": 0
+    }
+  ],
+  "think100.sb": [
+    {
+      "scene": "E2_EXC08.bin",
+      "offset": 0
+    }
+  ],
+  "think101.sb": [
+    {
+      "scene": "E2_EXC09.bin",
+      "offset": 0
+    }
+  ],
+  "think102.sb": [
+    {
+      "scene": "E2_EXC10.bin",
+      "offset": 0
+    }
+  ],
+  "think104.sb": [
+    {
+      "scene": "E2_EVE74.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_EXD01.bin",
+      "offset": 0
+    }
+  ],
+  "think105.sb": [
+    {
+      "scene": "E2_KML10.bin",
+      "offset": 0
+    }
+  ],
+  "think106.sb": [
+    {
+      "scene": "E2_EVE27.bin",
+      "offset": 0
+    },
+    {
+      "scene": "E2_EVE85.bin",
+      "offset": 0
+    }
+  ],
+  "think900.sb": [],
+  "think988.sb": [],
+  "think989.sb": [],
+  "think990.sb": [],
+  "think991.sb": [],
+  "think993.sb": [],
+  "think994.sb": [],
+  "think995.sb": [],
+  "think996.sb": [],
+  "think997.sb": [],
+  "think998.sb": [],
+  "think999.sb": []
+}
