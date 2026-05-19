@@ -1,0 +1,33 @@
+﻿[0xcac0]
+$zoom14;$col7AF9FB;　不邪見が解けた！$colc0c0c0;
+
+[0xcaf1]
+$zoom14;$col7AF9FB;　裏真言の効果が消えた！$colc0c0c0;
+
+[0xcb28]
+$zoom13;穿孔　一足の詰（斬）
+
+[0xcb45]
+$zoom13;鳳山越　下弦（斬）
+
+[0xcb60]
+$zoom13;裏穿孔　一足の詰（斬）
+
+[0xcb7f]
+$zoom13;裏鳳山越　下弦（斬）
+
+[0xcb9c]
+$zoom13;不邪見
+
+[0xcbab]
+$zoom14;$col7AF9FB;　　対ブレイクの構え\n　物理攻撃の耐性を得た$colc0c0c0;
+
+[0xcbf6]
+$zoom13;威圧（打）
+
+[0xcc09]
+$zoom13;真言　一唱　　−命中率アップ−
+
+[0xcc30]
+$zoom13;裏真言　三唱　　−剣に霊気が満ちた−
+

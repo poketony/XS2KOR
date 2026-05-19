@@ -1,0 +1,39 @@
+﻿[0xd8b0]
+$zoom14;$colc0c0c0;　　やっと２５匹か・・・\n　　まだまだ宴は続くぞ！$colc0c0c0;
+
+[0xd901]
+$zoom14;$colc0c0c0;　　　　５０匹突破！\n$col7AF9FB;　百匹宴は始まったばかりだ！$colc0c0c0;
+
+[0xd95d]
+$zoom14;$col7AF9FB;　　　７５匹突破！\n　　宴は最高潮だな！！$colc0c0c0;
+
+[0xd9a6]
+$zoom14;$col7AF9FB;　　　　　９５匹突破！！！$colc0c0c0;\n良くやった！　ん？疲労してるな？\nこれは俺からの褒美だ！受け取れぇー！$colc0c0c0;
+
+[0xda32]
+$zoom13;誓いの握手（気・打）
+
+[0xda4f]
+$zoom13;従属の証明（打）
+
+[0xda68]
+$zoom13;甘い囁き（冷）
+
+[0xda7f]
+$zoom13;震える声
+
+[0xda90]
+$zoom13;マーチ　ザ　メロス
+
+[0xdaab]
+$zoom13;満月の小夜曲
+
+[0xdac0]
+$zoom13;メディカ
+
+[0xdad1]
+$zoom13;癒しの水
+
+[0xdae2]
+$zoom13;舞踏会への招待状
+

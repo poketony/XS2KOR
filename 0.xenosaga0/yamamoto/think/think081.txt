@@ -1,0 +1,126 @@
+﻿[0xfccc]
+$zoom14;$col7AF9FB;　　記憶の車輪が動き出した！$colc0c0c0;
+
+[0xfd07]
+$zoom13;記憶の車輪
+
+[0xfd1a]
+$zoom14;$colc0c0c0;　「白き衣」が目覚めた！
+
+[0xfd46]
+$zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　ケイオスの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
+
+[0xfdc1]
+$zoom13;グァダルーペの記憶
+
+[0xfddc]
+$zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　ＫＯＳ−ＭＯＳの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
+
+[0xfe59]
+$zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　シオンの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
+
+[0xfed2]
+$zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　　ジンの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
+
+[0xff4b]
+$zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　ジギーの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
+
+[0xffc4]
+$zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　　モモの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
+
+[0x1003d]
+$zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　Ｊｒ．の魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
+
+[0x100b6]
+$zoom14;$col7AF9FB;　真実の鏡が魂を吸い尽くした！$colc0c0c0;
+
+[0x100f3]
+$zoom14;$colc0c0c0;　　真実の鏡はくもり始めた$colc0c0c0;
+
+[0x1012c]
+$zoom14;$col7AF9FB;　白き衣は癒しの土地を見つめた$colc0c0c0;
+
+[0x10169]
+$zoom14;$colc0c0c0;　「情熱の第一声」が目覚めた！\n$col7AF9FB;　　女性への欲望が渦巻いた$colc0c0c0;
+
+[0x101cd]
+$zoom14;$col7AF9FB;　欲望への対象が消えた！$colc0c0c0;
+
+[0x10204]
+$zoom14;$col7AF9FB;　争う者に興味はない！$colc0c0c0;
+
+[0x10239]
+$zoom14;$colc0c0c0;　「争いへの扇動」が目覚めた！\n$col7AF9FB;　男性の闘争本能を目覚めさせた！
+
+[0x10298]
+$zoom14;$col7AF9FB;　汚れし者に興味はない！$colc0c0c0;
+
+[0x102cf]
+$zoom21;$col7AF9FB;　３$colc0c0c0;
+
+[0x102f2]
+$zoom21;$col7AF9FB;　２$colc0c0c0;
+
+[0x10315]
+$zoom21;$col7AF9FB;　１$colc0c0c0;
+
+[0x10338]
+$zoom21;$col7AF9FB;　０$colc0c0c0;
+
+[0x1035b]
+$zoom13;聖母の愛情（Ｂ）
+
+[0x10374]
+$zoom13;ソドムクエイク（打）
+
+[0x10391]
+$zoom13;ルシフェルの雄叫び（打）
+
+[0x103b2]
+$zoom13;光り輝く四つの車輪（ＬポイズンＥＰ）
+
+[0x103df]
+$zoom13;欺瞞を浴びたユリ（Ｌウィーク）
+
+[0x10406]
+$zoom13;心に貫く失望の光（ＬエーテルＤＤ）
+
+[0x10431]
+$zoom13;降臨し甘い囁き（Ｌスタン）
+
+[0x10454]
+$zoom13;聖母被昇天
+
+[0x10467]
+$zoom13;情熱の眼差し
+
+[0x1047c]
+$zoom14;$col7AF9FB;　　「情熱の第一声」の\n　エーテル攻撃力が上昇した
+
+[0x104c2]
+$zoom13;魂の浄化
+
+[0x104d3]
+$zoom13;虐殺への扇動
+
+[0x104e8]
+$zoom14;$col7AF9FB;　　「争いへの扇動」の\n　　物理攻撃力が上昇した
+
+[0x1052c]
+$zoom13;ゲヘナ（炎）
+
+[0x10541]
+$zoom13;フレアブラスト
+
+[0x10558]
+$zoom13;サンダーブラスト
+
+[0x10571]
+$zoom13;癒しの御告げ
+
+[0x10586]
+$zoom13;バベルの嘆き（雷）
+
+[0x105a1]
+$zoom13;リフレッシュＨ
+

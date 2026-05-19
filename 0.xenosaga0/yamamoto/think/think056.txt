@@ -1,0 +1,87 @@
+﻿[0x8724]
+$zoom13;自動追尾レーザー（Ｂ）
+
+[0x8743]
+$zoom13;ブレイクアーマー（Ｌウィーク）
+
+[0x877a]
+$zoom14;$col7AF9FB;防御シールド耐久力が５０％低下した$colc0c0c0;
+
+[0x87cb]
+$zoom14;$col7AF9FB;　　防御シールドが破られた！$colc0c0c0;
+
+[0x8814]
+$zoom13;カウンターメジャー
+
+[0x882f]
+$zoom14;$col7AF9FB;　目視できない防御シールドが張られ\n　　如何なるダメージも軽減される●$colc0c0c0;
+
+[0x8894]
+$zoom14;$colc0c0c0;　防御シールドを維持する為\n　$col7AF9FB;発射した際のターン$colc0c0c0;毎に\n　再噴出しなければならない！●$colc0c0c0;
+
+[0x892b]
+$zoom14;$col7AF9FB;　　損傷箇所確認$colc0c0c0;
+
+[0x896a]
+$zoom14;$colc0c0c0;　エーテル機関室損傷\n$col7AF9FB;　エーテル使用不可$colc0c0c0;
+
+[0x89cc]
+$zoom14;$colc0c0c0;　　　　転送室損傷\n$col7AF9FB;　オーテックの転送不可$colc0c0c0;
+
+[0x8a30]
+$zoom14;$colc0c0c0;　　　　　艦底損傷\n$col7AF9FB;　大量の海水が浸水している$colc0c0c0;
+
+[0x8a98]
+$zoom14;$col7AF9FB;　オーテック転送$colc0c0c0;
+
+[0x8ac7]
+$zoom14;$colc0c0c0;ヴァンダーカム艦長は歯軋りしている
+
+[0x8b0d]
+$zoom14;$col7AF9FB;　　　エーテル機関室修復完了\n　ナグルファルのＥＰが全回復した$colc0c0c0;
+
+[0x8b78]
+$zoom14;$col7AF9FB;　　主砲発射準備$colc0c0c0;
+
+[0x8bb5]
+$zoom14;$col7AF9FB;　　次弾発射準備$colc0c0c0;
+
+[0x8bf4]
+$zoom14;$col7AF9FB;　エネルギー充填率５０％$colc0c0c0;
+
+[0x8c3b]
+$zoom14;$col7AF9FB;エーテルジェネレーターが限界点に達した$colc0c0c0;
+
+[0x8c9e]
+$zoom14;$col7AF9FB;　エネルギー充填率１００％$colc0c0c0;
+
+[0x8ce7]
+$zoom14;$col7AF9FB;　　　　転送室修復完了\n　オーテックの転送が可能になった$colc0c0c0;
+
+[0x8d4e]
+$zoom14;$col7AF9FB;　　艦底修復完了$colc0c0c0;
+
+[0x8d7d]
+$zoom14;$colc0c0c0;　　　　エーテル機関室損傷\n$col7AF9FB;　残量不足の為、エーテル使用不可$colc0c0c0;
+
+[0x8de3]
+$zoom14;$col7AF9FB;　　防御シールドが解除された！$colc0c0c0;
+
+[0x8e20]
+$zoom14;$col7AF9FB;　　補助燃料始動$colc0c0c0;
+
+[0x8e5d]
+$zoom14;$col7AF9FB;ナグルファル乗組員が脱走しはじめた！\n　　主砲エネルギー充填率５０％\n$colc0c0c0;
+
+[0x8ed0]
+$zoom13;第一主砲発射（Ｂ）
+
+[0x8eeb]
+$zoom13;第二主砲発射（Ｂ）
+
+[0x8f06]
+$zoom13;第三主砲発射（Ｂ）
+
+[0x8f21]
+$zoom13;全主砲一斉掃射（Ｂ）
+

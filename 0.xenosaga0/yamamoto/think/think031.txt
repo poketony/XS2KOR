@@ -1,0 +1,60 @@
+﻿[0xeaf6]
+$zoom14;$colc0c0c0;　　Ｊｒ．達の脳裏にサクラの意識が流れた\n$col7AF9FB;ＢＣゾーンを攻撃した後にブーストで繋いで。。。●$colc0c0c0;
+
+[0xeb7a]
+$zoom14;$colc0c0c0;　　サクラの意識が途絶えた$colc0c0c0;
+
+[0xebb3]
+$zoom14;$colc0c0c0;　Ｊｒ．達の脳裏にサクラの意識が流れた\n$col7AF9FB;ＢＣゾーンを攻撃した後にブーストで繋いで\nＣＢをヒットさせればブレイクが発生するわ●$colc0c0c0;
+
+[0xec59]
+$zoom14;$col7AF9FB;アルベドの再生能力が低下した$colc0c0c0;
+
+[0xec94]
+$zoom14;$col7AF9FB;アルベドの再生能力が限界に達した$colc0c0c0;
+
+[0xece8]
+$zoom14;$col7AF9FB;ステータスウィンドウが消された！$colc0c0c0;
+
+[0xed51]
+$zoom14;$col7AF9FB;アルベドの両腕がしびれた！$colc0c0c0;
+
+[0xedb4]
+$zoom14;$col7AF9FB;アルベドの両腕を破壊した！$colc0c0c0;
+
+[0xeded]
+$zoom13;欲望の解放（突・雷）
+
+[0xee0a]
+$zoom13;キャリオン　オブ　ソウル{ADB5}（打・ＬエーテルＤＤ）
+
+[0xee43]
+$zoom13;キャリオン　オブ　ソウル{ADB6}（ＨＰ吸収）
+
+[0xee72]
+$zoom13;リジェネレーション
+
+[0xee8d]
+$zoom13;思念の衝撃波（気）
+
+[0xeea8]
+$zoom14;$colc0c0c0;　　　貫いた右手には\n$col7AF9FB;　紅い血$colc0c0c0;が染み付いていた
+
+[0xef00]
+$zoom14;$colc0c0c0;　　　貫いた右手には\n$col7AF9FB;　紅い血液$colc0c0c0;が染み付いていた
+
+[0xef5a]
+$zoom14;$colc0c0c0;　　　　貫いた右手には\n$col7AF9FB;　どす黒い血$colc0c0c0;が染み付いていた
+
+[0xefb8]
+$zoom13;キャリオン　オブ　ソウル{ADB7}（ＥＰ吸収）
+
+[0xefe7]
+$zoom13;エーテルスピア
+
+[0xeffe]
+$zoom13;サンダーブラスト
+
+[0xf017]
+$zoom13;アイスブラスト
+
