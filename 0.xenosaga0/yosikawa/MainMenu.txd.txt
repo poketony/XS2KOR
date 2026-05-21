@@ -201,7 +201,7 @@
 [200]   클리어 데이터 체크
 [201]Xenosaga EPISODE [0xADB5]
 [202]Xenosaga EPISODE [0xADB5] Reloaded
-[203]XenosagaFreaks 제노코미
+[203]Xenosaga Freaks 제노코미
 [204]
 [205]
 [206]Xenosaga EPISODE [0xADB6]의 특전을 선물!

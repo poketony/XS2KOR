@@ -4,7 +4,7 @@ import sys
 import re
 
 class TXDTool:
-    def __init__(self, encoding='euc-jp'):
+    def __init__(self, encoding='euc_jis_2004'):
         self.encoding = encoding
 
     def get_data_start(self, data):

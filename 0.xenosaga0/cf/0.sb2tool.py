@@ -12,8 +12,9 @@ JSON 치환표: 스크립트와 같은 폴더의 "XENOSAGA KOR-JPN.json"
 
 import sys, os, re, struct, json
 
-ENCODING  = 'euc-jp'
+ENCODING  = 'euc_jis_2004'
 JSON_FILE = 'XENOSAGA KOR-JPN.json'
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 # ── 커스텀 바이트 에스케이프 ────────────────────────────────
@@ -118,6 +119,20 @@ def parse_txt(content):
 
 # ── JSON 치환표 ─────────────────────────────────────────────
 
+def find_json_path(sb_path=None):
+    candidates = [
+        os.path.join(os.getcwd(), JSON_FILE),
+        os.path.join(SCRIPT_DIR, JSON_FILE),
+    ]
+    if sb_path:
+        candidates.append(os.path.join(os.path.dirname(os.path.abspath(sb_path)), JSON_FILE))
+
+    for path in candidates:
+        if os.path.exists(path):
+            return path
+    return candidates[0]
+
+
 def load_table(json_path):
     if not os.path.exists(json_path):
         return {}
@@ -152,34 +167,63 @@ def cmd_extract(sb_path):
 
 # ── import ──────────────────────────────────────────────────
 
-def patch_bytecode_refs(sb_data, code_start, code_end, old_rel, new_rel):
+def patch_code_type6_refs(sb_data, code_start, code_end, old_rel, new_rel):
     """
-    바이트코드(code_start~code_end)에서 텍스트 참조 opcode(0x0028 + subtype 0x0006/0x0004)
-    인수 위치의 old_rel(u16)만 찾아 new_rel로 패치.
-    반환: 패치된 위치 수
+    바이트코드(code_start~code_end)의 type=0x0006 문자열 참조를 패치.
+    값은 16비트가 아니라 32비트 little-endian으로 저장된다.
     """
-    import struct as _struct
-    old_bytes = _struct.pack('<H', old_rel)
-    new_bytes = _struct.pack('<H', new_rel)
+    old_bytes = struct.pack('<I', old_rel)
+    new_bytes = struct.pack('<I', new_rel)
     count = 0
     pos = code_start
-    while pos < code_end - 1:
-        if sb_data[pos:pos+2] == old_bytes:
-            # 앞 4바이트 확인: opcode=0x0028, subtype=0x0006 or 0x0004
-            if pos >= 4:
-                op      = _struct.unpack_from('<H', sb_data, pos - 4)[0]
-                subtype = _struct.unpack_from('<H', sb_data, pos - 2)[0]
-                if op in (0x0028, 0x0019) and subtype == 0x0006:
-                    sb_data[pos:pos+2] = new_bytes
-                    count += 1
-        pos += 2
+    while pos <= code_end - 4:
+        found = sb_data.find(old_bytes, pos, code_end)
+        if found == -1:
+            break
+
+        if found >= code_start + 2:
+            subtype = struct.unpack_from('<H', sb_data, found - 2)[0]
+            if subtype == 0x0006:
+                sb_data[found:found + 4] = new_bytes
+                count += 1
+                pos = found + 4
+                continue
+
+        pos = found + 1
     return count
 
 
+def patch_secmeta_u32_refs(sb_data, secmeta_start, sp_start, old_rel, new_rel):
+    """secmeta 영역의 4바이트 정렬 문자열 포인터를 패치."""
+    old_bytes = struct.pack('<I', old_rel)
+    new_bytes = struct.pack('<I', new_rel)
+    count = 0
+    pos = secmeta_start
+    while pos <= sp_start - 4:
+        found = sb_data.find(old_bytes, pos, sp_start)
+        if found == -1:
+            break
+
+        if (found - secmeta_start) % 4 == 0:
+            sb_data[found:found + 4] = new_bytes
+            count += 1
+            pos = found + 4
+        else:
+            pos = found + 1
+    return count
+
+
+def patch_string_refs(sb_data, secmeta_start, sp_start, code_start, code_end, old_rel, new_rel):
+    code_count = patch_code_type6_refs(sb_data, code_start, code_end, old_rel, new_rel)
+    secmeta_count = patch_secmeta_u32_refs(sb_data, secmeta_start, sp_start, old_rel, new_rel)
+    return code_count, secmeta_count
+
+
 def cmd_import(sb_path, txt_path):
-    table = load_table(JSON_FILE)
+    json_path = find_json_path(sb_path)
+    table = load_table(json_path)
     if not table:
-        print(f'[!] 치환표 없음: {JSON_FILE}')
+        print(f'[!] 치환표 없음: {json_path}')
         return
 
     data   = open(sb_path, 'rb').read()
@@ -189,7 +233,26 @@ def cmd_import(sb_path, txt_path):
     with open(txt_path, 'r', encoding='utf-8-sig') as f:
         translations = parse_txt(f.read())
 
-    print(f'[*] 원본: {len(pool)}개 문자열 / 번역: {len(translations)}개')
+    pool_offsets = {abs_off for abs_off, _raw in pool}
+    translatable = [(abs_off, raw) for abs_off, raw in pool if raw and is_jp(raw)]
+    translatable_offsets = {abs_off for abs_off, _raw in translatable}
+    missing = sorted(translatable_offsets - set(translations))
+    extra = sorted(set(translations) - pool_offsets)
+
+    print(f'[*] 원본: {len(translatable)}개 번역 대상 / 번역: {len(translations)}개'
+          f' (풀 전체: {len(pool)}개)')
+
+    if missing:
+        print('[!] 번역 누락 offset:')
+        for abs_off in missing:
+            print(f'    {hex(abs_off)}')
+        return
+
+    if extra:
+        print('[!] 원본 string pool에 없는 번역 offset:')
+        for abs_off in extra:
+            print(f'    {hex(abs_off)}')
+        return
 
     secmeta    = hdr['secmeta_start']
     sp_start   = hdr['sp_start']
@@ -198,6 +261,7 @@ def cmd_import(sb_path, txt_path):
     code_end   = secmeta  # 바이트코드 영역
 
     sb_data = bytearray(data)
+    failed_ext = []
 
     for abs_off, raw in pool:
         if abs_off not in translations:
@@ -228,9 +292,21 @@ def cmd_import(sb_path, txt_path):
             new_rel = new_abs - secmeta
             sb_data.extend(new_bytes + b'\x00')
 
-            n = patch_bytecode_refs(sb_data, code_start, code_end, old_rel, new_rel)
+            code_n, secmeta_n = patch_string_refs(
+                sb_data, secmeta, sp_start, code_start, code_end, old_rel, new_rel
+            )
+            n = code_n + secmeta_n
             print(f'  [EXT] {hex(abs_off)} ({orig_len}->{len(new_bytes)} bytes)'
-                  f' -> {hex(new_abs)} (바이트코드 {n}곳 패치)')
+                  f' -> {hex(new_abs)}'
+                  f' (바이트코드 {code_n}곳 / secmeta {secmeta_n}곳 패치)')
+            if n == 0:
+                failed_ext.append(abs_off)
+
+    if failed_ext:
+        print('[!] EXT 문자열 중 참조를 1곳도 패치하지 못한 항목이 있어 저장하지 않습니다:')
+        for abs_off in failed_ext:
+            print(f'    {hex(abs_off)}')
+        return
 
     out_name = os.path.basename(sb_path) + '.new'
     out_path = os.path.join(os.getcwd(), out_name)

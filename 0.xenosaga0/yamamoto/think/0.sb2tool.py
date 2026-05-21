@@ -12,7 +12,7 @@ JSON 치환표: 스크립트와 같은 폴더의 "XENOSAGA KOR-JPN.json"
 
 import sys, os, re, struct, json
 
-ENCODING  = 'euc-jp'
+ENCODING  = 'euc_jis_2004'
 JSON_FILE = 'XENOSAGA KOR-JPN.json'
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
