@@ -1,0 +1,24 @@
+{
+  "format": "xs2-effects-text-v1",
+  "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\pe809_004.esd",
+  "source_sha256": "b797e42792263b913729393fdc6b064c8303b9ba8abafb3d697a65346e0baa9e",
+  "source_size": 518592,
+  "images": [
+    {
+      "key": "00004500_skb_m",
+      "name": "skb_m.bmp",
+      "route": [],
+      "offset": 17728,
+      "length": 16384,
+      "palette_offset": 82240,
+      "palette_length": 1024,
+      "palette_sha256": "5dd785e7513c94aeadd34df4713ef30bf2ddf2b1f8f4513a36b2b8c1279105dc",
+      "width": 128,
+      "height": 128,
+      "bpp": 8,
+      "mode": "rgba",
+      "png": "images/00004500_skb_m.rgba.png"
+    }
+  ],
+  "unsupported": []
+}

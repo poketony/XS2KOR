@@ -1,0 +1,8 @@
+@echo off
+setlocal
+chcp 65001 >nul
+python -B "%~dp0elf_text_tool.py" extract --disc 1
+set "result=%errorlevel%"
+if not "%result%"=="0" echo [FAILED] Existing translations and originals were not overwritten.
+pause
+exit /b %result%

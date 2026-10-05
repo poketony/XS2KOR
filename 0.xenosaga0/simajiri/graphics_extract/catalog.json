@@ -1,0 +1,176 @@
+{
+  "format": "xs2-text-catalog-v1",
+  "selection": "text_graphics.json",
+  "files": [
+    {
+      "path": "esd/ce000_033.esd",
+      "extract": "graphics_extract/esd/ce000_033",
+      "images": 1
+    },
+    {
+      "path": "esd/ce001_999.esd",
+      "extract": "graphics_extract/esd/ce001_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce002_002.esd",
+      "extract": "graphics_extract/esd/ce002_002",
+      "images": 1
+    },
+    {
+      "path": "esd/ce002_999.esd",
+      "extract": "graphics_extract/esd/ce002_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce003_999.esd",
+      "extract": "graphics_extract/esd/ce003_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce004_999.esd",
+      "extract": "graphics_extract/esd/ce004_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce005_999.esd",
+      "extract": "graphics_extract/esd/ce005_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce006_999.esd",
+      "extract": "graphics_extract/esd/ce006_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce007_999.esd",
+      "extract": "graphics_extract/esd/ce007_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce008_999.esd",
+      "extract": "graphics_extract/esd/ce008_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce009_999.esd",
+      "extract": "graphics_extract/esd/ce009_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce010_999.esd",
+      "extract": "graphics_extract/esd/ce010_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce011_999.esd",
+      "extract": "graphics_extract/esd/ce011_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce012_999.esd",
+      "extract": "graphics_extract/esd/ce012_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce013_999.esd",
+      "extract": "graphics_extract/esd/ce013_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce014_999.esd",
+      "extract": "graphics_extract/esd/ce014_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce015_999.esd",
+      "extract": "graphics_extract/esd/ce015_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce016_999.esd",
+      "extract": "graphics_extract/esd/ce016_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce017_996.esd",
+      "extract": "graphics_extract/esd/ce017_996",
+      "images": 1
+    },
+    {
+      "path": "esd/ce017_997.esd",
+      "extract": "graphics_extract/esd/ce017_997",
+      "images": 1
+    },
+    {
+      "path": "esd/ce017_998.esd",
+      "extract": "graphics_extract/esd/ce017_998",
+      "images": 1
+    },
+    {
+      "path": "esd/ce017_999.esd",
+      "extract": "graphics_extract/esd/ce017_999",
+      "images": 1
+    },
+    {
+      "path": "esd/ce052_001.esd",
+      "extract": "graphics_extract/esd/ce052_001",
+      "images": 6
+    },
+    {
+      "path": "esd/ce052_002.esd",
+      "extract": "graphics_extract/esd/ce052_002",
+      "images": 6
+    },
+    {
+      "path": "esd/ce052_003.esd",
+      "extract": "graphics_extract/esd/ce052_003",
+      "images": 5
+    },
+    {
+      "path": "esd/ce052_015.esd",
+      "extract": "graphics_extract/esd/ce052_015",
+      "images": 6
+    },
+    {
+      "path": "esd/ce052_016.esd",
+      "extract": "graphics_extract/esd/ce052_016",
+      "images": 6
+    },
+    {
+      "path": "esd/ce052_017.esd",
+      "extract": "graphics_extract/esd/ce052_017",
+      "images": 5
+    },
+    {
+      "path": "esd/pe050_009.esd",
+      "extract": "graphics_extract/esd/pe050_009",
+      "images": 1
+    },
+    {
+      "path": "esd/pe050_010.esd",
+      "extract": "graphics_extract/esd/pe050_010",
+      "images": 19
+    },
+    {
+      "path": "esd/pe050_016.esd",
+      "extract": "graphics_extract/esd/pe050_016",
+      "images": 5
+    },
+    {
+      "path": "esd/pe809_004.esd",
+      "extract": "graphics_extract/esd/pe809_004",
+      "images": 1
+    },
+    {
+      "path": "esp/cfdef.esp",
+      "extract": "graphics_extract/esp/cfdef",
+      "images": 1
+    },
+    {
+      "path": "esp/pe562.esp",
+      "extract": "graphics_extract/esp/pe562",
+      "images": 1
+    }
+  ]
+}

@@ -1,0 +1,595 @@
+{
+  "format": "xs2-text-selection-v1",
+  "files": {
+    "esd/ce000_033.esd": {
+      "sha256": "9adec5a815e82e32c5d3d6fe9e6e79fd7bc75867341825e7d796c9b7a2cd06ec",
+      "images": [
+        {
+          "key": "00000a00_layoutwarning_",
+          "name": "layoutwarning_.bmp",
+          "category": "ui_text"
+        }
+      ]
+    },
+    "esd/ce001_999.esd": {
+      "sha256": "2e7740a84bc1fe9f10ac0af840382058367a8d1856de539f37ddddf89d75c928",
+      "images": [
+        {
+          "key": "000029c0_m01-a",
+          "name": "m01-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce002_002.esd": {
+      "sha256": "ed01038ea8a3fd2f6ba280224f549159ad2d95a13b2a2d2358a1e51de172a903",
+      "images": [
+        {
+          "key": "00001440_exit_01-a",
+          "name": "exit_01-a.bmp",
+          "category": "ui_text"
+        }
+      ]
+    },
+    "esd/ce002_999.esd": {
+      "sha256": "72bfe7f925682dbf0c44139f7e4f32239396e1df5128d694f2f6bbe0a136784c",
+      "images": [
+        {
+          "key": "000029c0_m02-a",
+          "name": "m02-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce003_999.esd": {
+      "sha256": "bf5131fd314bafcd9047aa8d264d84e51cc6dd956373c6454e471ca189fc6f79",
+      "images": [
+        {
+          "key": "000029c0_m03-a",
+          "name": "m03-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce004_999.esd": {
+      "sha256": "55dd7a7b4567e831c9ed6f1c07887ca7d16a90dd1100142577965367bdab1572",
+      "images": [
+        {
+          "key": "000029c0_m04-a",
+          "name": "m04-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce005_999.esd": {
+      "sha256": "6eea39cc7136540183daf1b1dd31b95e7bb2aaaaca034bf87a372247f7bf08ce",
+      "images": [
+        {
+          "key": "000029c0_m05-a",
+          "name": "m05-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce006_999.esd": {
+      "sha256": "2e6c9f84b8a8c5bc8d848bbcea917b96ec3a6757959c9f6f303b65bdb56b4d57",
+      "images": [
+        {
+          "key": "000029c0_m06-a",
+          "name": "m06-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce007_999.esd": {
+      "sha256": "e9c8f4cec8ec9d3c736e321ca2f9d755b1be539391d6642db51f2ddda0d94548",
+      "images": [
+        {
+          "key": "000029c0_m07-a",
+          "name": "m07-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce008_999.esd": {
+      "sha256": "fd7fd800ab0c523f312a715d8f4100d70c0de6c804dd77b46a7293bdab88ce6a",
+      "images": [
+        {
+          "key": "000029c0_m08-a",
+          "name": "m08-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce009_999.esd": {
+      "sha256": "3a709a766585f0dc417ce46d9b1383b3061469eb38b140aa086194a7a4c20962",
+      "images": [
+        {
+          "key": "000029c0_m09-a",
+          "name": "m09-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce010_999.esd": {
+      "sha256": "d6e4f002f769652fb58a3dc7058ac6383538cf364a40e67d8bae5ffd677b953e",
+      "images": [
+        {
+          "key": "000029c0_m10-a",
+          "name": "m10-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce011_999.esd": {
+      "sha256": "b2edb89a6550b38fd9ce9c1223bf811d67b9f8b59ca91470886f1eedb87e6be6",
+      "images": [
+        {
+          "key": "000029c0_m11-a",
+          "name": "m11-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce012_999.esd": {
+      "sha256": "a0ff75dc77914e29a597b54c4c976f090785c02c5dd57acab6351c3849e2a0de",
+      "images": [
+        {
+          "key": "000029c0_m12-a",
+          "name": "m12-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce013_999.esd": {
+      "sha256": "71f53500ea70d095a96693de09145b1c273c7bf23afad348fb903707bef9cccb",
+      "images": [
+        {
+          "key": "000029c0_m13-a",
+          "name": "m13-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce014_999.esd": {
+      "sha256": "fe3fbd86e3fb2c2c063ef7025b2115fbb837352c00680abed0e46fef58603772",
+      "images": [
+        {
+          "key": "000029c0_m14-a",
+          "name": "m14-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce015_999.esd": {
+      "sha256": "a0b51f289bc4f827259d6fcbe8375c095a7ac7e860c884b7e01eb587d535b4d9",
+      "images": [
+        {
+          "key": "000029c0_m15-a",
+          "name": "m15-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce016_999.esd": {
+      "sha256": "6ab3c67b485ba6d73a5c4c44e740c958da9a5ea8ff9f3f31b501a87bd32ecad9",
+      "images": [
+        {
+          "key": "000029c0_m16-a",
+          "name": "m16-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce017_996.esd": {
+      "sha256": "3452a869a2b845cbf16fc069f68497976df983df0d7f9225d5544f613f33be6f",
+      "images": [
+        {
+          "key": "000029c0_m17a-a",
+          "name": "m17a-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce017_997.esd": {
+      "sha256": "6820dc630a0b2a2be0b3242d1fdc480d21fb1085cbca3eae78cc4a56d1e4e6a7",
+      "images": [
+        {
+          "key": "000029c0_m17b-a",
+          "name": "m17b-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce017_998.esd": {
+      "sha256": "9b134615630e06cb72c4471bc4eb681ca2add5b157e6b1e5879c4e6ab0f87d57",
+      "images": [
+        {
+          "key": "000029c0_m17c-a",
+          "name": "m17c-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce017_999.esd": {
+      "sha256": "994622e1b34c786c3f1b2ee9d4ca77a29951bea14065c2ca1af95b5ff197ffb4",
+      "images": [
+        {
+          "key": "000029c0_m17d-a",
+          "name": "m17d-a.bmp",
+          "category": "map_label"
+        }
+      ]
+    },
+    "esd/ce052_001.esd": {
+      "sha256": "1a59f91b35e12dd7f28895138d5a511641b4efdd71724810ea3f1d4a8596226c",
+      "images": [
+        {
+          "key": "00000f00_campaign_",
+          "name": "campaign_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00001f40_confidential_",
+          "name": "confidential_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00003b40_start_",
+          "name": "start_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00005b80_global_",
+          "name": "global_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00006bc0_report_",
+          "name": "report_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00007c00_get_",
+          "name": "get_.bmp",
+          "category": "ui_text"
+        }
+      ]
+    },
+    "esd/ce052_002.esd": {
+      "sha256": "d20b7021d8609fe9db447ac50e0a6052bbaf8a9dddfbec840aa6cb52dfb1dd3a",
+      "images": [
+        {
+          "key": "00000e80_campaign_",
+          "name": "campaign_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00001ec0_confidential_",
+          "name": "confidential_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00007b00_global_",
+          "name": "global_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00008b40_report_",
+          "name": "report_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00009b80_get_",
+          "name": "get_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00003ac0_succeeded_",
+          "name": "succeeded_.bmp",
+          "category": "ui_text"
+        }
+      ]
+    },
+    "esd/ce052_003.esd": {
+      "sha256": "6fdef93fa0f9565e502934b05e22af4d28a903fad48e57f406f639561aea54fe",
+      "images": [
+        {
+          "key": "00000d00_campaign_",
+          "name": "campaign_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00001d40_confidential_",
+          "name": "confidential_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00004900_global_",
+          "name": "global_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00005940_report_",
+          "name": "report_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "000038c0_get_",
+          "name": "get_.bmp",
+          "category": "ui_text"
+        }
+      ]
+    },
+    "esd/ce052_015.esd": {
+      "sha256": "8402628dea5caa354fd0a511fffff87df8158ea5076661e7451882fecd5b41b9",
+      "images": [
+        {
+          "key": "00000f00_campaign_",
+          "name": "campaign_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00001f40_confidential_",
+          "name": "confidential_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00003b40_start_",
+          "name": "start_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00005b80_global_",
+          "name": "global_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00006bc0_report_",
+          "name": "report_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00007c00_get_",
+          "name": "get_.bmp",
+          "category": "ui_text"
+        }
+      ]
+    },
+    "esd/ce052_016.esd": {
+      "sha256": "bfd6ae05fc542efa76dd5fdf1c5fc5d420b573ff6a31645363868d269e6438fb",
+      "images": [
+        {
+          "key": "00000e80_campaign_",
+          "name": "campaign_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00001ec0_confidential_",
+          "name": "confidential_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00007b00_global_",
+          "name": "global_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00008b40_report_",
+          "name": "report_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00009b80_get_",
+          "name": "get_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00003ac0_succeeded_",
+          "name": "succeeded_.bmp",
+          "category": "ui_text"
+        }
+      ]
+    },
+    "esd/ce052_017.esd": {
+      "sha256": "81938fd06443ce7e4de6f580f8188004d6e2b0ea1a147336616f2e4944a18f7c",
+      "images": [
+        {
+          "key": "00000d00_campaign_",
+          "name": "campaign_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00001d40_confidential_",
+          "name": "confidential_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00004900_global_",
+          "name": "global_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "00005940_report_",
+          "name": "report_.bmp",
+          "category": "ui_text"
+        },
+        {
+          "key": "000038c0_get_",
+          "name": "get_.bmp",
+          "category": "ui_text"
+        }
+      ]
+    },
+    "esd/pe050_009.esd": {
+      "sha256": "c9d6ec870028cd62ce929176b7a2d545f38e2a4e0aa2a7463e17b09633715231",
+      "images": [
+        {
+          "key": "00006b40_moji04-a",
+          "name": "moji04-a.bmp",
+          "category": "combat_text"
+        }
+      ]
+    },
+    "esd/pe050_010.esd": {
+      "sha256": "58f017ec50ca80cafec28944225a3c22727873922ad0042616cc5876c3e4e3ca",
+      "images": [
+        {
+          "key": "00006280_kuji01-a",
+          "name": "kuji01-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "000082c0_kuji02-a",
+          "name": "kuji02-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "0000a300_kuji03-a",
+          "name": "kuji03-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "0000c340_kuji04-a",
+          "name": "kuji04-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "0000e380_kuji05-a",
+          "name": "kuji05-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "000103c0_kuji06-a",
+          "name": "kuji06-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "00012400_kuji07-a",
+          "name": "kuji07-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "00014440_kuji08-a",
+          "name": "kuji08-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "00016480_kuji09-a",
+          "name": "kuji09-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "00019500_kuji02b-a",
+          "name": "kuji02b-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "0001a540_kuji04b-a",
+          "name": "kuji04b-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "0001b580_kuji06b-a",
+          "name": "kuji06b-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "0001c5c0_kuji08b-a",
+          "name": "kuji08b-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "0001d600_kuji09c-a",
+          "name": "kuji09c-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "0001f640_kuji05b-a",
+          "name": "kuji05b-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "00020680_kuji01b-a",
+          "name": "kuji01b-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "000216c0_kuji07b-a",
+          "name": "kuji07b-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "00022700_kuji03b-a",
+          "name": "kuji03b-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "00023740_kuji09b-a",
+          "name": "kuji09b-a.bmp",
+          "category": "combat_text"
+        }
+      ]
+    },
+    "esd/pe050_016.esd": {
+      "sha256": "3979d1c2327361d10e6b8f7eabfa31d744acfa9d22ac3327cc0f50ed3a4bc7e3",
+      "images": [
+        {
+          "key": "0000d600_moji01-a",
+          "name": "moji01-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "00011640_moji02-a",
+          "name": "moji02-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "00015680_moji03-a",
+          "name": "moji03-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "000196c0_moji04-a",
+          "name": "moji04-a.bmp",
+          "category": "combat_text"
+        },
+        {
+          "key": "0001d700_moji05-a",
+          "name": "moji05-a.bmp",
+          "category": "combat_text"
+        }
+      ]
+    },
+    "esd/pe809_004.esd": {
+      "sha256": "b797e42792263b913729393fdc6b064c8303b9ba8abafb3d697a65346e0baa9e",
+      "images": [
+        {
+          "key": "00004500_skb_m",
+          "name": "skb_m.bmp",
+          "category": "combat_text"
+        }
+      ]
+    },
+    "esp/cfdef.esp": {
+      "sha256": "2fa9f11ddec7e6e175954036365a259f524f6688c04aa80e882e9097080dec05",
+      "images": [
+        {
+          "key": "000092c0_look02",
+          "name": "look02.bmp",
+          "category": "ui_text"
+        }
+      ]
+    },
+    "esp/pe562.esp": {
+      "sha256": "f8fa783f6902316c5f4efb5ca0128f1089f787273d7616c27d0f30744bf2b7aa",
+      "images": [
+        {
+          "key": "00000040_mu",
+          "name": "mu.bmp",
+          "category": "combat_text"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "format": "xs2-yajima-images-v1",
+  "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\yajima\\synopsis.bin",
+  "source_sha256": "5e6b1cca56a982c714a857eec5991f26389e35f67461558727db9568b9d1a4b1",
+  "entries": [
+    {
+      "index": 0,
+      "type": "XTX",
+      "offset": 128,
+      "length": 131200,
+      "pixel_offset": 208,
+      "pixel_length": 131072,
+      "png": "images/loading.png",
+      "width": 512,
+      "height": 64
+    },
+    {
+      "index": 1,
+      "type": "XTX",
+      "offset": 131328,
+      "length": 131200,
+      "pixel_offset": 131408,
+      "pixel_length": 131072,
+      "png": "images/start.png",
+      "width": 512,
+      "height": 64
+    },
+    {
+      "index": 2,
+      "type": "JPEG",
+      "offset": 262528,
+      "length": 58688,
+      "png": "images/01.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 3,
+      "type": "JPEG",
+      "offset": 321216,
+      "length": 51072,
+      "png": "images/02.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 4,
+      "type": "JPEG",
+      "offset": 372288,
+      "length": 45696,
+      "png": "images/03.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 5,
+      "type": "JPEG",
+      "offset": 417984,
+      "length": 49920,
+      "png": "images/04.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 6,
+      "type": "JPEG",
+      "offset": 467904,
+      "length": 52864,
+      "png": "images/05.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 7,
+      "type": "JPEG",
+      "offset": 520768,
+      "length": 53952,
+      "png": "images/06.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 8,
+      "type": "JPEG",
+      "offset": 574720,
+      "length": 45376,
+      "png": "images/07.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 9,
+      "type": "JPEG",
+      "offset": 620096,
+      "length": 52864,
+      "png": "images/08.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 10,
+      "type": "JPEG",
+      "offset": 672960,
+      "length": 52032,
+      "png": "images/09.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 11,
+      "type": "JPEG",
+      "offset": 724992,
+      "length": 55232,
+      "png": "images/10.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 12,
+      "type": "JPEG",
+      "offset": 780224,
+      "length": 47488,
+      "png": "images/11.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 13,
+      "type": "JPEG",
+      "offset": 827712,
+      "length": 59072,
+      "png": "images/12.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 14,
+      "type": "JPEG",
+      "offset": 886784,
+      "length": 48256,
+      "png": "images/13.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 15,
+      "type": "JPEG",
+      "offset": 935040,
+      "length": 61952,
+      "png": "images/14.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 16,
+      "type": "JPEG",
+      "offset": 996992,
+      "length": 48000,
+      "png": "images/15.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 17,
+      "type": "JPEG",
+      "offset": 1044992,
+      "length": 49664,
+      "png": "images/16.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 18,
+      "type": "JPEG",
+      "offset": 1094656,
+      "length": 53120,
+      "png": "images/17.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 19,
+      "type": "JPEG",
+      "offset": 1147776,
+      "length": 47616,
+      "png": "images/18.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 20,
+      "type": "JPEG",
+      "offset": 1195392,
+      "length": 46784,
+      "png": "images/19.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 21,
+      "type": "JPEG",
+      "offset": 1242176,
+      "length": 54336,
+      "png": "images/20.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 22,
+      "type": "JPEG",
+      "offset": 1296512,
+      "length": 50432,
+      "png": "images/21.png",
+      "width": 512,
+      "height": 448
+    },
+    {
+      "index": 23,
+      "type": "JPEG",
+      "offset": 1346944,
+      "length": 55296,
+      "png": "images/22.png",
+      "width": 512,
+      "height": 448
+    }
+  ]
+}

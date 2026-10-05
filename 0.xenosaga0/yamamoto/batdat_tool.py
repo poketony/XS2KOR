@@ -8,15 +8,14 @@ Usage:
 
 The patch command keeps the original file size and section layout. When a
 section is changed, it rebuilds only that section's string pool, pads remaining
-space with NUL bytes, and updates every pointer-table value that points into
-the rebuilt pool. Korean text can be converted through the same
+space with NUL bytes, and updates only documented text pointer fields.
+Korean text can be converted through the same
 char_table.json "replace-table" style used by the Xenosaga III workflow.
 """
 
 from __future__ import annotations
 
 import json
-import os
 import struct
 import sys
 from dataclasses import dataclass
@@ -54,11 +53,18 @@ SECTIONS = [
 
 
 def read_header(data: bytes) -> list[int]:
+    if len(data) < 8:
+        raise ValueError("truncated header")
     count = struct.unpack_from("<I", data, 0)[0]
+    if count != 19 or len(data) < 8 + count * 4:
+        raise ValueError("expected the Xenosaga II 19-section header")
     file_size = struct.unpack_from("<I", data, 4)[0]
     if file_size != len(data):
         raise ValueError(f"header size mismatch: header={file_size}, actual={len(data)}")
-    return [struct.unpack_from("<I", data, 8 + i * 4)[0] for i in range(count)]
+    offsets = [struct.unpack_from("<I", data, 8 + i * 4)[0] for i in range(count)]
+    if offsets[0] != 84 or offsets != sorted(set(offsets)) or offsets[-1] >= len(data):
+        raise ValueError("invalid section offsets")
+    return offsets
 
 
 def validate_sections(data: bytes) -> None:
@@ -80,31 +86,44 @@ def validate_sections(data: bytes) -> None:
 
 
 def read_raw_str(data: bytes, abs_addr: int, end: int) -> bytes:
-    if abs_addr <= 0 or abs_addr >= end:
-        return b""
+    if not 0 <= abs_addr < end <= len(data):
+        raise ValueError(f"invalid string address: 0x{abs_addr:X}")
     nul = data.find(b"\x00", abs_addr, end)
-    if nul <= abs_addr:
-        return b""
+    if nul < 0:
+        raise ValueError(f"unterminated string: 0x{abs_addr:X}")
     return bytes(data[abs_addr:nul])
 
 
 def read_str(data: bytes, abs_addr: int, end: int) -> str:
-    return read_raw_str(data, abs_addr, end).decode(ENCODING, errors="replace")
+    return read_raw_str(data, abs_addr, end).decode(ENCODING)
 
 
 def encode_str(text: str) -> bytes:
-    return text.encode(ENCODING, errors="replace")
+    if not isinstance(text, str):
+        raise ValueError("translation must be a string")
+    if "\x00" in text:
+        raise ValueError("translation contains NUL")
+    return text.encode(ENCODING)
 
 
 def load_char_table(path: str | None) -> dict[str, str]:
-    if not path or not os.path.exists(path):
+    if path is None:
         return {}
     with open(path, encoding="utf-8-sig") as f:
         obj = json.load(f)
-    return obj.get("replace-table", {})
+    table = obj.get("replace-table") if isinstance(obj, dict) else None
+    if not isinstance(table, dict):
+        raise ValueError("char_table must contain a replace-table object")
+    for key, value in table.items():
+        if not isinstance(key, str) or len(key) != 1 or not isinstance(value, str) or len(value) != 1:
+            raise ValueError("char_table mappings must be one character to one character")
+        encode_str(value)
+    return table
 
 
 def apply_char_table(text: str, table: dict[str, str]) -> str:
+    if not isinstance(text, str):
+        raise ValueError("translation must be a string")
     if not table:
         return text
     return "".join(table.get(ch, ch) for ch in text)
@@ -121,7 +140,9 @@ def apply_menu_sita(text: str) -> str:
 def count_entries(data: bytes, sec: Section) -> int:
     first_ptr = struct.unpack_from("<H", data, sec.base + sec.hdr_off)[0]
     table_size = first_ptr - sec.hdr_off
-    if table_size <= 0 or table_size % sec.stride:
+    expected = {0: 15, 1: 125, 6: 109, 7: 104, 8: 40, 9: 40,
+                10: 31, 11: 107, 12: 16, 13: 21, 14: 10, 18: 54}
+    if table_size != expected[sec.index] * sec.stride:
         raise ValueError(
             f"{sec.label}: invalid pointer table size {table_size} for stride {sec.stride}"
         )
@@ -135,6 +156,8 @@ def is_pool_ptr(sec: Section, rel: int, pool_start_rel: int) -> bool:
 def entry_fields(data: bytes, sec: Section, idx: int, pool_start_rel: int) -> list[tuple[str, int, int]]:
     ptr_pos = sec.base + sec.hdr_off + idx * sec.stride
     name_ptr = struct.unpack_from("<H", data, ptr_pos)[0]
+    if not is_pool_ptr(sec, name_ptr, pool_start_rel):
+        raise ValueError(f"{sec.label}[{idx}]: name pointer outside string pool")
     if sec.sec_type == "name_only":
         return [("name", ptr_pos, name_ptr)]
     if sec.sec_type == "string_table":
@@ -142,24 +165,10 @@ def entry_fields(data: bytes, sec: Section, idx: int, pool_start_rel: int) -> li
 
     desc_ptr = struct.unpack_from("<H", data, ptr_pos + 2)[0]
     fields = [("name", ptr_pos, name_ptr)]
-    if is_pool_ptr(sec, desc_ptr, pool_start_rel):
-        fields.append(("desc", ptr_pos + 2, desc_ptr))
+    if not is_pool_ptr(sec, desc_ptr, pool_start_rel):
+        raise ValueError(f"{sec.label}[{idx}]: description pointer outside string pool")
+    fields.append(("desc", ptr_pos + 2, desc_ptr))
     return fields
-
-
-def iter_pool_strings(data: bytes, sec: Section, pool_start_rel: int) -> list[int]:
-    rels = []
-    pos = sec.base + pool_start_rel
-    while pos < sec.end:
-        if data[pos] == 0:
-            pos += 1
-            continue
-        nul = data.find(b"\x00", pos, sec.end)
-        if nul < 0:
-            break
-        rels.append(pos - sec.base)
-        pos = nul + 1
-    return rels
 
 
 def make_entry(data: bytes, sec: Section, idx: int, pool_start_rel: int) -> dict:
@@ -209,6 +218,10 @@ def make_entry(data: bytes, sec: Section, idx: int, pool_start_rel: int) -> dict
 
 
 def cmd_extract(bin_path: str, out_json: str) -> None:
+    if Path(bin_path).resolve() == Path(out_json).resolve() or (
+        Path(out_json).exists() and Path(bin_path).samefile(out_json)
+    ):
+        raise ValueError("output must not overwrite the source binary")
     data = Path(bin_path).read_bytes()
     validate_sections(data)
     result = {}
@@ -236,63 +249,66 @@ def cmd_extract(bin_path: str, out_json: str) -> None:
     print(f"[extract] wrote {out_json} ({total:,} entries)")
 
 
-def section_field_translations(sec: Section, sec_json: dict, char_table: dict[str, str]) -> dict[int, bytes]:
-    by_rel = {}
-    for entry in sec_json.get("entries", []):
-        if sec.sec_type == "name_only":
-            rel = entry.get("name_ptr")
-            text = entry.get("ko", entry.get("jp", ""))
-            if isinstance(rel, int):
-                by_rel[rel] = encode_str(apply_menu_sita(apply_char_table(text, char_table)))
-        elif sec.sec_type == "string_table":
-            rel = entry.get("text_ptr")
-            text = entry.get("ko", entry.get("jp", ""))
-            if isinstance(rel, int):
-                by_rel[rel] = encode_str(apply_menu_sita(apply_char_table(text, char_table)))
-        else:
-            name_rel = entry.get("name_ptr")
-            desc_rel = entry.get("desc_ptr")
-            if isinstance(name_rel, int) and entry.get("jp_name", "") != "":
-                text = entry.get("ko_name", entry.get("jp_name", ""))
-                by_rel[name_rel] = encode_str(apply_menu_sita(apply_char_table(text, char_table)))
-            if isinstance(desc_rel, int) and entry.get("jp_desc", "") != "":
-                text = entry.get("ko_desc", entry.get("jp_desc", ""))
-                by_rel[desc_rel] = encode_str(apply_menu_sita(apply_char_table(text, char_table)))
-    return by_rel
-
-
 def patch_section(buf: bytearray, sec: Section, sec_json: dict, char_table: dict[str, str]) -> tuple[bool, str]:
+    n = count_entries(buf, sec)
     pool_start_rel = struct.unpack_from("<H", buf, sec.base + sec.hdr_off)[0]
     pool_start = sec.base + pool_start_rel
     pool_size = sec.end - pool_start
-    translations = section_field_translations(sec, sec_json, char_table)
+    if not isinstance(sec_json, dict) or not isinstance(sec_json.get("entries"), list):
+        raise ValueError(f"{sec.label}: expected an entries list")
+    for key, value in {"index": sec.index, "base": sec.base, "end_sec": sec.end,
+                       "stride": sec.stride, "hdr_off": sec.hdr_off, "sec_type": sec.sec_type}.items():
+        if key in sec_json and sec_json[key] != value:
+            raise ValueError(f"{sec.label}: mismatched {key}")
 
-    has_change = False
-    for rel, new_raw in translations.items():
-        if not is_pool_ptr(sec, rel, pool_start_rel):
-            continue
-        old_raw = read_raw_str(buf, sec.base + rel, sec.end)
-        if old_raw != new_raw:
-            has_change = True
-            break
-    if not has_change:
+    # Addresses always come from the binary; JSON addresses are consistency checks.
+    originals = [make_entry(buf, sec, i, pool_start_rel) for i in range(n)]
+    submitted = {}
+    for entry in sec_json["entries"]:
+        if not isinstance(entry, dict):
+            raise ValueError(f"{sec.label}: entry must be an object")
+        idx = entry.get("idx")
+        if type(idx) is not int or not 0 <= idx < n or idx in submitted:
+            raise ValueError(f"{sec.label}: invalid or duplicate idx {idx!r}")
+        for key, value in originals[idx].items():
+            if not key.startswith("ko") and entry.get(key) != value:
+                raise ValueError(f"{sec.label}[{idx}]: source mismatch in {key}; extract from this binary again")
+        submitted[idx] = entry
+
+    pointers = []
+    translations = {}
+    covered = set()
+    patched_fields = 0
+    for idx in range(n):
+        entry = submitted.get(idx, originals[idx])
+        for field, pos, rel in entry_fields(buf, sec, idx, pool_start_rel):
+            suffix = "_" + field if sec.sec_type == "name_desc" else ""
+            jp_key, ko_key = "jp" + suffix, "ko" + suffix
+            old_raw = read_raw_str(buf, sec.base + rel, sec.end)
+            text = entry.get(ko_key, originals[idx][jp_key])
+            raw = old_raw
+            if text != originals[idx][jp_key]:
+                try:
+                    raw = encode_str(apply_menu_sita(apply_char_table(text, char_table)))
+                except (ValueError, UnicodeError) as exc:
+                    raise ValueError(f"{sec.label}[{idx}].{ko_key}: {exc}") from exc
+            if rel in translations and translations[rel] != raw:
+                raise ValueError(f"{sec.label}[{idx}]: conflicting translations for shared pointer 0x{rel:X}")
+            translations[rel] = raw
+            pointers.append((pos, rel))
+            covered.update(range(rel, rel + len(old_raw) + 1))
+            patched_fields += raw != old_raw
+    if not patched_fields:
         return False, "unchanged"
-
-    old_rels = iter_pool_strings(bytes(buf), sec, pool_start_rel)
-    for rel in sorted(translations):
-        if is_pool_ptr(sec, rel, pool_start_rel) and rel not in old_rels:
-            old_rels.append(rel)
-    old_rels.sort()
+    if any(buf[sec.base + rel] and rel not in covered for rel in range(pool_start_rel, sec.end - sec.base)):
+        raise ValueError(f"{sec.label}: unreferenced nonzero pool data; cannot rebuild safely")
 
     new_pool = bytearray()
     rel_map = {}
-    patched_fields = 0
-    for rel in old_rels:
-        old_raw = read_raw_str(buf, sec.base + rel, sec.end)
-        raw = translations.get(rel, old_raw)
-        if raw != old_raw:
-            patched_fields += 1
+    for rel, raw in sorted(translations.items()):
         rel_map[rel] = pool_start_rel + len(new_pool)
+        if rel_map[rel] > 0xFFFF:
+            raise ValueError(f"{sec.label}: 16-bit pointer overflow")
         new_pool += raw + b"\x00"
 
     if len(new_pool) > pool_size:
@@ -301,21 +317,30 @@ def patch_section(buf: bytearray, sec: Section, sec_json: dict, char_table: dict
 
     buf[pool_start : sec.end] = new_pool + b"\x00" * (pool_size - len(new_pool))
 
-    pointer_area_start = sec.base + sec.hdr_off
-    for pos in range(pointer_area_start, pool_start - 1, 2):
-        rel = struct.unpack_from("<H", buf, pos)[0]
-        if rel in rel_map:
-            struct.pack_into("<H", buf, pos, rel_map[rel])
+    for pos, rel in pointers:
+        struct.pack_into("<H", buf, pos, rel_map[rel])
 
     return True, f"{patched_fields} fields, pool {len(new_pool)}/{pool_size} bytes"
 
 
 def cmd_patch(bin_path: str, json_path: str, out_path: str, char_table_path: str | None = None) -> None:
+    protected = [Path(bin_path), Path(json_path), Path(json_path).parent / "char_table.json"]
+    if char_table_path:
+        protected.append(Path(char_table_path))
+    if any(Path(out_path).resolve() == path.resolve() or
+           (Path(out_path).exists() and path.exists() and Path(out_path).samefile(path))
+           for path in protected):
+        raise ValueError("output must not overwrite an input file")
     buf = bytearray(Path(bin_path).read_bytes())
     validate_sections(buf)
 
-    with open(json_path, encoding="utf-8") as f:
+    with open(json_path, encoding="utf-8-sig") as f:
         trans = json.load(f)
+    if not isinstance(trans, dict) or not trans:
+        raise ValueError("translation JSON must be a nonempty section object")
+    unknown = set(trans) - {sec.label for sec in SECTIONS}
+    if unknown:
+        raise ValueError(f"unknown JSON sections: {sorted(unknown)}")
 
     if char_table_path is None:
         auto = Path(json_path).parent / "char_table.json"
@@ -329,11 +354,15 @@ def cmd_patch(bin_path: str, json_path: str, out_path: str, char_table_path: str
     changed_sections = 0
     errors = []
     for sec in SECTIONS:
-        sec_json = trans.get(sec.label)
-        if sec_json is None:
+        if sec.label not in trans:
             print(f"  [{sec.label:<20}] missing in json, skipped")
             continue
-        changed, message = patch_section(buf, sec, sec_json, char_table)
+        sec_json = trans[sec.label]
+        try:
+            changed, message = patch_section(buf, sec, sec_json, char_table)
+        except ValueError as exc:
+            errors.append(str(exc))
+            continue
         if changed:
             changed_sections += 1
             print(f"  [{sec.label:<20}] patched: {message}")
@@ -374,4 +403,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except (OSError, ValueError, struct.error) as exc:
+        print(f"error: {exc}", file=sys.stderr)
+        sys.exit(2)

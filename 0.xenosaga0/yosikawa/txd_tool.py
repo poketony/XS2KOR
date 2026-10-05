@@ -2,10 +2,23 @@ import struct
 import os
 import sys
 import re
+import json
 
 class TXDTool:
     def __init__(self, encoding='euc_jis_2004'):
         self.encoding = encoding
+
+    def load_translation_table(self):
+        table_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'XENOSAGA KOR-JPN.json')
+        with open(table_path, 'r', encoding='utf-8-sig') as f:
+            table = json.load(f)['replace-table']
+        if not isinstance(table, dict) or any(
+            not isinstance(key, str) or len(key) != 1
+            or not isinstance(value, str) or not value
+            for key, value in table.items()
+        ):
+            raise ValueError('JSON의 replace-table은 한 글자 키와 비어 있지 않은 문자열 값이어야 합니다.')
+        return str.maketrans(table)
 
     def get_data_start(self, data):
         """4바이트 묶음 중 상위 2바이트가 0이 아닌 지점이 데이터의 시작"""
@@ -71,7 +84,9 @@ class TXDTool:
             print("오류: 파일이 없습니다.")
             return
 
-        with open(modified_txt, 'r', encoding='utf-8') as f:
+        translation_table = self.load_translation_table()
+
+        with open(modified_txt, 'r', encoding='utf-8-sig') as f:
             content = f.read()
             parts = re.split(r'\[\d+\]', content)
             if parts:
@@ -109,8 +124,15 @@ class TXDTool:
                         if len(hex_str) % 2 != 0: hex_str = "0" + hex_str
                         raw_pool += bytes.fromhex(hex_str)
                     else:
+                        token = token.translate(translation_table)
+                        unmapped = sorted(set(re.findall(r'[\u1100-\u11ff\u3130-\u318f\ua960-\ua97f\uac00-\ud7af\ud7b0-\ud7ff]', token)))
+                        if unmapped:
+                            raise ValueError(f'[{i}] JSON 대응표에 없는 한글: {" ".join(unmapped)}')
                         # 일반 텍스트는 인코딩 (여기서 '、'가 0xA1A2로 변환됨)
-                        raw_pool += token.replace('\n', '\r\n').encode(self.encoding, errors='ignore')
+                        try:
+                            raw_pool += token.replace('\n', '\r\n').encode(self.encoding)
+                        except UnicodeEncodeError as e:
+                            raise ValueError(f'[{i}] 인코딩할 수 없는 문자: {e.object[e.start:e.end]!r}') from e
                 
                 new_ptr_table.append(current_offset)
                 new_data_pool += raw_pool + b'\x00'
@@ -132,7 +154,13 @@ if __name__ == "__main__":
         print("사용법:")
         print("  추출: python txd_tool.py e 파일명.txd")
         print("  리팩: python txd_tool.py r 파일명.txd 파일명.txt")
+        print("  리팩 시 스크립트 옆 XENOSAGA KOR-JPN.json으로 한글을 자동 변환합니다.")
     else:
         mode = sys.argv[1].lower()
         if mode == 'e': tool.extract(sys.argv[2])
-        elif mode == 'r': tool.repack(sys.argv[2], (sys.argv[3] if len(sys.argv) > 3 else sys.argv[2] + ".txt"))
+        elif mode == 'r':
+            try:
+                tool.repack(sys.argv[2], (sys.argv[3] if len(sys.argv) > 3 else sys.argv[2] + ".txt"))
+            except (OSError, ValueError, KeyError) as e:
+                print(f"오류: {e}")
+                sys.exit(1)

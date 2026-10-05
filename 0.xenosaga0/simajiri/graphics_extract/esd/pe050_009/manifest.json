@@ -1,0 +1,24 @@
+{
+  "format": "xs2-effects-text-v1",
+  "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\pe050_009.esd",
+  "source_sha256": "c9d6ec870028cd62ce929176b7a2d545f38e2a4e0aa2a7463e17b09633715231",
+  "source_size": 277376,
+  "images": [
+    {
+      "key": "00006b40_moji04-a",
+      "name": "moji04-a.bmp",
+      "route": [],
+      "offset": 27520,
+      "length": 8192,
+      "palette_offset": 50432,
+      "palette_length": 1024,
+      "palette_sha256": "7cc237eb71a99efe1a045ab2118cfb221d940470843e1bfc87db925dea0d66bc",
+      "width": 128,
+      "height": 64,
+      "bpp": 8,
+      "mode": "alpha",
+      "png": "images/00006b40_moji04-a.alpha.png"
+    }
+  ],
+  "unsupported": []
+}

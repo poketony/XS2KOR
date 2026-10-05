@@ -1,0 +1,24 @@
+{
+  "format": "xs2-effects-text-v1",
+  "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esp\\cfdef.esp",
+  "source_sha256": "2fa9f11ddec7e6e175954036365a259f524f6688c04aa80e882e9097080dec05",
+  "source_size": 165440,
+  "images": [
+    {
+      "key": "000092c0_look02",
+      "name": "look02.bmp",
+      "route": [],
+      "offset": 37632,
+      "length": 4096,
+      "palette_offset": 72384,
+      "palette_length": 1024,
+      "palette_sha256": "bcd6a21c0ce3fa1069c8847cd70e3c1d08af282ce72c122954cdc70c2619a7d4",
+      "width": 64,
+      "height": 64,
+      "bpp": 8,
+      "mode": "rgba",
+      "png": "images/000092c0_look02.rgba.png"
+    }
+  ],
+  "unsupported": []
+}

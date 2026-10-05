@@ -1,0 +1,24 @@
+{
+  "format": "xs2-effects-text-v1",
+  "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esp\\pe562.esp",
+  "source_sha256": "f8fa783f6902316c5f4efb5ca0128f1089f787273d7616c27d0f30744bf2b7aa",
+  "source_size": 25856,
+  "images": [
+    {
+      "key": "00000040_mu",
+      "name": "mu.bmp",
+      "route": [],
+      "offset": 128,
+      "length": 2048,
+      "palette_offset": 12608,
+      "palette_length": 64,
+      "palette_sha256": "b9fdf61dce67b67daac80b36b68fc04337c75c3fcdb7673afb68895d2ecd7bf5",
+      "width": 64,
+      "height": 64,
+      "bpp": 4,
+      "mode": "rgba",
+      "png": "images/00000040_mu.rgba.png"
+    }
+  ],
+  "unsupported": []
+}

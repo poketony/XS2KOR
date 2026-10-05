@@ -1,0 +1,24 @@
+{
+  "format": "xs2-effects-text-v1",
+  "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce002_002.esd",
+  "source_sha256": "ed01038ea8a3fd2f6ba280224f549159ad2d95a13b2a2d2358a1e51de172a903",
+  "source_size": 12736,
+  "images": [
+    {
+      "key": "00001440_exit_01-a",
+      "name": "exit_01-a.bmp",
+      "route": [],
+      "offset": 5248,
+      "length": 2048,
+      "palette_offset": 10560,
+      "palette_length": 1024,
+      "palette_sha256": "2ac0949c3baa1dbda380d6256e78c043a0e8e4bd4e531bc750081d217981f4d1",
+      "width": 64,
+      "height": 32,
+      "bpp": 8,
+      "mode": "alpha",
+      "png": "images/00001440_exit_01-a.alpha.png"
+    }
+  ],
+  "unsupported": []
+}
