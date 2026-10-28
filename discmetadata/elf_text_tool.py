@@ -66,6 +66,7 @@ DYNAMIC_SLOT_IDS = {218, 539, 541, 543, 544, 545, 546, 547, 548}
 # Reviewed text-only calls: confirmation body and save/load status labels.
 # Never include character names, play times, numeric fields or image widgets.
 STATUS_SPACE_CALLS = (0x233AB4, 0x2347B0, 0x234B80, 0x234BC8, 0x234BEC, 0x234C54)
+MENU_ITEM_NAME_SPACE_CALLS = (0x21B858,)
 ITEM_COUNT_WRITES = {
     0x5651C0: ((0x0CFF24, 0xA2C30002), (0x0CFF2C, 0xA2C60003)),
     0x578D98: ((0x0DBF54, 0xA0430002), (0x0DBF5C, 0xA0470003)),
@@ -802,7 +803,7 @@ def popup_font_regions():
         (0x1049DC, struct.pack('<I', 0x0C08585C), struct.pack('<I', 0x0C000000 | (queue_labels['help'] >> 2))),
         *((address - 0x11F000, struct.pack('<I', 0x0C08585C),
            struct.pack('<I', 0x0C000000 | (queue_labels['space'] >> 2)))
-          for address in STATUS_SPACE_CALLS),
+          for address in STATUS_SPACE_CALLS + MENU_ITEM_NAME_SPACE_CALLS),
         (0x112000, struct.pack('<I', 0x8F83AA00), struct.pack('<I', jump(measure_labels['wide']))),
         (0x1120F0, struct.pack('<II', 0x8F82AA00, 0x000210C0), struct.pack('<II', jump(metric), 0)),
     ]

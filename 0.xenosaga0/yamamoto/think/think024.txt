@@ -1,57 +1,57 @@
 ﻿[0xe990]
-$zoom14;レベル４の脳がまだ覚醒していない！
+$zoom14;레벨 4의 뇌가 아직 깨어나지 않았다!
 
 [0xe9bb]
-$zoom13;アムド・バグ・ナウ
+$zoom13;암드 바그 나우
 
 [0xe9d6]
-$zoom14;$colc0c0c0;　　突き刺した指先から\n$col7AF9FB;　　　体液を吸収した$colc0c0c0;
+$zoom14;$colc0c0c0;　　찔러 넣은 손끝에서\n$col7AF9FB;　　　체액을 흡수했다$colc0c0c0;
 
 [0xea2c]
-$zoom13;ミトロカエシ
+$zoom13;미토로카에시
 
 [0xea41]
-$zoom14;$colc0c0c0;レベル４の超音波が響き渡った！
+$zoom14;$colc0c0c0;레벨 4의 초음파가 울려 퍼졌다!
 
 [0xea73]
-$zoom14;$colc0c0c0;　　　システム修復率４０％\n$col7AF9FB;　体内の細胞プログラムが結合した$colc0c0c0;
+$zoom14;$colc0c0c0;　　　시스템 복구율 40%\n$col7AF9FB;　체내 세포 프로그램이 결합했다$colc0c0c0;
 
 [0xead9]
-$zoom14;$colc0c0c0;　　　システム修復率７０％\n$col7AF9FB;　体内の神経プログラムが結合した$colc0c0c0;
+$zoom14;$colc0c0c0;　　　시스템 복구율 70%\n$col7AF9FB;　체내 신경 프로그램이 결합했다$colc0c0c0;
 
 [0xeb3f]
-$zoom14;$colc0c0c0;　　　システム修復率１００％\n$col7AF9FB;　　　完全なる力を取り戻した$colc0c0c0;
+$zoom14;$colc0c0c0;　　　시스템 복구율 100%\n$col7AF9FB;　　　완전한 힘을 되찾았다$colc0c0c0;
 
 [0xeba3]
-$zoom14;$colc0c0c0;　アンリミテッドプログラム始動\n$col7AF9FB;　すべての能力が限界を越えた！$colc0c0c0;
+$zoom14;$colc0c0c0;　언리미티드 프로그램 가동\n$col7AF9FB;　모든 능력이 한계를 넘어섰다!$colc0c0c0;
 
 [0xec0b]
-$zoom13;アムド・バグ・ナウ（打）
+$zoom13;암드 바그 나우(타격)
 
 [0xec2c]
-$zoom13;ＥＳＷ　出力２０％（打・Ｌヘビー）
+$zoom13;ESW 출력 20%(타격·L 헤비)
 
 [0xec57]
-$zoom13;ＥＳＷ　出力５０％（打・Ｌポイズン）
+$zoom13;ESW 출력 50%(타격·L 포이즌)
 
 [0xec84]
-$zoom13;ＥＳＷ　出力１００％（打）
+$zoom13;ESW 출력 100%(타격)
 
 [0xeca7]
-$zoom13;共食い（打・ＨＰ吸収）
+$zoom13;동족 포식(타격·HP 흡수)
 
 [0xecc6]
-$zoom13;セントラルドグマ修復プログラム
+$zoom13;센트럴 도그마 복구 프로그램
 
 [0xeced]
-$zoom14;$col7AF9FB;　レベル４の脳が覚醒しだした！
+$zoom14;$col7AF9FB;　레벨 4의 뇌가 깨어나기 시작했다!
 
 [0xed1f]
-$zoom13;アンリミテッドプログラム
+$zoom13;언리미티드 프로그램
 
 [0xed40]
-$zoom13;リープアタック（斬）
+$zoom13;리프 어택(베기)
 
 [0xed5d]
-$zoom13;チャージ（打）
+$zoom13;차지(타격)
 

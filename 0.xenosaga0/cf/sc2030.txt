@@ -4,17 +4,17 @@
 [JPN]
 その他 ?
 [KOR]
-
+기타 ?
 
 [0x194f]
 [JPN]
 jumpJr.サクラとの出会い
 [KOR]
-
+jump Jr. 사쿠라와의 만남
 
 [0x196f]
 [JPN]
 その他を破壊
 [KOR]
-
+기타 파괴
 

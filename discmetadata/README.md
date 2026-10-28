@@ -184,3 +184,7 @@ Disc 1에는 `slps_253.68.new`, Disc 2에는 `SLPS_253.69.new`를 `.new`를 뺀 
 이 후속 수정만으로는 MainMenu.txd를 다시 교체할 필요가 없습니다.
 검증: `python -B codex-lab/context-font/status-spacing/validate.py --deployed`.
 분기·적용 호출과 제외 범위: `codex-lab/context-font/status-spacing/README.md`.
+
+메인 메뉴 아이템 목록도 이름 안의 반각 공백만 좁힙니다(`나노 리페어 A` 등).
+개수 칸·선택/사용 불가 표시·다른 목록은 유지합니다. ELF만 갱신하면 됩니다.
+검증/근거: `codex-lab/context-font/menu-item-spacing/README.md`.

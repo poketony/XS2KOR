@@ -4,47 +4,47 @@
 [JPN]
   取得番号：
 [KOR]
-
+  획득 번호：
 
 [0xe91]
 [JPN]
 300を取得
 [KOR]
-
+300 획득
 
 [0xe9b]
 [JPN]
 301を取得
 [KOR]
-
+301 획득
 
 [0xea5]
 [JPN]
 302を取得
 [KOR]
-
+302 획득
 
 [0xeaf]
 [JPN]
 350を取得
 [KOR]
-
+350 획득
 
 [0xeb9]
 [JPN]
 その他を取得
 [KOR]
-
+기타 획득
 
 [0xecb]
 [JPN]
   踏んだID：
 [KOR]
-
+  밟은 ID：
 
 [0xee1]
 [JPN]
 その他 ?
 [KOR]
-
+기타 ?
 

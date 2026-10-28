@@ -1,33 +1,33 @@
 ﻿[0xcac0]
-$zoom14;$col7AF9FB;　不邪見が解けた！$colc0c0c0;
+$zoom14;$col7AF9FB;　불사견이 풀렸다!$colc0c0c0;
 
 [0xcaf1]
-$zoom14;$col7AF9FB;　裏真言の効果が消えた！$colc0c0c0;
+$zoom14;$col7AF9FB;　이면 진언의 효과가 사라졌다!$colc0c0c0;
 
 [0xcb28]
-$zoom13;穿孔　一足の詰（斬）
+$zoom13;천공 일족의 몰이(베기)
 
 [0xcb45]
-$zoom13;鳳山越　下弦（斬）
+$zoom13;봉산월 하현(베기)
 
 [0xcb60]
-$zoom13;裏穿孔　一足の詰（斬）
+$zoom13;이면 천공 일족의 몰이(베기)
 
 [0xcb7f]
-$zoom13;裏鳳山越　下弦（斬）
+$zoom13;이면 봉산월 하현(베기)
 
 [0xcb9c]
-$zoom13;不邪見
+$zoom13;불사견
 
 [0xcbab]
-$zoom14;$col7AF9FB;　　対ブレイクの構え\n　物理攻撃の耐性を得た$colc0c0c0;
+$zoom14;$col7AF9FB;　　브레이크에 대비한 태세\n　물리 공격 내성을 얻었다$colc0c0c0;
 
 [0xcbf6]
-$zoom13;威圧（打）
+$zoom13;위압(타격)
 
 [0xcc09]
-$zoom13;真言　一唱　　−命中率アップ−
+$zoom13;진언 일창　　−명중률 상승−
 
 [0xcc30]
-$zoom13;裏真言　三唱　　−剣に霊気が満ちた−
+$zoom13;이면 진언 삼창　　−검에 영기가 충만하다−
 

@@ -1,15 +1,15 @@
 ﻿[0xc860]
-$zoom13;$col7AF9FB;メインモニターにヒビが入った！$colc0c0c0;
+$zoom13;$col7AF9FB;메인 모니터에 금이 갔다!$colc0c0c0;
 
 [0xc89d]
-$zoom13;$col7AF9FB;メインモニターを破壊した！\n自動低温度捕獲システム異常$colc0c0c0;
+$zoom13;$col7AF9FB;메인 모니터를 파괴했다!\n자동 저온 포획 시스템 이상$colc0c0c0;
 
 [0xc8f2]
-$zoom13;オクトレイ（Ｂ）
+$zoom13;옥토 레이(B)
 
 [0xc90b]
-$zoom13;ＡＳＭ　１２２９（打・炎）
+$zoom13;ASM 1229(타격·화염)
 
 [0xc92e]
-$zoom13;音速障壁突破（打）
+$zoom13;음속 장벽 돌파(타격)
 

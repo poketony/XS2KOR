@@ -1,78 +1,78 @@
 ﻿[0x89aa]
-$zoom13;センテンツァ（打）
+$zoom13;센텐차(타격)
 
 [0x89c5]
-$zoom13;ラクテウス　オルビス（雷）
+$zoom13;락테우스 오르비스(번개)
 
 [0x89e8]
-$zoom13;ファインレイ（Ｂ）
+$zoom13;파인 레이(B)
 
 [0x8a03]
-$zoom13;センテンツァ（打・Ｌスロウ）
+$zoom13;센텐차(타격·L 슬로)
 
 [0x8a28]
-$zoom13;リフレッシュＬ
+$zoom13;리프레시 L
 
 [0x8a3f]
-$zoom13;リフレッシュＨ
+$zoom13;리프레시 H
 
 [0x8a56]
-$zoom13;腐敗ガス（Ｌポイズン）
+$zoom13;부패 가스(L 포이즌)
 
 [0x8a75]
-$zoom13;メディカ
+$zoom13;메디카
 
 [0x8a86]
-$zoom13;アーマーフィールド
+$zoom13;아머 필드
 
 [0x8aa1]
-$zoom13;雷の恩寵
+$zoom13;번개의 은총
 
 [0x8ab2]
-$zoom14;$col7AF9FB;センテンツァに雷のエーテルが満ちた$colc0c0c0;
+$zoom14;$col7AF9FB;센텐차에 번개 에테르가 충만해졌다$colc0c0c0;
 
 [0x8af3]
-$zoom13;英雄の盾
+$zoom13;영웅의 방패
 
 [0x8b04]
-$zoom14;$colc0c0c0;　リヒャルトが受けたダメージの\n　半分を肩代わりする$colc0c0c0;
+$zoom14;$colc0c0c0;　리하르트가 받은 대미지의\n　절반을 대신 받는다$colc0c0c0;
 
 [0x8b6d]
-$zoom14;$colc0c0c0;リヒャルトの様子がおかしい・・・$colc0c0c0;
+$zoom14;$colc0c0c0;리하르트의 상태가 이상하다・・・$colc0c0c0;
 
 [0x8bc2]
-$zoom14;$col7AF9FB;　リヒャルトが狂乱した！$colc0c0c0;
+$zoom14;$col7AF9FB;　리하르트가 광란에 빠졌다!$colc0c0c0;
 
 [0x8c25]
-$zoom14;$colc0c0c0;　リヒャルトは狂喜している！$colc0c0c0;
+$zoom14;$colc0c0c0;　리하르트는 미친 듯이 기뻐하고 있다!$colc0c0c0;
 
 [0x8c76]
-$zoom14;$colc0c0c0;　リヒャルトは狂乱している！$colc0c0c0;
+$zoom14;$colc0c0c0;　리하르트는 광란에 빠져 있다!$colc0c0c0;
 
 [0x8cc7]
-$zoom14;$col7AF9FB;　　防御属性が戻った$colc0c0c0;
+$zoom14;$col7AF9FB;　　방어 속성이 돌아왔다$colc0c0c0;
 
 [0x8d10]
-$zoom14;$col7AF9FB;　　防御属性が変化した$colc0c0c0;
+$zoom14;$col7AF9FB;　　방어 속성이 바뀌었다$colc0c0c0;
 
 [0x8d45]
-$zoom13;アンピュルシオン（突）
+$zoom13;앵퓔시옹(찌르기)
 
 [0x8d64]
-$zoom13;五連乱舞（突）
+$zoom13;오연난무(찌르기)
 
 [0x8d7b]
-$zoom13;エガリテランチャー（炎）
+$zoom13;에갈리테 런처(화염)
 
 [0x8d9c]
-$zoom13;第３種転送用兵器ナグルファル（Ｂ）
+$zoom13;제3종 전송용 병기 나글파르(B)
 
 [0x8dc7]
-$zoom13;インペール（突）
+$zoom13;임페일(찌르기)
 
 [0x8de0]
-$zoom13;五連乱舞　狂（突）
+$zoom13;오연난무 광(찌르기)
 
 [0x8dfb]
-$zoom13;ブーストワン
+$zoom13;부스트 원
 

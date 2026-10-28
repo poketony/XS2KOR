@@ -1,48 +1,48 @@
 ﻿[0xe5d2]
-$zoom13;センテンツァ（打・Ｌスロウ）
+$zoom13;센텐차(타격·L 슬로)
 
 [0xe5f7]
-$zoom13;ファインレイ（Ｂ）
+$zoom13;파인 레이(B)
 
 [0xe612]
-$zoom13;センテンツァ（打）
+$zoom13;센텐차(타격)
 
 [0xe62d]
-$zoom13;リフレッシュＬ
+$zoom13;리프레시 L
 
 [0xe644]
-$zoom13;リフレッシュＨ
+$zoom13;리프레시 H
 
 [0xe65b]
-$zoom13;シェイブアイ（Ｌブラック）
+$zoom13;셰이브 아이(L 블랙)
 
 [0xe67e]
-$zoom13;メディカ
+$zoom13;메디카
 
 [0xe68f]
-$zoom13;アーマーフィールド
+$zoom13;아머 필드
 
 [0xe6aa]
-$zoom13;雷の恩寵
+$zoom13;번개의 은총
 
 [0xe6bb]
-$zoom14;$col7AF9FB;センテンツァに雷のエーテルが満ちた$colc0c0c0;
+$zoom14;$col7AF9FB;센텐차에 번개 에테르가 충만해졌다$colc0c0c0;
 
 [0xe76a]
-$zoom13;アンピュルシオン（突・Ｌウィーク）
+$zoom13;앵퓔시옹(찌르기·L 위크)
 
 [0xe795]
-$zoom13;エガリテランチャー（炎）
+$zoom13;에갈리테 런처(화염)
 
 [0xe7b6]
-$zoom13;アタッカー
+$zoom13;어태커
 
 [0xe7c9]
-$zoom14;$col7AF9FB;自律プログラムが攻撃型へシフトした$colc0c0c0;
+$zoom14;$col7AF9FB;자율 프로그램이 공격형으로 전환됐다$colc0c0c0;
 
 [0xe80a]
-$zoom13;追加弾倉転送
+$zoom13;추가 탄창 전송
 
 [0xe81f]
-$zoom14;$col7AF9FB;エガリテに追加弾倉が転送された$colc0c0c0;
+$zoom14;$col7AF9FB;에갈리테에 추가 탄창이 전송됐다$colc0c0c0;
 

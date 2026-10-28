@@ -1,126 +1,126 @@
 ﻿[0xfccc]
-$zoom14;$col7AF9FB;　　記憶の車輪が動き出した！$colc0c0c0;
+$zoom14;$col7AF9FB;　　기억의 수레바퀴가 움직이기 시작했다!$colc0c0c0;
 
 [0xfd07]
-$zoom13;記憶の車輪
+$zoom13;기억의 수레바퀴
 
 [0xfd1a]
-$zoom14;$colc0c0c0;　「白き衣」が目覚めた！
+$zoom14;$colc0c0c0;　「하얀 옷」이 깨어났다!
 
 [0xfd46]
-$zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　ケイオスの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
+$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　케이오스의 영혼을\n$colc0c0c0;　　　　비추었다$colc0c0c0;
 
 [0xfdc1]
-$zoom13;グァダルーペの記憶
+$zoom13;과달루페의 기억
 
 [0xfddc]
-$zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　ＫＯＳ−ＭＯＳの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
+$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　KOS-MOS의 영혼을\n$colc0c0c0;　　　　비추었다$colc0c0c0;
 
 [0xfe59]
-$zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　シオンの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
+$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　시온의 영혼을\n$colc0c0c0;　　　　비추었다$colc0c0c0;
 
 [0xfed2]
-$zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　　ジンの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
+$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　　진의 영혼을\n$colc0c0c0;　　　　비추었다$colc0c0c0;
 
 [0xff4b]
-$zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　ジギーの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
+$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　지기의 영혼을\n$colc0c0c0;　　　　비추었다$colc0c0c0;
 
 [0xffc4]
-$zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　　モモの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
+$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　　모모의 영혼을\n$colc0c0c0;　　　　비추었다$colc0c0c0;
 
 [0x1003d]
-$zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　Ｊｒ．の魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
+$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　Jr.의 영혼을\n$colc0c0c0;　　　　비추었다$colc0c0c0;
 
 [0x100b6]
-$zoom14;$col7AF9FB;　真実の鏡が魂を吸い尽くした！$colc0c0c0;
+$zoom14;$col7AF9FB;　진실의 거울이 영혼을 모조리 빨아들였다!$colc0c0c0;
 
 [0x100f3]
-$zoom14;$colc0c0c0;　　真実の鏡はくもり始めた$colc0c0c0;
+$zoom14;$colc0c0c0;　　진실의 거울이 흐려지기 시작했다$colc0c0c0;
 
 [0x1012c]
-$zoom14;$col7AF9FB;　白き衣は癒しの土地を見つめた$colc0c0c0;
+$zoom14;$col7AF9FB;　하얀 옷은 치유의 땅을 바라보았다$colc0c0c0;
 
 [0x10169]
-$zoom14;$colc0c0c0;　「情熱の第一声」が目覚めた！\n$col7AF9FB;　　女性への欲望が渦巻いた$colc0c0c0;
+$zoom14;$colc0c0c0;　「정열의 첫마디」가 깨어났다!\n$col7AF9FB;　　여성을 향한 욕망이 소용돌이쳤다$colc0c0c0;
 
 [0x101cd]
-$zoom14;$col7AF9FB;　欲望への対象が消えた！$colc0c0c0;
+$zoom14;$col7AF9FB;　욕망의 대상이 사라졌다!$colc0c0c0;
 
 [0x10204]
-$zoom14;$col7AF9FB;　争う者に興味はない！$colc0c0c0;
+$zoom14;$col7AF9FB;　다투는 자에게는 관심 없다!$colc0c0c0;
 
 [0x10239]
-$zoom14;$colc0c0c0;　「争いへの扇動」が目覚めた！\n$col7AF9FB;　男性の闘争本能を目覚めさせた！
+$zoom14;$colc0c0c0;　「분쟁의 선동」이 깨어났다!\n$col7AF9FB;　남성의 투쟁 본능을 깨웠다!
 
 [0x10298]
-$zoom14;$col7AF9FB;　汚れし者に興味はない！$colc0c0c0;
+$zoom14;$col7AF9FB;　더럽혀진 자에게는 관심 없다!$colc0c0c0;
 
 [0x102cf]
-$zoom21;$col7AF9FB;　３$colc0c0c0;
+$zoom21;$col7AF9FB;　3$colc0c0c0;
 
 [0x102f2]
-$zoom21;$col7AF9FB;　２$colc0c0c0;
+$zoom21;$col7AF9FB;　2$colc0c0c0;
 
 [0x10315]
-$zoom21;$col7AF9FB;　１$colc0c0c0;
+$zoom21;$col7AF9FB;　1$colc0c0c0;
 
 [0x10338]
-$zoom21;$col7AF9FB;　０$colc0c0c0;
+$zoom21;$col7AF9FB;　0$colc0c0c0;
 
 [0x1035b]
-$zoom13;聖母の愛情（Ｂ）
+$zoom13;성모의 사랑(B)
 
 [0x10374]
-$zoom13;ソドムクエイク（打）
+$zoom13;소돔 퀘이크(타격)
 
 [0x10391]
-$zoom13;ルシフェルの雄叫び（打）
+$zoom13;루시펠의 포효(타격)
 
 [0x103b2]
-$zoom13;光り輝く四つの車輪（ＬポイズンＥＰ）
+$zoom13;빛나는 네 수레바퀴(L 포이즌 EP)
 
 [0x103df]
-$zoom13;欺瞞を浴びたユリ（Ｌウィーク）
+$zoom13;기만에 젖은 백합(L 위크)
 
 [0x10406]
-$zoom13;心に貫く失望の光（ＬエーテルＤＤ）
+$zoom13;마음을 꿰뚫는 실망의 빛(L 에테르 DD)
 
 [0x10431]
-$zoom13;降臨し甘い囁き（Ｌスタン）
+$zoom13;강림한 달콤한 속삭임(L 스턴)
 
 [0x10454]
-$zoom13;聖母被昇天
+$zoom13;성모 승천
 
 [0x10467]
-$zoom13;情熱の眼差し
+$zoom13;정열의 눈빛
 
 [0x1047c]
-$zoom14;$col7AF9FB;　　「情熱の第一声」の\n　エーテル攻撃力が上昇した
+$zoom14;$col7AF9FB;　　「정열의 첫마디」의\n　에테르 공격력이 상승했다
 
 [0x104c2]
-$zoom13;魂の浄化
+$zoom13;영혼의 정화
 
 [0x104d3]
-$zoom13;虐殺への扇動
+$zoom13;학살의 선동
 
 [0x104e8]
-$zoom14;$col7AF9FB;　　「争いへの扇動」の\n　　物理攻撃力が上昇した
+$zoom14;$col7AF9FB;　　「분쟁의 선동」의\n　　물리 공격력이 상승했다
 
 [0x1052c]
-$zoom13;ゲヘナ（炎）
+$zoom13;게헨나(화염)
 
 [0x10541]
-$zoom13;フレアブラスト
+$zoom13;플레어 블래스트
 
 [0x10558]
-$zoom13;サンダーブラスト
+$zoom13;선더 블래스트
 
 [0x10571]
-$zoom13;癒しの御告げ
+$zoom13;치유의 계시
 
 [0x10586]
-$zoom13;バベルの嘆き（雷）
+$zoom13;바벨의 탄식(번개)
 
 [0x105a1]
-$zoom13;リフレッシュＨ
+$zoom13;리프레시 H
 
