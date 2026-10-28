@@ -63,6 +63,9 @@ MENU_PATCHES = (
 )
 SLOT_IDS = {218, 220, 221, 222, 223, 514, 515, 539, 541, 543, 544, 545, 546, 547, 548}
 DYNAMIC_SLOT_IDS = {218, 539, 541, 543, 544, 545, 546, 547, 548}
+# Reviewed text-only calls: confirmation body and save/load status labels.
+# Never include character names, play times, numeric fields or image widgets.
+STATUS_SPACE_CALLS = (0x233AB4, 0x2347B0, 0x234B80, 0x234BC8, 0x234BEC, 0x234C54)
 ITEM_COUNT_WRITES = {
     0x5651C0: ((0x0CFF24, 0xA2C30002), (0x0CFF2C, 0xA2C60003)),
     0x578D98: ((0x0DBF54, 0xA0430002), (0x0DBF5C, 0xA0470003)),
@@ -547,12 +550,270 @@ def save_title_regions():
     ]
 
 
+def popup_font_regions():
+    # File header padding is loaded after BSS by an independent RX segment.
+    # Reserve it from BOTH kernel heap and libc sbrk; never map onto the stack.
+    bias = 0x9D0000
+    marker, select, metric = bias + 0x2F4, bias + 0x340, bias + 0x500
+    table = bias + 0x700
+    scope_callback, scope_queue, literals = bias + 0x780, bias + 0x7C0, bias + 0x980
+    before = b"$init;$bg2;$shadow+1,+3,000000;\0"
+    after = (b"\x0b\x0d\x02$shadow+1,+3,000000;\x17"
+             + marker.to_bytes(3, "big") + b"\x01\x01\x01\x01\0")
+    assert len(after) == len(before) and b"\0" not in after[:-1]
+
+    def imm(op, rt, rs, value):
+        return (op << 26) | (rs << 21) | (rt << 16) | (value & 0xFFFF)
+
+    def reg(fn, rd, rs, rt=0, shift=0):
+        return (rs << 21) | (rt << 16) | (rd << 11) | (shift << 6) | fn
+
+    def jump(target):
+        return 0x08000000 | (target >> 2)
+
+    def assemble(start, rows):
+        labels, words, fixups = {}, [], []
+        for row in rows:
+            if isinstance(row, str):
+                labels[row] = start + 4 * len(words)
+            elif isinstance(row, tuple):
+                if len(row) == 2:
+                    fixups.append((len(words), None, 0, 0, row[1]))
+                    words.append(0)
+                    continue
+                op, rs, rt, label = row
+                fixups.append((len(words), op, rs, rt, label))
+                words.append(0)
+            else:
+                words.append(row)
+        for index, op, rs, rt, label in fixups:
+            if op is None:
+                words[index] = jump(labels[label])
+                continue
+            delta = (labels[label] - (start + 4 * index + 4)) // 4
+            assert -32768 <= delta <= 32767
+            words[index] = imm(op, rt, rs, delta)
+        return struct.pack('<' + 'I' * len(words), *words), labels
+
+    # State bit 7 is private to this prefix. INIT and the normal flush clear it.
+    # Low bits remain the original ruby/proportional/ASCII-large/small settings.
+    mark, _ = assemble(marker, [
+        imm(0x24, 2, 4, 0x18),           # lbu v0,mode(a0)
+        imm(0x0C, 2, 2, 0xF0),         # same font reset + han1 as original prefix
+        imm(0x0D, 2, 2, 0x84),         # popup marker + han1
+        reg(8, 0, 31),                  # jr ra
+        imm(0x28, 2, 4, 0x18),         # sb v0,mode(a0)
+    ])
+    # Draw the original quad/UV unchanged, then override its advance only.
+    # Keep at least ten source pixels and retain the original left bearing;
+    # Native right bounds + 4 cover bitmap differences and the shadow. Backtick
+    # retains full advance: its normal/proportional glyphs have different bounds.
+    choose, _ = assemble(select, [
+        imm(9, 29, 29, -0x40),
+        imm(0x3F, 21, 29, 0), imm(0x3F, 31, 29, 8),
+        imm(0x3F, 4, 29, 0x10), imm(0x3F, 5, 29, 0x18),
+        imm(0x3F, 6, 29, 0x20), imm(0x3F, 7, 29, 0x28),
+        imm(0x2B, 0, 29, 0x30),
+        imm(0x24, 2, 19, 0x18),         # lbu v0,mode(s3)
+        imm(0x0C, 3, 2, 0x4F),         # bit 6: spaces only, not punctuation
+        imm(9, 1, 0, 0x44),
+        (5, 3, 1, 'punctuation'), 0,
+        imm(9, 3, 0, 0x20),
+        (5, 20, 3, 'punctuation'), 0,
+        (4, 16, 0, 'space'), 0,        # literal ASCII space maps to glyph zero
+        'punctuation',
+        imm(0x0C, 3, 2, 0x8F),
+        imm(9, 1, 0, 0x84),
+        (5, 3, 1, 'normal'), 0,
+        imm(9, 3, 20, -0x20),          # source byte in s4, not mapped glyph
+        imm(0x0B, 1, 3, 0x5F),
+        (4, 1, 0, 'normal'), 0,
+        imm(15, 1, 0, table >> 16),
+        imm(0x0D, 1, 1, table & 0xFFFF),
+        reg(0x21, 1, 1, 20),
+        imm(0x24, 3, 1, 0),
+        (4, 3, 0, 'normal'), 0,
+        imm(9, 3, 3, -1),
+        (5, 3, 16, 'normal'), 0,        # do not treat #HH escapes as literal #
+        imm(9, 1, 0, 0x20),
+        (4, 20, 1, 'space'), 0,
+        imm(9, 1, 0, 0x2C),
+        (4, 20, 1, 'space'), 0,
+        imm(9, 1, 0, 0x2E),
+        (4, 20, 1, 'space'), 0,
+        imm(15, 1, 0, 0x8D),
+        imm(0x24, 2, 1, 0x470E),
+        (5, 2, 0, 'normal'), 0,        # retain explicit xx3 fallback
+        0x0C06626A, reg(0x21, 4, 16),  # jal 0x1989a8; move a0,s0
+        reg(2, 2, 0, 2, 8),
+        imm(0x0C, 2, 2, 0xFF),
+        imm(9, 2, 2, 4),
+        imm(0x0B, 1, 2, 10),
+        (5, 1, 0, 'space'), 0,
+        imm(0x0B, 1, 2, 20),
+        (5, 1, 0, 'advance'), 0,
+        ('j', 'advance'), imm(9, 2, 0, 19),
+        'space',
+        imm(9, 2, 0, 10),
+        'advance',
+        imm(0x21, 3, 19, 0x2C),
+        reg(0x18, 0, 2, 3), reg(0x12, 2, 0),
+        reg(3, 2, 0, 2, 4),
+        imm(0x21, 21, 19, 8),
+        reg(0x21, 21, 21, 2),
+        imm(9, 2, 0, 1), imm(0x2B, 2, 29, 0x30),
+        'normal',
+        imm(0x37, 4, 29, 0x10), imm(0x37, 5, 29, 0x18),
+        imm(0x37, 6, 29, 0x20), imm(0x37, 7, 29, 0x28),
+        0x0C065C20, 0,                 # original glyph draw
+        imm(0x23, 2, 29, 0x30),
+        (4, 2, 0, 'return'), 0,
+        imm(0x29, 21, 19, 8),
+        'return',
+        imm(0x37, 21, 29, 0), imm(0x37, 31, 29, 8),
+        reg(8, 0, 31), imm(9, 29, 29, 0x40),
+    ])
+    # Popup width walker is leaf code. Only v0/v1/at are scratch at this point.
+    # Use current font right bounds, just as the draw wrapper does. Scale the
+    # actual 19-pixel large glyph, not the previous nominal 20-pixel estimate.
+    measure, measure_labels = assemble(metric, [
+        imm(15, 1, 0, table >> 16),
+        imm(0x0D, 1, 1, table & 0xFFFF),
+        reg(0x21, 1, 1, 3),
+        imm(0x24, 2, 1, 0),
+        (4, 2, 0, 'wide'), 0,
+        imm(9, 1, 0, 0x20),
+        (4, 3, 1, 'ten'), 0,
+        imm(9, 1, 0, 0x2C),
+        (4, 3, 1, 'ten'), 0,
+        imm(9, 1, 0, 0x2E),
+        (4, 3, 1, 'ten'), 0,
+        imm(15, 1, 0, 0x8D),
+        imm(0x24, 3, 1, 0x470E),
+        (5, 3, 0, 'wide'), 0,
+        imm(0x23, 3, 1, 0x4700),        # live font pointer
+        imm(9, 2, 2, -1),
+        reg(0, 2, 0, 2, 1),
+        reg(0x21, 3, 3, 2),
+        imm(15, 1, 0, 8),
+        reg(0x21, 3, 3, 1),
+        imm(0x25, 2, 3, -0x7FC0),
+        imm(9, 2, 2, 0x1FF),
+        imm(0x0C, 2, 2, 0xFFFF),
+        imm(0x0C, 3, 2, 0xFF),
+        imm(9, 1, 0, 0xFF),
+        (4, 3, 1, 'fallback'), 0,
+        reg(2, 2, 0, 2, 8),
+        'right',
+        imm(9, 2, 2, 4),
+        imm(0x0B, 1, 2, 10),
+        (5, 1, 0, 'ten'), 0,
+        imm(0x0B, 1, 2, 20),
+        (5, 1, 0, 'scale'), 0,
+        ('j', 'wide'), 0,
+        'fallback',
+        imm(15, 1, 0, 0x8D),
+        imm(0x24, 2, 1, 0x470C),
+        ('j', 'right'), 0,
+        'wide',
+        ('j', 'scale'), imm(9, 2, 0, 19),
+        'ten',
+        ('j', 'scale'), imm(9, 2, 0, 10),
+        'scale',
+        imm(0x23, 3, 28, -0x5600),
+        reg(0x18, 0, 2, 3), reg(0x12, 2, 0),
+        jump(0x2310F8), 0,
+    ])
+    # Fixed slots keep the code's absolute entry points easy to audit.
+    assert len(mark) <= select - marker and len(choose) <= metric - select
+    assert len(measure) <= table - metric
+    # ASCII remap -> glyph indices, checked against the original renderer in
+    # CPU tests. Zero means retain the full-width path. All indices < 192.
+    indices = {32: 1, 33: 10, 34: 41, 35: 84, 36: 80, 37: 83, 38: 85, 39: 39,
+               40: 42, 41: 43, 42: 86, 43: 60, 44: 4, 45: 61, 46: 5, 47: 31,
+               58: 7, 59: 8, 60: 67, 61: 65, 62: 68, 63: 9, 64: 87, 91: 46,
+               92: 79, 93: 47, 94: 16, 95: 18, 123: 48, 124: 35,
+               125: 49, 126: 33}
+    glyphs = bytes(indices.get(c, 0) for c in range(128))
+    # Scope only one queued name/help/status string. No parser changes to it,
+    # no permanent global font mode and no marker on quantity/HP columns.
+    callback, _ = assemble(scope_callback, [
+        imm(0x24, 2, 4, 0x18), imm(0x0C, 3, 5, 0xC0), imm(0x0C, 1, 5, 1),
+        (4, 1, 0, 'clear'), 0,
+        reg(0x25, 2, 2, 3), ('j', 'store'), 0,
+        'clear', reg(0x27, 3, 3), reg(0x24, 2, 2, 3),
+        'store', reg(8, 0, 31), imm(0x28, 2, 4, 0x18),
+    ])
+    controls = b''.join(b'\x17' + scope_callback.to_bytes(3, 'big')
+                        + bytes([mode, mode, mode, mode | enabled]) + b'\0'
+                        for mode, enabled in ((0x40, 1), (0x40, 0), (0x80, 1), (0x80, 0)))
+
+    def address(rt, value):
+        return [imm(15, rt, 0, value >> 16), imm(0x0D, rt, rt, value & 0xFFFF)]
+
+    queue, queue_labels = assemble(scope_queue, [
+        # s0 is the reviewed caller's list descriptor. Only the battle overlay's
+        # named rows with a separate quantity table qualify; other lists bypass.
+        imm(0x23, 2, 16, 0x14), (4, 2, 0, 'original'), 0,
+        imm(0x23, 2, 16, 0x10), *address(3, 0xAC3258),
+        (5, 2, 3, 'original'), 0,
+        'space',
+        *address(8, literals), *address(9, literals + 9),
+        ('j', 'common'), 0,
+        'help', *address(8, literals + 18), *address(9, literals + 27),
+        'common', imm(9, 29, 29, -0x40),
+        imm(0x3F, 16, 29, 0), imm(0x3F, 17, 29, 8),
+        imm(0x3F, 18, 29, 0x10), imm(0x3F, 19, 29, 0x18),
+        imm(0x3F, 20, 29, 0x20), imm(0x3F, 31, 29, 0x28),
+        reg(0x21, 16, 4), reg(0x21, 17, 5), reg(0x21, 18, 6),
+        reg(0x21, 19, 7), reg(0x21, 20, 9),
+        reg(0x21, 4, 0), reg(0x21, 5, 0), reg(0x21, 6, 8),
+        0x0C08585C, reg(0x21, 7, 0),   # queue begin control
+        reg(0x21, 4, 16), reg(0x21, 5, 17), reg(0x21, 6, 18),
+        0x0C08585C, reg(0x21, 7, 19),  # original text/position/flags
+        reg(0x21, 4, 0), reg(0x21, 5, 0), reg(0x21, 6, 20),
+        0x0C08585C, reg(0x21, 7, 0),   # queue end control
+        imm(0x37, 16, 29, 0), imm(0x37, 17, 29, 8),
+        imm(0x37, 18, 29, 0x10), imm(0x37, 19, 29, 0x18),
+        imm(0x37, 20, 29, 0x20), imm(0x37, 31, 29, 0x28),
+        reg(8, 0, 31), imm(9, 29, 29, 0x40),
+        'original', jump(0x216170), 0,
+    ])
+    assert len(callback) <= scope_queue - scope_callback
+    assert len(queue) <= literals - scope_queue
+    assert literals + len(controls) <= bias + 0xA00
+    payload = bytearray(0x800)
+    for location, value in ((marker, mark), (select, choose), (metric, measure), (table, glyphs),
+                            (scope_callback, callback), (scope_queue, queue), (literals, controls)):
+        offset = location - bias - 0x200
+        payload[offset:offset + len(value)] = value
+    return [
+        (0x2C, struct.pack('<H', 4), struct.pack('<H', 5)),
+        (0xB4, bytes(32), struct.pack('<8I', 1, 0x200, bias + 0x200,
+                                    bias + 0x200, len(payload), len(payload), 5, 0x1000)),
+        (0x1074, struct.pack('<I', 0x2484F770), struct.pack('<I', 0x24841000)),
+        (0x524934, struct.pack('<I', 0x9CF770), struct.pack('<I', bias + 0x1000)),
+        (0x200, bytes(len(payload)), bytes(payload)),
+        (0x566F88, before, after),
+        (0x78CA8, struct.pack('<I', 0x308400F8), struct.pack('<I', 0x30840038)),
+        (0x773C0, struct.pack('<I', 0x304200F8), struct.pack('<I', 0x30420038)),
+        (0x79748, struct.pack('<I', 0x0C065C20), struct.pack('<I', 0x0C000000 | (select >> 2))),
+        (0x113B08, struct.pack('<I', 0x0C08585C), struct.pack('<I', 0x0C000000 | (scope_queue >> 2))),
+        (0x1049DC, struct.pack('<I', 0x0C08585C), struct.pack('<I', 0x0C000000 | (queue_labels['help'] >> 2))),
+        *((address - 0x11F000, struct.pack('<I', 0x0C08585C),
+           struct.pack('<I', 0x0C000000 | (queue_labels['space'] >> 2)))
+          for address in STATUS_SPACE_CALLS),
+        (0x112000, struct.pack('<I', 0x8F83AA00), struct.pack('<I', jump(measure_labels['wide']))),
+        (0x1120F0, struct.pack('<II', 0x8F82AA00, 0x000210C0), struct.pack('<II', jump(metric), 0)),
+    ]
+
+
 def runtime_regions():
     return ([(offset, bytes.fromhex(before), bytes.fromhex(after))
              for offset, before, after in SPACING_PATCHES]
             + [(address - 0x11F000, struct.pack("<I", before), struct.pack("<I", after))
                for address, before, after in MENU_PATCHES]
-            + save_title_regions())
+            + save_title_regions() + popup_font_regions())
 
 
 def item_patch_regions(source, translated):
