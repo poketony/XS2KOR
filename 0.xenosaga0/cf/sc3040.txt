@@ -1,66 +1,134 @@
-﻿[0x3c74]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x3c74]
+[JPN]
   誰：
+[KOR]
+
 
 [0x3c7b]
+[JPN]
   どこを：
+[KOR]
+
 
 [0x3c86]
+[JPN]
 ロケーター反応キャラ番号：0
+[KOR]
+
 
 [0x3ca2]
+[JPN]
 その他のロケーター
+[KOR]
+
 
 [0x3cc0]
+[JPN]
   破壊番号：
+[KOR]
+
 
 [0x3ccd]
+[JPN]
 100を破壊
+[KOR]
+
 
 [0x3cd7]
+[JPN]
 101を破壊
+[KOR]
+
 
 [0x3ce1]
+[JPN]
 102を破壊
+[KOR]
+
 
 [0x3ceb]
+[JPN]
 103を破壊
+[KOR]
+
 
 [0x3cf5]
+[JPN]
 その他を破壊
+[KOR]
+
 
 [0x3d02]
+[JPN]
 判定
+[KOR]
+
 
 [0x3d07]
+[JPN]
 手前
+[KOR]
+
 
 [0x3d0c]
+[JPN]
 手前右
+[KOR]
+
 
 [0x3d13]
+[JPN]
 手前左
+[KOR]
+
 
 [0x3d1a]
+[JPN]
 ただ手前
+[KOR]
+
 
 [0x3d23]
+[JPN]
 左
+[KOR]
+
 
 [0x3d26]
+[JPN]
 右
+[KOR]
+
 
 [0x3d33]
+[JPN]
 ボタンと説明文があります。
+[KOR]
+
 
 [0x3d4e]
+[JPN]
 説明を読む\n台をリセットする\nなにもしない
+[KOR]
+
 
 [0x3d79]
+[JPN]
 ■貯水槽\n---ＷＡＲＮＩＮＧ！!---\n台は非常に不安定です。\nむやみに上に乗らないこと。\n傾いたりすると大変です。
+[KOR]
+
 
 [0x3dee]
+[JPN]
   踏んだID：
+[KOR]
+
 
 [0x3e0d]
+[JPN]
 その他 ?
+[KOR]
+
 

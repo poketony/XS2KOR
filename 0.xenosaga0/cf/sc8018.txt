@@ -1,66 +1,134 @@
-﻿[0xef5c]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xef5c]
+[JPN]
 ジンです
+[KOR]
+
 
 [0xef65]
+[JPN]
 ジン・ウヅキ
+[KOR]
+
 
 [0xef72]
+[JPN]
 よろしく
+[KOR]
+
 
 [0xef7b]
+[JPN]
 こちらこそ
+[KOR]
+
 
 [0xef86]
+[JPN]
 そうですか　シオンの──
+[KOR]
+
 
 [0xef9f]
+[JPN]
 うちの$rubyb;愚妹$rubys;ぐまい$rubye;ご迷惑おかけしてませんか
+[KOR]
+
 
 [0xefdd]
+[JPN]
 $rubyb;愚妹$rubys;ぐまい$rubye;は余計
+[KOR]
+
 
 [0xf003]
+[JPN]
 とんでもない
+[KOR]
+
 
 [0xf010]
+[JPN]
 シオンさんには\n日頃から何かとお世話になってますから
+[KOR]
+
 
 [0xf045]
+[JPN]
 そうですか
+[KOR]
+
 
 [0xf050]
+[JPN]
 別にこれの前だからって\n気を使われなくても結構なんですよ
+[KOR]
+
 
 [0xf089]
+[JPN]
 兄さん
+[KOR]
+
 
 [0xf090]
+[JPN]
 なんだか歓迎されてないみたいだなぁ
+[KOR]
+
 
 [0xf0b3]
+[JPN]
 もう──そんなこと言ってないでしょ
+[KOR]
+
 
 [0xf0d6]
+[JPN]
 私はただ──
+[KOR]
+
 
 [0xf0e3]
+[JPN]
 マスター\n私も同じものをお願いします
+[KOR]
+
 
 [0xf108]
+[JPN]
 激辛で
+[KOR]
+
 
 [0xf10f]
+[JPN]
 ちょっと
+[KOR]
+
 
 [0xf118]
+[JPN]
 人の話　最後まで聞いてくれる
+[KOR]
+
 
 [0xf135]
+[JPN]
 ちゃんと聞いてますよ
+[KOR]
+
 
 [0xf14a]
+[JPN]
 ──で　なんでしたっけ
+[KOR]
+
 
 [0xf161]
+[JPN]
 いいわ　もう\n疲れるから
+[KOR]
+
 

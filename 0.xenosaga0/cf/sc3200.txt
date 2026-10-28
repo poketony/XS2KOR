@@ -1,81 +1,164 @@
-﻿[0xd78]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xd78]
+[JPN]
 進行フラグ
+[KOR]
+
 
 [0xd83]
+[JPN]
 進行フラグ2
+[KOR]
+
 
 [0xd97]
+[JPN]
   誰：
+[KOR]
+
 
 [0xd9e]
+[JPN]
   どこを：
+[KOR]
+
 
 [0xda9]
+[JPN]
 ロケーター反応キャラ番号：0
+[KOR]
+
 
 [0xdc5]
+[JPN]
 ロケーター番号：800
+[KOR]
+
 
 [0xdd9]
+[JPN]
 ロケーター番号：802
+[KOR]
+
 
 [0xded]
+[JPN]
 その他のロケーター
+[KOR]
+
 
 [0xe00]
+[JPN]
 ロケーター反応キャラ番号：11
+[KOR]
+
 
 [0xe28]
+[JPN]
   破壊番号：
+[KOR]
+
 
 [0xe35]
+[JPN]
 100を破壊
+[KOR]
+
 
 [0xe3f]
+[JPN]
 102を破壊
+[KOR]
+
 
 [0xe49]
+[JPN]
 104を破壊
+[KOR]
+
 
 [0xe53]
+[JPN]
 その他を破壊
+[KOR]
+
 
 [0xe60]
+[JPN]
 11テストメッセージ\n表示中
+[KOR]
+
 
 [0xe7b]
+[JPN]
 12の人です
+[KOR]
+
 
 [0xe8a]
+[JPN]
   状況：
+[KOR]
+
 
 [0xe93]
+[JPN]
   誰に？：
+[KOR]
+
 
 [0xe9e]
+[JPN]
 勝ち
+[KOR]
+
 
 [0xea3]
+[JPN]
 11のキャラに
+[KOR]
+
 
 [0xeb0]
+[JPN]
 12のキャラに
+[KOR]
+
 
 [0xebd]
+[JPN]
 だれ？
+[KOR]
+
 
 [0xec4]
+[JPN]
 負け
+[KOR]
+
 
 [0xec9]
+[JPN]
 ？？
+[KOR]
+
 
 [0xece]
+[JPN]
 [シオン]いけない、もうこんな時間…。\n局長、怒ってるわよね。\nはやく通信室に行かなきゃ……。
+[KOR]
+
 
 [0xf30]
+[JPN]
   踏んだID：
+[KOR]
+
 
 [0xf46]
+[JPN]
 その他 ?
+[KOR]
+
 

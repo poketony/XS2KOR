@@ -1,21 +1,44 @@
-﻿[0x8b4]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x8b4]
+[JPN]
   取得番号：
+[KOR]
+
 
 [0x8c1]
+[JPN]
 300を取得
+[KOR]
+
 
 [0x8cb]
+[JPN]
 301を取得
+[KOR]
+
 
 [0x8d5]
+[JPN]
 302を取得
+[KOR]
+
 
 [0x8df]
+[JPN]
 その他を取得
+[KOR]
+
 
 [0x8f1]
+[JPN]
   踏んだID：
+[KOR]
+
 
 [0x907]
+[JPN]
 その他 ?
+[KOR]
+
 

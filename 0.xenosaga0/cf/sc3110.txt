@@ -1,138 +1,278 @@
-﻿[0x3da3]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x3da3]
+[JPN]
   誰：
+[KOR]
+
 
 [0x3daa]
+[JPN]
   どこを：
+[KOR]
+
 
 [0x3db5]
+[JPN]
 ロケーター反応キャラ番号：0
+[KOR]
+
 
 [0x3dd5]
+[JPN]
 ロケーター番号：802
+[KOR]
+
 
 [0x3de9]
+[JPN]
 ロケーター番号：890
+[KOR]
+
 
 [0x3dfd]
+[JPN]
 その他のロケーター
+[KOR]
+
 
 [0x3e10]
+[JPN]
 ロケーター反応キャラ番号：11
+[KOR]
+
 
 [0x3e38]
+[JPN]
   破壊番号：
+[KOR]
+
 
 [0x3e45]
+[JPN]
 1の列：
+[KOR]
+
 
 [0x3e4d]
+[JPN]
 2の列：
+[KOR]
+
 
 [0x3e55]
+[JPN]
 3の列：
+[KOR]
+
 
 [0x3e5d]
+[JPN]
 4の列：
+[KOR]
+
 
 [0x3e65]
+[JPN]
 5の列：
+[KOR]
+
 
 [0x3e6d]
+[JPN]
 6の列：
+[KOR]
+
 
 [0x3e75]
+[JPN]
 7の列：
+[KOR]
+
 
 [0x3e7d]
+[JPN]
 8の列：
+[KOR]
+
 
 [0x3e85]
+[JPN]
 9の列：
+[KOR]
+
 
 [0x3e8d]
+[JPN]
 10の列：
+[KOR]
+
 
 [0x3e96]
+[JPN]
 11の列：
+[KOR]
+
 
 [0x3e9f]
+[JPN]
 12の列：
+[KOR]
+
 
 [0x3ea8]
+[JPN]
 13の列：
+[KOR]
+
 
 [0x3eb1]
+[JPN]
 14の列：
+[KOR]
+
 
 [0x3eba]
+[JPN]
 15の列：
+[KOR]
+
 
 [0x3ec3]
+[JPN]
 16の列：
+[KOR]
+
 
 [0x3ecc]
+[JPN]
 17の列：
+[KOR]
+
 
 [0x3ed5]
+[JPN]
 18の列：
+[KOR]
+
 
 [0x3ede]
+[JPN]
 19の列：
+[KOR]
+
 
 [0x3ee7]
+[JPN]
 20の列：
+[KOR]
+
 
 [0x3ef0]
+[JPN]
 21の列：
+[KOR]
+
 
 [0x3ef9]
+[JPN]
 22の列：
+[KOR]
+
 
 [0x3f02]
+[JPN]
 23の列：
+[KOR]
+
 
 [0x3f0b]
+[JPN]
 24の列：
+[KOR]
+
 
 [0x3f14]
+[JPN]
 25の列：
+[KOR]
+
 
 [0x3f1d]
+[JPN]
 26の列：
+[KOR]
+
 
 [0x3f26]
+[JPN]
 27の列：
+[KOR]
+
 
 [0x3f2f]
+[JPN]
 28の列：
+[KOR]
+
 
 [0x3f38]
+[JPN]
 29の列：
+[KOR]
+
 
 [0x3f41]
+[JPN]
 30の列：
+[KOR]
+
 
 [0x3f4a]
+[JPN]
 31の列：
+[KOR]
+
 
 [0x3f53]
+[JPN]
 その他を破壊
+[KOR]
+
 
 [0x3f60]
+[JPN]
 2Fへ
+[KOR]
+
 
 [0x3f65]
+[JPN]
 1Fへ
+[KOR]
+
 
 [0x3f6a]
+[JPN]
 ブロックをリセットしますか？
+[KOR]
+
 
 [0x3f87]
+[JPN]
 はい\nいいえ
+[KOR]
+
 
 [0x3f99]
+[JPN]
   踏んだID：
+[KOR]
+
 
 [0x3fc1]
+[JPN]
 その他 ?
+[KOR]
+
 

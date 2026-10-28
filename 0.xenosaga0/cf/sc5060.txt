@@ -1,63 +1,128 @@
-﻿[0x79c4]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x79c4]
+[JPN]
 E.S.に乗りますか？
+[KOR]
+
 
 [0x79d7]
+[JPN]
 はい\nいいえ
+[KOR]
+
 
 [0x79e4]
+[JPN]
 E.S.から降りますか？
+[KOR]
+
 
 [0x7a7f]
+[JPN]
   誰：
+[KOR]
+
 
 [0x7a86]
+[JPN]
   どこを：
+[KOR]
+
 
 [0x7a91]
+[JPN]
 ロケーター反応キャラ番号：0
+[KOR]
+
 
 [0x7aad]
+[JPN]
 ロケーター番号：800
+[KOR]
+
 
 [0x7ac1]
+[JPN]
 その他のロケーター
+[KOR]
+
 
 [0x7ad4]
+[JPN]
 ロケーター反応キャラ番号：11
+[KOR]
+
 
 [0x7af1]
+[JPN]
 ロケーター番号：802
+[KOR]
+
 
 [0x7b10]
+[JPN]
   破壊番号：
+[KOR]
+
 
 [0x7b1d]
+[JPN]
 100を破壊
+[KOR]
+
 
 [0x7b27]
+[JPN]
 102を破壊
+[KOR]
+
 
 [0x7b31]
+[JPN]
 104を破壊
+[KOR]
+
 
 [0x7b3b]
+[JPN]
 その他を破壊
+[KOR]
+
 
 [0x7b48]
+[JPN]
 移動しますか？
+[KOR]
+
 
 [0x7b57]
+[JPN]
 ボタンを押しますか？
+[KOR]
+
 
 [0x7b6c]
+[JPN]
 等速速度：
+[KOR]
+
 
 [0x7b7a]
+[JPN]
 加速度：
+[KOR]
+
 
 [0x7b88]
+[JPN]
   踏んだID：
+[KOR]
+
 
 [0x7bb0]
+[JPN]
 その他 ?
+[KOR]
+
 

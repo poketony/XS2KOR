@@ -1,60 +1,122 @@
-﻿[0xefdc]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xefdc]
+[JPN]
 エントランスエントランスエントランスエントランスエントランス
+[KOR]
+
 
 [0xf019]
+[JPN]
 電力供給の平常化にチャレンジしますか？
+[KOR]
+
 
 [0xf040]
+[JPN]
 はい\nいいえ
+[KOR]
+
 
 [0xf04d]
+[JPN]
 これ以上の作業は危険なので中止します。
+[KOR]
+
 
 [0xf074]
+[JPN]
 セイフティー機能の作動を確認。\n電力の供給値を平常値に戻します。
+[KOR]
+
 
 [0xf0b5]
+[JPN]
 100を破壊
+[KOR]
+
 
 [0xf0bf]
+[JPN]
 その他を破壊
+[KOR]
+
 
 [0xf105]
+[JPN]
   踏んだID：
+[KOR]
+
 
 [0xf12d]
+[JPN]
 その他 ?
+[KOR]
+
 
 [0xf141]
+[JPN]
 その他
+[KOR]
+
 
 [0xf15c]
+[JPN]
 01秒経過
+[KOR]
+
 
 [0xf165]
+[JPN]
 02秒経過
+[KOR]
+
 
 [0xf16e]
+[JPN]
 03秒経過
+[KOR]
+
 
 [0xf177]
+[JPN]
 04秒経過
+[KOR]
+
 
 [0xf180]
+[JPN]
 05秒経過
+[KOR]
+
 
 [0xf189]
+[JPN]
 06秒経過
+[KOR]
+
 
 [0xf192]
+[JPN]
 07秒経過
+[KOR]
+
 
 [0xf19b]
+[JPN]
 08秒経過
+[KOR]
+
 
 [0xf1a4]
+[JPN]
 09秒経過
+[KOR]
+
 
 [0xf1ad]
+[JPN]
 10秒経過
+[KOR]
+
 

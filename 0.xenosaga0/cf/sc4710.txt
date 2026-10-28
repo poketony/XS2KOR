@@ -1,78 +1,158 @@
-﻿[0x1a30]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x1a30]
+[JPN]
   誰：
+[KOR]
+
 
 [0x1a37]
+[JPN]
   どこを：
+[KOR]
+
 
 [0x1a42]
+[JPN]
 ロケーター反応キャラ番号：0
+[KOR]
+
 
 [0x1a5e]
+[JPN]
 ロケーター番号：800
+[KOR]
+
 
 [0x1a72]
+[JPN]
 ロケーター番号：802
+[KOR]
+
 
 [0x1a86]
+[JPN]
 その他のロケーター
+[KOR]
+
 
 [0x1a99]
+[JPN]
 ロケーター反応キャラ番号：11
+[KOR]
+
 
 [0x1ac1]
+[JPN]
   破壊番号：
+[KOR]
+
 
 [0x1ace]
+[JPN]
 100を破壊
+[KOR]
+
 
 [0x1ad8]
+[JPN]
 102を破壊
+[KOR]
+
 
 [0x1ae2]
+[JPN]
 104を破壊
+[KOR]
+
 
 [0x1aec]
+[JPN]
 その他を破壊
+[KOR]
+
 
 [0x1af9]
+[JPN]
 [カナン]データのフルバックアップにはしばらくかかる。\nお前達は先にいけ。
+[KOR]
+
 
 [0x1b42]
+[JPN]
 [ジン]さあ、急いで！\nゾハルがある隔離エリアはロックＢの扉の先。\n左手にあるパネルでロック解除できるはずです。
+[KOR]
+
 
 [0x1bb5]
+[JPN]
   状況：
+[KOR]
+
 
 [0x1bbe]
+[JPN]
   誰に？：
+[KOR]
+
 
 [0x1bc9]
+[JPN]
 勝ち
+[KOR]
+
 
 [0x1bce]
+[JPN]
 11のキャラに
+[KOR]
+
 
 [0x1bdb]
+[JPN]
 12のキャラに
+[KOR]
+
 
 [0x1be8]
+[JPN]
 だれ？
+[KOR]
+
 
 [0x1bef]
+[JPN]
 負け
+[KOR]
+
 
 [0x1bf4]
+[JPN]
 ？？
+[KOR]
+
 
 [0x1bf9]
+[JPN]
 ボタンを押しますか？
+[KOR]
+
 
 [0x1c0e]
+[JPN]
 はい\nいいえ
+[KOR]
+
 
 [0x1c2a]
+[JPN]
   踏んだID：
+[KOR]
+
 
 [0x1c40]
+[JPN]
 その他 ?
+[KOR]
+
 

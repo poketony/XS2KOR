@@ -1,3 +1,8 @@
-﻿[0xa469]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xa469]
+[JPN]
 うわぁ
+[KOR]
+
 

@@ -1,54 +1,110 @@
-﻿[0xe28]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xe28]
+[JPN]
   誰：
+[KOR]
+
 
 [0xe2f]
+[JPN]
   どこを：
+[KOR]
+
 
 [0xe3a]
+[JPN]
 ロケーター反応キャラ番号：0
+[KOR]
+
 
 [0xe56]
+[JPN]
 ロケーター番号：800
+[KOR]
+
 
 [0xe6a]
+[JPN]
 ロケーター番号：802
+[KOR]
+
 
 [0xe7e]
+[JPN]
 その他のロケーター
+[KOR]
+
 
 [0xe91]
+[JPN]
 ロケーター反応キャラ番号：11
+[KOR]
+
 
 [0xeb9]
+[JPN]
   破壊番号：
+[KOR]
+
 
 [0xec6]
+[JPN]
 100を破壊
+[KOR]
+
 
 [0xed0]
+[JPN]
 102を破壊
+[KOR]
+
 
 [0xeda]
+[JPN]
 104を破壊
+[KOR]
+
 
 [0xee4]
+[JPN]
 その他を破壊
+[KOR]
+
 
 [0xef1]
+[JPN]
 エルザに戻りますか？
+[KOR]
+
 
 [0xf06]
+[JPN]
 はい\nいいえ
+[KOR]
+
 
 [0xf13]
+[JPN]
 エルザに戻ります。
+[KOR]
+
 
 [0xf26]
+[JPN]
 [Jr.]何とか外壁には取り着いたな、さて内部への侵入ルートを探すとするか。
+[KOR]
+
 
 [0xf73]
+[JPN]
   踏んだID：
+[KOR]
+
 
 [0xf89]
+[JPN]
 その他 ?
+[KOR]
+
 

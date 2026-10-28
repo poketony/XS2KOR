@@ -1,21 +1,44 @@
-﻿[0x7d5d]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x7d5d]
+[JPN]
 リヒャルト
+[KOR]
+
 
 [0x7d68]
+[JPN]
 我が名
+[KOR]
+
 
 [0x7d6f]
+[JPN]
 覚えてくれたかな
+[KOR]
+
 
 [0x7d80]
+[JPN]
 早速だけど
+[KOR]
+
 
 [0x7d8b]
+[JPN]
 余興を楽しむほどの\n時間は無いんだ
+[KOR]
+
 
 [0x7dae]
+[JPN]
 正直　見飽きたよ\n君たちの顔
+[KOR]
+
 
 [0x7dcb]
+[JPN]
 もう　見飽きたんだよ
+[KOR]
+
 

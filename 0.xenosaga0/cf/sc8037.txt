@@ -1,75 +1,152 @@
-﻿[0xfaf7]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xfaf7]
+[JPN]
 ディミトリ
+[KOR]
+
 
 [0xfb02]
+[JPN]
 本当に　あの少年達が\nサクラの治療に役立つと
+[KOR]
+
 
 [0xfb2f]
+[JPN]
 君の娘さんが抱えているのは\n単なる器質疾患ではない
+[KOR]
+
 
 [0xfb62]
+[JPN]
 反ウ・ドゥ波動を有する\nU.R.T.V.との接触は　有益だと思うよ
+[KOR]
+
 
 [0xfb9d]
+[JPN]
 U.M.N.の共時性に対する感受性過敏──
+[KOR]
+
 
 [0xfbc2]
+[JPN]
 狭い宇宙の時代には
+[KOR]
+
 
 [0xfbd5]
+[JPN]
 存在しなかった疾患だわ
+[KOR]
+
 
 [0xfbec]
+[JPN]
 U.M.N.ダイブミッション\nフェーズ6　終了
+[KOR]
+
 
 [0xfc14]
+[JPN]
 U.R.T.V.部隊　No.660から順次\nダイブアウト開始
+[KOR]
+
 
 [0xfc43]
+[JPN]
 ダイブポッド開放します
+[KOR]
+
 
 [0xfc5a]
+[JPN]
 あの子が──
+[KOR]
+
 
 [0xfc67]
+[JPN]
 あの女の子が　言ってた
+[KOR]
+
 
 [0xfc7e]
+[JPN]
 ママを大好きだ　って──
+[KOR]
+
 
 [0xfc97]
+[JPN]
 いつでもママを愛してる　って──\nそう伝えてくれって
+[KOR]
+
 
 [0xfccc]
+[JPN]
 えっと──
+[KOR]
+
 
 [0xfcd7]
+[JPN]
 去年の誕生日に貝殻の宝石箱を貰った　って\nそう言えば　ママには通じるから　って
+[KOR]
+
 
 [0xfd26]
+[JPN]
 ほう　波長が合ったか
+[KOR]
+
 
 [0xfd3b]
+[JPN]
 サクラと話せた──の
+[KOR]
+
 
 [0xfd50]
+[JPN]
 あなた　名前は
+[KOR]
+
 
 [0xfd5f]
+[JPN]
 ルベド\nあ──じゃなくて──
+[KOR]
+
 
 [0xfd7c]
+[JPN]
 U.R.T.V.個体ナンバー666　です
+[KOR]
+
 
 [0xfd9a]
+[JPN]
 ルベド
+[KOR]
+
 
 [0xfda1]
+[JPN]
 これからも　あの子の言葉を私に伝えて\n──お願い
+[KOR]
+
 
 [0xfdd2]
+[JPN]
 はい
+[KOR]
+
 
 [0xfdd7]
+[JPN]
 お母さん──か
+[KOR]
+
 

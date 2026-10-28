@@ -1,90 +1,182 @@
-﻿[0x2c28]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x2c28]
+[JPN]
 E.S.に乗りますか？
+[KOR]
+
 
 [0x2c3b]
+[JPN]
 はい\nいいえ
+[KOR]
+
 
 [0x2c48]
+[JPN]
 E.S.から降りますか？
+[KOR]
+
 
 [0x2cd3]
+[JPN]
   誰：
+[KOR]
+
 
 [0x2cda]
+[JPN]
   どこを：
+[KOR]
+
 
 [0x2ce5]
+[JPN]
 ロケーター反応キャラ番号：0
+[KOR]
+
 
 [0x2d01]
+[JPN]
 ロケーター番号：800
+[KOR]
+
 
 [0x2d15]
+[JPN]
 ロケーター番号：802
+[KOR]
+
 
 [0x2d29]
+[JPN]
 その他のロケーター
+[KOR]
+
 
 [0x2d3c]
+[JPN]
 ロケーター反応キャラ番号：11
+[KOR]
+
 
 [0x2d64]
+[JPN]
   破壊番号：
+[KOR]
+
 
 [0x2d71]
+[JPN]
 102を破壊
+[KOR]
+
 
 [0x2d85]
+[JPN]
 その他を破壊
+[KOR]
+
 
 [0x2d92]
+[JPN]
 11テストメッセージ\n表示中
+[KOR]
+
 
 [0x2dad]
+[JPN]
 12の人です
+[KOR]
+
 
 [0x2dbc]
+[JPN]
   状況：
+[KOR]
+
 
 [0x2dc5]
+[JPN]
   誰に？：
+[KOR]
+
 
 [0x2dd0]
+[JPN]
 勝ち
+[KOR]
+
 
 [0x2dd5]
+[JPN]
 11のキャラに
+[KOR]
+
 
 [0x2de2]
+[JPN]
 12のキャラに
+[KOR]
+
 
 [0x2def]
+[JPN]
 だれ？
+[KOR]
+
 
 [0x2df6]
+[JPN]
 負け
+[KOR]
+
 
 [0x2dfb]
+[JPN]
 ？？
+[KOR]
+
 
 [0x2e00]
+[JPN]
 [シオン]見て。\nラビュリントスのタワーよ。
+[KOR]
+
 
 [0x2e2b]
+[JPN]
 [Ｊｒ.]ああ、\n随分近くまで来たな。\nいよいよだぜ。
+[KOR]
+
 
 [0x2e5f]
+[JPN]
 [モモ]でも、ここから先\nE.S.での潜入は無理そうです。
+[KOR]
+
 
 [0x2e94]
+[JPN]
 [ケイオス]他の入り口を探そう。\nどこかに小さな隙間くらいあるはずだよ。
+[KOR]
+
 
 [0x2ee0]
+[JPN]
   踏んだID：
+[KOR]
+
 
 [0x2ef6]
+[JPN]
 その他 ?
+[KOR]
+
 
 [0x2f0a]
+[JPN]
 その他
+[KOR]
+
 

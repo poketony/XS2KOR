@@ -16,6 +16,7 @@ from pathlib import Path
 
 ENCODING  = 'euc_jis_2004'
 JSON_FILE = 'XENOSAGA KOR-JPN.json'
+BILINGUAL_HEADER = '# SB-TEXT: JPN-KOR v1'
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT = Path(SCRIPT_DIR)
 
@@ -124,6 +125,9 @@ def is_jp(raw):
 
 def parse_txt(content):
     """{abs_off(int): text(str)} 반환."""
+    if is_bilingual(content):
+        originals, translations = parse_bilingual(content)
+        return {off: translations.get(off, text) for off, text in originals.items()}
     result = {}
     current_off   = None
     current_lines = []
@@ -148,6 +152,52 @@ def parse_txt(content):
     return result
 
 
+def is_bilingual(content):
+    return any(line in (BILINGUAL_HEADER, '[JPN]', '[KOR]') or line.startswith('# SB-TEXT:')
+               for line in content.splitlines())
+
+
+def parse_bilingual(content):
+    lines = content.splitlines()
+    if not lines or lines[0] != BILINGUAL_HEADER:
+        raise ValueError('JPN/KOR TXT 형식 헤더가 없거나 지원하지 않는 버전입니다')
+    originals, translations = {}, {}
+    current, section, fields = None, None, {}
+
+    def finish():
+        if current is None:
+            return
+        if 'JPN' not in fields:
+            raise ValueError(f'{hex(current)}: [JPN]이 없습니다')
+        originals[current] = '\n'.join(fields['JPN']).rstrip('\n')
+        value = '\n'.join(fields.get('KOR', [])).rstrip('\n')
+        if value.strip():
+            translations[current] = value
+
+    for line_number, line in enumerate(lines[1:], 2):
+        address = re.fullmatch(r'\[(0x[0-9a-fA-F]+)\]', line)
+        if address:
+            finish()
+            current = int(address[1], 16)
+            if current in originals:
+                raise ValueError(f'중복 offset {hex(current)}: {line_number}행')
+            section, fields = None, {}
+        elif line in ('[JPN]', '[KOR]'):
+            name = line[1:-1]
+            if current is None or name in fields or (name == 'KOR' and 'JPN' not in fields):
+                raise ValueError(f'잘못된 JPN/KOR 구획: {line_number}행')
+            if name == 'JPN' and section is not None:
+                raise ValueError(f'JPN/KOR 순서 오류: {line_number}행')
+            section = name
+            fields[name] = []
+        elif section is not None:
+            fields[section].append(line)
+        elif line:
+            raise ValueError(f'구획 밖 내용: {line_number}행')
+    finish()
+    return originals, translations
+
+
 # ── JSON 치환표 ─────────────────────────────────────────────
 
 def convert(text, table):
@@ -156,11 +206,15 @@ def convert(text, table):
 
 # ── extract ─────────────────────────────────────────────────
 
-def export_text(data):
+def export_text(data, bilingual=False):
     hdr  = parse_header(data)
     pool = read_pool(data, hdr['sp_start'], hdr['sp_end'])
-    return ''.join(f'[{hex(off)}]\n{raw_to_text(raw).replace(chr(10), "[n]")}\n\n'
-                   for off, raw in pool if is_jp(raw))
+    entries = [(off, raw_to_text(raw).replace(chr(10), '[n]'))
+               for off, raw in pool if is_jp(raw)]
+    if bilingual:
+        return BILINGUAL_HEADER + '\n\n' + ''.join(
+            f'[{hex(off)}]\n[JPN]\n{text}\n[KOR]\n\n' for off, text in entries)
+    return ''.join(f'[{hex(off)}]\n{text}\n\n' for off, text in entries)
 
 
 # ── import ──────────────────────────────────────────────────
@@ -230,13 +284,22 @@ def build(data, content, table):
         raise ValueError('치환표가 비어 있습니다')
     hdr    = parse_header(data)
     pool   = read_pool(data, hdr['sp_start'], hdr['sp_end'])
-    translations = parse_txt(content)
+    originals = None
+    if is_bilingual(content):
+        originals, translations = parse_bilingual(content)
+        source_text = {off: raw_to_text(raw).replace(chr(10), '[n]') for off, raw in pool}
+        for off, text in originals.items():
+            if off not in source_text or text != source_text[off]:
+                raise ValueError(f'{hex(off)}: JPN이 원본 SB와 다릅니다')
+    else:
+        translations = parse_txt(content)
 
     pool_offsets = {abs_off for abs_off, _raw in pool}
     translatable = [(abs_off, raw) for abs_off, raw in pool if raw and is_jp(raw)]
     translatable_offsets = {abs_off for abs_off, _raw in translatable}
-    missing = sorted(translatable_offsets - set(translations))
-    extra = sorted(set(translations) - pool_offsets)
+    listed = set(originals if originals is not None else translations)
+    missing = sorted(translatable_offsets - listed)
+    extra = sorted(listed - pool_offsets)
 
     if missing:
         raise ValueError('번역 누락 offset: ' + ', '.join(map(hex, missing)))
@@ -379,7 +442,7 @@ def main(argv=None):
             source, data, _record = load_source(args[0], catalog)
             target = source.with_suffix('.txt')
             with target.open('x', encoding='utf-8-sig', newline='\n') as stream:
-                stream.write(export_text(data))
+                stream.write(export_text(data, bilingual=source.parent == ROOT / 'cf'))
             print(f'[SAVED] {target}')
             return 0
         if cmd == 'import' and len(args) == 2:

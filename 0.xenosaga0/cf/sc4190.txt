@@ -1,24 +1,50 @@
-﻿[0xe84]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xe84]
+[JPN]
   取得番号：
+[KOR]
+
 
 [0xe91]
+[JPN]
 300を取得
+[KOR]
+
 
 [0xe9b]
+[JPN]
 301を取得
+[KOR]
+
 
 [0xea5]
+[JPN]
 302を取得
+[KOR]
+
 
 [0xeaf]
+[JPN]
 350を取得
+[KOR]
+
 
 [0xeb9]
+[JPN]
 その他を取得
+[KOR]
+
 
 [0xecb]
+[JPN]
   踏んだID：
+[KOR]
+
 
 [0xee1]
+[JPN]
 その他 ?
+[KOR]
+
 

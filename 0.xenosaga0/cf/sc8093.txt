@@ -1,3 +1,8 @@
-﻿[0xf2e]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xf2e]
+[JPN]
 ヴェクター・インダストリー　“曙光”
+[KOR]
+
 

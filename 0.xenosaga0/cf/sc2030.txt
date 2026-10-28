@@ -1,9 +1,20 @@
-﻿[0x193e]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x193e]
+[JPN]
 その他 ?
+[KOR]
+
 
 [0x194f]
+[JPN]
 jumpJr.サクラとの出会い
+[KOR]
+
 
 [0x196f]
+[JPN]
 その他を破壊
+[KOR]
+
 

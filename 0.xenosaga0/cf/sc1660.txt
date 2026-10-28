@@ -1,18 +1,38 @@
-﻿[0x7e8]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x7e8]
+[JPN]
   取得番号：
+[KOR]
+
 
 [0x7f5]
+[JPN]
 300を取得
+[KOR]
+
 
 [0x7ff]
+[JPN]
 301を取得
+[KOR]
+
 
 [0x809]
+[JPN]
 302を取得
+[KOR]
+
 
 [0x813]
+[JPN]
 その他を取得
+[KOR]
+
 
 [0x82e]
+[JPN]
 その他 ?
+[KOR]
+
 

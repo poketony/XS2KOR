@@ -1,72 +1,146 @@
-﻿[0xae8]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xae8]
+[JPN]
   誰：
+[KOR]
+
 
 [0xaef]
+[JPN]
   どこを：
+[KOR]
+
 
 [0xafa]
+[JPN]
 ロケーター反応キャラ番号：0
+[KOR]
+
 
 [0xb16]
+[JPN]
 ロケーター番号：800
+[KOR]
+
 
 [0xb2a]
+[JPN]
 ロケーター番号：802
+[KOR]
+
 
 [0xb3e]
+[JPN]
 その他のロケーター
+[KOR]
+
 
 [0xb51]
+[JPN]
 ロケーター反応キャラ番号：11
+[KOR]
+
 
 [0xb79]
+[JPN]
   破壊番号：
+[KOR]
+
 
 [0xb86]
+[JPN]
 100を破壊
+[KOR]
+
 
 [0xb90]
+[JPN]
 102を破壊
+[KOR]
+
 
 [0xb9a]
+[JPN]
 104を破壊
+[KOR]
+
 
 [0xba4]
+[JPN]
 その他を破壊
+[KOR]
+
 
 [0xbb1]
+[JPN]
 11テストメッセージ\n表示中
+[KOR]
+
 
 [0xbcc]
+[JPN]
 12の人です
+[KOR]
+
 
 [0xbdb]
+[JPN]
   状況：
+[KOR]
+
 
 [0xbe4]
+[JPN]
   誰に？：
+[KOR]
+
 
 [0xbef]
+[JPN]
 勝ち
+[KOR]
+
 
 [0xbf4]
+[JPN]
 11のキャラに
+[KOR]
+
 
 [0xc01]
+[JPN]
 12のキャラに
+[KOR]
+
 
 [0xc0e]
+[JPN]
 だれ？
+[KOR]
+
 
 [0xc15]
+[JPN]
 負け
+[KOR]
+
 
 [0xc1a]
+[JPN]
 ？？
+[KOR]
+
 
 [0xc24]
+[JPN]
   踏んだID：
+[KOR]
+
 
 [0xc4c]
+[JPN]
 その他 ?
+[KOR]
+
 

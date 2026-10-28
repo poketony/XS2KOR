@@ -1,45 +1,92 @@
-﻿[0xa64]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xa64]
+[JPN]
 ロケーター反応キャラ番号：0
+[KOR]
+
 
 [0xa84]
+[JPN]
 ロケーター番号：800
+[KOR]
+
 
 [0xa9c]
+[JPN]
 ロケーター番号：802
+[KOR]
+
 
 [0xab0]
+[JPN]
 その他のロケーター
+[KOR]
+
 
 [0xac3]
+[JPN]
 ロケーター反応キャラ番号：11
+[KOR]
+
 
 [0xaeb]
+[JPN]
 50を破壊
+[KOR]
+
 
 [0xaf4]
+[JPN]
 52を破壊
+[KOR]
+
 
 [0xafd]
+[JPN]
 54を破壊
+[KOR]
+
 
 [0xb06]
+[JPN]
 その他を破壊
+[KOR]
+
 
 [0xb4f]
+[JPN]
   取得番号：
+[KOR]
+
 
 [0xb5c]
+[JPN]
 300を取得
+[KOR]
+
 
 [0xb66]
+[JPN]
 301を取得
+[KOR]
+
 
 [0xb70]
+[JPN]
 302を取得
+[KOR]
+
 
 [0xb7a]
+[JPN]
 その他を取得
+[KOR]
+
 
 [0xb95]
+[JPN]
 その他 ?
+[KOR]
+
 

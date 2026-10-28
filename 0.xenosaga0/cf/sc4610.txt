@@ -1,84 +1,170 @@
-﻿[0x3ccc]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x3ccc]
+[JPN]
   誰：
+[KOR]
+
 
 [0x3cd3]
+[JPN]
   どこを：
+[KOR]
+
 
 [0x3cde]
+[JPN]
 ロケーター反応キャラ番号：0
+[KOR]
+
 
 [0x3cfa]
+[JPN]
 ロケーター番号：800
+[KOR]
+
 
 [0x3d0e]
+[JPN]
 ロケーター番号：802
+[KOR]
+
 
 [0x3d22]
+[JPN]
 その他のロケーター
+[KOR]
+
 
 [0x3d35]
+[JPN]
 ロケーター反応キャラ番号：11
+[KOR]
+
 
 [0x3d5d]
+[JPN]
   破壊番号：
+[KOR]
+
 
 [0x3d6a]
+[JPN]
 100を破壊
+[KOR]
+
 
 [0x3d74]
+[JPN]
 102を破壊
+[KOR]
+
 
 [0x3d7e]
+[JPN]
 104を破壊
+[KOR]
+
 
 [0x3d88]
+[JPN]
 その他を破壊
+[KOR]
+
 
 [0x3d95]
+[JPN]
 11テストメッセージ\n表示中
+[KOR]
+
 
 [0x3db0]
+[JPN]
 12の人です
+[KOR]
+
 
 [0x3dbf]
+[JPN]
   状況：
+[KOR]
+
 
 [0x3dc8]
+[JPN]
   誰に？：
+[KOR]
+
 
 [0x3dd3]
+[JPN]
 勝ち
+[KOR]
+
 
 [0x3dd8]
+[JPN]
 11のキャラに
+[KOR]
+
 
 [0x3de5]
+[JPN]
 12のキャラに
+[KOR]
+
 
 [0x3df2]
+[JPN]
 だれ？
+[KOR]
+
 
 [0x3df9]
+[JPN]
 負け
+[KOR]
+
 
 [0x3dfe]
+[JPN]
 ？？
+[KOR]
+
 
 [0x3e03]
+[JPN]
 [Jr.]ラビュリントスの中枢に行くには\nこの水路を抜けるしかないな。
+[KOR]
+
 
 [0x3e4f]
+[JPN]
 ボタンを押しますか？
+[KOR]
+
 
 [0x3e64]
+[JPN]
 はい\nいいえ
+[KOR]
+
 
 [0x3e76]
+[JPN]
   踏んだID：
+[KOR]
+
 
 [0x3e9e]
+[JPN]
 その他 ?
+[KOR]
+
 
 [0x3eb2]
+[JPN]
 その他
+[KOR]
+
 
