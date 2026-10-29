@@ -188,3 +188,10 @@ Disc 1에는 `slps_253.68.new`, Disc 2에는 `SLPS_253.69.new`를 `.new`를 뺀 
 메인 메뉴 아이템 목록도 이름 안의 반각 공백만 좁힙니다(`나노 리페어 A` 등).
 개수 칸·선택/사용 불가 표시·다른 목록은 유지합니다. ELF만 갱신하면 됩니다.
 검증/근거: `codex-lab/context-font/menu-item-spacing/README.md`.
+
+NEW GAME 특전창·초기 설정창 및 일반 설정 메뉴에도 반각 공백 전용 보정을 적용합니다.
+하단 중앙 문구와 획득 제목/느낌표 위치는 줄어든 폭에 맞췄고, 여러 줄 안내와 설정 항목/값은
+각자의 왼쪽 기준을 유지합니다. 이미 좁은 상단 비례폭 작품 목록과 글자별 설명 출력은 그대로입니다.
+이 변경에 MainMenu.txd·폰트 재교체는 필요하지 않습니다.
+최신 종합 검증: `python -B codex-lab/context-font/title-options-spacing/validate.py --deployed`.
+분석·범위·좌표·오프라인 비교: `codex-lab/context-font/title-options-spacing/README.md`.

@@ -86,6 +86,36 @@ def rebuild_directory(work):
     return REBUILT / work.name
 
 
+def resolve_rebuild_work(work):
+    if work is None:
+        try:
+            name = input('Folder name (example: ce001_999, or esd/ce001_999): ').strip()
+        except EOFError:
+            name = ''
+        if not name:
+            raise ValueError('No folder entered; nothing was rebuilt')
+        if len(name) >= 2 and name[0] == name[-1] == '"':
+            name = name[1:-1]
+        work = Path(name)
+    if work.name.lower() == 'manifest.json':
+        work = work.parent
+    if work.is_absolute() or work.drive:
+        return work
+    if work.parts and work.parts[0] in ('esd', 'esp'):
+        return EXTRACT / work
+    if work.parts and work.parts[0] == 'graphics_extract':
+        return ROOT / work
+    if len(work.parts) == 1 and work.name not in ('.', '..'):
+        candidates = [EXTRACT / kind / work for kind in ('esd', 'esp')]
+        matches = [p for p in candidates if p.is_dir() and (p / 'manifest.json').is_file()]
+        if len(matches) > 1:
+            raise ValueError(f'Ambiguous folder {work}: enter esd/{work} or esp/{work}')
+        if not matches:
+            raise ValueError(f'Exported folder not found: {work}; check graphics_extract/esd or esp')
+        return matches[0]
+    return work
+
+
 def payload(data, block):
     start = block["offset"] + 64
     return data[start:start + block["payload_size"]]
@@ -462,7 +492,7 @@ def main():
     exp.add_argument("--all-images", action="store_true", help="Explicit opt-in for non-text effects")
     sub.add_parser("export-text", help="Export only the reviewed text selection from original")
     build = sub.add_parser("rebuild")
-    build.add_argument("work", type=Path)
+    build.add_argument("work", type=Path, nargs="?")
     build.add_argument("destination", type=Path, nargs="?")
     build.add_argument("--sync-root", type=Path)
     check = sub.add_parser("audit")
@@ -478,7 +508,7 @@ def main():
         elif args.command == "export-text":
             result = export_text()
         elif args.command == "rebuild":
-            work = args.work.parent if args.work.name.lower() == "manifest.json" else args.work
+            work = resolve_rebuild_work(args.work)
             destination = args.destination or rebuild_directory(work)
             result = rebuild(work, destination, args.sync_root)
         else:

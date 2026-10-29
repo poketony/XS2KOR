@@ -67,6 +67,35 @@ DYNAMIC_SLOT_IDS = {218, 539, 541, 543, 544, 545, 546, 547, 548}
 # Never include character names, play times, numeric fields or image widgets.
 STATUS_SPACE_CALLS = (0x233AB4, 0x2347B0, 0x234B80, 0x234BC8, 0x234BEC, 0x234C54)
 MENU_ITEM_NAME_SPACE_CALLS = (0x21B858,)
+TITLE_SPACE_CALLS = (
+    0x236DDC, 0x236DF8, 0x236E9C, 0x236EC8, 0x236F0C,
+    0x236FB4, 0x236FD0, 0x236FEC, 0x237034, 0x237050,
+    0x23709C, 0x2370B8, 0x237164, 0x237180,
+    0x237290, 0x2372B4, 0x2372D8, 0x2372FC, 0x237324, 0x23734C,
+    0x2373AC, 0x2373C8, 0x21FAE0, 0x21FB1C, 0x21FB54,
+)
+TITLE_SPACE_TAILS = (0x236E4C, 0x236F38, 0x236F64, 0x236F94, 0x237018,
+                     0x23707C, 0x237148, 0x237210, 0x23723C)
+# Coordinates reviewed with the actual zoom13 renderer and narrowed spaces.
+TITLE_CENTER_X = {206: 67, 207: 135, 209: 165, 211: 214, 212: 97,
+                  213: 165, 215: 145, 216: 225, 559: 169}
+TITLE_LAYOUT_PATCHES = (
+    (0x236DD0, 0x24040030, 0x24040043),
+    (0x236DEC, 0x24040088, 0x24040087),
+    (0x236F48, 0x240400A8, 0x240400A9),
+    (0x236F78, 0x240400A0, 0x240400A5),
+    (0x237090, 0x24040090, 0x24040091),
+    (0x2370AC, 0x240400B8, 0x240400D6),
+    (0x237174, 0x240400B8, 0x240400D6),
+    (0x2370DC, 0x24050133, 0x2405011F),
+    (0x2371A4, 0x24050133, 0x2405011F),
+    (0x23710C, 0x24050132, 0x2405011E),
+    (0x2371D4, 0x24050132, 0x2405011E),
+    (0x23712C, 0x24040070, 0x24040061),
+    (0x237158, 0x240400E0, 0x240400E1),
+    (0x2371F4, 0x240400B0, 0x240400A5),
+    (0x237220, 0x240400A8, 0x240400A9),
+)
 ITEM_COUNT_WRITES = {
     0x5651C0: ((0x0CFF24, 0xA2C30002), (0x0CFF2C, 0xA2C60003)),
     0x578D98: ((0x0DBF54, 0xA0430002), (0x0DBF5C, 0xA0470003)),
@@ -804,16 +833,24 @@ def popup_font_regions():
         *((address - 0x11F000, struct.pack('<I', 0x0C08585C),
            struct.pack('<I', 0x0C000000 | (queue_labels['space'] >> 2)))
           for address in STATUS_SPACE_CALLS + MENU_ITEM_NAME_SPACE_CALLS),
+        *((address - 0x11F000, struct.pack('<I', 0x0C08585C),
+           struct.pack('<I', 0x0C000000 | (queue_labels['space'] >> 2)))
+          for address in TITLE_SPACE_CALLS),
+        *((address - 0x11F000, struct.pack('<I', 0x0808585C),
+           struct.pack('<I', 0x08000000 | (queue_labels['space'] >> 2)))
+          for address in TITLE_SPACE_TAILS),
         (0x112000, struct.pack('<I', 0x8F83AA00), struct.pack('<I', jump(measure_labels['wide']))),
         (0x1120F0, struct.pack('<II', 0x8F82AA00, 0x000210C0), struct.pack('<II', jump(metric), 0)),
     ]
 
 
 def runtime_regions():
+    menu = {address: (before, after) for address, before, after in MENU_PATCHES}
+    menu.update({address: (before, after) for address, before, after in TITLE_LAYOUT_PATCHES})
     return ([(offset, bytes.fromhex(before), bytes.fromhex(after))
              for offset, before, after in SPACING_PATCHES]
             + [(address - 0x11F000, struct.pack("<I", before), struct.pack("<I", after))
-               for address, before, after in MENU_PATCHES]
+               for address, (before, after) in menu.items()]
             + save_title_regions() + popup_font_regions())
 
 
@@ -897,8 +934,11 @@ def build_menu_txd(text, table, font):
     for i, marker in enumerate(markers):
         end = markers[i + 1].start() if i + 1 < len(markers) else len(text)
         entries[i] = text[marker.end():end].rstrip("\n")
-    expected = {211: "특전 획득", 212: "지기와 $prop1;KOS-MOS$prop0;의 수영복 스킬을 획득했다",
-                213: "노인용 수영복을 획득했다"}
+    expected = {206: "Xenosaga EPISODE [0xADB6]의 특전을 선물!",
+                207: "클리어 데이터를 체크하겠습니까?", 209: "클리어 데이터가 없습니다",
+                211: "특전 획득", 212: "지기와 $prop1;KOS-MOS$prop0;의 수영복 스킬을 획득했다",
+                213: "노인용 수영복을 획득했다", 215: "EP 1 or EP 1 리로디드",
+                216: "제노코미", 559: "불러오기에 실패했습니다"}
     if any(entries[i] != value for i, value in expected.items()) or "$han1;" not in entries[34]:
         raise ValueError("MainMenu reward text/font setup changed; review fixed coordinates")
     if not entries[224].startswith("클리어 데이터"):

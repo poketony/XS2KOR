@@ -1,36 +1,74 @@
-﻿[0xd758]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xd758]
+[JPN]
+$zoom13;冥界の血印（ＨＰドレイン）
+[KOR]
 $zoom13;명계의 혈인(HP 드레인)
 
 [0xd77b]
+[JPN]
+$zoom13;冥界の霊印（ＥＰドレイン）
+[KOR]
 $zoom13;명계의 영인(EP 드레인)
 
 [0xd79e]
-$zoom13;연옥의 불꽃(화염)
+[JPN]
+$zoom13;煉獄の炎（炎）
+[KOR]
+$zoom13;연옥의 불꽃(불꽃)
 
 [0xd7b5]
+[JPN]
+$zoom13;不生の冷（冷）
+[KOR]
 $zoom13;불생의 냉기(냉기)
 
 [0xd7cc]
+[JPN]
+$zoom13;裁きの雷（雷）
+[KOR]
 $zoom13;심판의 번개(번개)
 
 [0xd7e3]
+[JPN]
+$zoom13;癒しの雫
+[KOR]
 $zoom13;치유의 물방울
 
 [0xd7f4]
+[JPN]
+$zoom13;滅殺陣
+[KOR]
 $zoom13;멸살진
 
 [0xd803]
+[JPN]
+$zoom13;ブーストワン
+[KOR]
 $zoom13;부스트 원
 
 [0xd818]
-$zoom13;호란도(베기·번개)
+[JPN]
+$zoom13;虎乱刀（斬・雷）
+[KOR]
+$zoom13;호란도(참격·번개)
 
 [0xd831]
-$zoom13;사파참(베기·화염)
+[JPN]
+$zoom13;蛇波斬（斬・炎）
+[KOR]
+$zoom13;사파참(참격·불꽃)
 
 [0xd84a]
+[JPN]
+$zoom13;剣の風
+[KOR]
 $zoom13;검의 바람
 
 [0xd859]
+[JPN]
+$zoom13;剣の舞
+[KOR]
 $zoom13;검무
 

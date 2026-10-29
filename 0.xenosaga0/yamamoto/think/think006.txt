@@ -1,93 +1,188 @@
-﻿[0xd948]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xd948]
+[JPN]
+勝利者ゆにっときゃんせる！！！
+[KOR]
 승리자 유닛 취소!!!
 
 [0xd967]
+[JPN]
+■■■■■■■敵のアタック
+[KOR]
 ■■■■■■■적의 공격
 
 [0xd982]
+[JPN]
+■■■■■■■ろ〜〜〜〜〜んぐこ〜〜〜〜〜る
+[KOR]
 ■■■■■■■로~~~~~옹 코~~~~~올
 
 [0xd9af]
+[JPN]
+■■■■モモの技＝
+[KOR]
 ■■■■모모의 기술=
 
 [0xd9c2]
+[JPN]
+きゃんせる
+[KOR]
 취소
 
 [0xd9d5]
-$zoom13;5.56mm U-TIC탄(찌르기)
+[JPN]
+$zoom13;５．５６ｍｍＵ−ＴＩＣ弾（突）
+[KOR]
+$zoom13;5.56mm U-TIC탄(돌격)
 
 [0xd9fc]
-$zoom13;하이암즈 M87R(찌르기)
+[JPN]
+$zoom13;ハイアムズＭ８７Ｒ（突）
+[KOR]
+$zoom13;하이암즈 M87R(돌격)
 
 [0xda1d]
+[JPN]
+$zoom13;ＥＡＰ弾（Ｂ）
+[KOR]
 $zoom13;EAP탄(B)
 
 [0xda34]
+[JPN]
+$zoom14;$colc0c0c0;　対象者の活力を読んだ\n$col7AF9FB;　物理攻撃力が上昇した
+[KOR]
 $zoom14;$colc0c0c0;　대상자의 활력을 읽었다\n$col7AF9FB;　물리 공격력이 상승했다
 
 [0xda81]
+[JPN]
+$zoom14;$colc0c0c0;　対象者の精神力を読んだ\n$col7AF9FB;　エーテル攻撃力が上昇した
+[KOR]
 $zoom14;$colc0c0c0;　대상자의 정신력을 읽었다\n$col7AF9FB;　에테르 공격력이 상승했다
 
 [0xdad4]
+[JPN]
+■■リフレッシュ１
+[KOR]
 ■■리프레시 1
 
 [0xdae7]
+[JPN]
+■■リフレッシュ2
+[KOR]
 ■■리프레시 2
 
 [0xdaf9]
+[JPN]
+■■ユニットナンバー
+[KOR]
 ■■유닛 번호
 
 [0xdb0e]
+[JPN]
+$zoom14;$colc0c0c0;テレパシーの効力が弱まった
+[KOR]
 $zoom14;$colc0c0c0;텔레파시의 효력이 약해졌다
 
 [0xdb3c]
+[JPN]
 ■■ATK_Phase2
+[KOR]
+
 
 [0xdb4b]
+[JPN]
 ■■ATK_Phase3
+[KOR]
+
 
 [0xdb5a]
+[JPN]
 ■■ATK_Phase4
+[KOR]
+
 
 [0xdb69]
+[JPN]
 ■■ATK_Phase5
+[KOR]
+
 
 [0xdb78]
-$zoom13;그립스 클로(베기)
+[JPN]
+$zoom13;グリプスクロウ（斬）
+[KOR]
+$zoom13;그립스 클로(참격)
 
 [0xdb95]
-$zoom13;파이어 브레스(화염)
+[JPN]
+$zoom13;ファイヤーブレス（炎）
+[KOR]
+$zoom13;파이어 브레스(불꽃)
 
 [0xdbb4]
+[JPN]
+$zoom13;邪視（Ｈストップ）
+[KOR]
 $zoom13;사시(H 스톱)
 
 [0xdbcf]
+[JPN]
+$zoom13;邪眼（Ｌスタン）
+[KOR]
 $zoom13;사안(L 스턴)
 
 [0xdbe8]
+[JPN]
+$zoom13;リフレッシュＬ
+[KOR]
 $zoom13;리프레시 L
 
 [0xdbff]
+[JPN]
+$zoom13;リフレッシュＨ
+[KOR]
 $zoom13;리프레시 H
 
 [0xdc16]
+[JPN]
+$zoom13;テレパシー（ＨＰドレイン）
+[KOR]
 $zoom13;텔레파시(HP 드레인)
 
 [0xdc39]
+[JPN]
+$zoom13;テレパシー（ＥＰドレイン）
+[KOR]
 $zoom13;텔레파시(EP 드레인)
 
 [0xdc5c]
+[JPN]
+$zoom13;フレアブラスト
+[KOR]
 $zoom13;플레어 블래스트
 
 [0xdc73]
-■■상태 이상 H
+[JPN]
+■■ステータス異常Ｈ
+[KOR]
+■■스테이터스 이상 H
 
 [0xdc88]
-■■상태 이상 L
+[JPN]
+■■ステータス異常Ｌ
+[KOR]
+■■스테이터스 이상 L
 
 [0xdc9d]
+[JPN]
+■■異常者なし
+[KOR]
 ■■이상자 없음
 
 [0xdcac]
+[JPN]
+■■生存者
+[KOR]
 ■■생존자
 

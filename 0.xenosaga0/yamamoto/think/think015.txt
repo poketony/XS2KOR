@@ -1,48 +1,98 @@
-﻿[0xe5d2]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xe5d2]
+[JPN]
+$zoom13;センテンツァ（打・Ｌスロウ）
+[KOR]
 $zoom13;센텐차(타격·L 슬로)
 
 [0xe5f7]
+[JPN]
+$zoom13;ファインレイ（Ｂ）
+[KOR]
 $zoom13;파인 레이(B)
 
 [0xe612]
+[JPN]
+$zoom13;センテンツァ（打）
+[KOR]
 $zoom13;센텐차(타격)
 
 [0xe62d]
+[JPN]
+$zoom13;リフレッシュＬ
+[KOR]
 $zoom13;리프레시 L
 
 [0xe644]
+[JPN]
+$zoom13;リフレッシュＨ
+[KOR]
 $zoom13;리프레시 H
 
 [0xe65b]
+[JPN]
+$zoom13;シェイブアイ（Ｌブラック）
+[KOR]
 $zoom13;셰이브 아이(L 블랙)
 
 [0xe67e]
+[JPN]
+$zoom13;メディカ
+[KOR]
 $zoom13;메디카
 
 [0xe68f]
+[JPN]
+$zoom13;アーマーフィールド
+[KOR]
 $zoom13;아머 필드
 
 [0xe6aa]
+[JPN]
+$zoom13;雷の恩寵
+[KOR]
 $zoom13;번개의 은총
 
 [0xe6bb]
+[JPN]
+$zoom14;$col7AF9FB;センテンツァに雷のエーテルが満ちた$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;센텐차에 번개 에테르가 충만해졌다$colc0c0c0;
 
 [0xe76a]
-$zoom13;앵퓔시옹(찌르기·L 위크)
+[JPN]
+$zoom13;アンピュルシオン（突・Ｌウィーク）
+[KOR]
+$zoom13;앵퓔시옹(돌격·L 위크)
 
 [0xe795]
-$zoom13;에갈리테 런처(화염)
+[JPN]
+$zoom13;エガリテランチャー（炎）
+[KOR]
+$zoom13;에갈리테 런처(불꽃)
 
 [0xe7b6]
+[JPN]
+$zoom13;アタッカー
+[KOR]
 $zoom13;어태커
 
 [0xe7c9]
+[JPN]
+$zoom14;$col7AF9FB;自律プログラムが攻撃型へシフトした$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;자율 프로그램이 공격형으로 전환됐다$colc0c0c0;
 
 [0xe80a]
+[JPN]
+$zoom13;追加弾倉転送
+[KOR]
 $zoom13;추가 탄창 전송
 
 [0xe81f]
+[JPN]
+$zoom14;$col7AF9FB;エガリテに追加弾倉が転送された$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;에갈리테에 추가 탄창이 전송됐다$colc0c0c0;
 

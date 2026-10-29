@@ -1,72 +1,146 @@
-﻿[0xe724]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xe724]
+[JPN]
+勝利者ゆにっときゃんせる！！！
+[KOR]
 승리자 유닛 취소!!!
 
 [0xe743]
+[JPN]
+■■■■■■■敵のアタック
+[KOR]
 ■■■■■■■적의 공격
 
 [0xe75e]
+[JPN]
+■■■■■■■ろ〜〜〜〜〜んぐこ〜〜〜〜〜る
+[KOR]
 ■■■■■■■로~~~~~옹 코~~~~~올
 
 [0xe78b]
+[JPN]
+■■■■モモの技＝
+[KOR]
 ■■■■모모의 기술=
 
 [0xe79e]
+[JPN]
+きゃんせる
+[KOR]
 취소
 
 [0xe7a9]
-$zoom13;리프 어택(베기·L 포이즌)
+[JPN]
+$zoom13;リープアタック（斬・Ｌポイズン）
+[KOR]
+$zoom13;리프 어택(참격·L 포이즌)
 
 [0xe7d2]
+[JPN]
+$zoom13;チャージ（打）
+[KOR]
 $zoom13;차지(타격)
 
 [0xe7e9]
+[JPN]
+$col7AF9FB;$zoom15;　お前の美しさが憎い…
+[KOR]
 $col7AF9FB;$zoom15;　네 아름다움이 미워…
 
 [0xe813]
+[JPN]
+$col7AF9FB;$zoom15;　お前の強さが憎い…
+[KOR]
 $col7AF9FB;$zoom15;　네 강함이 미워…
 
 [0xe83b]
+[JPN]
+$col7AF9FB;$zoom15;　お前の可愛さが憎い…
+[KOR]
 $col7AF9FB;$zoom15;　네 귀여움이 미워…
 
 [0xe865]
+[JPN]
+$zoom13;避けるほどの視線（雷）
+[KOR]
 $zoom13;피하고 싶은 시선(번개)
 
 [0xe884]
+[JPN]
+$zoom13;セイラムの涙（Ｌウィーク）
+[KOR]
 $zoom13;세일럼의 눈물(L 위크)
 
 [0xe8a7]
+[JPN]
+$zoom13;セイラムの涙（Ｌスロウ）
+[KOR]
 $zoom13;세일럼의 눈물(L 슬로)
 
 [0xe8c8]
+[JPN]
+$col7AF9FB;$zoom15;　オーバーロード（筋力低下）
+[KOR]
 $col7AF9FB;$zoom15;　오버로드(근력 저하)
 
 [0xe8f8]
-$zoom13;집행(베기)
+[JPN]
+$zoom13;執行（斬）
+[KOR]
+$zoom13;집행(참격)
 
 [0xe90b]
-$zoom13;잭 케치는 살인자다(베기)
+[JPN]
+$zoom13;ジャック・ケッチは殺し屋だ（斬）
+[KOR]
+$zoom13;잭 케치는 살인자다(참격)
 
 [0xe934]
+[JPN]
+$zoom13;筋肉増強剤
+[KOR]
 $zoom13;근육 증강제
 
 [0xe947]
+[JPN]
+$zoom13;第一角笛（打）
+[KOR]
 $zoom13;첫 번째 뿔피리(타격)
 
 [0xe95e]
+[JPN]
+$col7AF9FB;$zoom15;　全味方の攻撃能力をアップ！
+[KOR]
 $col7AF9FB;$zoom15;　아군 전체의 공격 능력 상승!
 
 [0xe98e]
+[JPN]
+$zoom13;第二角笛
+[KOR]
 $zoom13;두 번째 뿔피리
 
 [0xe99f]
+[JPN]
+$zoom13;第三角笛（Ｌポイズン）
+[KOR]
 $zoom13;세 번째 뿔피리(L 포이즌)
 
 [0xe9be]
-$zoom13;풀 스로틀(화염)
+[JPN]
+$zoom13;フルスロットル（炎）
+[KOR]
+$zoom13;풀 스로틀(불꽃)
 
 [0xe9db]
-$zoom13;우정의 증표(화염)
+[JPN]
+$zoom13;友情の証（炎）
+[KOR]
+$zoom13;우정의 증표(불꽃)
 
 [0xe9f2]
+[JPN]
+$zoom13;ブーストプレゼント
+[KOR]
 $zoom13;부스트 프레젠트
 

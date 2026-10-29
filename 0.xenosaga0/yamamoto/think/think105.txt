@@ -1,36 +1,74 @@
-﻿[0xbe70]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xbe70]
+[JPN]
+$zoom14;$colc0c0c0;　対象者の活力を読んだ\n$col7AF9FB;　物理攻撃力が上昇した
+[KOR]
 $zoom14;$colc0c0c0;　대상자의 활력을 읽었다\n$col7AF9FB;　물리 공격력이 상승했다
 
 [0xbebd]
+[JPN]
+$zoom14;$colc0c0c0;　対象者の精神力を読んだ\n$col7AF9FB;　エーテル攻撃力が上昇した
+[KOR]
 $zoom14;$colc0c0c0;　대상자의 정신력을 읽었다\n$col7AF9FB;　에테르 공격력이 상승했다
 
 [0xbf10]
+[JPN]
+$zoom14;$colc0c0c0;テレパシーの効力が弱まった
+[KOR]
 $zoom14;$colc0c0c0;텔레파시의 효력이 약해졌다
 
 [0xbf3e]
-$zoom13;그립스 클로(베기)
+[JPN]
+$zoom13;グリプスクロウ（斬）
+[KOR]
+$zoom13;그립스 클로(참격)
 
 [0xbf5b]
-$zoom13;파이어 브레스(화염)
+[JPN]
+$zoom13;ファイヤーブレス（炎）
+[KOR]
+$zoom13;파이어 브레스(불꽃)
 
 [0xbf7a]
+[JPN]
+$zoom13;邪視（Ｈストップ）
+[KOR]
 $zoom13;사시(H 스톱)
 
 [0xbf95]
+[JPN]
+$zoom13;邪眼（Ｌスタン）
+[KOR]
 $zoom13;사안(L 스턴)
 
 [0xbfae]
+[JPN]
+$zoom13;リフレッシュＬ
+[KOR]
 $zoom13;리프레시 L
 
 [0xbfc5]
+[JPN]
+$zoom13;リフレッシュＨ
+[KOR]
 $zoom13;리프레시 H
 
 [0xbfdc]
+[JPN]
+$zoom13;テレパシー（ＨＰドレイン）
+[KOR]
 $zoom13;텔레파시(HP 드레인)
 
 [0xbfff]
+[JPN]
+$zoom13;テレパシー（ＥＰドレイン）
+[KOR]
 $zoom13;텔레파시(EP 드레인)
 
 [0xc022]
+[JPN]
+$zoom13;フレアブラスト
+[KOR]
 $zoom13;플레어 블래스트
 

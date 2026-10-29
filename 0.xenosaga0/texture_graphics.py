@@ -69,11 +69,11 @@ MENU_RECTS = {
         ('obj_duo', 190, 360, 42, 18),
         ('obj_class', 248, 360, 48, 18),
         ('obj_battle_formation', 312, 360, 63, 18),
-        ('obj_learned_skill', 391, 360, 66, 18),
-        ('obj_tutorial', 303, 396, 81, 18),
-        ('obj_equipped_skill', 8, 432, 66, 18),
-        ('obj_ether_skill', 90, 432, 88, 18),
-        ('obj_leader_change', 194, 432, 94, 18),
+        ('obj_learned_skill', 391, 358, 66, 18),
+        ('obj_tutorial', 303, 394, 81, 18),
+        ('obj_equipped_skill', 8, 428, 66, 18),
+        ('obj_ether_skill', 90, 428, 88, 18),
+        ('obj_leader_change', 194, 428, 94, 18),
     ],
 }
 MAP_MATERIALS = {

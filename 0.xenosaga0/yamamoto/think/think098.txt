@@ -1,75 +1,152 @@
-﻿[0xf03c]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xf03c]
+[JPN]
+$zoom14;$colc0c0c0;ビッグウェーーーーブ！！
+[KOR]
 $zoom14;$colc0c0c0;빅 웨이~~~~브!!
 
 [0xf068]
+[JPN]
+$zoom14;$colc0c0c0;どこか不機嫌そうだ・・
+[KOR]
 $zoom14;$colc0c0c0;어쩐지 심기가 불편한 듯하다・・
 
 [0xf092]
+[JPN]
+$zoom13;ナックルインパクト（打）
+[KOR]
 $zoom13;너클 임팩트(타격)
 
 [0xf0b3]
+[JPN]
+$zoom13;エアーライディング（打・Ｌスタン）
+[KOR]
 $zoom13;에어 라이딩(타격·L 스턴)
 
 [0xf0de]
+[JPN]
+$zoom14;$colc0c0c0;デイオンは周辺の匂いを嗅ぎ出した！
+[KOR]
 $zoom14;$colc0c0c0;데이온은 주변의 냄새를 맡기 시작했다!
 
 [0xf114]
+[JPN]
+$zoom14;$colc0c0c0;匂いの元へ突進した！
+[KOR]
 $zoom14;$colc0c0c0;냄새가 나는 곳으로 돌진했다!
 
 [0xf13c]
-$zoom13;꼬리 베기(베기)
+[JPN]
+$zoom13;しっぽ斬り（斬）
+[KOR]
+$zoom13;꼬리 베기(참격)
 
 [0xf155]
+[JPN]
+$zoom13;しゃくりあげ（打）
+[KOR]
 $zoom13;올려치기(타격)
 
 [0xf170]
+[JPN]
+$zoom13;種爆弾（気）
+[KOR]
 $zoom13;씨앗 폭탄(기)
 
 [0xf185]
+[JPN]
+$zoom13;クイック
+[KOR]
 $zoom13;퀵
 
 [0xf196]
+[JPN]
+$zoom13;シェイブパワー（Ｌヘビー）
+[KOR]
 $zoom13;셰이브 파워(L 헤비)
 
 [0xf1b9]
+[JPN]
+$zoom13;シェイブブレイン（ＬエーテルＰＤ）
+[KOR]
 $zoom13;셰이브 브레인(L 에테르 PD)
 
 [0xf1e4]
+[JPN]
+$zoom13;シェイブボディー（Ｌウィーク）
+[KOR]
 $zoom13;셰이브 보디(L 위크)
 
 [0xf20b]
+[JPN]
+$zoom13;シェイブオーラ（ＬエーテルＤＤ）
+[KOR]
 $zoom13;셰이브 오라(L 에테르 DD)
 
 [0xf234]
+[JPN]
+$zoom13;メディカ
+[KOR]
 $zoom13;메디카
 
 [0xf245]
+[JPN]
+$zoom14;$colc0c0c0;　　三戦立ちの構えを崩した！
+[KOR]
 $zoom14;$colc0c0c0;　　삼전서기 자세가 무너졌다!
 
 [0xf275]
+[JPN]
+$zoom13;右下段回し蹴り（打）
+[KOR]
 $zoom13;오른쪽 하단 돌려차기(타격)
 
 [0xf292]
+[JPN]
+$zoom13;羅刹門・改　２７Ｆ（打）
+[KOR]
 $zoom13;나찰문·개 27F(타격)
 
 [0xf2b3]
+[JPN]
+$zoom13;三戦立ち
+[KOR]
 $zoom13;삼전서기
 
 [0xf2c4]
+[JPN]
+$zoom14;$colc0c0c0;　　　　三戦立ちの構え！\n　カウンタースタイルになった
+[KOR]
 $zoom14;$colc0c0c0;　　　　삼전서기 자세!\n　카운터 스타일로 바뀌었다
 
 [0xf30e]
+[JPN]
+$zoom13;残心
+[KOR]
 $zoom13;잔심
 
 [0xf31b]
+[JPN]
+$zoom13;囁く雨（雷・Ｌブラック）
+[KOR]
 $zoom13;속삭이는 비(번개·L 블랙)
 
 [0xf33c]
+[JPN]
+$zoom13;ブーストワン
+[KOR]
 $zoom13;부스트 원
 
 [0xf351]
+[JPN]
+$zoom13;ミラクルスター
+[KOR]
 $zoom13;미러클 스타
 
 [0xf368]
+[JPN]
+$zoom13;戒め
+[KOR]
 $zoom13;징계
 

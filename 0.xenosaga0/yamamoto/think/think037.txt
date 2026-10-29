@@ -1,15 +1,32 @@
-﻿[0x6810]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x6810]
+[JPN]
+勝利者ゆにっと！！！
+[KOR]
 승리자 유닛!!!
 
 [0x6825]
+[JPN]
+★現在の技
+[KOR]
 ★현재 기술
 
 [0x6838]
+[JPN]
+$zoom13;５．５６ｍｍＵ−ＴＩＣ弾
+[KOR]
 $zoom13;5.56mm U-TIC탄
 
 [0x6859]
+[JPN]
+$zoom13;ハイアムズＭ８７Ｒ
+[KOR]
 $zoom13;하이암즈 M87R
 
 [0x6874]
+[JPN]
+$zoom13;ＥＡＰ弾
+[KOR]
 $zoom13;EAP탄
 

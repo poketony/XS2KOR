@@ -1,96 +1,194 @@
-﻿[0xee58]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xee58]
+[JPN]
+勝利者ゆにっときゃんせる！！！
+[KOR]
 승리자 유닛 취소!!!
 
 [0xee77]
+[JPN]
+■■■■■■■敵のアタック
+[KOR]
 ■■■■■■■적의 공격
 
 [0xee92]
+[JPN]
+■■■■■■■ろ〜〜〜〜〜んぐこ〜〜〜〜〜る
+[KOR]
 ■■■■■■■로~~~~~옹 코~~~~~올
 
 [0xeebf]
+[JPN]
+■■■■モモの技＝
+[KOR]
 ■■■■모모의 기술=
 
 [0xeed2]
+[JPN]
+きゃんせる
+[KOR]
 취소
 
 [0xeedd]
-$zoom13;구로즈카(찌르기·L 포이즌)
+[JPN]
+$zoom13;黒塚（突・Ｌポイズン）
+[KOR]
+$zoom13;구로즈카(돌격·L 포이즌)
 
 [0xeefc]
+[JPN]
+$zoom13;鉄輪　前ジテ（Ｂ）
+[KOR]
 $zoom13;철륜 전반 주역(B)
 
 [0xef17]
+[JPN]
+$zoom13;鉄輪　後ジテ（Ｂ）
+[KOR]
 $zoom13;철륜 후반 주역(B)
 
 [0xef32]
+[JPN]
+$zoom13;枕慈童
+[KOR]
 $zoom13;마쿠라지도
 
 [0xef41]
+[JPN]
+$col7AF9FB;$zoom15;　対属性ボルテージＭＡＸ！
+[KOR]
 $col7AF9FB;$zoom15;　대속성 볼티지 MAX!
 
 [0xef6f]
-$zoom13;아오이노우에 주살(찌르기·화염·L 슬로)
+[JPN]
+$zoom13;葵上呪殺（突・炎・Ｌスロウ）
+[KOR]
+$zoom13;아오이노우에 주살(돌격·불꽃·L 슬로)
 
 [0xef94]
-$zoom13;요시와라 염상(화염)
+[JPN]
+$zoom13;吉原炎上（炎）
+[KOR]
+$zoom13;요시와라 염상(불꽃)
 
 [0xefab]
+[JPN]
+$zoom13;筋力退散（Ｌヘビー）
+[KOR]
 $zoom13;근력 퇴산(L 헤비)
 
 [0xefc8]
+[JPN]
+$zoom13;精神退散（ＬエーテルＰＤ）
+[KOR]
 $zoom13;정신 퇴산(L 에테르 PD)
 
 [0xefeb]
-$zoom13;하이암즈 P88R(찌르기)
+[JPN]
+$zoom13;ハイアムズＰ８８Ｒ（突）
+[KOR]
+$zoom13;하이암즈 P88R(돌격)
 
 [0xf00c]
+[JPN]
+$zoom13;スタングレネード（Ｌブラック）
+[KOR]
 $zoom13;스턴 그레네이드(L 블랙)
 
 [0xf033]
-$zoom13;더블 탭스(찌르기)
+[JPN]
+$zoom13;ダブルタップス（突）
+[KOR]
+$zoom13;더블 탭스(돌격)
 
 [0xf050]
-$zoom13;풀 매거진 샷(찌르기)
+[JPN]
+$zoom13;フルマガジンショット（突）
+[KOR]
+$zoom13;풀 매거진 샷(돌격)
 
 [0xf073]
+[JPN]
+$zoom13;オペレーションＡ
+[KOR]
 $zoom13;오퍼레이션 A
 
 [0xf08c]
-$zoom13;철수(화염)
+[JPN]
+$zoom13;撤退（炎）
+[KOR]
+$zoom13;철수(불꽃)
 
 [0xf09f]
+[JPN]
+$zoom13;メディカ
+[KOR]
 $zoom13;메디카
 
 [0xf0b0]
-$zoom13;엄호 사격(찌르기)
+[JPN]
+$zoom13;掩護射撃（突）
+[KOR]
+$zoom13;엄호 사격(돌격)
 
 [0xf0c7]
-$zoom13;퀵 샷(찌르기)
+[JPN]
+$zoom13;クイックショット（突）
+[KOR]
+$zoom13;퀵 샷(돌격)
 
 [0xf0e6]
+[JPN]
+$zoom13;レティクル調整
+[KOR]
 $zoom13;조준선 조정
 
 [0xf0fd]
+[JPN]
+$col7AF9FB;$zoom15;　銃の命中と威力を調整
+[KOR]
 $col7AF9FB;$zoom15;　총의 명중률과 위력 조정
 
 [0xf127]
-$zoom13;저격(찌르기·H 바인드)
+[JPN]
+$zoom13;狙撃（突・Ｈバインド）
+[KOR]
+$zoom13;저격(돌격·H 바인드)
 
 [0xf146]
-$zoom13;급소 조준 시야(베기·번개·L 블랙)
+[JPN]
+$zoom13;急所狙い　視界（斬・雷・Ｌブラック）
+[KOR]
+$zoom13;급소 조준 시야(참격·번개·L 블랙)
 
 [0xf173]
-$zoom13;급소 조준 마무리(찌르기·번개)
+[JPN]
+$zoom13;急所狙い　止め（突・雷）
+[KOR]
+$zoom13;급소 조준 마무리(돌격·번개)
 
 [0xf194]
-$zoom13;자칼(찌르기·번개)
+[JPN]
+$zoom13;ジャッカル（突・雷）
+[KOR]
+$zoom13;자칼(돌격·번개)
 
 [0xf1b1]
+[JPN]
+$zoom15;$col7AF9FB;　レーザー出力上昇
+[KOR]
 $zoom15;$col7AF9FB;　레이저 출력 상승
 
 [0xf1d7]
+[JPN]
+$zoom13;ペネトレート　レーザー（Ｂ）
+[KOR]
 $zoom13;페네트레이트 레이저(B)
 
 [0xf1fc]
+[JPN]
+$zoom13;ヘッドハント（打・Ｂ）
+[KOR]
 $zoom13;헤드 헌트(타격·B)
 

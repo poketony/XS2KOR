@@ -1,72 +1,146 @@
-﻿[0xe34c]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xe34c]
+[JPN]
+勝利者ゆにっときゃんせる！！！
+[KOR]
 승리자 유닛 취소!!!
 
 [0xe36b]
+[JPN]
+■■■■■■■敵のアタック
+[KOR]
 ■■■■■■■적의 공격
 
 [0xe386]
+[JPN]
+■■■■■■■ろ〜〜〜〜〜んぐこ〜〜〜〜〜る
+[KOR]
 ■■■■■■■로~~~~~옹 코~~~~~올
 
 [0xe3b3]
+[JPN]
+■■■■モモの技＝
+[KOR]
 ■■■■모모의 기술=
 
 [0xe3c6]
+[JPN]
+きゃんせる
+[KOR]
 취소
 
 [0xe3d1]
+[JPN]
 ■■■■UNO
+[KOR]
+
 
 [0xe3dd]
+[JPN]
+$col7AF9FB;$zoom15;　ナノマシンに異常発生
+[KOR]
 $col7AF9FB;$zoom15;　나노 머신에 이상 발생
 
 [0xe407]
+[JPN]
+$col7AF9FB;$zoom15;　再生完了
+[KOR]
 $col7AF9FB;$zoom15;　재생 완료
 
 [0xe425]
-$zoom13;참수 겨루기(찌르기·냉기·L 위크)
+[JPN]
+$zoom13;斬首競べ（突・冷・Ｌウィーク）
+[KOR]
+$zoom13;참수 겨루기(돌격·냉기·L 위크)
 
 [0xe44c]
+[JPN]
+$zoom13;魔獣のしゃくりあげ（打）
+[KOR]
 $zoom13;마수의 올려치기(타격)
 
 [0xe46d]
-$zoom13;아포토 프로그램(찌르기)
+[JPN]
+$zoom13;アポトプログラム（突）
+[KOR]
+$zoom13;아포토 프로그램(돌격)
 
 [0xe48c]
+[JPN]
+$zoom13;クイック
+[KOR]
 $zoom13;퀵
 
 [0xe49d]
+[JPN]
+$zoom13;墓標縛り（Ｈバインド）
+[KOR]
 $zoom13;묘비의 속박(H 바인드)
 
 [0xe4bc]
+[JPN]
+$zoom13;ＨＰドレイン
+[KOR]
 $zoom13;HP 드레인
 
 [0xe4d1]
+[JPN]
+$zoom13;冥界からの奪還（雷）
+[KOR]
 $zoom13;명계에서의 탈환(번개)
 
 [0xe4ee]
+[JPN]
+$zoom13;猛者の前菜（Ｈロスト）
+[KOR]
 $zoom13;강자의 전채(H 로스트)
 
 [0xe50d]
-$zoom13;아그네아(화염)
+[JPN]
+$zoom13;アグネア（炎）
+[KOR]
+$zoom13;아그네아(불꽃)
 
 [0xe524]
+[JPN]
+$zoom13;メディカ２
+[KOR]
 $zoom13;메디카 2
 
 [0xe537]
+[JPN]
+$zoom13;リフレッシュＬ
+[KOR]
 $zoom13;리프레시 L
 
 [0xe54e]
+[JPN]
+$zoom13;リフレッシュＨ
+[KOR]
 $zoom13;리프레시 H
 
 [0xe565]
+[JPN]
+$zoom13;粉砕（打・Ｌスロウ）
+[KOR]
 $zoom13;분쇄(타격·L 슬로)
 
 [0xe582]
+[JPN]
+$zoom13;巨人の痕跡（打）
+[KOR]
 $zoom13;거인의 흔적(타격)
 
 [0xe59b]
+[JPN]
+$zoom13;大地震（打）
+[KOR]
 $zoom13;대지진(타격)
 
 [0xe5b0]
+[JPN]
+$zoom13;Ｈブーストロック
+[KOR]
 $zoom13;H 부스트 록
 

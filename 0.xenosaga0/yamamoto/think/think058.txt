@@ -1,84 +1,170 @@
-﻿[0xc0a8]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xc0a8]
+[JPN]
+勝利者ゆにっときゃんせる！！！
+[KOR]
 승리자 유닛 취소!!!
 
 [0xc0c7]
+[JPN]
+■■■■■■■敵のアタック
+[KOR]
 ■■■■■■■적의 공격
 
 [0xc0e2]
+[JPN]
+■■■■■■■ろ〜〜〜〜〜んぐこ〜〜〜〜〜る
+[KOR]
 ■■■■■■■로~~~~~옹 코~~~~~올
 
 [0xc10f]
+[JPN]
+■■■■モモの技＝
+[KOR]
 ■■■■모모의 기술=
 
 [0xc122]
+[JPN]
+きゃんせる
+[KOR]
 취소
 
 [0xc12d]
+[JPN]
+$zoom14;$colc0c0c0;　対象者の活力を読んだ\n$col7AF9FB;　物理攻撃力が上昇した
+[KOR]
 $zoom14;$colc0c0c0;　대상자의 활력을 읽었다\n$col7AF9FB;　물리 공격력이 상승했다
 
 [0xc17a]
+[JPN]
+$zoom14;$colc0c0c0;　対象者の精神力を読んだ\n$col7AF9FB;　エーテル攻撃力が上昇した
+[KOR]
 $zoom14;$colc0c0c0;　대상자의 정신력을 읽었다\n$col7AF9FB;　에테르 공격력이 상승했다
 
 [0xc1cd]
+[JPN]
+■■リフレッシュ１
+[KOR]
 ■■리프레시 1
 
 [0xc1e0]
+[JPN]
+■■リフレッシュ2
+[KOR]
 ■■리프레시 2
 
 [0xc1f2]
+[JPN]
+■■ユニットナンバー
+[KOR]
 ■■유닛 번호
 
 [0xc207]
+[JPN]
+$zoom14;$colc0c0c0;テレパシーの効力が弱まった
+[KOR]
 $zoom14;$colc0c0c0;텔레파시의 효력이 약해졌다
 
 [0xc235]
+[JPN]
 ■■ATK_Phase2
+[KOR]
+
 
 [0xc244]
+[JPN]
 ■■ATK_Phase3
+[KOR]
+
 
 [0xc253]
+[JPN]
 ■■ATK_Phase4
+[KOR]
+
 
 [0xc262]
+[JPN]
 ■■ATK_Phase5
+[KOR]
+
 
 [0xc271]
-$zoom13;그립스 클로(베기)
+[JPN]
+$zoom13;グリプスクロウ（斬）
+[KOR]
+$zoom13;그립스 클로(참격)
 
 [0xc28e]
+[JPN]
+$zoom13;サンダーブレス（雷）
+[KOR]
 $zoom13;선더 브레스(번개)
 
 [0xc2ab]
+[JPN]
+$zoom13;邪視（Ｈストップ）
+[KOR]
 $zoom13;사시(H 스톱)
 
 [0xc2c6]
+[JPN]
+$zoom13;邪眼（Ｌスタン）
+[KOR]
 $zoom13;사안(L 스턴)
 
 [0xc2df]
+[JPN]
+$zoom13;リフレッシュＬ
+[KOR]
 $zoom13;리프레시 L
 
 [0xc2f6]
+[JPN]
+$zoom13;リフレッシュＨ
+[KOR]
 $zoom13;리프레시 H
 
 [0xc30d]
+[JPN]
+$zoom13;テレパシー（ＨＰドレイン）
+[KOR]
 $zoom13;텔레파시(HP 드레인)
 
 [0xc330]
+[JPN]
+$zoom13;テレパシー（ＥＰドレイン）
+[KOR]
 $zoom13;텔레파시(EP 드레인)
 
 [0xc353]
+[JPN]
+$zoom13;サンダーブラスト
+[KOR]
 $zoom13;선더 블래스트
 
 [0xc36c]
-■■상태 이상 H
+[JPN]
+■■ステータス異常Ｈ
+[KOR]
+■■스테이터스 이상 H
 
 [0xc381]
-■■상태 이상 L
+[JPN]
+■■ステータス異常Ｌ
+[KOR]
+■■스테이터스 이상 L
 
 [0xc396]
+[JPN]
+■■異常者なし
+[KOR]
 ■■이상자 없음
 
 [0xc3a5]
+[JPN]
+■■生存者
+[KOR]
 ■■생존자
 

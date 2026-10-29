@@ -1,60 +1,122 @@
-﻿[0xeaf6]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xeaf6]
+[JPN]
+$zoom14;$colc0c0c0;　　Ｊｒ．達の脳裏にサクラの意識が流れた\n$col7AF9FB;ＢＣゾーンを攻撃した後にブーストで繋いで。。。●$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　　Jr. 일행의 뇌리에 사쿠라의 의식이 전해졌다\n$col7AF9FB;BC존을 공격한 다음 부스트로 이어서。。。●$colc0c0c0;
 
 [0xeb7a]
+[JPN]
+$zoom14;$colc0c0c0;　　サクラの意識が途絶えた$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　　사쿠라의 의식이 끊겼다$colc0c0c0;
 
 [0xebb3]
+[JPN]
+$zoom14;$colc0c0c0;　Ｊｒ．達の脳裏にサクラの意識が流れた\n$col7AF9FB;ＢＣゾーンを攻撃した後にブーストで繋いで\nＣＢをヒットさせればブレイクが発生するわ●$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　Jr. 일행의 뇌리에 사쿠라의 의식이 전해졌다\n$col7AF9FB;BC존을 공격한 다음 부스트로 이어서\nCB를 맞히면 브레이크가 일어나●$colc0c0c0;
 
 [0xec59]
+[JPN]
+$zoom14;$col7AF9FB;アルベドの再生能力が低下した$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;알베도의 재생 능력이 저하됐다$colc0c0c0;
 
 [0xec94]
+[JPN]
+$zoom14;$col7AF9FB;アルベドの再生能力が限界に達した$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;알베도의 재생 능력이 한계에 달했다$colc0c0c0;
 
 [0xece8]
-$zoom14;$col7AF9FB;상태창이 사라졌다!$colc0c0c0;
+[JPN]
+$zoom14;$col7AF9FB;ステータスウィンドウが消された！$colc0c0c0;
+[KOR]
+$zoom14;$col7AF9FB;스테이터스창이 사라졌다!$colc0c0c0;
 
 [0xed51]
+[JPN]
+$zoom14;$col7AF9FB;アルベドの両腕がしびれた！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;알베도의 양팔이 마비됐다!$colc0c0c0;
 
 [0xedb4]
+[JPN]
+$zoom14;$col7AF9FB;アルベドの両腕を破壊した！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;알베도의 양팔을 파괴했다!$colc0c0c0;
 
 [0xeded]
-$zoom13;욕망의 해방(찌르기·번개)
+[JPN]
+$zoom13;欲望の解放（突・雷）
+[KOR]
+$zoom13;욕망의 해방(돌격·번개)
 
 [0xee0a]
+[JPN]
+$zoom13;キャリオン　オブ　ソウルⅠ（打・ＬエーテルＤＤ）
+[KOR]
 $zoom13;캐리언 오브 소울 I(타격·L 에테르 DD)
 
 [0xee43]
+[JPN]
+$zoom13;キャリオン　オブ　ソウルⅡ（ＨＰ吸収）
+[KOR]
 $zoom13;캐리언 오브 소울 II(HP 흡수)
 
 [0xee72]
+[JPN]
+$zoom13;リジェネレーション
+[KOR]
 $zoom13;리제너레이션
 
 [0xee8d]
+[JPN]
+$zoom13;思念の衝撃波（気）
+[KOR]
 $zoom13;사념의 충격파(기)
 
 [0xeea8]
+[JPN]
+$zoom14;$colc0c0c0;　　　貫いた右手には\n$col7AF9FB;　紅い血$colc0c0c0;が染み付いていた
+[KOR]
 $zoom14;$colc0c0c0;　　　꿰뚫은 오른손에는\n$col7AF9FB;　붉은 피$colc0c0c0;가 묻어 있었다
 
 [0xef00]
+[JPN]
+$zoom14;$colc0c0c0;　　　貫いた右手には\n$col7AF9FB;　紅い血液$colc0c0c0;が染み付いていた
+[KOR]
 $zoom14;$colc0c0c0;　　　꿰뚫은 오른손에는\n$col7AF9FB;　붉은 혈액$colc0c0c0;이 묻어 있었다
 
 [0xef5a]
+[JPN]
+$zoom14;$colc0c0c0;　　　　貫いた右手には\n$col7AF9FB;　どす黒い血$colc0c0c0;が染み付いていた
+[KOR]
 $zoom14;$colc0c0c0;　　　　꿰뚫은 오른손에는\n$col7AF9FB;　검붉은 피$colc0c0c0;가 묻어 있었다
 
 [0xefb8]
+[JPN]
+$zoom13;キャリオン　オブ　ソウルⅢ（ＥＰ吸収）
+[KOR]
 $zoom13;캐리언 오브 소울 III(EP 흡수)
 
 [0xefe7]
+[JPN]
+$zoom13;エーテルスピア
+[KOR]
 $zoom13;에테르 스피어
 
 [0xeffe]
+[JPN]
+$zoom13;サンダーブラスト
+[KOR]
 $zoom13;선더 블래스트
 
 [0xf017]
+[JPN]
+$zoom13;アイスブラスト
+[KOR]
 $zoom13;아이스 블래스트
 

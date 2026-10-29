@@ -1,78 +1,158 @@
-﻿[0x89aa]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x89aa]
+[JPN]
+$zoom13;センテンツァ（打）
+[KOR]
 $zoom13;센텐차(타격)
 
 [0x89c5]
+[JPN]
+$zoom13;ラクテウス　オルビス（雷）
+[KOR]
 $zoom13;락테우스 오르비스(번개)
 
 [0x89e8]
+[JPN]
+$zoom13;ファインレイ（Ｂ）
+[KOR]
 $zoom13;파인 레이(B)
 
 [0x8a03]
+[JPN]
+$zoom13;センテンツァ（打・Ｌスロウ）
+[KOR]
 $zoom13;센텐차(타격·L 슬로)
 
 [0x8a28]
+[JPN]
+$zoom13;リフレッシュＬ
+[KOR]
 $zoom13;리프레시 L
 
 [0x8a3f]
+[JPN]
+$zoom13;リフレッシュＨ
+[KOR]
 $zoom13;리프레시 H
 
 [0x8a56]
+[JPN]
+$zoom13;腐敗ガス（Ｌポイズン）
+[KOR]
 $zoom13;부패 가스(L 포이즌)
 
 [0x8a75]
+[JPN]
+$zoom13;メディカ
+[KOR]
 $zoom13;메디카
 
 [0x8a86]
+[JPN]
+$zoom13;アーマーフィールド
+[KOR]
 $zoom13;아머 필드
 
 [0x8aa1]
+[JPN]
+$zoom13;雷の恩寵
+[KOR]
 $zoom13;번개의 은총
 
 [0x8ab2]
+[JPN]
+$zoom14;$col7AF9FB;センテンツァに雷のエーテルが満ちた$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;센텐차에 번개 에테르가 충만해졌다$colc0c0c0;
 
 [0x8af3]
+[JPN]
+$zoom13;英雄の盾
+[KOR]
 $zoom13;영웅의 방패
 
 [0x8b04]
+[JPN]
+$zoom14;$colc0c0c0;　リヒャルトが受けたダメージの\n　半分を肩代わりする$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　리하르트가 받은 대미지의\n　절반을 대신 받는다$colc0c0c0;
 
 [0x8b6d]
+[JPN]
+$zoom14;$colc0c0c0;リヒャルトの様子がおかしい・・・$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;리하르트의 상태가 이상하다・・・$colc0c0c0;
 
 [0x8bc2]
+[JPN]
+$zoom14;$col7AF9FB;　リヒャルトが狂乱した！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　리하르트가 광란에 빠졌다!$colc0c0c0;
 
 [0x8c25]
+[JPN]
+$zoom14;$colc0c0c0;　リヒャルトは狂喜している！$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　리하르트는 미친 듯이 기뻐하고 있다!$colc0c0c0;
 
 [0x8c76]
+[JPN]
+$zoom14;$colc0c0c0;　リヒャルトは狂乱している！$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　리하르트는 광란에 빠져 있다!$colc0c0c0;
 
 [0x8cc7]
+[JPN]
+$zoom14;$col7AF9FB;　　防御属性が戻った$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　방어 속성이 돌아왔다$colc0c0c0;
 
 [0x8d10]
+[JPN]
+$zoom14;$col7AF9FB;　　防御属性が変化した$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　방어 속성이 바뀌었다$colc0c0c0;
 
 [0x8d45]
-$zoom13;앵퓔시옹(찌르기)
+[JPN]
+$zoom13;アンピュルシオン（突）
+[KOR]
+$zoom13;앵퓔시옹(돌격)
 
 [0x8d64]
-$zoom13;오연난무(찌르기)
+[JPN]
+$zoom13;五連乱舞（突）
+[KOR]
+$zoom13;오연난무(돌격)
 
 [0x8d7b]
-$zoom13;에갈리테 런처(화염)
+[JPN]
+$zoom13;エガリテランチャー（炎）
+[KOR]
+$zoom13;에갈리테 런처(불꽃)
 
 [0x8d9c]
+[JPN]
+$zoom13;第３種転送用兵器ナグルファル（Ｂ）
+[KOR]
 $zoom13;제3종 전송용 병기 나글파르(B)
 
 [0x8dc7]
-$zoom13;임페일(찌르기)
+[JPN]
+$zoom13;インペール（突）
+[KOR]
+$zoom13;임페일(돌격)
 
 [0x8de0]
-$zoom13;오연난무 광(찌르기)
+[JPN]
+$zoom13;五連乱舞　狂（突）
+[KOR]
+$zoom13;오연난무 광(돌격)
 
 [0x8dfb]
+[JPN]
+$zoom13;ブーストワン
+[KOR]
 $zoom13;부스트 원
 

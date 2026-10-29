@@ -1,102 +1,206 @@
-﻿[0xfc7c]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xfc7c]
+[JPN]
+勝利者ゆにっときゃんせる！！！
+[KOR]
 승리자 유닛 취소!!!
 
 [0xfc9b]
+[JPN]
+■■■■■■■敵のアタック
+[KOR]
 ■■■■■■■적의 공격
 
 [0xfcb6]
+[JPN]
+■■■■■■■ろ〜〜〜〜〜んぐこ〜〜〜〜〜る
+[KOR]
 ■■■■■■■로~~~~~옹 코~~~~~올
 
 [0xfce3]
+[JPN]
+■■■■モモの技＝
+[KOR]
 ■■■■모모의 기술=
 
 [0xfcf6]
+[JPN]
+■■■■Ｊｒの技＝
+[KOR]
 ■■■■Jr.의 기술=
 
 [0xfd09]
+[JPN]
+きゃんせる
+[KOR]
 취소
 
 [0xfd14]
+[JPN]
+$zoom13;封印の玉座（抗体）
+[KOR]
 $zoom13;봉인의 옥좌(항체)
 
 [0xfd2f]
+[JPN]
+$zoom14;$colc0c0c0;　　　オルグイアの威圧により\n$col0fd0e0;　　　　ムーブができない！\n　ブーストカウントを吸収された！$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　　　오르기아의 위압으로\n$col0fd0e0;　　　　이동할 수 없다!\n　부스트 카운트를 흡수당했다!$colc0c0c0;
 
 [0xfdc5]
+[JPN]
+$zoom14;$col0fd0e0;　オルグイアの瞳が$cola05050;蒼く$col0fd0e0;輝いた$colc0c0c0;
+[KOR]
 $zoom14;$col0fd0e0;　오르기아의 눈동자가 $cola05050;푸르게$col0fd0e0; 빛났다$colc0c0c0;
 
 [0xfe28]
+[JPN]
+$zoom14;$col7AF9FB;　　毒の効果がアップした$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　독의 효과가 강해졌다$colc0c0c0;
 
 [0xfe83]
+[JPN]
+$zoom14;$colc0c0c0;　オルグイアの瞳が$cola05050;蒼く$colc0c0c0;発光した
+[KOR]
 $zoom14;$colc0c0c0;　오르기아의 눈동자가 $cola05050;푸른$colc0c0c0; 빛을 냈다
 
 [0xfecb]
+[JPN]
+$zoom14;$colc0c0c0;　オルグイアの瞳が$col00c050;翠に$colc0c0c0;発光した
+[KOR]
 $zoom14;$colc0c0c0;　오르기아의 눈동자가 $col00c050;초록$colc0c0c0; 빛을 냈다
 
 [0xff13]
-$zoom13;베일린 카인(베기·L 포이즌)
+[JPN]
+$zoom13;ベイリンカイン（斬・Ｌポイズン）
+[KOR]
+$zoom13;베일린 카인(참격·L 포이즌)
 
 [0xff4f]
-$zoom13;베일린 카인 글로부스(베기·찌르기·L 포이즌)
+[JPN]
+$zoom13;ベイリンカイングロブス（斬・突・Ｌポイズン）
+[KOR]
+$zoom13;베일린 카인 글로부스(참격·돌격·L 포이즌)
 
 [0xffaa]
-$zoom13;글로부스(찌르기)
+[JPN]
+$zoom13;グロブス（突）
+[KOR]
+$zoom13;글로부스(돌격)
 
 [0xffc1]
+[JPN]
+$zoom13;マネス覚醒
+[KOR]
 $zoom13;마네스 각성
 
 [0xffe7]
+[JPN]
+$zoom13;クイック
+[KOR]
 $zoom13;퀵
 
 [0xfff8]
+[JPN]
+$zoom13;リフレッシュＬ
+[KOR]
 $zoom13;리프레시 L
 
 [0x1000f]
+[JPN]
+$zoom13;リフレッシュＨ
+[KOR]
 $zoom13;리프레시 H
 
 [0x10026]
+[JPN]
+$zoom13;メディカ
+[KOR]
 $zoom13;메디카
 
 [0x10037]
+[JPN]
+$zoom13;暗殺の前夜（抗体＋毒効果ＵＰ）
+[KOR]
 $zoom13;암살의 전야(항체+독 효과 UP)
 
 [0x10070]
-$zoom14;$colc0c0c0;　　　　제2 바이러스 발동\n$col7AF9FB;　　마네스의 능력치가 저하됐다$colc0c0c0;
+[JPN]
+$zoom14;$colc0c0c0;　　　　第二ウィルスが発動\n$col7AF9FB;　　マネスのステータスが低下した$colc0c0c0;
+[KOR]
+$zoom14;$colc0c0c0;　　　　제2 바이러스 발동\n$col7AF9FB;　　마네스의 스테이터스가 저하됐다$colc0c0c0;
 
 [0x100d6]
+[JPN]
+$zoom13;マネス抑制第二ウィルス
+[KOR]
 $zoom13;마네스 억제 제2 바이러스
 
 [0x10107]
+[JPN]
+$zoom14;$colc0c0c0;　オルグイアの口元が緩んだ
+[KOR]
 $zoom14;$colc0c0c0;　오르기아의 입가에 미소가 번졌다
 
 [0x10147]
+[JPN]
+$zoom13;死の接吻
+[KOR]
 $zoom13;죽음의 입맞춤
 
 [0x10158]
-$zoom13;비그리드(베기·냉기·L 위크)
+[JPN]
+$zoom13;ヴィーグリード（斬・冷・Ｌウィーク）
+[KOR]
+$zoom13;비그리드(참격·냉기·L 위크)
 
 [0x10198]
-$zoom13;발할라(베기·냉기)
+[JPN]
+$zoom13;ヴァルハラ（斬・冷）
+[KOR]
+$zoom13;발할라(참격·냉기)
 
 [0x101c8]
-$zoom13;에인헤랴르(베기·냉기)
+[JPN]
+$zoom13;エインヘリアル（斬・冷）
+[KOR]
+$zoom13;에인헤랴르(참격·냉기)
 
 [0x101fc]
+[JPN]
+$zoom13;マネス抑制プログラム
+[KOR]
 $zoom13;마네스 억제 프로그램
 
 [0x1023f]
+[JPN]
+$zoom13;アイスブラスト
+[KOR]
 $zoom13;아이스 블래스트
 
 [0x10256]
+[JPN]
+$zoom13;血の契約
+[KOR]
 $zoom13;피의 계약
 
 [0x10267]
+[JPN]
+$zoom14;$colc0c0c0;　　自分のＨＰを犠牲にして\n$col7AF9FB;　　物理攻撃力を上昇させた$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　　자신의 HP를 희생하여\n$col7AF9FB;　　물리 공격력을 높였다$colc0c0c0;
 
 [0x102c7]
+[JPN]
+$zoom13;肉の契約
+[KOR]
 $zoom13;살의 계약
 
 [0x102d8]
+[JPN]
+$zoom14;$colc0c0c0;　　自分のＨＰを犠牲にして\n$col7AF9FB;　ブーストカウントを上昇させた$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　　자신의 HP를 희생하여\n$col7AF9FB;　부스트 카운트를 높였다$colc0c0c0;
 

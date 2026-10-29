@@ -1,42 +1,86 @@
-﻿[0xeda4]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xeda4]
+[JPN]
+$zoom14;$colc0c0c0;　プロトオメガは静寂に包まれている
+[KOR]
 $zoom14;$colc0c0c0;　프로토 오메가는 정적에 싸여 있다
 
 [0xedda]
+[JPN]
+$zoom14;Ｕ．Ｍ．Ｎ．相転移砲　ー拡散ー（Ｂ）
+[KOR]
 $zoom14;U.M.N. 상전이포 ─확산─(B)
 
 [0xee07]
+[JPN]
+$zoom14;Ｕ．Ｍ．Ｎ．相転移砲　ー直線ー（Ｂ）
+[KOR]
 $zoom14;U.M.N. 상전이포 ─직선─(B)
 
 [0xee7f]
+[JPN]
+$zoom13;下賎に存在意義無し（気・Ｌブラック）
+[KOR]
 $zoom13;천한 자에겐 존재 의의 없다(기·L 블랙)
 
 [0xeeac]
+[JPN]
+$zoom13;死への誘い（気・Ｌスロウ）
+[KOR]
 $zoom13;죽음의 유혹(기·L 슬로)
 
 [0xeecf]
+[JPN]
+$zoom13;崇高な波動（気）
+[KOR]
 $zoom13;숭고한 파동(기)
 
 [0xeefb]
+[JPN]
+$zoom13;次元の交差（打・気）
+[KOR]
 $zoom13;차원의 교차(타격·기)
 
 [0xef18]
+[JPN]
+$zoom13;痴れ者への罰（気・Ｌブラック）
+[KOR]
 $zoom13;어리석은 자에게 내리는 벌(기·L 블랙)
 
 [0xef3f]
+[JPN]
+$zoom13;参入儀礼（気・Ｌスロウ）
+[KOR]
 $zoom13;입문 의례(기·L 슬로)
 
 [0xef73]
+[JPN]
+$zoom13;墓標縛り（Ｈブーストロック）
+[KOR]
 $zoom13;묘비의 속박(H 부스트 록)
 
 [0xef98]
+[JPN]
+$zoom13;クイック
+[KOR]
 $zoom13;퀵
 
 [0xefa9]
+[JPN]
+$zoom13;リフレッシュＨ
+[KOR]
 $zoom13;리프레시 H
 
 [0xefc0]
+[JPN]
+$zoom13;リフレッシュＬ
+[KOR]
 $zoom13;리프레시 L
 
 [0xefd7]
+[JPN]
+$zoom13;ガルテスの憎呪（戒め）
+[KOR]
 $zoom13;갈테스의 저주(징계)
 

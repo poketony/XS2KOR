@@ -1,72 +1,146 @@
-﻿[0xff18]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xff18]
+[JPN]
+$zoom14;$colc0c0c0;　　決着への執念\n$col7AF9FB;　ジンで止めを刺せ！$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　　결판을 향한 집념\n$col7AF9FB;　진으로 마무리해라!$colc0c0c0;
 
 [0xff90]
+[JPN]
+$zoom14;$colc0c0c0;マーグリスは$col7AF9FB;　純粋な気　$colc0c0c0;を練り上げた$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;마굴리스는 $col7AF9FB;　순수한 기　$colc0c0c0;를 끌어올렸다$colc0c0c0;
 
 [0xfffd]
+[JPN]
+$zoom14;$col7AF9FB;マーグリスは二重身をかき消した！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;마굴리스는 분신을 지워 버렸다!$colc0c0c0;
 
 [0x10064]
+[JPN]
+$zoom13;内縛印
+[KOR]
 $zoom13;내박인
 
 [0x10073]
+[JPN]
+$zoom14;$col7AF9FB;　　　不動の印　第壱を結んだ！$colc0c0c0;\n場の霊気が縛りつけられた感じがする$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　　부동의 인, 첫 번째를 맺었다!$colc0c0c0;\n주변의 영기가 속박된 듯하다$colc0c0c0;
 
 [0x100df]
+[JPN]
+$zoom14;$col7AF9FB;　強制Ｈストップまで残り３$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　강제 H 스톱까지 앞으로 3$colc0c0c0;
 
 [0x1012c]
+[JPN]
+$zoom13;外伍鈷印
+[KOR]
 $zoom13;외오고인
 
 [0x1013d]
+[JPN]
+$zoom14;$col7AF9FB;　　　不動の印　第弐を結んだ！$colc0c0c0;\n明王の加護により　霊気が無力化した$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　　부동의 인, 두 번째를 맺었다!$colc0c0c0;\n명왕의 가호로 영기가 무력해졌다$colc0c0c0;
 
 [0x101a9]
+[JPN]
+$zoom14;$col7AF9FB;　強制Ｈストップまで残り２$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　강제 H 스톱까지 앞으로 2$colc0c0c0;
 
 [0x101f6]
+[JPN]
+$zoom13;諸天救勅印
+[KOR]
 $zoom13;제천구칙인
 
 [0x10209]
+[JPN]
+$zoom14;$col7AF9FB;　　　不動の印　第参を結んだ！$colc0c0c0;\n　諸天の力で霊気を覆い包囲した！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　　부동의 인, 세 번째를 맺었다!$colc0c0c0;\n　제천의 힘이 영기를 둘러쌌다!$colc0c0c0;
 
 [0x10273]
+[JPN]
+$zoom14;$col7AF9FB;　　強制Ｈストップまで残り１！\n　　非常に危険な状態になった！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　강제 H 스톱까지 앞으로 1!\n　　매우 위험한 상태가 됐다!$colc0c0c0;
 
 [0x102d0]
-$zoom13;다키니 호파참(베기·찌르기)
+[JPN]
+$zoom13;荼枳尼護破斬（斬・突）
+[KOR]
+$zoom13;다키니 호파참(참격·돌격)
 
 [0x102ef]
-$zoom13;마혜수라참(베기·찌르기·화염)
+[JPN]
+$zoom13;摩醯首羅斬（斬・突・炎）
+[KOR]
+$zoom13;마혜수라참(참격·돌격·불꽃)
 
 [0x10310]
+[JPN]
+$zoom13;瞋恚雷天呪（雷）
+[KOR]
 $zoom13;진에뇌천주(번개)
 
 [0x10329]
-$zoom13;인화화계주(화염)
+[JPN]
+$zoom13;燐火火界呪（炎）
+[KOR]
+$zoom13;인화화계주(불꽃)
 
 [0x10342]
+[JPN]
+$zoom13;影寂二重印
+[KOR]
 $zoom13;영적이중인
 
 [0x10355]
+[JPN]
+$zoom13;重圧（打）
+[KOR]
 $zoom13;중압(타격)
 
 [0x10368]
+[JPN]
+$zoom13;影寂二重印　封殺
+[KOR]
 $zoom13;영적이중인 봉살
 
 [0x10381]
+[JPN]
+$zoom13;外縛印
+[KOR]
 $zoom13;외박인
 
 [0x10390]
+[JPN]
+$zoom14;$col7AF9FB;　　　　不動の印　終焉を結んだ！\n不動の法が完成し強制Ｈストップになった！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　　　부동의 인, 종언을 맺었다!\n부동의 법이 완성되어 강제 H 스톱에 걸렸다!$colc0c0c0;
 
 [0x103f9]
+[JPN]
+$zoom14;$colc0c0c0;マーグリスの二重身は消え去った$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;마굴리스의 분신이 사라졌다$colc0c0c0;
 
 [0x10436]
+[JPN]
+$zoom13;メディカ
+[KOR]
 $zoom13;메디카
 
 [0x10447]
+[JPN]
+$zoom14;$col7AF9FB;マーグリスの体力が蝕まれた$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;마굴리스의 체력이 소모됐다$colc0c0c0;
 

@@ -1,57 +1,116 @@
-﻿[0x6ad0]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x6ad0]
+[JPN]
+$zoom14;$colc0c0c0;カウンターブーストシステム異常発生
+[KOR]
 $zoom14;$colc0c0c0;카운터 부스트 시스템 이상 발생
 
 [0x6b06]
+[JPN]
+$zoom14;$colc0c0c0;カウンターブーストシステム異常！
+[KOR]
 $zoom14;$colc0c0c0;카운터 부스트 시스템 이상!
 
 [0x6b3a]
+[JPN]
+$zoom14;$colc0c0c0;　インベルシオンから泡が噴出した！\n$col7AF9FB;ーカウンターブーストシステム故障ー$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　인베르시옹에서 거품이 뿜어져 나왔다!\n$col7AF9FB;─카운터 부스트 시스템 고장─$colc0c0c0;
 
 [0x6baa]
+[JPN]
+$zoom14;$colc0c0c0;カウンターブーストシステム故障中！$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;카운터 부스트 시스템 고장 중!$colc0c0c0;
 
 [0x6beb]
+[JPN]
+$zoom14;$colc0c0c0;　カウンターブーストシステム\n$col7AF9FB;　　　　自動修復開始！$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　카운터 부스트 시스템\n$col7AF9FB;　　　　자동 복구 시작!$colc0c0c0;
 
 [0x6c49]
+[JPN]
+$zoom14;$colc0c0c0;敵の戦闘能力を分析中・・・$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;적의 전투 능력을 분석 중・・・$colc0c0c0;
 
 [0x6c82]
+[JPN]
+$zoom14;$colc0c0c0;・・・分析終了\n$col7AF9FB;カウンターブースト起動プラグイン\n　　　　　ＥーＣ　セット$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;・・・분석 완료\n$col7AF9FB;카운터 부스트 기동 플러그인\n　　　　　E-C 설정$colc0c0c0;
 
 [0x6cf6]
+[JPN]
+$zoom14;$colc0c0c0;・・・分析終了\n$col7AF9FB;カウンターブースト起動プラグイン\n　　　　　ＢーＣ　セット$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;・・・분석 완료\n$col7AF9FB;카운터 부스트 기동 플러그인\n　　　　　B-C 설정$colc0c0c0;
 
 [0x6d6a]
+[JPN]
+$zoom14;$colc0c0c0;・・・分析終了\n$col7AF9FB;カウンターブースト起動プラグイン\n　　　　　ＨーＰ　セット$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;・・・분석 완료\n$col7AF9FB;카운터 부스트 기동 플러그인\n　　　　　H-P 설정$colc0c0c0;
 
 [0x6dde]
+[JPN]
+$zoom14;$col7AF9FB;敵のエーテルスキルを分析中・・・$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;적의 에테르 스킬을 분석 중・・・$colc0c0c0;
 
 [0x6e1d]
+[JPN]
+$zoom13;スパイラルレイ（Ｂ）
+[KOR]
 $zoom13;스파이럴 레이(B)
 
 [0x6e3a]
+[JPN]
+$zoom13;上空誘導レーザー（Ｂ）
+[KOR]
 $zoom13;상공 유도 레이저(B)
 
 [0x6e59]
+[JPN]
+$zoom13;ＡＥＥ（Ｂ・冷・ＬエーテルＰＤ）
+[KOR]
 $zoom13;AEE(B·냉기·L 에테르 PD)
 
 [0x6e82]
+[JPN]
+$zoom13;トールシャウト（Ｂ・雷・Ｌチャージロスト）
+[KOR]
 $zoom13;토르 샤우트(B·번개·L 차지 로스트)
 
 [0x6eb5]
+[JPN]
+$zoom13;ＡＥＥ（Ｂ・冷・ＬエーテルＤＤ）
+[KOR]
 $zoom13;AEE(B·냉기·L 에테르 DD)
 
 [0x6ede]
+[JPN]
+$zoom13;クイック
+[KOR]
 $zoom13;퀵
 
 [0x6eef]
+[JPN]
+$zoom13;エーテルジャミング（Ｈロスト）
+[KOR]
 $zoom13;에테르 재밍(H 로스트)
 
 [0x6f16]
+[JPN]
+$zoom13;エーテルスピア
+[KOR]
 $zoom13;에테르 스피어
 
 [0x6f2d]
+[JPN]
+$zoom13;リフレッシュＨ
+[KOR]
 $zoom13;리프레시 H
 

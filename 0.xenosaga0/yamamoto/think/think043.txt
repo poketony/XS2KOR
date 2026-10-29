@@ -1,45 +1,92 @@
-﻿[0x64e4]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x64e4]
+[JPN]
+$zoom14;$col7AF9FB;　Ｄフィールドが消えた・・$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　D 필드가 사라졌다・・$colc0c0c0;
 
 [0x6534]
+[JPN]
+$zoom14;$col7AF9FB;　歪んだ空間が弾道を鈍足にした！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　뒤틀린 공간이 탄환의 속도를 늦췄다!$colc0c0c0;
 
 [0x65cf]
+[JPN]
+$zoom13;審判の日
+[KOR]
 $zoom13;심판의 날
 
 [0x65f7]
-$zoom13;비셔스 크림슨(찌르기)
+[JPN]
+$zoom13;ヴィシャスクリムゾン（突）
+[KOR]
+$zoom13;비셔스 크림슨(돌격)
 
 [0x661a]
+[JPN]
+$zoom13;マーサレスレイン（打）
+[KOR]
 $zoom13;머시리스 레인(타격)
 
 [0x6639]
+[JPN]
+$zoom13;エンジェルタワー（ＨＰ吸収）
+[KOR]
 $zoom13;엔젤 타워(HP 흡수)
 
 [0x665e]
-$zoom13;폴링 로즈(화염)
+[JPN]
+$zoom13;フォーリンローズ（炎）
+[KOR]
+$zoom13;폴링 로즈(불꽃)
 
 [0x667d]
+[JPN]
+$zoom13;Ｉｎ　ｔｈｅ　Ｂｅｇｉｎｎｉｎｇ（雷）
+[KOR]
 $zoom13;In the Beginning(번개)
 
 [0x66ac]
-$zoom13;폴링 로즈 II(화염·L 에테르 DD)
+[JPN]
+$zoom13;フォーリンローズⅡ（炎・ＬエーテルＤＤ）
+[KOR]
+$zoom13;폴링 로즈 II(불꽃·L 에테르 DD)
 
 [0x66dd]
-$zoom13;궁니르의 일격(찌르기)
+[JPN]
+$zoom13;グングニルの一撃（突）
+[KOR]
+$zoom13;궁니르의 일격(돌격)
 
 [0x66fc]
+[JPN]
+$zoom13;リフレッシュＬ
+[KOR]
 $zoom13;리프레시 L
 
 [0x6713]
+[JPN]
+$zoom13;リフレッシュＨ
+[KOR]
 $zoom13;리프레시 H
 
 [0x672a]
+[JPN]
+$zoom13;ブーストＵＰ
+[KOR]
 $zoom13;부스트 UP
 
 [0x673f]
+[JPN]
+$zoom13;Ｄフィールド
+[KOR]
 $zoom13;D 필드
 
 [0x6754]
+[JPN]
+$zoom14;$col7AF9FB;　Ｅ．Ｓ．イサカル周辺のエーテルが収縮し\n　　光すら吸い込む歪みが空間に発生した$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　E.S. 잇사갈 주변의 에테르가 수축하여\n　　빛마저 빨아들이는 왜곡이 공간에 생겼다$colc0c0c0;
 

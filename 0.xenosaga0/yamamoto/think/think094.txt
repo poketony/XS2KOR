@@ -1,90 +1,182 @@
-﻿[0xffe4]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xffe4]
+[JPN]
+$zoom14;$colc0c0c0;ビッグウェーーーーブ！！
+[KOR]
 $zoom14;$colc0c0c0;빅 웨이~~~~브!!
 
 [0x10010]
+[JPN]
+$zoom14;$colc0c0c0;どこか不機嫌そうだ・・
+[KOR]
 $zoom14;$colc0c0c0;어쩐지 심기가 불편한 듯하다・・
 
 [0x1003a]
+[JPN]
+$zoom13;ナックルインパクト（打）
+[KOR]
 $zoom13;너클 임팩트(타격)
 
 [0x1005b]
+[JPN]
+$zoom13;エアーライディング（打・Ｌスタン）
+[KOR]
 $zoom13;에어 라이딩(타격·L 스턴)
 
 [0x10086]
+[JPN]
+$zoom14;$colc0c0c0;デイオンは周辺の匂いを嗅ぎ出した！
+[KOR]
 $zoom14;$colc0c0c0;데이온은 주변의 냄새를 맡기 시작했다!
 
 [0x100bc]
+[JPN]
+$zoom14;$colc0c0c0;匂いの元へ突進した！
+[KOR]
 $zoom14;$colc0c0c0;냄새가 나는 곳으로 돌진했다!
 
 [0x100e4]
-$zoom13;꼬리 베기(베기)
+[JPN]
+$zoom13;しっぽ斬り（斬）
+[KOR]
+$zoom13;꼬리 베기(참격)
 
 [0x100fd]
+[JPN]
+$zoom13;しゃくりあげ（打）
+[KOR]
 $zoom13;올려치기(타격)
 
 [0x10118]
+[JPN]
+$zoom13;種爆弾（気）
+[KOR]
 $zoom13;씨앗 폭탄(기)
 
 [0x1012d]
+[JPN]
+$zoom13;クイック
+[KOR]
 $zoom13;퀵
 
 [0x1013e]
+[JPN]
+$zoom13;シェイブパワー（Ｌヘビー）
+[KOR]
 $zoom13;셰이브 파워(L 헤비)
 
 [0x10161]
+[JPN]
+$zoom13;シェイブブレイン（ＬエーテルＰＤ）
+[KOR]
 $zoom13;셰이브 브레인(L 에테르 PD)
 
 [0x1018c]
+[JPN]
+$zoom13;シェイブボディー（Ｌウィーク）
+[KOR]
 $zoom13;셰이브 보디(L 위크)
 
 [0x101b3]
+[JPN]
+$zoom13;シェイブオーラ（ＬエーテルＤＤ）
+[KOR]
 $zoom13;셰이브 오라(L 에테르 DD)
 
 [0x101dc]
+[JPN]
+$zoom13;メディカ
+[KOR]
 $zoom13;메디카
 
 [0x101ed]
+[JPN]
+$zoom14;$colc0c0c0;　　三戦立ちの構えを崩した！
+[KOR]
 $zoom14;$colc0c0c0;　　삼전서기 자세가 무너졌다!
 
 [0x1021d]
+[JPN]
+$zoom13;右下段回し蹴り（打）
+[KOR]
 $zoom13;오른쪽 하단 돌려차기(타격)
 
 [0x1023a]
+[JPN]
+$zoom13;羅刹門・改　２７Ｆ（打）
+[KOR]
 $zoom13;나찰문·개 27F(타격)
 
 [0x1025b]
+[JPN]
+$zoom13;三戦立ち
+[KOR]
 $zoom13;삼전서기
 
 [0x1026c]
+[JPN]
+$zoom14;$colc0c0c0;　　　　三戦立ちの構え！\n　カウンタースタイルになった
+[KOR]
 $zoom14;$colc0c0c0;　　　　삼전서기 자세!\n　카운터 스타일로 바뀌었다
 
 [0x102b6]
+[JPN]
+$zoom13;残心
+[KOR]
 $zoom13;잔심
 
 [0x102c3]
+[JPN]
+$zoom13;囁く雨（雷・Ｌブラック）
+[KOR]
 $zoom13;속삭이는 비(번개·L 블랙)
 
 [0x102e4]
+[JPN]
+$zoom13;ブーストワン
+[KOR]
 $zoom13;부스트 원
 
 [0x102f9]
+[JPN]
+$zoom13;ミラクルスター
+[KOR]
 $zoom13;미러클 스타
 
 [0x10310]
+[JPN]
+$zoom13;戒め
+[KOR]
 $zoom13;징계
 
 [0x1031d]
+[JPN]
+$zoom14;$col7AF9FB;　蓄積エネルギー限界突破！
+[KOR]
 $zoom14;$col7AF9FB;　축적 에너지 한계 돌파!
 
 [0x1034b]
-$zoom13;재블린 히트 너클(찌르기·화염)
+[JPN]
+$zoom13;ジァベリンヒートナックル（突・炎）
+[KOR]
+$zoom13;재블린 히트 너클(돌격·불꽃)
 
 [0x10376]
-$zoom13;번 웨이브(화염)
+[JPN]
+$zoom13;バーンウェーブ（炎）
+[KOR]
+$zoom13;번 웨이브(불꽃)
 
 [0x10393]
-$zoom13;헬 캐논(화염)
+[JPN]
+$zoom13;ヘルカノン（炎）
+[KOR]
+$zoom13;헬 캐논(불꽃)
 
 [0x103ac]
+[JPN]
+$zoom13;フレアブラスト
+[KOR]
 $zoom13;플레어 블래스트
 

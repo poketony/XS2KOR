@@ -1,0 +1,998 @@
+{
+  "passed": true,
+  "labels": 20,
+  "output_files": 20,
+  "delivery": "0.xenosaga0\\simajiri\\graphics_rebuilt\\map_labels",
+  "non_pixel_bytes_and_palettes_unchanged": true,
+  "original_and_editing_inputs_unchanged": true,
+  "preservation": {
+    "original_files": 1124,
+    "originals_sha256": "a7a9a40aede73cfcac98c11634bbbb25724a60c2c9cfdad33ae2ab3838e34007",
+    "editing_sha256": {
+      "graphics_extract\\esd\\ce001_999\\images\\000029c0_m01-a.alpha.png": "a0f66ce45abe52ad10793ebb981e959f82f307e45bce6214b7a44ad2ff38eb7c",
+      "graphics_extract\\esd\\ce001_999\\images\\000029c0_m01-a.alpha_KOR.png": "e2748d6a675d605b9611fa51aa9e8c261a9ac4190ceef096779f5de14a80b4af",
+      "graphics_extract\\esd\\ce001_999\\manifest.json": "9afab1152fcfba8bf4e18e78c284d892dda42ad68f05551405c75793ca448c5b",
+      "graphics_extract\\esd\\ce002_999\\images\\000029c0_m02-a.alpha.png": "2ff52c41534534af043fd4ecfef228777962d32dc917b770936a76f7081986b3",
+      "graphics_extract\\esd\\ce002_999\\images\\000029c0_m02-a.alpha_KOR.png": "94721bd1154820fb6f22a029cb0eb5415db11bead0820eb0b840b2dabc2c5c9d",
+      "graphics_extract\\esd\\ce002_999\\manifest.json": "23bf0d4ce48da3f46571f471c69f72a98771e8ca9dddbb32e6dc4e325344b961",
+      "graphics_extract\\esd\\ce003_999\\images\\000029c0_m03-a.alpha.png": "20f8a6151326ededa5de93ddddee2e300a8d4c91bffaaf40f2fff05114e5f384",
+      "graphics_extract\\esd\\ce003_999\\images\\000029c0_m03-a.alpha_KOR.png": "fdddbbf6ccd6c1e99fcad0f325b3991eaeb8a71e9872298d736bb4c0ebd28e9c",
+      "graphics_extract\\esd\\ce003_999\\manifest.json": "2ec61c65eb405020c71efcd7ade32da2b2cc1f2872b283636f94951548af738a",
+      "graphics_extract\\esd\\ce004_999\\images\\000029c0_m04-a.alpha.png": "49b8b0d7f42f7af96f7b0cce65d43a3172f6e67c0094ddc8e770d14733459198",
+      "graphics_extract\\esd\\ce004_999\\images\\000029c0_m04-a.alpha_KOR.png": "07f7d5df9586418e4c53e248ddab792e42b68bdad58f182d7ee04de527793e68",
+      "graphics_extract\\esd\\ce004_999\\manifest.json": "616d6d7447e1fc9aa91e5ea5e45b82284c376d00db20c8c92da98a6d2b46f5f8",
+      "graphics_extract\\esd\\ce005_999\\images\\000029c0_m05-a.alpha.png": "0a9f7a00896e9a78835bc279c868f15c486d4c40a6b14ab931c77c70baad3fc5",
+      "graphics_extract\\esd\\ce005_999\\images\\000029c0_m05-a.alpha_KOR.png": "2a342cc38f93fe025e4d95b55b307002448390335a3fb41264e124507ba8c5f2",
+      "graphics_extract\\esd\\ce005_999\\manifest.json": "c297e3bf9641e8cba07b20227c4c81a5c3533f5ea501b0e69b37b87afd7bec36",
+      "graphics_extract\\esd\\ce006_999\\images\\000029c0_m06-a.alpha.png": "06629f15334a10d6666eb75cba9f14b1052cceb5999f8bb7c60b641b690df441",
+      "graphics_extract\\esd\\ce006_999\\images\\000029c0_m06-a.alpha_KOR.png": "f40ca69e3453e97fb8695426ad25f35dc47c25d643198031e2036740d0f2c2c6",
+      "graphics_extract\\esd\\ce006_999\\manifest.json": "efbfb62c76a44b19cc4589b4260c29960d401f7d59bca18d07c06b5dc718f7bb",
+      "graphics_extract\\esd\\ce007_999\\images\\000029c0_m07-a.alpha.png": "4d11a85a76f9a29c768f8b0a1edfd88a85dd494a93410516076596674cac787d",
+      "graphics_extract\\esd\\ce007_999\\images\\000029c0_m07-a.alpha_KOR.png": "d34f7952038dca1500f23e1c59ddd620355911fb690121b8ebdb1b9d52bed55f",
+      "graphics_extract\\esd\\ce007_999\\manifest.json": "39a8945fdcd6c17b7b2462d3385249860f9ea997695ab3ca76813c76b5ead7cb",
+      "graphics_extract\\esd\\ce008_999\\images\\000029c0_m08-a.alpha.png": "e09f51173b5fa424720f4c3748311d83f0b53e88eaa0caea96f9e36f67bea151",
+      "graphics_extract\\esd\\ce008_999\\images\\000029c0_m08-a.alpha_KOR.png": "36cbe71f2df242744ba72d748816118b114cbd494a4e618b4f2327a91be3492b",
+      "graphics_extract\\esd\\ce008_999\\manifest.json": "768adaf7663b87bbe41e923162438795ea0d9eb0db49fa0ec0abd9e1e6fc366c",
+      "graphics_extract\\esd\\ce009_999\\images\\000029c0_m09-a.alpha.png": "174c9464e38243944b2f1dfe77dc19472dd26988a006caa5f6a37adc470c203a",
+      "graphics_extract\\esd\\ce009_999\\images\\000029c0_m09-a.alpha_KOR.png": "98859684a347bc3cb4f6e3724238dbf70364ecb8e726865c181cf165ca4c3d12",
+      "graphics_extract\\esd\\ce009_999\\manifest.json": "701742978c65e7def0228be19c45d720f01ad8c54229d4b1e798d7a65f9f952b",
+      "graphics_extract\\esd\\ce010_999\\images\\000029c0_m10-a.alpha.png": "1ccd6879cb6a65ba601e0b1049238b51a685b3026af4b7519d9059921acf89ad",
+      "graphics_extract\\esd\\ce010_999\\images\\000029c0_m10-a.alpha_KOR.png": "6aeb6f23de91f5113e5dcd026d09a8910bf738de0fe6fd46e3d628efd4630a59",
+      "graphics_extract\\esd\\ce010_999\\manifest.json": "d8bee49637f4be682fd22f9bb2ecdb64b6e34aca6f3167520021b43bae729b2e",
+      "graphics_extract\\esd\\ce011_999\\images\\000029c0_m11-a.alpha.png": "c6fd0e90fbb675265248164d7e772249d242e3cd57bcc7cce638264f1dff2780",
+      "graphics_extract\\esd\\ce011_999\\images\\000029c0_m11-a.alpha_KOR.png": "3f1ce660d74dae810b61c93d42164fc73e8d3a6d4f06bb3e00d36f1b161cc234",
+      "graphics_extract\\esd\\ce011_999\\manifest.json": "f62ac028fd66e6b209ca1a2ab8fe326754bc17bf66ecf28ee77b07ffa12f7792",
+      "graphics_extract\\esd\\ce012_999\\images\\000029c0_m12-a.alpha.png": "0cc64c49ceb734b164928673909a7a89e423a91254ea52ae03d65983d8e029fb",
+      "graphics_extract\\esd\\ce012_999\\images\\000029c0_m12-a.alpha_KOR.png": "27a1465ea5daf7c38653e5e9ef4c9fd17a976aa9cd30736a5bbb563931f23600",
+      "graphics_extract\\esd\\ce012_999\\manifest.json": "afd5190eb212f8e9841a1a49ec317f2e3eb40ffa0f6715dd61efcd0095c82350",
+      "graphics_extract\\esd\\ce013_999\\images\\000029c0_m13-a.alpha.png": "09878a197ed6174ca6399b7fb5eb1e6abf34f8af7f673a1aa4835dcbb1eb49fe",
+      "graphics_extract\\esd\\ce013_999\\images\\000029c0_m13-a.alpha_KOR.png": "ac64dc9866de74819659da0dd7eeabbeca683d3b2448f0705061d4840e0036bb",
+      "graphics_extract\\esd\\ce013_999\\manifest.json": "e8f5e049c4096dc71f7a239082561863ce849e0bab8ea40c5f214d265172da99",
+      "graphics_extract\\esd\\ce014_999\\images\\000029c0_m14-a.alpha.png": "56d4ce7f460894a0cdc1d9ad320c9d9068d0ecee8b4562bcbb8fa364dcf281f8",
+      "graphics_extract\\esd\\ce014_999\\images\\000029c0_m14-a.alpha_KOR.png": "2e6a75463b8cb19f4813bf9adc46db98bdcd03c4df95f27dd19d827257b23044",
+      "graphics_extract\\esd\\ce014_999\\manifest.json": "4e5d072a5ba559afea047c814f7eabd1e7bd8ee071577212d988bed715816f30",
+      "graphics_extract\\esd\\ce015_999\\images\\000029c0_m15-a.alpha.png": "f050fabfe661a7588d684e3f66df1e380fcf96c90930dc43b1e134bfc2f6323f",
+      "graphics_extract\\esd\\ce015_999\\images\\000029c0_m15-a.alpha_KOR.png": "d93abceae0879ce6f2754dea47d580330b3ddace810b189cbf84f30a93bfb768",
+      "graphics_extract\\esd\\ce015_999\\manifest.json": "f5b159776b1ad0f70e29b1e6d507b7e2bfb944801999b5aa8c7a11ecd3d777e6",
+      "graphics_extract\\esd\\ce016_999\\images\\000029c0_m16-a.alpha.png": "79047fa800c344a616887a6afe60c2fea8ee3cd9042fa23715d89eb8139ef249",
+      "graphics_extract\\esd\\ce016_999\\images\\000029c0_m16-a.alpha_KOR.png": "1acf6d16dadf5161341be40760b4a6b47f9072fd70778615e084e1d1674d4fda",
+      "graphics_extract\\esd\\ce016_999\\manifest.json": "70d0c3ab1f7159fafe3cd59fb2937a38b6f6554f803e668641145e2b342ef442",
+      "graphics_extract\\esd\\ce017_996\\images\\000029c0_m17a-a.alpha.png": "1f55e3bd693994a0aab4381b263dd535bc28bd23d00470bb74bc75ae16285d57",
+      "graphics_extract\\esd\\ce017_996\\images\\000029c0_m17a-a.alpha_KOR.png": "650e9fcc5532b4914f15b1496a35437784be67f61623b5145daf6f8e2bc95af2",
+      "graphics_extract\\esd\\ce017_996\\manifest.json": "1e6538af6cfb8ee44149c7c72250954341bc1cad6b7e604f02492c7b1172dd5f",
+      "graphics_extract\\esd\\ce017_997\\images\\000029c0_m17b-a.alpha.png": "715fd8c2967c59fdef19a869eada5ff96e95559962bf89c9e1eb23ea4ed9847f",
+      "graphics_extract\\esd\\ce017_997\\images\\000029c0_m17b-a.alpha_KOR.png": "164177a4f98e079ac1ef45cfd882dbd1f361df6fa931f58efe32e5baa081b116",
+      "graphics_extract\\esd\\ce017_997\\manifest.json": "f4d4bab76a6dc2a73f3aedd12b0d2795c14342684e4d67097ede4a3666d74dee",
+      "graphics_extract\\esd\\ce017_998\\images\\000029c0_m17c-a.alpha.png": "247ca1f9f5b41f8c12caca7ca950e6f9b4c3f2eb3ce06dcf42a16f12dc4e4c17",
+      "graphics_extract\\esd\\ce017_998\\images\\000029c0_m17c-a.alpha_KOR.png": "cc43089b795098bb5550005375d9f6c286574d9903c849ac5ca0c6ed4afdcf2e",
+      "graphics_extract\\esd\\ce017_998\\manifest.json": "daf40340345a710dfc6cbab687df68e707d27398bff8c338b921547e08e63c3a",
+      "graphics_extract\\esd\\ce017_999\\images\\000029c0_m17d-a.alpha.png": "4b1ca2947bc5127d921d32037697a8feec202092d16e18b16e74e7c195c45956",
+      "graphics_extract\\esd\\ce017_999\\images\\000029c0_m17d-a.alpha_KOR.png": "02dbc6f6bf6d7d451e498fed1ea8ad5850adc4b9f563d84c4786fcce5ea53ae5",
+      "graphics_extract\\esd\\ce017_999\\manifest.json": "abc077a5f4c68b4e4acdb697b4b3514168d90d60da9fcb58ca8833a8969d14a6",
+      "graphics_extract\\map_effect.psd": "54804f8f3a7ad568097b6d2626101395b76c7bd61a9456f94e209f3b8f55b95a"
+    }
+  },
+  "jobs": [
+    {
+      "name": "ce001_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce001_999\\images\\000029c0_m01-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce001_999.esd",
+      "output_sha256": "21ed814485c8480f9b12c9095e7447d4cce570dee342cce634be5520daa974d5",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        72,
+        6,
+        241,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce001_999.esd",
+        "source_sha256": "2e7740a84bc1fe9f10ac0af840382058367a8d1856de539f37ddddf89d75c928",
+        "images": [
+          {
+            "key": "000029c0_m01-a",
+            "edited_pixels": 4226,
+            "changed_indices": 4146,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m01-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce001_999.esd",
+            "size": 37888,
+            "before": "2e7740a84bc1fe9f10ac0af840382058367a8d1856de539f37ddddf89d75c928",
+            "after": "21ed814485c8480f9b12c9095e7447d4cce570dee342cce634be5520daa974d5",
+            "changed_bytes": 4146
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce002_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce002_999\\images\\000029c0_m02-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce002_999.esd",
+      "output_sha256": "0948a77130fec61c4564cb358c9fbd7aa292ddd6ec0950d713001d18490dddc4",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        58,
+        6,
+        241,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce002_999.esd",
+        "source_sha256": "72bfe7f925682dbf0c44139f7e4f32239396e1df5128d694f2f6bbe0a136784c",
+        "images": [
+          {
+            "key": "000029c0_m02-a",
+            "edited_pixels": 4755,
+            "changed_indices": 4672,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m02-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce002_999.esd",
+            "size": 37888,
+            "before": "72bfe7f925682dbf0c44139f7e4f32239396e1df5128d694f2f6bbe0a136784c",
+            "after": "0948a77130fec61c4564cb358c9fbd7aa292ddd6ec0950d713001d18490dddc4",
+            "changed_bytes": 4672
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce003_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce003_999\\images\\000029c0_m03-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce003_999.esd",
+      "output_sha256": "b2f9ac43975fb75488c966b0d700b1a8388809cf3a741138a4de111ead656902",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        166,
+        6,
+        244,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce003_999.esd",
+        "source_sha256": "bf5131fd314bafcd9047aa8d264d84e51cc6dd956373c6454e471ca189fc6f79",
+        "images": [
+          {
+            "key": "000029c0_m03-a",
+            "edited_pixels": 3396,
+            "changed_indices": 3360,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m03-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce003_999.esd",
+            "size": 37888,
+            "before": "bf5131fd314bafcd9047aa8d264d84e51cc6dd956373c6454e471ca189fc6f79",
+            "after": "b2f9ac43975fb75488c966b0d700b1a8388809cf3a741138a4de111ead656902",
+            "changed_bytes": 3360
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce004_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce004_999\\images\\000029c0_m04-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce004_999.esd",
+      "output_sha256": "83f25ce95801111449c4ea84bef0e5918dd538f66b83328c8dc423212466bed6",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        125,
+        6,
+        244,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce004_999.esd",
+        "source_sha256": "55dd7a7b4567e831c9ed6f1c07887ca7d16a90dd1100142577965367bdab1572",
+        "images": [
+          {
+            "key": "000029c0_m04-a",
+            "edited_pixels": 3555,
+            "changed_indices": 3510,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m04-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce004_999.esd",
+            "size": 37888,
+            "before": "55dd7a7b4567e831c9ed6f1c07887ca7d16a90dd1100142577965367bdab1572",
+            "after": "83f25ce95801111449c4ea84bef0e5918dd538f66b83328c8dc423212466bed6",
+            "changed_bytes": 3510
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce005_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce005_999\\images\\000029c0_m05-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce005_999.esd",
+      "output_sha256": "7239b433df87e70ecc8cda2672a88478772a8ddc288b87c3e0f868ec4c36131d",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        138,
+        6,
+        244,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce005_999.esd",
+        "source_sha256": "6eea39cc7136540183daf1b1dd31b95e7bb2aaaaca034bf87a372247f7bf08ce",
+        "images": [
+          {
+            "key": "000029c0_m05-a",
+            "edited_pixels": 3001,
+            "changed_indices": 2956,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m05-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce005_999.esd",
+            "size": 37888,
+            "before": "6eea39cc7136540183daf1b1dd31b95e7bb2aaaaca034bf87a372247f7bf08ce",
+            "after": "7239b433df87e70ecc8cda2672a88478772a8ddc288b87c3e0f868ec4c36131d",
+            "changed_bytes": 2956
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce006_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce006_999\\images\\000029c0_m06-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce006_999.esd",
+      "output_sha256": "4bd3482a4a9109dff4f1f2ea148541b9874690c39c86eefdf4add7e5a1e1bcd3",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        76,
+        6,
+        241,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce006_999.esd",
+        "source_sha256": "2e6c9f84b8a8c5bc8d848bbcea917b96ec3a6757959c9f6f303b65bdb56b4d57",
+        "images": [
+          {
+            "key": "000029c0_m06-a",
+            "edited_pixels": 5420,
+            "changed_indices": 5345,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m06-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce006_999.esd",
+            "size": 37888,
+            "before": "2e6c9f84b8a8c5bc8d848bbcea917b96ec3a6757959c9f6f303b65bdb56b4d57",
+            "after": "4bd3482a4a9109dff4f1f2ea148541b9874690c39c86eefdf4add7e5a1e1bcd3",
+            "changed_bytes": 5345
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce007_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce007_999\\images\\000029c0_m07-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce007_999.esd",
+      "output_sha256": "04cda4b33a85347c3effe68eb5674254cd122f918f071c11e73f4dc7ff8b512c",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        112,
+        6,
+        241,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce007_999.esd",
+        "source_sha256": "e9c8f4cec8ec9d3c736e321ca2f9d755b1be539391d6642db51f2ddda0d94548",
+        "images": [
+          {
+            "key": "000029c0_m07-a",
+            "edited_pixels": 3570,
+            "changed_indices": 3496,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m07-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce007_999.esd",
+            "size": 37888,
+            "before": "e9c8f4cec8ec9d3c736e321ca2f9d755b1be539391d6642db51f2ddda0d94548",
+            "after": "04cda4b33a85347c3effe68eb5674254cd122f918f071c11e73f4dc7ff8b512c",
+            "changed_bytes": 3496
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce008_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce008_999\\images\\000029c0_m08-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce008_999.esd",
+      "output_sha256": "a0ff64c1d31947db783bc5ac5c6fd892566e300102646647ec297ecd96e1761a",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        205,
+        6,
+        244,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce008_999.esd",
+        "source_sha256": "fd7fd800ab0c523f312a715d8f4100d70c0de6c804dd77b46a7293bdab88ce6a",
+        "images": [
+          {
+            "key": "000029c0_m08-a",
+            "edited_pixels": 1586,
+            "changed_indices": 1564,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m08-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce008_999.esd",
+            "size": 37888,
+            "before": "fd7fd800ab0c523f312a715d8f4100d70c0de6c804dd77b46a7293bdab88ce6a",
+            "after": "a0ff64c1d31947db783bc5ac5c6fd892566e300102646647ec297ecd96e1761a",
+            "changed_bytes": 1564
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce009_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce009_999\\images\\000029c0_m09-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce009_999.esd",
+      "output_sha256": "fe76f0f14b4466d1d1f25c7baf21918548ba8c54db0409caa21da2eed12569cb",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        46,
+        6,
+        241,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce009_999.esd",
+        "source_sha256": "3a709a766585f0dc417ce46d9b1383b3061469eb38b140aa086194a7a4c20962",
+        "images": [
+          {
+            "key": "000029c0_m09-a",
+            "edited_pixels": 5761,
+            "changed_indices": 5658,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m09-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce009_999.esd",
+            "size": 37888,
+            "before": "3a709a766585f0dc417ce46d9b1383b3061469eb38b140aa086194a7a4c20962",
+            "after": "fe76f0f14b4466d1d1f25c7baf21918548ba8c54db0409caa21da2eed12569cb",
+            "changed_bytes": 5658
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce010_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce010_999\\images\\000029c0_m10-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce010_999.esd",
+      "output_sha256": "c5f7b345907e5bafa1e0feb7d33a10732bbdff9d156909243facfa24327e2807",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        118,
+        7,
+        241,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce010_999.esd",
+        "source_sha256": "d6e4f002f769652fb58a3dc7058ac6383538cf364a40e67d8bae5ffd677b953e",
+        "images": [
+          {
+            "key": "000029c0_m10-a",
+            "edited_pixels": 3479,
+            "changed_indices": 3418,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m10-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce010_999.esd",
+            "size": 37888,
+            "before": "d6e4f002f769652fb58a3dc7058ac6383538cf364a40e67d8bae5ffd677b953e",
+            "after": "c5f7b345907e5bafa1e0feb7d33a10732bbdff9d156909243facfa24327e2807",
+            "changed_bytes": 3418
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce011_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce011_999\\images\\000029c0_m11-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce011_999.esd",
+      "output_sha256": "cc40bd9ae3e68cfbaa1d22561fd0db608a33a9f52e687358d1824c77d52f0264",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        185,
+        6,
+        244,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce011_999.esd",
+        "source_sha256": "b2edb89a6550b38fd9ce9c1223bf811d67b9f8b59ca91470886f1eedb87e6be6",
+        "images": [
+          {
+            "key": "000029c0_m11-a",
+            "edited_pixels": 2881,
+            "changed_indices": 2858,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m11-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce011_999.esd",
+            "size": 37888,
+            "before": "b2edb89a6550b38fd9ce9c1223bf811d67b9f8b59ca91470886f1eedb87e6be6",
+            "after": "cc40bd9ae3e68cfbaa1d22561fd0db608a33a9f52e687358d1824c77d52f0264",
+            "changed_bytes": 2858
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce012_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce012_999\\images\\000029c0_m12-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce012_999.esd",
+      "output_sha256": "876c461ed8b021b10a981c29e722a25476e8a95b50c17bb2d958a1c0581ce6a3",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        146,
+        6,
+        242,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce012_999.esd",
+        "source_sha256": "a0ff75dc77914e29a597b54c4c976f090785c02c5dd57acab6351c3849e2a0de",
+        "images": [
+          {
+            "key": "000029c0_m12-a",
+            "edited_pixels": 4257,
+            "changed_indices": 4215,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m12-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce012_999.esd",
+            "size": 37888,
+            "before": "a0ff75dc77914e29a597b54c4c976f090785c02c5dd57acab6351c3849e2a0de",
+            "after": "876c461ed8b021b10a981c29e722a25476e8a95b50c17bb2d958a1c0581ce6a3",
+            "changed_bytes": 4215
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce013_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce013_999\\images\\000029c0_m13-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce013_999.esd",
+      "output_sha256": "22a2c8d7369985d96025fc1c173f985fa5849eac11364684252c047f00e287b1",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        158,
+        6,
+        241,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce013_999.esd",
+        "source_sha256": "71f53500ea70d095a96693de09145b1c273c7bf23afad348fb903707bef9cccb",
+        "images": [
+          {
+            "key": "000029c0_m13-a",
+            "edited_pixels": 2525,
+            "changed_indices": 2464,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m13-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce013_999.esd",
+            "size": 37888,
+            "before": "71f53500ea70d095a96693de09145b1c273c7bf23afad348fb903707bef9cccb",
+            "after": "22a2c8d7369985d96025fc1c173f985fa5849eac11364684252c047f00e287b1",
+            "changed_bytes": 2464
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce014_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce014_999\\images\\000029c0_m14-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce014_999.esd",
+      "output_sha256": "f051d6f864a6859e02af4ce3011fb162eb3f43b86ada95fd643b823dbd91cad9",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        146,
+        6,
+        244,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce014_999.esd",
+        "source_sha256": "fe3fbd86e3fb2c2c063ef7025b2115fbb837352c00680abed0e46fef58603772",
+        "images": [
+          {
+            "key": "000029c0_m14-a",
+            "edited_pixels": 3518,
+            "changed_indices": 3480,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m14-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce014_999.esd",
+            "size": 37888,
+            "before": "fe3fbd86e3fb2c2c063ef7025b2115fbb837352c00680abed0e46fef58603772",
+            "after": "f051d6f864a6859e02af4ce3011fb162eb3f43b86ada95fd643b823dbd91cad9",
+            "changed_bytes": 3480
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce015_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce015_999\\images\\000029c0_m15-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce015_999.esd",
+      "output_sha256": "5d87a72073a485bf529cc8255350019ef1813cbfd4564058c26358645090cac1",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        118,
+        6,
+        241,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce015_999.esd",
+        "source_sha256": "a0b51f289bc4f827259d6fcbe8375c095a7ac7e860c884b7e01eb587d535b4d9",
+        "images": [
+          {
+            "key": "000029c0_m15-a",
+            "edited_pixels": 3747,
+            "changed_indices": 3695,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m15-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce015_999.esd",
+            "size": 37888,
+            "before": "a0b51f289bc4f827259d6fcbe8375c095a7ac7e860c884b7e01eb587d535b4d9",
+            "after": "5d87a72073a485bf529cc8255350019ef1813cbfd4564058c26358645090cac1",
+            "changed_bytes": 3695
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce016_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce016_999\\images\\000029c0_m16-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce016_999.esd",
+      "output_sha256": "3176ee1e54d0c9b36ea6a92368be87505f69a73897ccc4eec55c7e3258d063c9",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        112,
+        6,
+        241,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce016_999.esd",
+        "source_sha256": "6ab3c67b485ba6d73a5c4c44e740c958da9a5ea8ff9f3f31b501a87bd32ecad9",
+        "images": [
+          {
+            "key": "000029c0_m16-a",
+            "edited_pixels": 3882,
+            "changed_indices": 3801,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m16-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce016_999.esd",
+            "size": 37888,
+            "before": "6ab3c67b485ba6d73a5c4c44e740c958da9a5ea8ff9f3f31b501a87bd32ecad9",
+            "after": "3176ee1e54d0c9b36ea6a92368be87505f69a73897ccc4eec55c7e3258d063c9",
+            "changed_bytes": 3801
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce017_996",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce017_996\\images\\000029c0_m17a-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce017_996.esd",
+      "output_sha256": "810d9006349d4e90c32bf3f016010124e01184e3cfdf0b477a0d48fe1516ce40",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        205,
+        6,
+        244,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce017_996.esd",
+        "source_sha256": "3452a869a2b845cbf16fc069f68497976df983df0d7f9225d5544f613f33be6f",
+        "images": [
+          {
+            "key": "000029c0_m17a-a",
+            "edited_pixels": 1274,
+            "changed_indices": 1234,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m17a-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce017_996.esd",
+            "size": 37888,
+            "before": "3452a869a2b845cbf16fc069f68497976df983df0d7f9225d5544f613f33be6f",
+            "after": "810d9006349d4e90c32bf3f016010124e01184e3cfdf0b477a0d48fe1516ce40",
+            "changed_bytes": 1234
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce017_997",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce017_997\\images\\000029c0_m17b-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce017_997.esd",
+      "output_sha256": "b461ce9bf726badaadc7c6a01b478c350ab575ab1c85fcc83ce4168f87ad4c45",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        158,
+        6,
+        242,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce017_997.esd",
+        "source_sha256": "6820dc630a0b2a2be0b3242d1fdc480d21fb1085cbca3eae78cc4a56d1e4e6a7",
+        "images": [
+          {
+            "key": "000029c0_m17b-a",
+            "edited_pixels": 2446,
+            "changed_indices": 2386,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m17b-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce017_997.esd",
+            "size": 37888,
+            "before": "6820dc630a0b2a2be0b3242d1fdc480d21fb1085cbca3eae78cc4a56d1e4e6a7",
+            "after": "b461ce9bf726badaadc7c6a01b478c350ab575ab1c85fcc83ce4168f87ad4c45",
+            "changed_bytes": 2386
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce017_998",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce017_998\\images\\000029c0_m17c-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce017_998.esd",
+      "output_sha256": "072afa62fe87df22908edcd778e6f5358a7d70a62a65983c11a4964fbd757e4e",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        158,
+        6,
+        241,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce017_998.esd",
+        "source_sha256": "9b134615630e06cb72c4471bc4eb681ca2add5b157e6b1e5879c4e6ab0f87d57",
+        "images": [
+          {
+            "key": "000029c0_m17c-a",
+            "edited_pixels": 2482,
+            "changed_indices": 2420,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m17c-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce017_998.esd",
+            "size": 37888,
+            "before": "9b134615630e06cb72c4471bc4eb681ca2add5b157e6b1e5879c4e6ab0f87d57",
+            "after": "072afa62fe87df22908edcd778e6f5358a7d70a62a65983c11a4964fbd757e4e",
+            "changed_bytes": 2420
+          }
+        ]
+      }
+    },
+    {
+      "name": "ce017_999",
+      "input_png": "0.xenosaga0\\simajiri\\graphics_extract\\esd\\ce017_999\\images\\000029c0_m17d-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "output": "esd/ce017_999.esd",
+      "output_sha256": "1e57c0ecb3555ef94ad3d28b7de73a01729327aef4d6431babea285356926726",
+      "size": 37888,
+      "max_alpha_error": 11,
+      "opaque_core_bounds": [
+        78,
+        6,
+        244,
+        26
+      ],
+      "core_touches_edge": false,
+      "exact_expected_pixels": true,
+      "second_roundtrip_identical": true,
+      "build": {
+        "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce017_999.esd",
+        "source_sha256": "994622e1b34c786c3f1b2ee9d4ca77a29951bea14065c2ca1af95b5ff197ffb4",
+        "images": [
+          {
+            "key": "000029c0_m17d-a",
+            "edited_pixels": 4488,
+            "changed_indices": 4427,
+            "max_channel_error": 11,
+            "input_png": "images/000029c0_m17d-a.alpha_KOR.png",
+            "conversion": "luminance",
+            "kor_override": true
+          }
+        ],
+        "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+        "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+        "unsupported_preserved": [],
+        "unselected_images_preserved": 3,
+        "files": [
+          {
+            "path": "esd/ce017_999.esd",
+            "size": 37888,
+            "before": "994622e1b34c786c3f1b2ee9d4ca77a29951bea14065c2ca1af95b5ff197ffb4",
+            "after": "1e57c0ecb3555ef94ad3d28b7de73a01729327aef4d6431babea285356926726",
+            "changed_bytes": 4427
+          }
+        ]
+      }
+    }
+  ],
+  "note": "Independent alpha-CLUT decode; no GPU effect or emulator validation"
+}

@@ -1,54 +1,110 @@
-﻿[0xc8ac]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xc8ac]
+[JPN]
+勝利者ゆにっときゃんせる！！！
+[KOR]
 승리자 유닛 취소!!!
 
 [0xc8cb]
+[JPN]
+■■■■■■■敵のアタック
+[KOR]
 ■■■■■■■적의 공격
 
 [0xc8e6]
+[JPN]
+■■■■■■■ろ〜〜〜〜〜んぐこ〜〜〜〜〜る
+[KOR]
 ■■■■■■■로~~~~~옹 코~~~~~올
 
 [0xc913]
+[JPN]
+■■■■モモの技＝
+[KOR]
 ■■■■모모의 기술=
 
 [0xc926]
+[JPN]
+きゃんせる
+[KOR]
 취소
 
 [0xc931]
+[JPN]
+$col7AF9FB;$zoom15;　カイザーシールドに亀裂が生じた！
+[KOR]
 $col7AF9FB;$zoom15;　카이저 실드에 금이 갔다!
 
 [0xc967]
+[JPN]
+$col7AF9FB;$zoom15;　笑止！\n　勝ち急ぎ使いどころを見誤ったな！
+[KOR]
 $col7AF9FB;$zoom15;　가소롭군!\n　이기려 서두르다 쓸 때를 잘못 짚었구나!
 
 [0xc9a7]
+[JPN]
+$col7AF9FB;$zoom15;　カイザーシールドが崩壊した！
+[KOR]
 $col7AF9FB;$zoom15;　카이저 실드가 붕괴했다!
 
 [0xc9d9]
+[JPN]
+$zoom13;ブラックナックル（打）
+[KOR]
 $zoom13;블랙 너클(타격)
 
 [0xc9f8]
-$zoom13;블랙 사이클론(베기)
+[JPN]
+$zoom13;ブラックサイクロン（斬）
+[KOR]
+$zoom13;블랙 사이클론(참격)
 
 [0xca19]
-$zoom13;블랙 카오스 플레임(화염)
+[JPN]
+$zoom13;ブラックカオスフレイム（炎）
+[KOR]
+$zoom13;블랙 카오스 플레임(불꽃)
 
 [0xca3e]
+[JPN]
+$zoom13;ロストミスト（Ｈロスト）
+[KOR]
 $zoom13;로스트 미스트(H 로스트)
 
 [0xca5f]
+[JPN]
+$zoom13;クイック
+[KOR]
 $zoom13;퀵
 
 [0xca70]
+[JPN]
+$zoom13;シャドーバインド（Ｈバインド）
+[KOR]
 $zoom13;섀도 바인드(H 바인드)
 
 [0xca97]
+[JPN]
+$zoom13;カイザーシールド
+[KOR]
 $zoom13;카이저 실드
 
 [0xcab0]
+[JPN]
+$zoom13;フレアヴェール
+[KOR]
 $zoom13;플레어 베일
 
 [0xcac7]
+[JPN]
+$zoom13;オーラヴェール
+[KOR]
 $zoom13;오라 베일
 
 [0xcade]
+[JPN]
+$zoom13;ブラックウェイブ（ＬエーテルＤＤ）
+[KOR]
 $zoom13;블랙 웨이브(L 에테르 DD)
 

@@ -1,0 +1,28 @@
+{
+  "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original\\esd\\ce003_999.esd",
+  "source_sha256": "bf5131fd314bafcd9047aa8d264d84e51cc6dd956373c6454e471ca189fc6f79",
+  "images": [
+    {
+      "key": "000029c0_m03-a",
+      "edited_pixels": 3396,
+      "changed_indices": 3360,
+      "max_channel_error": 11,
+      "input_png": "images/000029c0_m03-a.alpha_KOR.png",
+      "conversion": "luminance",
+      "kor_override": true
+    }
+  ],
+  "sync_policy": "Exact full-ESD copies only; no same-name or partial matching",
+  "sync_root": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\simajiri\\original",
+  "unsupported_preserved": [],
+  "unselected_images_preserved": 3,
+  "files": [
+    {
+      "path": "esd/ce003_999.esd",
+      "size": 37888,
+      "before": "bf5131fd314bafcd9047aa8d264d84e51cc6dd956373c6454e471ca189fc6f79",
+      "after": "b2f9ac43975fb75488c966b0d700b1a8388809cf3a741138a4de111ead656902",
+      "changed_bytes": 3360
+    }
+  ]
+}

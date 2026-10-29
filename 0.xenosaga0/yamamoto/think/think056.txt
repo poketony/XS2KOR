@@ -1,87 +1,176 @@
-﻿[0x8724]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x8724]
+[JPN]
+$zoom13;自動追尾レーザー（Ｂ）
+[KOR]
 $zoom13;자동 추적 레이저(B)
 
 [0x8743]
+[JPN]
+$zoom13;ブレイクアーマー（Ｌウィーク）
+[KOR]
 $zoom13;브레이크 아머(L 위크)
 
 [0x877a]
+[JPN]
+$zoom14;$col7AF9FB;防御シールド耐久力が５０％低下した$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;방어 실드의 내구력이 50% 줄었다$colc0c0c0;
 
 [0x87cb]
+[JPN]
+$zoom14;$col7AF9FB;　　防御シールドが破られた！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　방어 실드가 깨졌다!$colc0c0c0;
 
 [0x8814]
+[JPN]
+$zoom13;カウンターメジャー
+[KOR]
 $zoom13;카운터메저
 
 [0x882f]
+[JPN]
+$zoom14;$col7AF9FB;　目視できない防御シールドが張られ\n　　如何なるダメージも軽減される●$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　눈에 보이지 않는 방어 실드가 펼쳐져\n　　모든 대미지가 줄어든다●$colc0c0c0;
 
 [0x8894]
+[JPN]
+$zoom14;$colc0c0c0;　防御シールドを維持する為\n　$col7AF9FB;発射した際のターン$colc0c0c0;毎に\n　再噴出しなければならない！●$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　방어 실드를 유지하려면\n　$col7AF9FB;발사했던 턴$colc0c0c0;마다\n　다시 분출해야 한다!●$colc0c0c0;
 
 [0x892b]
+[JPN]
+$zoom14;$col7AF9FB;　　損傷箇所確認$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　손상 부위 확인$colc0c0c0;
 
 [0x896a]
+[JPN]
+$zoom14;$colc0c0c0;　エーテル機関室損傷\n$col7AF9FB;　エーテル使用不可$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　에테르 기관실 손상\n$col7AF9FB;　에테르 사용 불가$colc0c0c0;
 
 [0x89cc]
+[JPN]
+$zoom14;$colc0c0c0;　　　　転送室損傷\n$col7AF9FB;　オーテックの転送不可$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　　　　전송실 손상\n$col7AF9FB;　오테크 전송 불가$colc0c0c0;
 
 [0x8a30]
+[JPN]
+$zoom14;$colc0c0c0;　　　　　艦底損傷\n$col7AF9FB;　大量の海水が浸水している$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　　　　　함저 손상\n$col7AF9FB;　바닷물이 대량으로 들어오고 있다$colc0c0c0;
 
 [0x8a98]
+[JPN]
+$zoom14;$col7AF9FB;　オーテック転送$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　오테크 전송$colc0c0c0;
 
 [0x8ac7]
+[JPN]
+$zoom14;$colc0c0c0;ヴァンダーカム艦長は歯軋りしている
+[KOR]
 $zoom14;$colc0c0c0;반더컴 함장은 이를 갈고 있다
 
 [0x8b0d]
+[JPN]
+$zoom14;$col7AF9FB;　　　エーテル機関室修復完了\n　ナグルファルのＥＰが全回復した$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　　에테르 기관실 복구 완료\n　나글파르의 EP가 모두 회복됐다$colc0c0c0;
 
 [0x8b78]
+[JPN]
+$zoom14;$col7AF9FB;　　主砲発射準備$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　주포 발사 준비$colc0c0c0;
 
 [0x8bb5]
+[JPN]
+$zoom14;$col7AF9FB;　　次弾発射準備$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　다음 탄 발사 준비$colc0c0c0;
 
 [0x8bf4]
+[JPN]
+$zoom14;$col7AF9FB;　エネルギー充填率５０％$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　에너지 충전율 50%$colc0c0c0;
 
 [0x8c3b]
+[JPN]
+$zoom14;$col7AF9FB;エーテルジェネレーターが限界点に達した$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;에테르 제너레이터가 한계점에 달했다$colc0c0c0;
 
 [0x8c9e]
+[JPN]
+$zoom14;$col7AF9FB;　エネルギー充填率１００％$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　에너지 충전율 100%$colc0c0c0;
 
 [0x8ce7]
+[JPN]
+$zoom14;$col7AF9FB;　　　　転送室修復完了\n　オーテックの転送が可能になった$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　　　전송실 복구 완료\n　오테크를 전송할 수 있게 됐다$colc0c0c0;
 
 [0x8d4e]
+[JPN]
+$zoom14;$col7AF9FB;　　艦底修復完了$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　함저 복구 완료$colc0c0c0;
 
 [0x8d7d]
+[JPN]
+$zoom14;$colc0c0c0;　　　　エーテル機関室損傷\n$col7AF9FB;　残量不足の為、エーテル使用不可$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;　　　　에테르 기관실 손상\n$col7AF9FB;　잔량 부족으로 에테르 사용 불가$colc0c0c0;
 
 [0x8de3]
+[JPN]
+$zoom14;$col7AF9FB;　　防御シールドが解除された！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　방어 실드가 해제됐다!$colc0c0c0;
 
 [0x8e20]
+[JPN]
+$zoom14;$col7AF9FB;　　補助燃料始動$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;　　보조 연료 가동$colc0c0c0;
 
 [0x8e5d]
+[JPN]
+$zoom14;$col7AF9FB;ナグルファル乗組員が脱走しはじめた！\n　　主砲エネルギー充填率５０％\n$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;나글파르의 승무원들이 탈주하기 시작했다!\n　　주포 에너지 충전율 50%\n$colc0c0c0;
 
 [0x8ed0]
+[JPN]
+$zoom13;第一主砲発射（Ｂ）
+[KOR]
 $zoom13;제1 주포 발사(B)
 
 [0x8eeb]
+[JPN]
+$zoom13;第二主砲発射（Ｂ）
+[KOR]
 $zoom13;제2 주포 발사(B)
 
 [0x8f06]
+[JPN]
+$zoom13;第三主砲発射（Ｂ）
+[KOR]
 $zoom13;제3 주포 발사(B)
 
 [0x8f21]
+[JPN]
+$zoom13;全主砲一斉掃射（Ｂ）
+[KOR]
 $zoom13;모든 주포 일제 소사(B)
 

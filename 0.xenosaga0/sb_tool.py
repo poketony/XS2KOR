@@ -442,7 +442,7 @@ def main(argv=None):
             source, data, _record = load_source(args[0], catalog)
             target = source.with_suffix('.txt')
             with target.open('x', encoding='utf-8-sig', newline='\n') as stream:
-                stream.write(export_text(data, bilingual=source.parent == ROOT / 'cf'))
+                stream.write(export_text(data, bilingual=True))
             print(f'[SAVED] {target}')
             return 0
         if cmd == 'import' and len(args) == 2:

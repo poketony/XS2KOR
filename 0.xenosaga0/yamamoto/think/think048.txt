@@ -1,66 +1,134 @@
-﻿[0xddbc]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xddbc]
+[JPN]
+勝利者ゆにっときゃんせる！！！
+[KOR]
 승리자 유닛 취소!!!
 
 [0xdddb]
+[JPN]
+■■■■■■■敵のアタック
+[KOR]
 ■■■■■■■적의 공격
 
 [0xddf6]
+[JPN]
+■■■■■■■ろ〜〜〜〜〜んぐこ〜〜〜〜〜る
+[KOR]
 ■■■■■■■로~~~~~옹 코~~~~~올
 
 [0xde23]
+[JPN]
+■■■■モモの技＝
+[KOR]
 ■■■■모모의 기술=
 
 [0xde36]
+[JPN]
+きゃんせる
+[KOR]
 취소
 
 [0xde41]
-$zoom13;구로즈카(찌르기·L 포이즌)
+[JPN]
+$zoom13;黒塚（突・Ｌポイズン）
+[KOR]
+$zoom13;구로즈카(돌격·L 포이즌)
 
 [0xde60]
+[JPN]
+$zoom13;鉄輪　前ジテ（Ｂ）
+[KOR]
 $zoom13;철륜 전반 주역(B)
 
 [0xde7b]
+[JPN]
+$zoom13;鉄輪　後ジテ（Ｂ）
+[KOR]
 $zoom13;철륜 후반 주역(B)
 
 [0xde96]
+[JPN]
+$zoom13;枕慈童
+[KOR]
 $zoom13;마쿠라지도
 
 [0xdea5]
+[JPN]
+$col7AF9FB;$zoom15;　対属性ボルテージが上昇！
+[KOR]
 $col7AF9FB;$zoom15;　대속성 볼티지 상승!
 
 [0xded3]
+[JPN]
+$col7AF9FB;$zoom15;　対属性ボルテージＭＡＸ！
+[KOR]
 $col7AF9FB;$zoom15;　대속성 볼티지 MAX!
 
 [0xdf01]
-$zoom13;아오이노우에 주살(찌르기·화염·L 슬로)
+[JPN]
+$zoom13;葵上呪殺（突・炎・Ｌスロウ）
+[KOR]
+$zoom13;아오이노우에 주살(돌격·불꽃·L 슬로)
 
 [0xdf26]
+[JPN]
+$zoom13;安達ヶ原氷結（冷）
+[KOR]
 $zoom13;아다치가하라 빙결(냉기)
 
 [0xdf41]
+[JPN]
+$zoom13;筋力退散（Ｌヘビー）
+[KOR]
 $zoom13;근력 퇴산(L 헤비)
 
 [0xdf5e]
+[JPN]
+$zoom13;精神退散（ＬエーテルＰＤ）
+[KOR]
 $zoom13;정신 퇴산(L 에테르 PD)
 
 [0xdf81]
-$zoom13;더블 탭스(찌르기)
+[JPN]
+$zoom13;ダブルタップス（突）
+[KOR]
+$zoom13;더블 탭스(돌격)
 
 [0xdf9e]
-$zoom13;풀 매거진 샷(찌르기)
+[JPN]
+$zoom13;フルマガジンショット（突）
+[KOR]
+$zoom13;풀 매거진 샷(돌격)
 
 [0xdfc1]
+[JPN]
+$zoom13;オペレーションＡ
+[KOR]
 $zoom13;오퍼레이션 A
 
 [0xdfda]
-$zoom13;철수(화염)
+[JPN]
+$zoom13;撤退（炎）
+[KOR]
+$zoom13;철수(불꽃)
 
 [0xdfed]
+[JPN]
+$zoom13;メディカ
+[KOR]
 $zoom13;메디카
 
 [0xdffe]
-$zoom13;체인 건(찌르기)
+[JPN]
+$zoom13;チェーンガン（突）
+[KOR]
+$zoom13;체인 건(돌격)
 
 [0xe019]
+[JPN]
+$zoom13;エネルギー爆雷（雷）
+[KOR]
 $zoom13;에너지 폭뢰(번개)
 

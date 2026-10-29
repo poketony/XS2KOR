@@ -1,57 +1,116 @@
-﻿[0xda25]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xda25]
+[JPN]
+$zoom13;意識の再生
+[KOR]
 $zoom13;의식의 재생
 
 [0xda4d]
+[JPN]
+$zoom13;時空の再生
+[KOR]
 $zoom13;시공의 재생
 
 [0xda60]
+[JPN]
+$zoom14;$col7AF9FB;アルベドのテンションが高揚した！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;알베도의 기세가 고조됐다!$colc0c0c0;
 
 [0xdaca]
+[JPN]
+$zoom13;挑発５
+[KOR]
 $zoom13;도발 5
 
 [0xdaee]
+[JPN]
+$zoom13;挑発６
+[KOR]
 $zoom13;도발 6
 
 [0xdb12]
+[JPN]
+$zoom13;挑発７
+[KOR]
 $zoom13;도발 7
 
 [0xdb21]
+[JPN]
+$zoom13;挑発８
+[KOR]
 $zoom13;도발 8
 
 [0xdb45]
+[JPN]
+$zoom13;挑発９
+[KOR]
 $zoom13;도발 9
 
 [0xdb69]
+[JPN]
+$zoom13;挑発１０
+[KOR]
 $zoom13;도발 10
 
 [0xdb90]
+[JPN]
+$zoom13;挑発１
+[KOR]
 $zoom13;도발 1
 
 [0xdbb4]
+[JPN]
+$zoom13;挑発２
+[KOR]
 $zoom13;도발 2
 
 [0xdbd8]
+[JPN]
+$zoom13;挑発３
+[KOR]
 $zoom13;도발 3
 
 [0xdbfd]
+[JPN]
+$zoom13;挑発４
+[KOR]
 $zoom13;도발 4
 
 [0xdc21]
+[JPN]
+$zoom13;鬱憤
+[KOR]
 $zoom13;울분
 
 [0xdc98]
+[JPN]
+$zoom13;決別の意思
+[KOR]
 $zoom13;결별의 의지
 
 [0xdcab]
+[JPN]
+$zoom13;永遠の連鎖（気）
+[KOR]
 $zoom13;영원한 연쇄(기)
 
 [0xdcc4]
+[JPN]
+$zoom13;ミラクルスター
+[KOR]
 $zoom13;미러클 스타
 
 [0xdcdb]
+[JPN]
+$zoom13;アイスブラスト
+[KOR]
 $zoom13;아이스 블래스트
 
 [0xdcf2]
+[JPN]
+$zoom13;セフティー
+[KOR]
 $zoom13;세이프티
 

@@ -1,15 +1,32 @@
-﻿[0xc860]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xc860]
+[JPN]
+$zoom13;$col7AF9FB;メインモニターにヒビが入った！$colc0c0c0;
+[KOR]
 $zoom13;$col7AF9FB;메인 모니터에 금이 갔다!$colc0c0c0;
 
 [0xc89d]
+[JPN]
+$zoom13;$col7AF9FB;メインモニターを破壊した！\n自動低温度捕獲システム異常$colc0c0c0;
+[KOR]
 $zoom13;$col7AF9FB;메인 모니터를 파괴했다!\n자동 저온 포획 시스템 이상$colc0c0c0;
 
 [0xc8f2]
+[JPN]
+$zoom13;オクトレイ（Ｂ）
+[KOR]
 $zoom13;옥토 레이(B)
 
 [0xc90b]
-$zoom13;ASM 1229(타격·화염)
+[JPN]
+$zoom13;ＡＳＭ　１２２９（打・炎）
+[KOR]
+$zoom13;ASM 1229(타격·불꽃)
 
 [0xc92e]
+[JPN]
+$zoom13;音速障壁突破（打）
+[KOR]
 $zoom13;음속 장벽 돌파(타격)
 

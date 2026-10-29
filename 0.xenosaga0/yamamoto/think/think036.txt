@@ -1,42 +1,86 @@
-﻿[0xcf30]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xcf30]
+[JPN]
+勝利者ゆにっときゃんせる！！！
+[KOR]
 승리자 유닛 취소!!!
 
 [0xcf4f]
+[JPN]
+■■■■■■■敵のアタック
+[KOR]
 ■■■■■■■적의 공격
 
 [0xcf6a]
+[JPN]
+■■■■■■■ろ〜〜〜〜〜んぐこ〜〜〜〜〜る
+[KOR]
 ■■■■■■■로~~~~~옹 코~~~~~올
 
 [0xcf97]
+[JPN]
+■■■■モモの技＝
+[KOR]
 ■■■■모모의 기술=
 
 [0xcfaa]
+[JPN]
+きゃんせる
+[KOR]
 취소
 
 [0xcfbd]
+[JPN]
+$col7AF9FB;$zoom15;　警告！\n　これ以上の破壊は生命の保障を致しません。
+[KOR]
 $col7AF9FB;$zoom15;　경고!\n　더 파괴하면 생명을 보장할 수 없습니다.
 
 [0xd005]
+[JPN]
+$col7AF9FB;$zoom15;　武装を解除し、投降して下さい。
+[KOR]
 $col7AF9FB;$zoom15;　무장을 해제하고 투항하십시오.
 
 [0xd039]
+[JPN]
+$col7AF9FB;$zoom15;　この区域は関係者以外立ち入り禁止です。
+[KOR]
 $col7AF9FB;$zoom15;　이 구역은 관계자 외 출입 금지입니다.
 
 [0xd075]
+[JPN]
+$zoom13;増援
+[KOR]
 $zoom13;증원
 
 [0xd082]
+[JPN]
+$zoom13;威嚇射撃（Ｂ）
+[KOR]
 $zoom13;위협 사격(B)
 
 [0xd099]
+[JPN]
+$zoom13;射撃（Ｂ）
+[KOR]
 $zoom13;사격(B)
 
 [0xd0ac]
+[JPN]
+$zoom13;粘着ビーム（Ｌスロウ）
+[KOR]
 $zoom13;점착 빔(L 슬로)
 
 [0xd0cb]
+[JPN]
+$zoom13;ヘビーアックス（打）
+[KOR]
 $zoom13;헤비 액스(타격)
 
 [0xd0e8]
-$zoom13;33식 벌컨포(찌르기)
+[JPN]
+$zoom13;３３式バルカン砲（突）
+[KOR]
+$zoom13;33식 벌컨포(돌격)
 

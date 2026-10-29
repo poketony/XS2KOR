@@ -1,54 +1,110 @@
-﻿[0x6df4]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0x6df4]
+[JPN]
+$zoom14;$col7AF9FB;突然の珍客にスカラベイユは驚いている！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;갑작스러운 손님에 스카라베유가 놀랐다!$colc0c0c0;
 
 [0x6e39]
+[JPN]
+$zoom14;$col7AF9FB;スカラベイユは珍客に対し一礼した$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;스카라베유는 손님에게 인사했다$colc0c0c0;
 
 [0x6e78]
+[JPN]
+$zoom14;$col7AF9FB;スカラベイユは珍客を敵とみなした！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;스카라베유는 손님을 적으로 여겼다!$colc0c0c0;
 
 [0x6eb9]
+[JPN]
+$zoom14;$colc0c0c0;スカラベイユは珍客に対し\n$col7AF9FB;　　無礼者と判断した！$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;스카라베유는 손님을\n$col7AF9FB;　　무례한 자로 판단했다!$colc0c0c0;
 
 [0x6f13]
+[JPN]
+$zoom14;$col7AF9FB;スカラベイユは警戒している$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;스카라베유는 경계하고 있다$colc0c0c0;
 
 [0x6f4c]
+[JPN]
+$zoom14;$col7AF9FB;スカラベイユはギアを一段上げた！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;스카라베유는 기어를 한 단 올렸다!$colc0c0c0;
 
 [0x6f8b]
+[JPN]
+$zoom14;$colc0c0c0;スカラベイユはトップギアまで加速し\n$col7AF9FB;　　　音速の領域を手に入れた！$colc0c0c0;
+[KOR]
 $zoom14;$colc0c0c0;스카라베유는 최고 기어까지 가속하여\n$col7AF9FB;　　　음속의 영역에 도달했다!$colc0c0c0;
 
 [0x6ff7]
+[JPN]
+$zoom14;$col7AF9FB;かなり怒ってる様子だ！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;상당히 화가 난 모양이다!$colc0c0c0;
 
 [0x702c]
+[JPN]
+$zoom14;$col7AF9FB;スカラベイユはバテた！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;스카라베유는 지쳤다!$colc0c0c0;
 
 [0x7061]
+[JPN]
+$zoom14;$col7AF9FB;スカラベイユは音速の壁を突破し\n光速の領域を手に入れた！$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;스카라베유는 음속의 벽을 돌파하여\n광속의 영역에 도달했다!$colc0c0c0;
 
 [0x70b8]
+[JPN]
+$zoom14;$col7AF9FB;どこまでいくんだスカラベイユ！？$colc0c0c0;
+[KOR]
 $zoom14;$col7AF9FB;어디까지 갈 셈이냐, 스카라베유!?$colc0c0c0;
 
 [0x70f7]
-$zoom13;블레이드 어택(베기)
+[JPN]
+$zoom13;ブレードアタック（斬）
+[KOR]
+$zoom13;블레이드 어택(참격)
 
 [0x7116]
-$zoom13;꿈의 찌르기(찌르기·L 스턴)
+[JPN]
+$zoom13;夢の一刺し（突・Ｌスタン）
+[KOR]
+$zoom13;꿈의 찌르기(돌격·L 스턴)
 
 [0x7139]
+[JPN]
+$zoom13;圧縮波動砲（Ｂ）
+[KOR]
 $zoom13;압축 파동포(B)
 
 [0x7152]
+[JPN]
+$zoom13;墓標縛り（Ｈバインド）
+[KOR]
 $zoom13;묘비의 속박(H 바인드)
 
 [0x7171]
+[JPN]
+$zoom13;クイック
+[KOR]
 $zoom13;퀵
 
 [0x7182]
+[JPN]
+$zoom13;腐敗ガス（Ｌポイズン）
+[KOR]
 $zoom13;부패 가스(L 포이즌)
 
 [0x71a1]
+[JPN]
+$zoom13;リフレッシュＨ
+[KOR]
 $zoom13;리프레시 H
 

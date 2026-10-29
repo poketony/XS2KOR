@@ -1,45 +1,92 @@
-﻿[0xd03c]
+﻿# SB-TEXT: JPN-KOR v1
+
+[0xd03c]
+[JPN]
+勝利者ゆにっときゃんせる！！！
+[KOR]
 승리자 유닛 취소!!!
 
 [0xd05b]
+[JPN]
+■■■■■■■敵のアタック
+[KOR]
 ■■■■■■■적의 공격
 
 [0xd076]
+[JPN]
+■■■■■■■ろ〜〜〜〜〜んぐこ〜〜〜〜〜る
+[KOR]
 ■■■■■■■로~~~~~옹 코~~~~~올
 
 [0xd0a3]
+[JPN]
+■■■■モモの技＝
+[KOR]
 ■■■■모모의 기술=
 
 [0xd0b6]
+[JPN]
+きゃんせる
+[KOR]
 취소
 
 [0xd0c1]
+[JPN]
+$col7AF9FB;$zoom15;　お前の美しさが憎い…
+[KOR]
 $col7AF9FB;$zoom15;　네 아름다움이 미워…
 
 [0xd0eb]
+[JPN]
+$col7AF9FB;$zoom15;　お前の強さが憎い…
+[KOR]
 $col7AF9FB;$zoom15;　네 강함이 미워…
 
 [0xd113]
+[JPN]
+$col7AF9FB;$zoom15;　お前の可愛さが憎い…
+[KOR]
 $col7AF9FB;$zoom15;　네 귀여움이 미워…
 
 [0xd13d]
+[JPN]
+$zoom13;避けるほどの視線（雷）
+[KOR]
 $zoom13;피하고 싶은 시선(번개)
 
 [0xd15c]
+[JPN]
+$zoom13;セイラムの涙（Ｌウィーク）
+[KOR]
 $zoom13;세일럼의 눈물(L 위크)
 
 [0xd17f]
+[JPN]
+$zoom13;セイラムの涙（Ｌスロウ）
+[KOR]
 $zoom13;세일럼의 눈물(L 슬로)
 
 [0xd1a0]
+[JPN]
+$col7AF9FB;$zoom15;　オーバーロード（筋力低下）
+[KOR]
 $col7AF9FB;$zoom15;　오버로드(근력 저하)
 
 [0xd1d0]
-$zoom13;집행(베기)
+[JPN]
+$zoom13;執行（斬）
+[KOR]
+$zoom13;집행(참격)
 
 [0xd1e3]
-$zoom13;잭 케치는 살인자다(베기)
+[JPN]
+$zoom13;ジャック・ケッチは殺し屋だ（斬）
+[KOR]
+$zoom13;잭 케치는 살인자다(참격)
 
 [0xd20c]
+[JPN]
+$zoom13;筋肉増強剤
+[KOR]
 $zoom13;근육 증강제
 
