@@ -193,5 +193,44 @@ NEW GAME 특전창·초기 설정창 및 일반 설정 메뉴에도 반각 공�
 하단 중앙 문구와 획득 제목/느낌표 위치는 줄어든 폭에 맞췄고, 여러 줄 안내와 설정 항목/값은
 각자의 왼쪽 기준을 유지합니다. 이미 좁은 상단 비례폭 작품 목록과 글자별 설명 출력은 그대로입니다.
 이 변경에 MainMenu.txd·폰트 재교체는 필요하지 않습니다.
-최신 종합 검증: `python -B codex-lab/context-font/title-options-spacing/validate.py --deployed`.
+특전/설정 검증: `python -B codex-lab/context-font/title-options-spacing/validate.py --deployed`.
 분석·범위·좌표·오프라인 비교: `codex-lab/context-font/title-options-spacing/README.md`.
+
+저장·불러오기의 **슬롯 선택창 `슬롯 1`/`슬롯 2`**에도 반각 공백 전용 보정을 적용합니다.
+선택 상태·숫자·비활성 표시·글자 시작 좌표는 유지합니다.
+영상 PAUSE의 위쪽 스킵 안내와 아래쪽 START 안내 모두 공백만 좁히고, 실제 표시 폭으로 가운데 정렬합니다.
+해당 안내의 표시용 사본은 매 빌드 현재 번역에서 자동 생성하므로 TXT 편집 방법은 같습니다.
+공백만 네이티브 비례폭으로 표시하고 글자 모드는 즉시 복원합니다. CF·자막·다른 UI·루비 처리는 바꾸지 않습니다.
+이 수정만 적용할 때는 ELF를 다시 적용하면 됩니다. MainMenu TXD와 폰트는 변경하지 않았습니다.
+
+슬롯/PAUSE 단계 검증: `python -B codex-lab/context-font/slot-pause-spacing/validate.py --deployed`.
+분석·백업·검증 범위: `codex-lab/context-font/slot-pause-spacing/README.md`.
+
+메뉴의 글자별 안내문도 공통 출력 함수에서 **반각 쉼표의 X 이동을 15→8**로 보정합니다.
+현재 MainMenu 569항목 전체와 부분 출력·페이드 440상태를 비교했고,
+장비 스킬 장비/해제 안내와 어태커·리저버·서브 파일럿 편성 안내에도 함께 적용됩니다.
+이미 보정한 정적 하단 설명은 유지합니다. 공백·소수점·이름의 마침표·아이콘·개행과
+타이핑/페이드 진행은 변경하지 않습니다. 문구별 추가 패치나 TXT 수정은 필요 없습니다.
+이 변경도 ELF만 다시 적용하면 됩니다. 공용 폰트·CF·컷신·루비 처리는 수정하지 않았습니다.
+
+최신 종합 검증: `python -B codex-lab/context-font/menu-prose-spacing/validate.py --deployed`.
+조사 목록·근거·백업: `codex-lab/context-font/menu-prose-spacing/README.md`.
+
+2026-10-30 후속 수정: 이전 PAUSE 패치에서 빠졌던 위쪽 스킵 안내도 포함했습니다.
+위쪽 표시용 사본의 시작 모드를 명시해 폭 측정과 출력의 초기 글자 폭도 일치시킵니다.
+양쪽 안내·기존 UI/CF/루비 종합 검증:
+`python -B codex-lab/context-font/movie-pause-followup/validate.py --deployed`.
+상세 범위·백업: `codex-lab/context-font/movie-pause-followup/README.md`.
+
+설정 종료 확인창의 [214] 본문은 왼쪽으로 6픽셀 옮겨, 현재 번역·폰트 기준
+그림자 포함 좌우 여백을 각각 6픽셀 확보합니다. 상자 크기·예/아니요·다른 확인창은 유지합니다.
+ELF만 다시 적용하면 됩니다. 검증·백업: `codex-lab/context-font/settings-exit-layout/README.md`.
+
+저장·불러오기 상단 제목의 구분자는 전각 `／` 대신 반각 `/`를 비례폭으로 표시합니다.
+슬래시 직후 원래 글자 모드로 복원하며 제목 상자·한글·슬롯 숫자·공백은 유지합니다.
+이 변경도 ELF만 적용합니다. 조립 후 제목이 NUL 포함 32바이트를 넘으면 빌드를 중단합니다.
+검증·백업: `codex-lab/context-font/save-title-slash/README.md`.
+
+같은 상단 제목의 `슬롯 1/2` 반각 공백도 14→7픽셀로 보정합니다.
+슬래시·숫자·한글·상자 크기는 유지하며 ELF만 갱신하면 됩니다.
+검증·백업: `codex-lab/context-font/save-title-space/README.md`.

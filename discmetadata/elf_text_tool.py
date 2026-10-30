@@ -67,6 +67,7 @@ DYNAMIC_SLOT_IDS = {218, 539, 541, 543, 544, 545, 546, 547, 548}
 # Never include character names, play times, numeric fields or image widgets.
 STATUS_SPACE_CALLS = (0x233AB4, 0x2347B0, 0x234B80, 0x234BC8, 0x234BEC, 0x234C54)
 MENU_ITEM_NAME_SPACE_CALLS = (0x21B858,)
+SLOT_SPACE_CALLS = (0x23429C,)
 TITLE_SPACE_CALLS = (
     0x236DDC, 0x236DF8, 0x236E9C, 0x236EC8, 0x236F0C,
     0x236FB4, 0x236FD0, 0x236FEC, 0x237034, 0x237050,
@@ -580,11 +581,53 @@ def save_title_regions():
     ]
 
 
-def popup_font_regions():
+def movie_pause_text(translated, offset=0x194610):
+    # Follow the reviewed reference, including an automatic text relocation.
+    address, _hi, _lo = RELOCATION_REFERENCES[offset]
+    hi, lo = struct.unpack_from('<II', translated, address)
+    if hi & 0xFFFF0000 != _hi & 0xFFFF0000 or lo & 0xFFFF0000 != _lo & 0xFFFF0000:
+        raise ValueError('Unexpected PAUSE text reference')
+    low = lo & 0xFFFF
+    offset = ((hi & 0xFFFF) << 16) + (low - 0x10000 if low & 0x8000 else low) - MAIN_FILE_BIAS
+    if not 0 <= offset < len(translated):
+        raise ValueError('PAUSE text reference is outside the ELF')
+    raw, _text, _controls = read_string(translated, offset, len(translated))
+    result, mode, index = bytearray(), 0, 0
+    while index < len(raw):
+        byte = raw[index]
+        if byte < 32:
+            size = control_size(raw, index, len(raw))
+            if byte == 0x0B:
+                mode = 0
+            elif byte == 0x19:
+                mode = raw[index + 1]
+        else:
+            size = 3 if byte == 0x8F else 2 if byte >= 127 else 1
+        if byte == 32 and mode < 3:
+            # Native large proportional blank only; immediately restore the
+            # original mode. Do not reinterpret color operands or glyph bytes.
+            result.extend(b'\x19\x03 \x19' + bytes([mode]))
+        else:
+            result.extend(raw[index:index + size])
+        index += size
+    return bytes(result) if result != raw else None
+
+
+def movie_skip_text(translated):
+    text = movie_pause_text(translated, 0x1945E0)
+    # Native measurement otherwise starts with different implicit glyph metrics
+    # until the first mode command. Match the renderer's reset mode explicitly.
+    if text is not None and text.startswith(b'\x0b'):
+        text = b'\x0b\x19\x00' + text[1:]
+    return text
+
+
+def popup_font_regions(pause_text=None, skip_text=None):
     # File header padding is loaded after BSS by an independent RX segment.
     # Reserve it from BOTH kernel heap and libc sbrk; never map onto the stack.
     bias = 0x9D0000
     marker, select, metric = bias + 0x2F4, bias + 0x340, bias + 0x500
+    animated_comma = bias + 0x310
     table = bias + 0x700
     scope_callback, scope_queue, literals = bias + 0x780, bias + 0x7C0, bias + 0x980
     before = b"$init;$bg2;$shadow+1,+3,000000;\0"
@@ -633,6 +676,15 @@ def popup_font_regions():
         imm(0x0D, 2, 2, 0x84),         # popup marker + han1
         reg(8, 0, 31),                  # jr ra
         imm(0x28, 2, 4, 0x18),         # sb v0,mode(a0)
+    ])
+    # The shared animated menu help positions every glyph separately. Narrow
+    # only literal ASCII comma; spaces, decimal points, icons and commands keep
+    # their native advances. v1 is overwritten at the original continuation.
+    comma, _ = assemble(animated_comma, [
+        imm(0x28, 0, 29, 1), imm(9, 21, 0, 15),
+        imm(9, 3, 0, 0x2C), (5, 4, 3, 'resume'), 0,
+        imm(9, 21, 0, 8),
+        'resume', jump(0x2237F0), 0,
     ])
     # Draw the original quad/UV unchanged, then override its advance only.
     # Keep at least ten source pixels and retain the original left bearing;
@@ -755,7 +807,8 @@ def popup_font_regions():
         jump(0x2310F8), 0,
     ])
     # Fixed slots keep the code's absolute entry points easy to audit.
-    assert len(mark) <= select - marker and len(choose) <= metric - select
+    assert len(mark) <= animated_comma - marker and len(comma) <= select - animated_comma
+    assert len(choose) <= metric - select
     assert len(measure) <= table - metric
     # ASCII remap -> glyph indices, checked against the original renderer in
     # CPU tests. Zero means retain the full-width path. All indices < 192.
@@ -777,6 +830,29 @@ def popup_font_regions():
     controls = b''.join(b'\x17' + scope_callback.to_bytes(3, 'big')
                         + bytes([mode, mode, mode, mode | enabled]) + b'\0'
                         for mode, enabled in ((0x40, 1), (0x40, 0), (0x80, 1), (0x80, 0)))
+
+    # The title's original byte counter counts inline commands as visible text.
+    # Ignore only these exact prop commands, reserving the old two-byte cell for
+    # '/' so the native frame width stays unchanged when the separator shrinks.
+    title_count = bias + 0x8C0
+    count_rows = [reg(0x21, 2, 0), reg(0x21, 3, 4), 'next',
+                  imm(0x24, 5, 3, 0), (4, 5, 0, 'done'), 0,
+                  imm(9, 6, 0, 0x24), (5, 5, 6, 'count'), 0]
+    for position, byte in enumerate(b'prop', 1):
+        count_rows += [imm(0x24, 5, 3, position), imm(9, 6, 0, byte),
+                       (5, 5, 6, 'count'), 0]
+    count_rows += [imm(0x24, 5, 3, 5), imm(9, 5, 5, -0x30), imm(0x0B, 5, 5, 2),
+                   (4, 5, 0, 'count'), 0,
+                   imm(0x24, 5, 3, 6), imm(9, 6, 0, 0x3B), (5, 5, 6, 'count'), 0,
+                   ('j', 'next'), imm(9, 3, 3, 7),
+                   'count', imm(9, 6, 0, 0x2F), reg(0x26, 5, 5, 6),
+                   imm(0x0B, 5, 5, 1), reg(0x21, 2, 2, 5), imm(9, 2, 2, 1),
+                   ('j', 'next'), imm(9, 3, 3, 1),
+                   'done', reg(8, 0, 31), 0]
+    title_counter, _ = assemble(title_count, count_rows)
+    title_separator = title_count + len(title_counter)
+    title_text = b'$prop1;/$prop0;\0'
+    assert title_separator + len(title_text) <= literals
 
     def address(rt, value):
         return [imm(15, rt, 0, value >> 16), imm(0x0D, rt, rt, value & 0xFFFF)]
@@ -808,15 +884,49 @@ def popup_font_regions():
         imm(0x37, 20, 29, 0x20), imm(0x37, 31, 29, 0x28),
         reg(8, 0, 31), imm(9, 29, 29, 0x40),
         'original', jump(0x216170), 0,
+        'confirmation',
+        # Only MainMenu[214] needs a smaller inset in this shared dialog body.
+        # Resolve the live TXD pointer, not a translation-dependent pool offset.
+        *address(2, 0x6A05C0), imm(0x23, 3, 2, 214 * 4), reg(0x21, 3, 3, 2),
+        (5, 6, 3, 'space'), 0,
+        ('j', 'space'), imm(9, 4, 4, -6),
     ])
     assert len(callback) <= scope_queue - scope_callback
     assert len(queue) <= literals - scope_queue
+    assert scope_queue + len(queue) <= title_count
     assert literals + len(controls) <= bias + 0xA00
     payload = bytearray(0x800)
-    for location, value in ((marker, mark), (select, choose), (metric, measure), (table, glyphs),
-                            (scope_callback, callback), (scope_queue, queue), (literals, controls)):
+    for location, value in ((marker, mark), (animated_comma, comma), (select, choose), (metric, measure), (table, glyphs),
+                            (scope_callback, callback), (scope_queue, queue), (literals, controls),
+                            (title_count, title_counter), (title_separator, title_text)):
         offset = location - bias - 0x200
         payload[offset:offset + len(value)] = value
+    pause_calls = []
+    if pause_text is not None or skip_text is not None:
+        # Reuse the already loaded, unused RX prefix, before the popup marker.
+        # Neither the original literal/relocation nor the renderers are changed.
+        prefix = bytearray()
+        for text, width_call, draw_call, draw_before in (
+                (pause_text, 0x0B8240, 0x0B8274, 0x0806552E),
+                (skip_text, 0x0B8208, 0x0B8230, 0x0C06552E)):
+            if text is None:
+                continue
+            prefix.extend(bytes(-len(prefix) % 4))
+            entry = bias + 0x200 + len(prefix)
+            text_address = entry + 24
+            prefix.extend(struct.pack('<6I',
+                imm(15, 4, 0, text_address >> 16), jump(0x195D00),
+                imm(0x0D, 4, 4, text_address & 0xFFFF),
+                imm(15, 7, 0, text_address >> 16), jump(0x1954B8),
+                imm(0x0D, 7, 7, text_address & 0xFFFF)) + text + b'\0')
+            pause_calls.extend([
+                (width_call, struct.pack('<I', 0x0C065740), struct.pack('<I', 0x0C000000 | (entry >> 2))),
+                (draw_call, struct.pack('<I', draw_before),
+                 struct.pack('<I', (draw_before & 0xFC000000) | ((entry + 12) >> 2))),
+            ])
+        if len(prefix) > marker - (bias + 0x200):
+            raise ValueError('PAUSE space formatting exceeds the reviewed RX prefix')
+        payload[:len(prefix)] = prefix
     return [
         (0x2C, struct.pack('<H', 4), struct.pack('<H', 5)),
         (0xB4, bytes(32), struct.pack('<8I', 1, 0x200, bias + 0x200,
@@ -830,9 +940,14 @@ def popup_font_regions():
         (0x79748, struct.pack('<I', 0x0C065C20), struct.pack('<I', 0x0C000000 | (select >> 2))),
         (0x113B08, struct.pack('<I', 0x0C08585C), struct.pack('<I', 0x0C000000 | (scope_queue >> 2))),
         (0x1049DC, struct.pack('<I', 0x0C08585C), struct.pack('<I', 0x0C000000 | (queue_labels['help'] >> 2))),
+        (0x114E3C, struct.pack('<I', 0x3C05006A), struct.pack('<I', imm(15, 5, 0, title_separator >> 16))),
+        (0x114E44, struct.pack('<I', 0x24A58390), struct.pack('<I', imm(9, 5, 5, title_separator & 0xFFFF))),
+        (0x116020, struct.pack('<I', 0x0C08CE52), struct.pack('<I', 0x0C000000 | (title_count >> 2))),
+        (0x116088, struct.pack('<I', 0x0C08585C), struct.pack('<I', 0x0C000000 | (queue_labels['space'] >> 2))),
+        (0x1047E8, struct.pack('<II', 0xA3A00001, 0x2415000F), struct.pack('<II', jump(animated_comma), 0)),
         *((address - 0x11F000, struct.pack('<I', 0x0C08585C),
-           struct.pack('<I', 0x0C000000 | (queue_labels['space'] >> 2)))
-          for address in STATUS_SPACE_CALLS + MENU_ITEM_NAME_SPACE_CALLS),
+           struct.pack('<I', 0x0C000000 | (queue_labels['confirmation' if address == 0x233AB4 else 'space'] >> 2)))
+          for address in STATUS_SPACE_CALLS + MENU_ITEM_NAME_SPACE_CALLS + SLOT_SPACE_CALLS),
         *((address - 0x11F000, struct.pack('<I', 0x0C08585C),
            struct.pack('<I', 0x0C000000 | (queue_labels['space'] >> 2)))
           for address in TITLE_SPACE_CALLS),
@@ -841,17 +956,17 @@ def popup_font_regions():
           for address in TITLE_SPACE_TAILS),
         (0x112000, struct.pack('<I', 0x8F83AA00), struct.pack('<I', jump(measure_labels['wide']))),
         (0x1120F0, struct.pack('<II', 0x8F82AA00, 0x000210C0), struct.pack('<II', jump(metric), 0)),
-    ]
+    ] + pause_calls
 
 
-def runtime_regions():
+def runtime_regions(pause_text=None, skip_text=None):
     menu = {address: (before, after) for address, before, after in MENU_PATCHES}
     menu.update({address: (before, after) for address, before, after in TITLE_LAYOUT_PATCHES})
     return ([(offset, bytes.fromhex(before), bytes.fromhex(after))
              for offset, before, after in SPACING_PATCHES]
             + [(address - 0x11F000, struct.pack("<I", before), struct.pack("<I", after))
                for address, (before, after) in menu.items()]
-            + save_title_regions() + popup_font_regions())
+            + save_title_regions() + popup_font_regions(pause_text, skip_text))
 
 
 def item_patch_regions(source, translated):
@@ -882,7 +997,7 @@ def apply_runtime_patches(source, translated):
     if len(translated) != len(source):
         raise ValueError("Runtime patch input size changed")
     result = bytearray(translated)
-    for offset, before, after in (runtime_regions() + item_patch_regions(source, translated)
+    for offset, before, after in (runtime_regions(movie_pause_text(translated), movie_skip_text(translated)) + item_patch_regions(source, translated)
                                   + campaign_patch_regions(source, translated)):
         end = offset + len(before)
         if len(before) != len(after) or source[offset:end] != before:
@@ -951,6 +1066,10 @@ def build_menu_txd(text, table, font):
     if [((m >> 8) - (m & 255) + 1) * 13 // 16 for m in metrics] != [10, 11, 9, 12, 13, 11, 9]:
         raise ValueError("Menu font metrics changed; review fixed coordinates")
     pointers, pool = [], bytearray()
+    for index in (512, 513):
+        # Title buffer ends at the adjacent confirmation object (32 bytes).
+        if len(encode_menu_text(entries[index], table)) + len(b'$prop1;/$prop0;') + 6 + 1 > 32:
+            raise ValueError(f'MainMenu [{index}]: save/load title exceeds its 32-byte buffer')
     for index, value in entries.items():
         try:
             raw = encode_menu_text(value, table)
