@@ -150,9 +150,26 @@ class TXDTool:
 
 if __name__ == "__main__":
     tool = TXDTool()
+    if len(sys.argv) == 2 and sys.argv[1].lower() == 'r':
+        try:
+            name = input('리빌드할 파일명 (Location / Tutorial): ').strip().strip('"').lower()
+        except (EOFError, KeyboardInterrupt):
+            print('\n리빌드를 취소했습니다.')
+            sys.exit(1)
+        targets = {stem.lower() + suffix: stem for stem in ('Location', 'Tutorial')
+                   for suffix in ('', '.txd', '.txd.txt')}
+        if name not in targets:
+            print('Location 또는 Tutorial을 입력해 주세요. 파일은 변경하지 않았습니다.')
+            sys.exit(1)
+        source = os.path.join(os.path.dirname(os.path.abspath(__file__)), targets[name] + '.txd')
+        if not os.path.isfile(source) or not os.path.isfile(source + '.txt'):
+            print('원본 TXD 또는 번역 TXT가 없습니다. 파일은 변경하지 않았습니다.')
+            sys.exit(1)
+        sys.argv.append(source)
     if len(sys.argv) < 3:
         print("사용법:")
         print("  추출: python txd_tool.py e 파일명.txd")
+        print("  파일명 입력 리팩: python txd_tool.py r")
         print("  리팩: python txd_tool.py r 파일명.txd 파일명.txt")
         print("  리팩 시 스크립트 옆 XENOSAGA KOR-JPN.json으로 한글을 자동 변환합니다.")
     else:
