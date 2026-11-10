@@ -10,7 +10,7 @@ $zoom14;$colc0c0c0;　　결판을 향한 집념\n$col7AF9FB;　진으로 마무
 [JPN]
 $zoom14;$colc0c0c0;マーグリスは$col7AF9FB;　純粋な気　$colc0c0c0;を練り上げた$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;마굴리스는 $col7AF9FB;　순수한 기　$colc0c0c0;를 끌어올렸다$colc0c0c0;
+$zoom14;$colc0c0c0;마굴리스는 $col7AF9FB;순수한 기$colc0c0c0;를 끌어올렸다$colc0c0c0;
 
 [0xfffd]
 [JPN]

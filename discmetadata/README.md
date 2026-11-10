@@ -234,3 +234,12 @@ ELF만 다시 적용하면 됩니다. 검증·백업: `codex-lab/context-font/se
 같은 상단 제목의 `슬롯 1/2` 반각 공백도 14→7픽셀로 보정합니다.
 슬래시·숫자·한글·상자 크기는 유지하며 ELF만 갱신하면 됩니다.
 검증·백업: `codex-lab/context-font/save-title-space/README.md`.
+
+RESULT/ClearTime 화면의 아이템 획득 목록도 이름 안의 반각 공백을 15→8픽셀로 보정합니다.
+개수 칸·창 배치·초과 획득 안내는 유지하며, 이미 비례폭인 이름과 작은 글자는 다시 줄이지 않습니다.
+ELF만 다시 적용하면 됩니다. 검증·백업: `codex-lab/context-font/result-item-spacing/README.md`.
+
+저장·불러오기 슬롯의 장소명 두 줄도 반각 공백을 14→7픽셀로 보정합니다.
+장소명 좌표·상자·캐릭터명·플레이 시간·세이브 데이터는 유지하며 ELF만 다시 적용하면 됩니다.
+Location TXT/TXD와 폰트는 이 보정을 위해 수정할 필요가 없습니다.
+검증·백업: `codex-lab/context-font/save-location-spacing/README.md`.

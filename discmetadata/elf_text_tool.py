@@ -67,6 +67,8 @@ DYNAMIC_SLOT_IDS = {218, 539, 541, 543, 544, 545, 546, 547, 548}
 # Never include character names, play times, numeric fields or image widgets.
 STATUS_SPACE_CALLS = (0x233AB4, 0x2347B0, 0x234B80, 0x234BC8, 0x234BEC, 0x234C54)
 MENU_ITEM_NAME_SPACE_CALLS = (0x21B858,)
+RESULT_NAME_SPACE_CALLS = (0x2302A8,)
+LOCATION_SPACE_CALLS = (0x234958, 0x234978)
 SLOT_SPACE_CALLS = (0x23429C,)
 TITLE_SPACE_CALLS = (
     0x236DDC, 0x236DF8, 0x236E9C, 0x236EC8, 0x236F0C,
@@ -947,7 +949,7 @@ def popup_font_regions(pause_text=None, skip_text=None):
         (0x1047E8, struct.pack('<II', 0xA3A00001, 0x2415000F), struct.pack('<II', jump(animated_comma), 0)),
         *((address - 0x11F000, struct.pack('<I', 0x0C08585C),
            struct.pack('<I', 0x0C000000 | (queue_labels['confirmation' if address == 0x233AB4 else 'space'] >> 2)))
-          for address in STATUS_SPACE_CALLS + MENU_ITEM_NAME_SPACE_CALLS + SLOT_SPACE_CALLS),
+          for address in STATUS_SPACE_CALLS + MENU_ITEM_NAME_SPACE_CALLS + SLOT_SPACE_CALLS + RESULT_NAME_SPACE_CALLS + LOCATION_SPACE_CALLS),
         *((address - 0x11F000, struct.pack('<I', 0x0C08585C),
            struct.pack('<I', 0x0C000000 | (queue_labels['space'] >> 2)))
           for address in TITLE_SPACE_CALLS),
