@@ -1,5 +1,8 @@
 # Synopsis BIN 작업
 
+타이틀 로고는 별도 [타이틀 편집 사용법](README_TITLE.md)을 따릅니다.
+`title_graphics/*_KOR.png`를 수정하고 `4.RebuildTitle.bat`을 실행합니다. 아래의 `2.Rebuild.bat`은 synopsis 전용입니다.
+
 ## 핵심 사용법
 
 아래 작업 경로는 이 README가 있는 `0.xenosaga0/yajima` 폴더 기준입니다.

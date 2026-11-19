@@ -1,0 +1,16 @@
+{
+  "format": 1,
+  "originals": {
+    "title": "1d1d748d37ed46aca0c7f51baae952e54411f0e01425f753456187b86cd8c2d3",
+    "title2": "90655d97f7bc93e88717d855deb036e482fb556f0ec8659262ad881cf4814362"
+  },
+  "inputs": {
+    "title_KOR.png": "c48b592873f7bfa4c026d9aee97eaf77b88e23e04da86cf1893008f2d7dbe4b1",
+    "title2_KOR.png": "5dcaabfab59a57bf467a303d14fc7a203e96801f12dbd84e0ae4261014b0eacf"
+  },
+  "outputs": {
+    "title.bin": "348e7f1775079d96b5038f659cb8c3e83f87d269bae312e36cc84ca796e7386d",
+    "title2.bin": "c45abe6d668aa767bc098e8336957bdb172154ef432da205ce3b7ae46d69ff26"
+  },
+  "verified_raw_bytes": 917504
+}
