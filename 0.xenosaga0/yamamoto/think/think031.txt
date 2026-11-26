@@ -4,7 +4,7 @@
 [JPN]
 $zoom14;$colc0c0c0;　　Ｊｒ．達の脳裏にサクラの意識が流れた\n$col7AF9FB;ＢＣゾーンを攻撃した後にブーストで繋いで。。。●$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　　Jr. 일행의 뇌리에 사쿠라의 의식이 전해졌다\n$col7AF9FB;BC존을 공격한 다음 부스트로 이어서。。。●$colc0c0c0;
+$zoom14;$colc0c0c0;　　Jr. 일행의 뇌리에 사쿠라의 의식이 전해졌다\n$col7AF9FB;BC존을 공격한 다음 부스트로 이어서・・・●$colc0c0c0;
 
 [0xeb7a]
 [JPN]
@@ -34,7 +34,7 @@ $zoom14;$col7AF9FB;알베도의 재생 능력이 한계에 달했다$colc0c0c0;
 [JPN]
 $zoom14;$col7AF9FB;ステータスウィンドウが消された！$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;스테이터스창이 사라졌다!$colc0c0c0;
+$zoom14;$col7AF9FB;스테이터스 윈도우가 사라졌다!$colc0c0c0;
 
 [0xed51]
 [JPN]
@@ -52,19 +52,19 @@ $zoom14;$col7AF9FB;알베도의 양팔을 파괴했다!$colc0c0c0;
 [JPN]
 $zoom13;欲望の解放（突・雷）
 [KOR]
-$zoom13;욕망의 해방(돌격·번개)
+$zoom13;욕망의 해방(관통・번개)
 
 [0xee0a]
 [JPN]
 $zoom13;キャリオン　オブ　ソウルⅠ（打・ＬエーテルＤＤ）
 [KOR]
-$zoom13;캐리언 오브 소울 I(타격·L 에테르 DD)
+$zoom13;캐리언 오브 소울 Ⅰ(타격・L 에테르 DD)
 
 [0xee43]
 [JPN]
 $zoom13;キャリオン　オブ　ソウルⅡ（ＨＰ吸収）
 [KOR]
-$zoom13;캐리언 오브 소울 II(HP 흡수)
+$zoom13;캐리언 오브 소울 Ⅱ(HP 흡수)
 
 [0xee72]
 [JPN]
@@ -100,7 +100,7 @@ $zoom14;$colc0c0c0;　　　　꿰뚫은 오른손에는\n$col7AF9FB;　검붉�
 [JPN]
 $zoom13;キャリオン　オブ　ソウルⅢ（ＥＰ吸収）
 [KOR]
-$zoom13;캐리언 오브 소울 III(EP 흡수)
+$zoom13;캐리언 오브 소울 Ⅲ(EP 흡수)
 
 [0xefe7]
 [JPN]

@@ -34,7 +34,7 @@
 [JPN]
 $zoom13;マクシミリアン　Ｇ４（突）
 [KOR]
-$zoom13;막시밀리안 G4(돌격)
+$zoom13;막시밀리안 G4(관통)
 
 [0xccd8]
 [JPN]
@@ -46,7 +46,7 @@ $zoom13;그레네이드(불꽃)
 [JPN]
 $zoom13;ハイアムズＰ８８Ｒ（突）
 [KOR]
-$zoom13;하이암즈 P88R(돌격)
+$zoom13;하이암즈 P88R(관통)
 
 [0xcd12]
 [JPN]
@@ -58,17 +58,17 @@ $zoom13;스턴 그레네이드(L 블랙)
 [JPN]
 $col7AF9FB;$zoom17;　恐れるな！クズども！
 [KOR]
-$col7AF9FB;$zoom17;　겁먹지 마라! 쓰레기들아!
+$col7AF9FB;$zoom17;　겁먹지 마라 쓰레기 놈들!
 
 [0xcd63]
 [JPN]
 $col7AF9FB;$zoom17;　我が部隊の力！教えてやれ！
 [KOR]
-$col7AF9FB;$zoom17;　우리 부대의 힘을! 똑똑히 알려 줘라!
+$col7AF9FB;$zoom17;　우리 부대의 힘을 똑똑히 알려 줘라!
 
 [0xcd93]
 [JPN]
 $zoom13;１２．７ｍｍ機関銃（突）
 [KOR]
-$zoom13;12.7mm 기관총(돌격)
+$zoom13;12.7mm 기관총(관통)
 

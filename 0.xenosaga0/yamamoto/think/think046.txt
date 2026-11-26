@@ -22,7 +22,7 @@ $zoom13;파인 레이(B)
 [JPN]
 $zoom13;センテンツァ（打・Ｌスロウ）
 [KOR]
-$zoom13;센텐차(타격·L 슬로)
+$zoom13;센텐차(타격・L 슬로)
 
 [0x8a28]
 [JPN]
@@ -64,7 +64,7 @@ $zoom13;번개의 은총
 [JPN]
 $zoom14;$col7AF9FB;センテンツァに雷のエーテルが満ちた$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;센텐차에 번개 에테르가 충만해졌다$colc0c0c0;
+$zoom14;$col7AF9FB;센텐차에 번개 에테르가 가득 찼다$colc0c0c0;
 
 [0x8af3]
 [JPN]
@@ -118,19 +118,19 @@ $zoom14;$col7AF9FB;　　방어 속성이 바뀌었다$colc0c0c0;
 [JPN]
 $zoom13;アンピュルシオン（突）
 [KOR]
-$zoom13;앵퓔시옹(돌격)
+$zoom13;앵퓔시옹(관통)
 
 [0x8d64]
 [JPN]
 $zoom13;五連乱舞（突）
 [KOR]
-$zoom13;오연난무(돌격)
+$zoom13;오연난무(관통)
 
 [0x8d7b]
 [JPN]
 $zoom13;エガリテランチャー（炎）
 [KOR]
-$zoom13;에갈리테 런처(불꽃)
+$zoom13;에갈리테 론처(불꽃)
 
 [0x8d9c]
 [JPN]
@@ -142,13 +142,13 @@ $zoom13;제3종 전송용 병기 나글파르(B)
 [JPN]
 $zoom13;インペール（突）
 [KOR]
-$zoom13;임페일(돌격)
+$zoom13;임페일(관통)
 
 [0x8de0]
 [JPN]
 $zoom13;五連乱舞　狂（突）
 [KOR]
-$zoom13;오연난무 광(돌격)
+$zoom13;광란의 오연난무(관통)
 
 [0x8dfb]
 [JPN]

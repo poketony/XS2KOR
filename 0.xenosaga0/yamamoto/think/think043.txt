@@ -4,7 +4,7 @@
 [JPN]
 $zoom14;$col7AF9FB;　Ｄフィールドが消えた・・$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　D 필드가 사라졌다・・$colc0c0c0;
+$zoom14;$col7AF9FB;　D 필드가 사라졌다・・・$colc0c0c0;
 
 [0x6534]
 [JPN]
@@ -22,7 +22,7 @@ $zoom13;심판의 날
 [JPN]
 $zoom13;ヴィシャスクリムゾン（突）
 [KOR]
-$zoom13;비셔스 크림슨(돌격)
+$zoom13;비셔스 크림슨(관통)
 
 [0x661a]
 [JPN]
@@ -52,13 +52,13 @@ $zoom13;In the Beginning(번개)
 [JPN]
 $zoom13;フォーリンローズⅡ（炎・ＬエーテルＤＤ）
 [KOR]
-$zoom13;폴링 로즈 II(불꽃·L 에테르 DD)
+$zoom13;폴링 로즈 Ⅱ(불꽃・L 에테르 DD)
 
 [0x66dd]
 [JPN]
 $zoom13;グングニルの一撃（突）
 [KOR]
-$zoom13;궁니르의 일격(돌격)
+$zoom13;궁니르의 일격(관통)
 
 [0x66fc]
 [JPN]
@@ -76,7 +76,7 @@ $zoom13;리프레시 H
 [JPN]
 $zoom13;ブーストＵＰ
 [KOR]
-$zoom13;부스트 UP
+$zoom13;부스트 업
 
 [0x673f]
 [JPN]

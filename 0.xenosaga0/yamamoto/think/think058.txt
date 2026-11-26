@@ -106,13 +106,13 @@ $zoom13;선더 브레스(번개)
 [JPN]
 $zoom13;邪視（Ｈストップ）
 [KOR]
-$zoom13;사시(H 스톱)
+$zoom13;사악한 시선(H 스톱)
 
 [0xc2c6]
 [JPN]
 $zoom13;邪眼（Ｌスタン）
 [KOR]
-$zoom13;사안(L 스턴)
+$zoom13;사악한 눈(L 스턴)
 
 [0xc2df]
 [JPN]

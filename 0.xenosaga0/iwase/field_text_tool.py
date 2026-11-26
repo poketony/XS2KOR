@@ -22,6 +22,12 @@ SOURCE_HASHES = {
     "Treasure.txt": "c82c3f678a9ab4f727d4cfa337e1932628f9383bc1c4524e95d0fbbf18485107",
 }
 TABLE_HASH = "1f461ef9eee4b58a856ef214e80f38ffa84c24865bddd7a494662685f00ab007"
+# These headers select two K2 labels in the paired executable. The original
+# layout/capacities above are still required for the stock-compatible fields.
+EXPANDED = {
+    "Treasure.txt": (b"!#XS2KOR_TREASURE_NAMES24_V3\r\n", {"Item": 24, "Locate": 24}),
+    "QuestMes.txt": (b"!#XS2KOR_QUESTMES_LABELS_V1\r\n", {"Subject": 32, "Locate": 24}),
+}
 
 
 def sha(data):
@@ -221,19 +227,71 @@ def text_layout(text, fields):
     return re.sub(r"\s+", "", "".join(pieces))
 
 
+def rebuild_expanded(data, filename, fields, edits, table, spaces):
+    header, limits = EXPANDED[filename]
+    legacy = edits.copy()
+    long_labels = {}
+    for f in fields:
+        key = f["id"]
+        limit = limits.get(key.split(".")[1])
+        if limit is None or edits[key] == f["original"]:
+            continue
+        try:
+            raw, size = encode_translation(edits[key], table, spaces)
+        except (ValueError, UnicodeError) as exc:
+            raise ValueError(f"{key}: {exc}") from exc
+        if size > limit or len(raw) > limit:
+            raise ValueError(f"{key}: {size} bytes exceeds {limit}")
+        if size > f["max_runtime_bytes"]:
+            long_labels[key] = raw
+            legacy[key] = f["original"]
+    fallback, report = rebuild_bytes(data, filename, legacy, table, spaces)
+    if not long_labels:
+        return fallback, report
+
+    # The original parser skips K2 lines and sees only original-sized fields.
+    # The paired ELF consumes the two K2 values in each record.
+    if b"K2:" in fallback:
+        raise ValueError(f"{filename} contains a reserved K2 field key")
+    reserved = tuple(key.encode("ascii") + b":" for key in PROFILES[filename][1])
+    inserts = []
+    for f in parse(fallback, filename):
+        key = f["id"]
+        limit = limits.get(key.split(".")[1])
+        if limit is None:
+            continue
+        at, length = f["offset"], f["length"]
+        value = long_labels.get(key, fallback[at:at+length])
+        runtime = runtime_text(value)
+        if (not runtime or any(c < 32 for c in runtime)
+                or len(value) > limit or any(token in value for token in (*reserved, b'"', b"K2:"))):
+            raise ValueError(f"{key}: expanded labels must be one nonempty line without field keys")
+        line = fallback.rfind(b"\n", 0, at) + 1
+        inserts.append((line, b'\tK2:"' + value + b'"\r\n'))
+    result = bytearray(fallback)
+    for at, line in reversed(inserts):
+        result[at:at] = line
+    report.extend({"id": key, "runtime_bytes": len(runtime_text(value)), "limit": limits[key.split(".")[1]]}
+                  for key, value in long_labels.items())
+    return header + bytes(result), sorted(report, key=lambda entry: entry["id"])
+
+
 def rebuild_text(data, filename, text, table, spaces="fullwidth"):
     original = data.decode("cp932").replace("\r\n", "\n")
     text = text.replace("\r\n", "\n")
     before, after = text_fields(original, filename), text_fields(text, filename)
     if text_layout(original, before) != text_layout(text, after):
         raise ValueError("Edit only quoted text; record labels, comments and other structure must stay unchanged")
-    edits = {f["id"]: f["original"] for f in parse(data, filename)}
+    fields = parse(data, filename)
+    edits = {f["id"]: f["original"] for f in fields}
     for old, new in zip(before, after):
         if old["value"] == new["value"]:
             continue
         # Physical lines/indentation are source formatting; literal \\n is a game line break.
         value = re.sub(r"\n[ \t]*", "", new["value"])
         edits[new["id"]] = value.replace("\\n", "\n")
+    if filename in EXPANDED:
+        return rebuild_expanded(data, filename, fields, edits, table, spaces)
     return rebuild_bytes(data, filename, edits, table, spaces)
 
 
@@ -247,7 +305,11 @@ def export(source):
     return {"translation": str(destination), "encoding": "UTF-8"}
 
 
-def plan_rebuild(translation, destination, spaces="fullwidth"):
+def replaceable(destination, filename):
+    return filename in EXPANDED and destination == REBUILT / filename
+
+
+def plan_rebuild(translation, destination, spaces="fullwidth", *, keep_identical=False):
     translation = Path(translation).resolve()
     if translation.parent != ROOT or translation.name not in PROFILES:
         raise ValueError("Use Citizen.txt, QuestMes.txt or Treasure.txt beside this tool")
@@ -260,24 +322,44 @@ def plan_rebuild(translation, destination, spaces="fullwidth"):
         raise ValueError("Font mapping changed from the verified table")
     text = translation.read_bytes().decode("utf-8-sig")
     built, report = rebuild_text(data, translation.name, text, table, spaces)
-    if report and destination.exists():
-        raise ValueError("Output TXT exists; existing results are never overwritten")
+    if report and replaceable(destination, translation.name):
+        pending = destination.with_suffix(".pending.txt")
+        if destination.is_symlink() or (destination.exists() and not destination.is_file()):
+            raise ValueError(f"Output is not a regular file: {destination}")
+        if pending.exists() or pending.is_symlink():
+            raise ValueError(f"An incomplete rebuild is pending: {pending}")
+    elif report and destination.exists():
+        if not keep_identical or destination.read_bytes() != built:
+            raise ValueError("Output TXT exists; existing results are never overwritten")
     return destination, built, {"file": translation.name, "changed_fields": len(report),
                                 "output": str(destination) if report else None}
+
+
+def write_rebuild(destination, built, filename):
+    if replaceable(destination, filename) and destination.exists():
+        if destination.read_bytes() == built:
+            return
+        pending = destination.with_suffix(".pending.txt")
+        write_new(pending, built)
+        if pending.read_bytes() != built:
+            raise OSError(f"Output verification failed: {pending}")
+        pending.replace(destination)
+    else:
+        write_new(destination, built)
 
 
 def rebuild(translation, destination, spaces="fullwidth"):
     destination, built, result = plan_rebuild(translation, destination, spaces)
     if result["changed_fields"]:
-        write_new(destination, built)
+        write_rebuild(destination, built, result["file"])
     return result
 
 
 def rebuild_all(spaces="fullwidth"):
-    plans = [plan_rebuild(ROOT / name, REBUILT / name, spaces) for name in PROFILES]
+    plans = [plan_rebuild(ROOT / name, REBUILT / name, spaces, keep_identical=True) for name in PROFILES]
     for destination, built, result in plans:
-        if result["changed_fields"]:
-            write_new(destination, built)
+        if result["changed_fields"] and (replaceable(destination, result["file"]) or not destination.exists()):
+            write_rebuild(destination, built, result["file"])
     return [result for _, _, result in plans]
 
 

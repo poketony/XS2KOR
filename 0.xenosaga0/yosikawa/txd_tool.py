@@ -21,13 +21,19 @@ class TXDTool:
         return str.maketrans(table)
 
     def get_data_start(self, data):
-        """4바이트 묶음 중 상위 2바이트가 0이 아닌 지점이 데이터의 시작"""
-        for i in range(0, len(data), 4):
-            if i + 4 > len(data): break
-            upper_half = struct.unpack('<H', data[i+2:i+4])[0]
-            if upper_half != 0:
-                return i
-        return len(data)
+        # In these TXDs the string pool starts at the lowest nonzero pointer.
+        start = len(data)
+        for offset in range(0, len(data) - 3, 4):
+            if offset >= start:
+                break
+            ptr, = struct.unpack_from('<I', data, offset)
+            if ptr:
+                if not offset + 4 <= ptr < len(data):
+                    raise ValueError('TXD 문자열 포인터가 범위를 벗어났습니다.')
+                start = min(start, ptr)
+        if start == len(data) or start % 4:
+            raise ValueError('TXD 포인터 테이블의 경계를 확인할 수 없습니다.')
+        return start
 
     def safe_decode(self, raw_bytes):
         """디코딩 에러 발생 시 2바이트씩 묶어서 [0xXXXX] 형태로 추출"""
@@ -88,59 +94,60 @@ class TXDTool:
 
         with open(modified_txt, 'r', encoding='utf-8-sig') as f:
             content = f.read()
-            parts = re.split(r'\[\d+\]', content)
-            if parts:
-                new_texts = [p.rstrip('\n') for p in parts[1:]]
 
         with open(original_txd, 'rb') as f:
             orig_data = f.read()
         
         data_start = self.get_data_start(orig_data)
         ptr_count = data_start // 4
+        original_ptrs = struct.unpack_from(f'<{ptr_count}I', orig_data)
+        markers = list(re.finditer(r'^\[([0-9]+)\]', content, re.M))
+        if [m[1] for m in markers] != [str(i) for i in range(ptr_count)] or content[:markers[0].start()].strip():
+            raise ValueError(f'TXT 항목 번호는 [0]부터 [{ptr_count - 1}]까지 순서대로 있어야 합니다.')
+        ends = [m.start() for m in markers[1:]] + [len(content)]
+        new_texts = [content[m.end():end].rstrip('\n') for m, end in zip(markers, ends)]
 
         new_ptr_table = []
         new_data_pool = b""
         current_offset = data_start 
 
-        for i in range(ptr_count):
-            if i < len(new_texts):
-                text = new_texts[i]
-                if not text:
-                    new_ptr_table.append(0)
-                    continue
+        for i, text in enumerate(new_texts):
+            if "[menu_sita]" in text:
+                text = text.replace("[menu_sita]", "").replace(" ", "、")
 
-                # --- 추가된 기능: [menu_sita] 태그 처리 ---
-                if "[menu_sita]" in text:
-                    # 태그 제거 및 공백을 '、'로 변경
-                    text = text.replace("[menu_sita]", "").replace(" ", "、")
-                # ----------------------------------------
-                
-                raw_pool = b""
-                tokens = re.split(r'(\[0x[0-9A-Fa-f]+\])', text)
-                for token in tokens:
-                    hex_match = re.match(r'\[0x([0-9A-Fa-f]+)\]', token)
-                    if hex_match:
-                        hex_str = hex_match.group(1)
-                        if len(hex_str) % 2 != 0: hex_str = "0" + hex_str
-                        raw_pool += bytes.fromhex(hex_str)
-                    else:
-                        token = token.translate(translation_table)
-                        unmapped = sorted(set(re.findall(r'[\u1100-\u11ff\u3130-\u318f\ua960-\ua97f\uac00-\ud7af\ud7b0-\ud7ff]', token)))
-                        if unmapped:
-                            raise ValueError(f'[{i}] JSON 대응표에 없는 한글: {" ".join(unmapped)}')
-                        # 일반 텍스트는 인코딩 (여기서 '、'가 0xA1A2로 변환됨)
-                        try:
-                            raw_pool += token.replace('\n', '\r\n').encode(self.encoding)
-                        except UnicodeEncodeError as e:
-                            raise ValueError(f'[{i}] 인코딩할 수 없는 문자: {e.object[e.start:e.end]!r}') from e
-                
-                new_ptr_table.append(current_offset)
-                new_data_pool += raw_pool + b'\x00'
-                current_offset += len(raw_pool) + 1
-            else:
-                new_ptr_table.append(0)
+            raw_pool = b""
+            tokens = re.split(r'(\[0x[0-9A-Fa-f]+\])', text)
+            for token in tokens:
+                hex_match = re.fullmatch(r'\[0x([0-9A-Fa-f]+)\]', token)
+                if hex_match:
+                    hex_str = hex_match.group(1)
+                    if len(hex_str) % 2 != 0: hex_str = "0" + hex_str
+                    raw_pool += bytes.fromhex(hex_str)
+                else:
+                    token = token.translate(translation_table)
+                    unmapped = sorted(set(re.findall(r'[\u1100-\u11ff\u3130-\u318f\ua960-\ua97f\uac00-\ud7af\ud7b0-\ud7ff]', token)))
+                    if unmapped:
+                        raise ValueError(f'[{i}] JSON 대응표에 없는 한글: {" ".join(unmapped)}')
+                    try:
+                        raw_pool += token.replace('\n', '\r\n').encode(self.encoding)
+                    except UnicodeEncodeError as e:
+                        raise ValueError(f'[{i}] 인코딩할 수 없는 문자: {e.object[e.start:e.end]!r}') from e
 
-        output_path = original_txd.replace(".txd", "_repacked.txd")
+            if b'\0' in raw_pool:
+                raise ValueError(f'[{i}] 문자열에 NUL을 넣을 수 없습니다.')
+            if not raw_pool:
+                new_ptr_table.append(None if original_ptrs[i] else 0)
+                continue
+            new_ptr_table.append(current_offset)
+            new_data_pool += raw_pool + b'\x00'
+            current_offset += len(raw_pool) + 1
+
+        # A live empty string must point to a terminator, not to the table.
+        if None in new_ptr_table:
+            new_data_pool += b'\0'
+            new_ptr_table = [current_offset if ptr is None else ptr for ptr in new_ptr_table]
+
+        output_path = os.path.splitext(original_txd)[0] + '_repacked.txd'
         with open(output_path, 'wb') as f:
             for ptr in new_ptr_table:
                 f.write(struct.pack('<I', ptr))

@@ -4,7 +4,7 @@
 [JPN]
 $zoom14;$colc0c0c0;　　決着への執念\n$col7AF9FB;　ジンで止めを刺せ！$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　　결판을 향한 집념\n$col7AF9FB;　진으로 마무리해라!$colc0c0c0;
+$zoom14;$colc0c0c0;　　결착을 향한 집념\n$col7AF9FB;　진으로 마무리하자!$colc0c0c0;
 
 [0xff90]
 [JPN]
@@ -28,7 +28,7 @@ $zoom13;내박인
 [JPN]
 $zoom14;$col7AF9FB;　　　不動の印　第壱を結んだ！$colc0c0c0;\n場の霊気が縛りつけられた感じがする$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　　　부동의 인, 첫 번째를 맺었다!$colc0c0c0;\n주변의 영기가 속박된 듯하다$colc0c0c0;
+$zoom14;$col7AF9FB;　　　제1 부동의 인을 맺었다!$colc0c0c0;\n주변의 영기가 속박된 듯하다$colc0c0c0;
 
 [0x100df]
 [JPN]
@@ -46,7 +46,7 @@ $zoom13;외오고인
 [JPN]
 $zoom14;$col7AF9FB;　　　不動の印　第弐を結んだ！$colc0c0c0;\n明王の加護により　霊気が無力化した$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　　　부동의 인, 두 번째를 맺었다!$colc0c0c0;\n명왕의 가호로 영기가 무력해졌다$colc0c0c0;
+$zoom14;$col7AF9FB;　　　제2 부동의 인을 맺었다!$colc0c0c0;\n명왕의 가호로 영기가 무력화됐다$colc0c0c0;
 
 [0x101a9]
 [JPN]
@@ -64,7 +64,7 @@ $zoom13;제천구칙인
 [JPN]
 $zoom14;$col7AF9FB;　　　不動の印　第参を結んだ！$colc0c0c0;\n　諸天の力で霊気を覆い包囲した！$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　　　부동의 인, 세 번째를 맺었다!$colc0c0c0;\n　제천의 힘이 영기를 둘러쌌다!$colc0c0c0;
+$zoom14;$col7AF9FB;　　　제3 부동의 인을 맺었다!$colc0c0c0;\n　제천의 힘이 영기를 둘러쌌다!$colc0c0c0;
 
 [0x10273]
 [JPN]
@@ -76,13 +76,13 @@ $zoom14;$col7AF9FB;　　강제 H 스톱까지 앞으로 1!\n　　매우 위험
 [JPN]
 $zoom13;荼枳尼護破斬（斬・突）
 [KOR]
-$zoom13;다키니 호파참(참격·돌격)
+$zoom13;다키니 호파참(참격・관통)
 
 [0x102ef]
 [JPN]
 $zoom13;摩醯首羅斬（斬・突・炎）
 [KOR]
-$zoom13;마혜수라참(참격·돌격·불꽃)
+$zoom13;마혜 수라참(참격・관통・불꽃)
 
 [0x10310]
 [JPN]
@@ -124,7 +124,7 @@ $zoom13;외박인
 [JPN]
 $zoom14;$col7AF9FB;　　　　不動の印　終焉を結んだ！\n不動の法が完成し強制Ｈストップになった！$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　　　　부동의 인, 종언을 맺었다!\n부동의 법이 완성되어 강제 H 스톱에 걸렸다!$colc0c0c0;
+$zoom14;$col7AF9FB;　　　　종언의 부동의 인을 맺었다!\n부동의 법이 완성되어 강제 H 스톱에 걸렸다!$colc0c0c0;
 
 [0x103f9]
 [JPN]

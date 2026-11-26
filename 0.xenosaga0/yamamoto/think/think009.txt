@@ -34,13 +34,13 @@
 [JPN]
 $zoom13;５．５６ｍｍＵ−ＴＩＣ弾（突）
 [KOR]
-$zoom13;5.56mm U-TIC탄(돌격)
+$zoom13;5.56mm U-TIC탄(관통)
 
 [0xcc08]
 [JPN]
 $zoom13;ハイアムズＭ８７Ｒ（突）
 [KOR]
-$zoom13;하이암즈 M87R(돌격)
+$zoom13;하이암즈 M87R(관통)
 
 [0xcc29]
 [JPN]
@@ -52,11 +52,11 @@ $zoom15;$col7AF9FB;　레이저 출력 상승
 [JPN]
 $zoom13;ペネトレート　レーザー（Ｂ）
 [KOR]
-$zoom13;페네트레이트 레이저(B)
+$zoom13;페너트레이트 레이저(B)
 
 [0xcc74]
 [JPN]
 $zoom13;ヘッドハント（打・Ｂ）
 [KOR]
-$zoom13;헤드 헌트(타격·B)
+$zoom13;헤드 헌트(타격・B)
 

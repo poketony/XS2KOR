@@ -21,6 +21,7 @@ ORIGINALS = {
 }
 ELF_NAMES = {1: "slps_253.68", 2: "SLPS_253.69"}
 ELF_HASH = "4e6b7fa2d0fb21af561519d914cf5b84598b6ad8622412a0daa6963825942c75"
+OV01_HASH = "97602c5252bcd14113cb214e5441a1c4bae44baa97d57e5e60a3b3f27d2167a3"
 OV02_HASH = "1d61c26c667bb9e4b6187cede22b386d6062d805b141711b921682162ae4fdaf"
 TABLE = ROOT / "0.xenosaga0/yosikawa/XENOSAGA KOR-JPN.json"
 TABLE_HASH = "1f461ef9eee4b58a856ef214e80f38ffa84c24865bddd7a494662685f00ab007"
@@ -67,7 +68,31 @@ DYNAMIC_SLOT_IDS = {218, 539, 541, 543, 544, 545, 546, 547, 548}
 # Never include character names, play times, numeric fields or image widgets.
 STATUS_SPACE_CALLS = (0x233AB4, 0x2347B0, 0x234B80, 0x234BC8, 0x234BEC, 0x234C54)
 MENU_ITEM_NAME_SPACE_CALLS = (0x21B858,)
-RESULT_NAME_SPACE_CALLS = (0x2302A8,)
+# Fixed-width text fields, not the adjacent format prefixes or numeric columns.
+MENU_BODY_SPACE_CALLS = (
+    0x223D2C, 0x223D54, 0x223D78, 0x223FA0,  # common dialogs and their choices
+    0x210FBC, 0x210FDC,  # tutorial choices
+    0x21BBC8, 0x21BBEC, 0x21BF10, 0x21C2C0,
+    0x21CDEC, 0x21CE18, 0x21D0F8,  # other item/ether/equipment list names
+    0x21D4B0, 0x21D86C, 0x21D90C,  # skills and skill lists
+    0x21DC54, 0x21E144, 0x21E608, 0x21EA50,  # skill details
+    0x21F2D4, 0x21F32C, 0x21F52C,  # level/class and skill in the status panel
+)
+DETAIL_SPACE_CALLS = (
+    0x21DCF8, 0x21DD20, 0x21DD48, 0x21DD70,  # Target, Zone, Type, Range
+    0x21E1E8, 0x21E210, 0x21E678, 0x21E6A0, 0x21E6C8, 0x21EAFC, 0x21EB24, 0x21EB4C,
+    0x21DE8C, 0x21DEB4, 0x21E36C, 0x21E784, 0x21EC0C,  # Condition and Effect
+)
+ATTRIBUTE_ADVANCES = ((0x21DDEC, 0x21DDF8), (0x21E2D4, 0x21E2E0),
+                      (0x21E744, 0x21E750), (0x21EBCC, 0x21EBD8))
+CONDITION_ADVANCES = ((0x21DE50, 0x21DE58), (0x21E330, 0x21E338))
+EQUIP_SPACE_TAILS = (0x210934, 0x2109C4)
+UMN_LIST_CALL = 0x20C758
+UMN_WIDTH_CALL = 0x20C71C
+UMN_CENTER_CODE = 0x20C728
+MENU_PAD_APPEND_CALLS = (0x21139C, 0x211414, 0x2114B8, 0x213744, 0x2138E4,
+                         0x2152DC, 0x215394)
+RESULT_SPACE_CALLS = (0x2302A8, 0x230488)  # Reward name and 99-item overflow warning.
 LOCATION_SPACE_CALLS = (0x234958, 0x234978)
 SLOT_SPACE_CALLS = (0x23429C,)
 TITLE_SPACE_CALLS = (
@@ -107,6 +132,10 @@ CAMPAIGN_NUMBER = 0x2C9348
 CAMPAIGN_NUMBER_WRITES = ((0x10B570, 0xA0C30012), (0x10B57C, 0xA0C20013))
 SHORT_ITEM = 0x578D98
 SHORT_ITEM_STORAGE = 0x578D96
+LONG_ITEM = 0x5651C0
+LONG_ITEM_END = 0x5651E0
+SHORT_ITEM_OVERFLOW = 0x5773F0
+SHORT_ITEM_OVERFLOW_END = 0x577400
 
 # Reviewed NUL-terminated movie labels: each has one independent LUI/ADDIU
 # address construction, used by both the width and draw calls at 0x1D71F0.
@@ -121,11 +150,16 @@ RELOCATION_REFERENCES = {
 # Leave the four bytes after .lit4 untouched; align string starts to eight.
 RELOCATION_POOLS = ((0x5773B0, 0x577400),)
 
+# Fixed-position prompts on illustrated save, ending, disc and movie-error screens.
+ARTWORK_SAVE_TEXT = (0x564DA0, 0x564E20, 0x564E98, 0x564F40, 0x564F90)
+ARTWORK_DISC_TEXT = (0x199CD0, 0x199CF8, 0x199D30, 0x199D70)
+ARTWORK_DRAW_CALLS = (0x1E7CD0, 0x1E85FC, 0x1E8668, 0x1E8AD4, 0x1E8B40, 0x1E8D54)
+
 # Reviewed display strings, not a blind scan of code, pointers or font tables.
 GROUPS = {
     "UI / movie pause": (0x1945E0, 0x194610),
-    "UI / disc change": (0x199CD0, 0x199CF8, 0x199D30, 0x199D70),
-    "UI / movie error and save": (0x564DA0, 0x564E20, 0x564E98, 0x564F40, 0x564F90),
+    "UI / disc change": ARTWORK_DISC_TEXT,
+    "UI / movie error and save": ARTWORK_SAVE_TEXT,
     "UI / item message fragments": (0x5651C0, 0x578D98, 0x579670, 0x579678),
     "UI / segment address": (0x5666F0, 0x566718, 0x566748),
     "UI / quest and citizen help": (0x5669F0, 0x566B48, 0x566B58, 0x566BB8,
@@ -328,18 +362,65 @@ def load_table():
 
 
 def export_text(data):
+    width_notes = {
+        "UI / movie pause": (
+            "# 표기: 영문은 전각(ＳＴＡＲＴ/ＰＡＵＳＥ), 본문 문장부호도 전각(：．！？)을 사용하세요.",
+            "# 단어 사이 공백은 반각을 사용하세요. {1901}/{1900}은 유지하세요. 반각 영문은 다른 글리프로 표시됩니다.",
+        ),
+        "UI / disc change": (
+            "# 표기: 영문·숫자·문장부호는 원문의 전각(ＤＩＳＣ ２/。 등)을 유지하세요. 반각 치환 시 표시는 미검증입니다.",
+        ),
+        "UI / movie error and save": (
+            "# 표기: 영문·문장부호는 원문의 전각(ＥＰＩＩ/：/？ 등)을 유지하세요. 제어코드·버튼 기호는 변경하지 마세요.",
+        ),
+        "UI / item message fragments": (
+            "# 표기: 조사 '(을)를'의 괄호와 !, 공백은 반각을 유지하세요. 개수 자리 00은 반드시 반각입니다.",
+        ),
+        "UI / segment address": (
+            "# 표기: 현재 번역의 No., !, ( )는 반각을 유지하세요. %d는 반각 서식 지정자이므로 전각으로 바꾸지 마세요.",
+        ),
+        "UI / quest and citizen help": (
+            "# 표기: ＮＯ ＤＡＴＡ·Ｌ１／Ｒ１ 등 전각 표기와 or 등 반각 표기는 원문대로 유지하세요. &03/&04는 반각 필수입니다. 다른 조합의 표시는 미검증입니다.",
+        ),
+        "UI / shop": (
+            "# 표기: 현재 번역의 :와 공백은 반각을 유지하세요. 새 영문·문장부호의 표시 방식은 별도 확인이 필요합니다.",
+        ),
+        "UI / HDD read error": (
+            "# 표기: ＤＶＤ·： 등 원문의 전각 영문·문장부호를 유지하세요. 반각 치환 시 표시는 미검증입니다.",
+        ),
+        "UI / campaign number": (
+            "# 표기: 일반 영문·문장부호는 원문 표기를 유지하세요(표시 미검증). 번호 자리 01 및 &03/&04는 반드시 반각입니다.",
+        ),
+        "Optional / English UI": (
+            "# 표기: 원래 반각인 영문·문장부호는 반각을 유지하세요. W．ATT 등의 전각 점은 그대로 두세요. 일괄 전각/반각 변환하지 마세요.",
+        ),
+        "Debug / Japanese test and diagnostics": (
+            "# 표기: 영문·문장부호는 원문 표기를 유지하세요. 함수명·수식·%3d/%8f 등 서식 지정자는 반각 그대로 보존하세요.",
+        ),
+        "OV02 / memory card": (
+            "# 표기: ＥＰＩＩ·ＫＢ·ＰＳ２ 및 문장부호는 원문의 전각을 유지하세요. {1903}292의 숫자는 반각, 제어코드도 그대로 유지하세요.",
+        ),
+        "OV02 / HDD": (
+            "# 표기: ＰｌａｙＳｔａｔｉｏｎ·１７９２ＭＢ 및 문장부호는 원문의 전각을 유지하세요. 다른 폭으로 치환했을 때의 표시는 미검증입니다.",
+        ),
+        "OV02 / English installation status": (
+            "# 표기: 영문·문장부호는 원문의 반각을 유지하세요. %1d/%2d/%8x 등 서식 지정자도 반각 필수입니다.",
+        ),
+    }
     lines = ["# XS2 ELF text v1", f"# origin-sha256: {ELF_HASH}",
              "# offset|original bytes/in-place bytes|text",
              "# Edit only text after the second |. Missing rows remain original.",
              "# \\n = line break (0A); \\\\n = literal backslash+n; {HEX} = control packet.",
              "# Keep {HEX}, % formats and &03/&04. Item counts require one ASCII 00.",
              "# English/debug groups are optional. Rebuild includes runtime fixes, not the font asset.",
-             "# Reviewed movie labels can relocate on overflow; other rows retain their limits."]
+             "# Reviewed movie labels can relocate on overflow; other rows retain their limits.",
+             "# 조사 표기: (을)를 / (은)는 / (이)가 / (와)과. 괄호는 반각을 사용하세요."]
     group = None
     for rec in records(data):
         if group != rec.group:
             group = rec.group
             lines.extend(["", "# " + group])
+            lines.extend(width_notes.get(group, ()))
         if rec.offset in ITEM_COUNT_WRITES:
             lines.append("# COUNT: Keep exactly one ASCII 00. Rebuild adjusts the numeric write position.")
         if rec.offset == CAMPAIGN_NUMBER:
@@ -412,6 +493,16 @@ def validate_relocation_layout(data, catalog):
             raise ValueError("Relocation pool overlaps a text slot")
         if any(off < end and start < off + len(after) for off, _before, after in runtime_regions()):
             raise ValueError("Relocation pool overlaps a runtime patch")
+    for start, end in ((LONG_ITEM + 24, LONG_ITEM_END),
+                       (SHORT_ITEM_OVERFLOW, SHORT_ITEM_OVERFLOW_END)):
+        if any(data[start:end]):
+            raise ValueError("Item expansion padding changed")
+        if not any(p[0] == 1 and p[6] & 2 and p[1] <= start and end <= p[1] + p[4]
+                   and p[2] - p[1] == MAIN_FILE_BIAS for p in programs):
+            raise ValueError("Item expansion storage is not writable file-backed memory")
+        if any(r.write_offset < end and start < r.write_offset + r.capacity + 1
+               for r in catalog.values()):
+            raise ValueError("Item expansion storage overlaps a text slot")
     for group in RELOCATION_GROUPS:
         for left, right in zip(group, group[1:]):
             if catalog[left].write_offset + catalog[left].capacity + 1 != right:
@@ -432,7 +523,13 @@ def plan_text_layout(data, catalog, changes):
     payloads = {r.offset: r.raw for r in catalog.values()}
     payloads.update((r.offset, raw) for r, raw in changes)
     overflow = {r.offset for r, raw in changes if len(raw) > r.capacity}
+    item_limits = {LONG_ITEM: LONG_ITEM_END - LONG_ITEM - 1,
+                   SHORT_ITEM: SHORT_ITEM_OVERFLOW_END - SHORT_ITEM_OVERFLOW - 1}
     for offset in sorted(overflow):
+        if offset in item_limits:
+            if len(payloads[offset]) > item_limits[offset]:
+                raise ValueError(f"{offset:08X}: {len(payloads[offset])} bytes exceeds {item_limits[offset]} reviewed item bytes")
+            continue
         if offset not in RELOCATION_REFERENCES:
             raise ValueError(f"{offset:08X}: {len(payloads[offset])} bytes exceeds {catalog[offset].capacity}; "
                              "relocation references are not reviewed for this row")
@@ -441,6 +538,21 @@ def plan_text_layout(data, catalog, changes):
     validate_relocation_layout(data, catalog)
     pools = [list(bounds) for bounds in RELOCATION_POOLS]
     extra_regions = []
+    if LONG_ITEM in overflow:
+        # The next jump table begins at LONG_ITEM_END; only its preceding
+        # eight zero padding bytes extend this mutable message in place.
+        regions[LONG_ITEM] = (LONG_ITEM, LONG_ITEM_END)
+    if SHORT_ITEM in overflow:
+        # Keep Dummy and the separately referenced empty string untouched.
+        # Reserve the pool's last 16 bytes only when this fragment needs them.
+        for pool in pools:
+            if pool[0] <= SHORT_ITEM_OVERFLOW and pool[1] == SHORT_ITEM_OVERFLOW_END:
+                pool[1] = SHORT_ITEM_OVERFLOW
+                break
+        else:
+            raise ValueError("Short item expansion pool is unavailable")
+        positions[SHORT_ITEM] = SHORT_ITEM_OVERFLOW
+        extra_regions.append((SHORT_ITEM_OVERFLOW, SHORT_ITEM_OVERFLOW_END))
     for group in RELOCATION_GROUPS:
         if not overflow.intersection(group):
             continue
@@ -594,7 +706,12 @@ def movie_pause_text(translated, offset=0x194610):
     if not 0 <= offset < len(translated):
         raise ValueError('PAUSE text reference is outside the ELF')
     raw, _text, _controls = read_string(translated, offset, len(translated))
-    result, mode, index = bytearray(), 0, 0
+    result = narrow_prompt_spaces(raw)
+    return result if result != raw else None
+
+
+def narrow_prompt_spaces(raw, mode=0):
+    result, index = bytearray(), 0
     while index < len(raw):
         byte = raw[index]
         if byte < 32:
@@ -612,7 +729,19 @@ def movie_pause_text(translated, offset=0x194610):
         else:
             result.extend(raw[index:index + size])
         index += size
-    return bytes(result) if result != raw else None
+    return bytes(result)
+
+
+def artwork_prompt_texts(translated):
+    copies = {}
+    for offset in ARTWORK_SAVE_TEXT + ARTWORK_DISC_TEXT:
+        raw, _text, _controls = read_string(translated, offset, len(translated))
+        # Unlike the save strings, disc messages inherit {1901} from the
+        # separate mode prefix at VA 0x697B10.
+        formatted = narrow_prompt_spaces(raw, mode=int(offset in ARTWORK_DISC_TEXT))
+        if formatted != raw:
+            copies[offset + MAIN_FILE_BIAS] = formatted
+    return copies
 
 
 def movie_skip_text(translated):
@@ -624,7 +753,7 @@ def movie_skip_text(translated):
     return text
 
 
-def popup_font_regions(pause_text=None, skip_text=None):
+def popup_font_regions(pause_text=None, skip_text=None, artwork_texts=None):
     # File header padding is loaded after BSS by an independent RX segment.
     # Reserve it from BOTH kernel heap and libc sbrk; never map onto the stack.
     bias = 0x9D0000
@@ -632,6 +761,8 @@ def popup_font_regions(pause_text=None, skip_text=None):
     animated_comma = bias + 0x310
     table = bias + 0x700
     scope_callback, scope_queue, literals = bias + 0x780, bias + 0x7C0, bias + 0x980
+    pad_append = bias + 0x600
+    label_width = bias + 0x670
     before = b"$init;$bg2;$shadow+1,+3,000000;\0"
     after = (b"\x0b\x0d\x02$shadow+1,+3,000000;\x17"
              + marker.to_bytes(3, "big") + b"\x01\x01\x01\x01\0")
@@ -812,6 +943,25 @@ def popup_font_regions(pause_text=None, skip_text=None):
     assert len(mark) <= animated_comma - marker and len(comma) <= select - animated_comma
     assert len(choose) <= metric - select
     assert len(measure) <= table - metric
+    assert metric + len(measure) <= pad_append
+    # The reviewed inputs are five-column decimal fields or literal indents.
+    # Keep their wide advances in the narrowed dialog, without changing the
+    # original number buffer or the visible character count.
+    append_pad, _ = assemble(pad_append, [
+        imm(9, 29, 29, -0x30), imm(0x3F, 31, 29, 0x20),
+        reg(0x21, 8, 4), reg(0x21, 9, 29), imm(9, 10, 0, 0x20),
+        imm(9, 11, 0, 0xA1), imm(9, 12, 0, 12),
+        'next', imm(0x24, 2, 8, 0),
+        (4, 2, 0, 'done'), imm(9, 8, 8, 1),
+        (4, 12, 0, 'append'), imm(9, 12, 12, -1),  # unknown longer inputs pass through
+        (5, 2, 10, 'copy'), 0,
+        imm(0x28, 11, 9, 0), imm(9, 9, 9, 1), reg(0x21, 2, 11),
+        'copy', imm(0x28, 2, 9, 0), ('j', 'next'), imm(9, 9, 9, 1),
+        'done', imm(0x28, 0, 9, 0), reg(0x21, 4, 29),
+        'append', 0x0C088E8A, 0,
+        imm(0x37, 31, 29, 0x20), reg(8, 0, 31), imm(9, 29, 29, 0x30),
+    ])
+    assert pad_append + len(append_pad) <= label_width
     # ASCII remap -> glyph indices, checked against the original renderer in
     # CPU tests. Zero means retain the full-width path. All indices < 192.
     indices = {32: 1, 33: 10, 34: 41, 35: 84, 36: 80, 37: 83, 38: 85, 39: 39,
@@ -897,10 +1047,91 @@ def popup_font_regions(pause_text=None, skip_text=None):
     assert len(queue) <= literals - scope_queue
     assert scope_queue + len(queue) <= title_count
     assert literals + len(controls) <= bias + 0xA00
-    payload = bytearray(0x800)
-    for location, value in ((marker, mark), (animated_comma, comma), (select, choose), (metric, measure), (table, glyphs),
+
+    # Measure plain EUC/ASCII text using the per-glyph integer advances of
+    # the large fixed-width renderer. The caller supplies glyph/space widths.
+    label_measure, _ = assemble(label_width, [
+        reg(0x21, 2, 0), imm(9, 12, 0, 0x20),
+        'next', imm(0x24, 11, 8, 0),
+        (4, 11, 0, 'done'), imm(9, 8, 8, 1),
+        (4, 11, 12, 'space'), 0,
+        imm(0x0B, 11, 11, 0x80), imm(0x0E, 11, 11, 1),
+        reg(0x21, 8, 8, 11), ('j', 'next'), reg(0x21, 2, 2, 9),
+        'space', ('j', 'next'), reg(0x21, 2, 2, 10),
+        'done', reg(8, 0, 31), 0,
+    ])
+    detail_field = label_width + len(label_measure)
+    detail, _ = assemble(detail_field, [
+        imm(9, 29, 29, -0x20), imm(0x3F, 31, 29, 8),
+        reg(0x21, 8, 6), imm(9, 9, 0, 14),
+        0x0C000000 | label_width >> 2, imm(9, 10, 0, 7),
+        imm(9, 2, 2, 1),
+        0x0C000000 | queue_labels['space'] >> 2, imm(0x2B, 2, 29, 0),
+        imm(0x23, 2, 29, 0), imm(0x37, 31, 29, 8), reg(8, 0, 31), imm(9, 29, 29, 0x20),
+    ])
+    umn_width = detail_field + len(detail)
+    umn_measure = struct.pack('<4I', reg(0x21, 8, 4), imm(9, 9, 0, 15),
+                              jump(label_width), imm(9, 10, 0, 8))
+    assert umn_width + len(umn_measure) <= table
+
+    # Scope the reviewed OV01 enemy HUD name only. Bits 4/5 are unused by the
+    # native renderer; bit 5 marks this scope, bit 4 saves the old han1 bit.
+    # Explicit ruby, proportional and small modes bypass the scope entirely.
+    enemy_begin, enemy_end = bias + 0xA10, bias + 0xA50
+    enemy_queue, enemy_controls = bias + 0xAA0, bias + 0xB80
+    begin, _ = assemble(enemy_begin, [
+        imm(0x24, 2, 4, 0x18), imm(0x0C, 3, 2, 0xFB),
+        (5, 3, 0, 'return'), 0,
+        reg(0, 3, 0, 2, 2), imm(0x0D, 2, 3, 0xA4),
+        imm(0x28, 2, 4, 0x18),
+        imm(9, 3, 0, 8), imm(0x29, 3, 4, 0x2C),
+        'return', reg(8, 0, 31), 0,
+    ])
+    end, _ = assemble(enemy_end, [
+        imm(0x24, 2, 4, 0x18), imm(0x0C, 3, 2, 0x20),
+        (4, 3, 0, 'return'), 0,
+        imm(0x0C, 2, 2, 0x10), reg(2, 2, 0, 2, 2),
+        imm(0x28, 2, 4, 0x18),
+        imm(9, 3, 0, 10), imm(0x29, 3, 4, 0x2C),
+        'return', reg(8, 0, 31), 0,
+    ])
+    enemy_wrapper, _ = assemble(enemy_queue, [
+        *address(2, 0xAA537C), (5, 31, 2, 'original'), 0,
+        *address(2, 0xADF368), (5, 4, 2, 'original'), 0,
+        imm(9, 29, 29, -0x20),
+        imm(0x3F, 16, 29, 0), imm(0x3F, 31, 29, 8),
+        reg(0x21, 16, 4), *address(4, enemy_controls + 20),
+        0x0C0654E0, 0,  # Native raw-control-aware queue copy, 0x195380.
+        imm(15, 8, 0, 0x8D), imm(0x23, 9, 8, 0x4824),
+        imm(9, 9, 9, -1), imm(0x2B, 9, 8, 0x4824),
+        0x0C0654E0, imm(9, 4, 16, 27),
+        imm(0x3F, 2, 29, 0x10),
+        imm(15, 8, 0, 0x8D), imm(0x23, 9, 8, 0x4824),
+        imm(9, 9, 9, -1), imm(0x2B, 9, 8, 0x4824),
+        *address(4, enemy_controls + 9),
+        0x0C0654E0, 0,
+        imm(0x37, 2, 29, 0x10), imm(0x37, 16, 29, 0),
+        imm(0x37, 31, 29, 8), reg(8, 0, 31), imm(9, 29, 29, 0x20),
+        'original', jump(0x195380), 0,
+    ])
+    enemy_text = b''.join(b'\x17' + entry.to_bytes(3, 'big') + b'\x01'*4 + b'\0'
+                          for entry in (enemy_begin, enemy_end))
+    # Apply horizontal zoom AFTER the original 27-byte style prefix; the source
+    # name buffer is untouched. End restores its native zoom10 for later draws.
+    enemy_text += b'\0\0$zoom10,10;$colc0c0c0;$bg3;' + enemy_text[:8] + b'\0'
+    assert enemy_begin + len(begin) <= enemy_end
+    assert enemy_end + len(end) <= enemy_queue
+    assert enemy_queue + len(enemy_wrapper) <= enemy_controls
+    assert enemy_controls + len(enemy_text) <= bias + 0xC00
+    # Header padding remains below the existing 0x9D1000 heap start.
+    payload = bytearray(0xA00)
+    for location, value in ((marker, mark), (animated_comma, comma), (select, choose), (metric, measure),
+                            (pad_append, append_pad), (label_width, label_measure),
+                            (detail_field, detail), (umn_width, umn_measure), (table, glyphs),
                             (scope_callback, callback), (scope_queue, queue), (literals, controls),
-                            (title_count, title_counter), (title_separator, title_text)):
+                            (title_count, title_counter), (title_separator, title_text),
+                            (enemy_begin, begin), (enemy_end, end),
+                            (enemy_queue, enemy_wrapper), (enemy_controls, enemy_text)):
         offset = location - bias - 0x200
         payload[offset:offset + len(value)] = value
     pause_calls = []
@@ -929,6 +1160,31 @@ def popup_font_regions(pause_text=None, skip_text=None):
         if len(prefix) > marker - (bias + 0x200):
             raise ValueError('PAUSE space formatting exceeds the reviewed RX prefix')
         payload[:len(prefix)] = prefix
+    artwork_calls = []
+    if artwork_texts:
+        # Only these callers read the display copies. Unknown pointers and the
+        # original source slots retain their exact paths and contents.
+        entry = bias + 0xC00
+        lookup = entry + 40
+        art_draw, _ = assemble(entry, [
+            *address(8, lookup),
+            'next', imm(0x23, 9, 8, 0),
+            (4, 9, 0, 'draw'), imm(0x23, 10, 8, 4),
+            (5, 9, 7, 'next'), imm(9, 8, 8, 8),
+            reg(0x21, 7, 10),
+            'draw', jump(0x1954B8), 0,
+        ])
+        assert len(art_draw) == lookup - entry
+        pointers, strings = bytearray(), bytearray()
+        text_base = lookup + (len(artwork_texts) + 1) * 8
+        for original, formatted in artwork_texts.items():
+            pointers.extend(struct.pack('<II', original, text_base + len(strings)))
+            strings.extend(formatted + b'\0')
+        payload.extend(art_draw + pointers + bytes(8) + strings)
+        if len(payload) > 0xE00:  # Loaded from file 0x200 through at most 0x1000.
+            raise ValueError('Illustrated prompt copies exceed the reviewed RX padding below the heap')
+        artwork_calls = [(address - MAIN_FILE_BIAS, struct.pack('<I', 0x0C06552E),
+                          struct.pack('<I', 0x0C000000 | (entry >> 2))) for address in ARTWORK_DRAW_CALLS]
     return [
         (0x2C, struct.pack('<H', 4), struct.pack('<H', 5)),
         (0xB4, bytes(32), struct.pack('<8I', 1, 0x200, bias + 0x200,
@@ -940,6 +1196,7 @@ def popup_font_regions(pause_text=None, skip_text=None):
         (0x78CA8, struct.pack('<I', 0x308400F8), struct.pack('<I', 0x30840038)),
         (0x773C0, struct.pack('<I', 0x304200F8), struct.pack('<I', 0x30420038)),
         (0x79748, struct.pack('<I', 0x0C065C20), struct.pack('<I', 0x0C000000 | (select >> 2))),
+        (0x764F0, struct.pack('<I', 0x080654E0), struct.pack('<I', jump(enemy_queue))),
         (0x113B08, struct.pack('<I', 0x0C08585C), struct.pack('<I', 0x0C000000 | (scope_queue >> 2))),
         (0x1049DC, struct.pack('<I', 0x0C08585C), struct.pack('<I', 0x0C000000 | (queue_labels['help'] >> 2))),
         (0x114E3C, struct.pack('<I', 0x3C05006A), struct.pack('<I', imm(15, 5, 0, title_separator >> 16))),
@@ -949,37 +1206,168 @@ def popup_font_regions(pause_text=None, skip_text=None):
         (0x1047E8, struct.pack('<II', 0xA3A00001, 0x2415000F), struct.pack('<II', jump(animated_comma), 0)),
         *((address - 0x11F000, struct.pack('<I', 0x0C08585C),
            struct.pack('<I', 0x0C000000 | (queue_labels['confirmation' if address == 0x233AB4 else 'space'] >> 2)))
-          for address in STATUS_SPACE_CALLS + MENU_ITEM_NAME_SPACE_CALLS + SLOT_SPACE_CALLS + RESULT_NAME_SPACE_CALLS + LOCATION_SPACE_CALLS),
+          for address in STATUS_SPACE_CALLS + MENU_ITEM_NAME_SPACE_CALLS + MENU_BODY_SPACE_CALLS
+          + SLOT_SPACE_CALLS + RESULT_SPACE_CALLS + LOCATION_SPACE_CALLS + DETAIL_SPACE_CALLS + (UMN_LIST_CALL,)),
+        (UMN_WIDTH_CALL - 0x11F000, struct.pack('<I', 0x0C065740), struct.pack('<I', 0x0C000000 | umn_width >> 2)),
+        # The new width is already scaled. Half of it is the centering offset.
+        (UMN_CENTER_CODE - 0x11F000, struct.pack('<5I', 0x00021840, 0x00621821, 0x00031880, 0x00621821, 0x00031943),
+         struct.pack('<5I', reg(3, 3, 0, 2, 1), 0, 0, 0, 0)),
+        (0x698048 - 0x11F000, b'\xA1\xBF\0', b'\xA1\xA6\0'),  # Attribute-only separator
+        *((call - 0x11F000, struct.pack('<I', 0x0C08585C),
+           struct.pack('<I', 0x0C000000 | detail_field >> 2))
+          for call, _ in ATTRIBUTE_ADVANCES + CONDITION_ADVANCES),
+        *((at - 0x11F000, struct.pack('<I', 0x2652000D),
+           struct.pack('<I', reg(0x21, 18, 18, 2))) for _, at in ATTRIBUTE_ADVANCES),
+        *((at - 0x11F000, struct.pack('<I', 0x26A400A0),
+           struct.pack('<I', reg(0x21, 4, 22, 2))) for _, at in CONDITION_ADVANCES),
+        *((address - 0x11F000, struct.pack('<I', 0x0C088E8A),
+           struct.pack('<I', 0x0C000000 | pad_append >> 2))
+          for address in MENU_PAD_APPEND_CALLS),
         *((address - 0x11F000, struct.pack('<I', 0x0C08585C),
            struct.pack('<I', 0x0C000000 | (queue_labels['space'] >> 2)))
           for address in TITLE_SPACE_CALLS),
         *((address - 0x11F000, struct.pack('<I', 0x0808585C),
            struct.pack('<I', 0x08000000 | (queue_labels['space'] >> 2)))
-          for address in TITLE_SPACE_TAILS),
+          for address in TITLE_SPACE_TAILS + EQUIP_SPACE_TAILS),
         (0x112000, struct.pack('<I', 0x8F83AA00), struct.pack('<I', jump(measure_labels['wide']))),
         (0x1120F0, struct.pack('<II', 0x8F82AA00, 0x000210C0), struct.pack('<II', jump(metric), 0)),
-    ] + pause_calls
+    ] + pause_calls + artwork_calls
 
 
-def runtime_regions(pause_text=None, skip_text=None):
+def treasure_regions():
+    # The !# Treasure header selects the two 24-byte K2 labels. Plain files
+    # use the original keys. 18 * 0xC0 still fits the original 4 KiB arena.
+    words = {
+        0x22DD40: (0x24040AE6, 0x24040D80),  # Allocate and zero the same size.
+        0x22DD80: (0x24060AE6, 0x24060D80),
+        0x22DD8C: (0x00000000, 0x0000882D),  # Initialize record index.
+        0x22DDB8: (0x14600009, 0x14600006),
+        0x22DDBC: (0x0000882D, 0x26880009),
+        0x22DDC4: (0x3C050068, 0x2685FFF0),  # Keep the original fatal diagnostic.
+        0x22DDCC: (0x24A55C30, 0x0C069A2E),
+        0x22DDD0: (0x0C069A2E, 0x2406013E),
+        0x22DDD4: (0x2406013E, 0x94620000),  # Sector-aligned TXT header.
+        0x22DDD8: (0x8FA30000, 0x38422321),
+        0x22DDDC: (0x0000882D, 0x0102A00A),
+        0x22DDE0: (0x00111080, 0x0102980A),
+        0x22DDE8: (0x00511021, 0x00111040),  # Stride = 3 * i << 6.
+        0x22DDEC: (0x26310001, 0x00511021),
+        0x22DDF0: (0x00028140, 0x00028180),
+        0x22DDF8: (0x02028023, 0x26310001),
+        0x22DE1C: (0x24C60011, 0x24C60019),  # Locate.
+        0x22DE3C: (0x24C60022, 0x24C60032),  # Expl.
+        0x22DE50: (0x1440FFE3, 0x1440FFE4),
+        0x22E6D4: (0x00151080, 0x00151040),
+        0x22E6E4: (0x00021940, 0x00021980),
+        0x22E6EC: (0x00621823, 0),
+        0x22E700: (0x24C60011, 0x24C60019),
+        0x22E72C: (0x00151080, 0x00151040),
+        0x22E73C: (0x00023140, 0x00023180),
+        0x22E744: (0x00C23023, 0),
+        0x22EF30: (0x24C65E00, 0x24C65AC0),
+        0x22EF50: (0x00021880, 0x00021840),
+        0x22EF60: (0x00031140, 0x00031180),
+        0x22EF64: (0x00431023, 0),
+        0x22EF70: (0x24C60022, 0x24C60032),
+    }
+    key = 0x685C49 - 0x11F000
+    # The card inset is narrower than the body panel. Preserve the height,
+    # and use large ASCII with proportional widths on both.
+    old_style = b"$init;$bg2;$shadow+1,+3,000000;$colc0c0c0;$zoom12;"
+    new_style = b"\x0b\x0d\x02$shadow+1,+3,000000;\x0c\xc0\xc0\xc0$zoom10,12;$han1;$prop1;"
+    return [(va - 0x11F000, struct.pack("<I", before), struct.pack("<I", after))
+            for va, (before, after) in words.items()] + [
+                (key, bytes(7), b"K2:%s\n\0"),
+                (0x685D88 - 0x11F000, old_style.ljust(0x38, b"\0"), new_style.ljust(0x38, b"\0")),
+            ]
+
+
+def quest_regions():
+    # Keep all message capacities and raise only Subject (32) and Locate (24).
+    # 36 * 0xB50 fits in the same sector-rounded allocation as the original.
+    old_loop = """
+        0c08aa34 0000802d 24110023 8f86b380 3c050068 24a55880 8fa40000 2631ffff
+        0c08a9c6 00d03021 8f86b380 0040202d 03c0282d 00d03021 afa20000 0c08a9c6
+        24c60019 8f86b380 0040202d 02e0282d 00d03021 afa20000 0c08a9c6 24c6002a
+        8f86b380 0040202d 02c0282d 00d03021 afa20000 0c08a9c6 24c6003b 8f86b380
+        0040202d 02a0282d 00d03021 afa20000 0c08a9c6 24c6013c 8f86b380 0040202d
+        0280282d 00d03021 afa20000 0c08a9c6 24c6023d 8f86b380 0040202d 0260282d
+        00d03021 afa20000 0c08a9c6 24c6033e 8f86b380 0040202d 0240282d 00d03021
+        26100b40 24c6073f 0c08a9c6 afa20000 0621ffc6 afa20000
+    """
+    new_loop = [
+        0x0C08AA34, 0x0000802D,  # Wait for the original file read; zero array offset.
+        0x8FA40000, 0x94820000, 0x38422321,  # Aligned input; little-endian '!#'.
+        0x27C9FFF0, 0x27C803B9,  # Subject = Locate-16; K2 = Locate+0x3B9.
+        0x0102480A, 0x0102F00A, 0xAFA90004, 0x24110023,
+    ]
+    start = len(new_loop)
+    new_loop += [0x8F86B380, 0x8FA50004, 0x8FA40000, 0x2631FFFF, 0x0C08A9C6, 0x00D03021]
+    for register, offset in zip((30, 23, 22, 21, 20, 19, 18),
+                                (0x21, 0x3A, 0x4B, 0x14C, 0x24D, 0x34E, 0x74F)):
+        new_loop += [0x8F86B380, 0x0040202D, register << 21 | 0x282D,
+                     0x00D03021, 0x0C08A9C6, 0x24C60000 | offset]
+    new_loop.append(0x26100B50)
+    new_loop += [0x06210000 | ((start - len(new_loop) - 1) & 0xFFFF), 0xAFA20000]
+
+    def packed(words):
+        return struct.pack("<" + "I" * len(words), *words)
+
+    regions = [(0x22A9EC - 0x11F000, packed([int(w, 16) for w in old_loop.split()]), packed(new_loop))]
+    words = {
+        0x22A94C: (0x34849500, 0x34849740),
+        0x22A9A8: (0x34C69500, 0x34C69740),
+        0x22BFF8: (0x24C60019, 0x24C60021),
+        0x22C02C: (0x24C6002A, 0x24C6003A),
+        0x22C110: (0x24C6003B, 0x24C6004B),
+        0x22C168: (0x24C6023D, 0x24C6024D),
+        0x22C1D8: (0x24C6013C, 0x24C6014C),
+        0x22CB44: (0x24C6073F, 0x24C6074F),
+        0x22CB84: (0x24C6033E, 0x24C6034E),
+    }
+    # Each reader has five local stride instructions. Leave two intervening
+    # instructions before mflo and do not change any call or draw argument.
+    stride_sites = (
+        ((0x22BFA4, 0x22BFAC, 0x22BFB4, 0x22BFB8, 0x22BFBC),
+         (0x00031040, 0x00431021, 0x00023100, 0x00C23023, 0x00063180),
+         (0x24020B50, 0x00620019, 0, 0, 0x00003012)),
+        ((0x22CB10, 0x22CB20, 0x22CB2C, 0x22CB30, 0x22CB38),
+         (0x00081040, 0x00483021, 0x00061100, 0x00461023, 0x00021180),
+         (0x24020B50, 0x01020019, 0, 0, 0x00001012)),
+        ((0x22CB58, 0x22CB60, 0x22CB68, 0x22CB70, 0x22CB78),
+         (0x00081040, 0x00481021, 0x00021900, 0x00621823, 0x00031980),
+         (0x24020B50, 0x01020019, 0, 0, 0x00001812)),
+    )
+    common = (0x00021840, 0x00621821, 0x00031100, 0x00431023, 0x00021180)
+    replacement = (0x24030B50, 0x00430019, 0, 0, 0x00001012)
+    for start in (0x22BFD4, 0x22C008, 0x22C0EC, 0x22C144, 0x22C1B4):
+        words.update(zip((start, start+8, start+16, start+20, start+24), zip(common, replacement)))
+    for addresses, before, after in stride_sites:
+        words.update(zip(addresses, zip(before, after)))
+    return regions + [(va-0x11F000, packed([before]), packed([after]))
+                      for va, (before, after) in words.items()]
+
+
+def runtime_regions(pause_text=None, skip_text=None, artwork_texts=None):
     menu = {address: (before, after) for address, before, after in MENU_PATCHES}
     menu.update({address: (before, after) for address, before, after in TITLE_LAYOUT_PATCHES})
     return ([(offset, bytes.fromhex(before), bytes.fromhex(after))
              for offset, before, after in SPACING_PATCHES]
             + [(address - 0x11F000, struct.pack("<I", before), struct.pack("<I", after))
                for address, (before, after) in menu.items()]
-            + save_title_regions() + popup_font_regions(pause_text, skip_text))
+            + save_title_regions() + popup_font_regions(pause_text, skip_text, artwork_texts)
+            + treasure_regions() + quest_regions())
 
 
 def item_patch_regions(source, translated):
-    catalog = {r.offset: r for r in records(source)}
+    # Direct callers must still provide the immutable, validated original.
+    records(source)
     regions = []
     for offset, words in ITEM_COUNT_WRITES.items():
-        row = catalog[offset]
         # Only an edited short fragment occupies the former zero padding. Every
         # valid fragment contains 00 and cannot begin with a NUL terminator.
-        location = row.write_offset if translated[row.write_offset] else row.offset
-        raw, _text, _controls = read_string(translated, location, row.write_offset + row.capacity + 1)
+        location, limit = item_message_range(translated, offset)
+        raw, _text, _controls = read_string(translated, location, limit)
         position = item_count_position(raw)
         for digit, (address, expected) in enumerate(words):
             replacement = (expected & 0xFFFF0000) | (position + digit)
@@ -994,12 +1382,25 @@ def item_patch_regions(source, translated):
     return regions
 
 
+def item_message_range(translated, offset):
+    if offset == LONG_ITEM:
+        return LONG_ITEM, LONG_ITEM_END
+    if offset != SHORT_ITEM:
+        raise ValueError("Unknown item count message")
+    if translated[SHORT_ITEM_STORAGE]:
+        return SHORT_ITEM_STORAGE, 0x578DA1
+    if translated[SHORT_ITEM]:
+        return SHORT_ITEM, 0x578DA1
+    return SHORT_ITEM_OVERFLOW, SHORT_ITEM_OVERFLOW_END
+
+
 def apply_runtime_patches(source, translated):
     catalog = records(source)
     if len(translated) != len(source):
         raise ValueError("Runtime patch input size changed")
     result = bytearray(translated)
-    for offset, before, after in (runtime_regions(movie_pause_text(translated), movie_skip_text(translated)) + item_patch_regions(source, translated)
+    for offset, before, after in (runtime_regions(movie_pause_text(translated), movie_skip_text(translated),
+                                                    artwork_prompt_texts(translated)) + item_patch_regions(source, translated)
                                   + campaign_patch_regions(source, translated)):
         end = offset + len(before)
         if len(before) != len(after) or source[offset:end] != before:
@@ -1042,6 +1443,15 @@ def encode_menu_text(text, table):
     return bytes(output)
 
 
+def fixed_menu_label_width(raw, index, zoom):
+    # Match label_measure: large fixed-width glyphs and narrow ASCII spaces.
+    if not re.fullmatch(rb'(?:[ -~]|[\xA1-\xFE]{2})+', raw) or any(c in raw for c in (b'$', b'&', b'#', b'\\')):
+        raise ValueError(f'MainMenu [{index}]: label must be plain text')
+    glyphs = len(raw) - sum(b >= 128 for b in raw) // 2
+    spaces = raw.count(b' ')
+    return (glyphs - spaces) * (19 * zoom // 16) + spaces * (10 * zoom // 16)
+
+
 def build_menu_txd(text, table, font):
     text = text.lstrip("\ufeff").replace("\r\n", "\n")
     markers = list(re.finditer(r"^\[(\d+)\]", text, re.M))
@@ -1056,7 +1466,7 @@ def build_menu_txd(text, table, font):
                 211: "특전 획득", 212: "지기와 $prop1;KOS-MOS$prop0;의 수영복 스킬을 획득했다",
                 213: "노인용 수영복을 획득했다", 215: "EP 1 or EP 1 리로디드",
                 216: "제노코미", 559: "불러오기에 실패했습니다"}
-    if any(entries[i] != value for i, value in expected.items()) or "$han1;" not in entries[34]:
+    if any(entries[i] != value for i, value in expected.items()) or "$zoom13;$han1;$prop0;" not in entries[34]:
         raise ValueError("MainMenu reward text/font setup changed; review fixed coordinates")
     if not entries[224].startswith("클리어 데이터"):
         raise ValueError("MainMenu [224] must retain the corrected leading-space layout")
@@ -1073,18 +1483,39 @@ def build_menu_txd(text, table, font):
         if len(encode_menu_text(entries[index], table)) + len(b'$prop1;/$prop0;') + 6 + 1 > 32:
             raise ValueError(f'MainMenu [{index}]: save/load title exceeds its 32-byte buffer')
     for index, value in entries.items():
+        umn_title = 470 <= index <= 477
+        if umn_title:
+            # Ignore legacy hand-tuned RX values while keeping the editable name.
+            value = re.sub(r'^\$rx[+-]?\d+;', '', value, count=1)
         try:
             raw = encode_menu_text(value, table)
         except ValueError as error:
             raise ValueError(f"MainMenu [{index}]: {error}") from error
+        if 304 <= index <= 312 and fixed_menu_label_width(raw, index, 12) > 49:
+            raise ValueError(f'MainMenu [{index}]: two attributes and their separator must fit the detail column')
+        if index == 320 and fixed_menu_label_width(raw, index, 12) > 70:
+            raise ValueError(f'MainMenu [{index}]: condition label leaves no room for the multiplier')
+        if umn_title or 480 <= index <= 487:
+            width = fixed_menu_label_width(raw, index, 13)
+            if width > (228 if umn_title else 456):
+                raise ValueError(f'MainMenu [{index}]: U.M.N. name exceeds the centered field')
+            if umn_title:
+                # Confirmation body begins at X=140; its frame centers at X=256.
+                raw = f'$rx{116 - width // 2};'.encode('ascii') + raw
         if index in SLOT_IDS:
             number = 0 if index in DYNAMIC_SLOT_IDS else (1 if index in (220, 221, 514) else 2)
             prefix = encode_menu_text(f"슬롯 {number}", table)
             if len(prefix) != 6 or not raw.startswith(prefix) or (index in (514, 515) and len(raw) != 6):
                 raise ValueError(f"MainMenu [{index}]: expected six-byte slot prefix")
-        pointers.append(569 * 4 + len(pool) if raw else 0)
+        pointers.append(569 * 4 + len(pool) if raw else None)
         if raw:
             pool.extend(raw + b"\0")
+    # All 569 original slots are live, including the intentionally empty ones.
+    # Put their shared terminator last to preserve every nonempty offset.
+    if None in pointers:
+        empty = 569 * 4 + len(pool)
+        pool.append(0)
+        pointers = [empty if ptr is None else ptr for ptr in pointers]
     result = struct.pack("<569I", *pointers) + pool
     if len(result) > 0x3000:
         raise ValueError("MainMenu.txd exceeds the 12288-byte area before Tutorial.txd")
@@ -1104,6 +1535,8 @@ def load_sources(disc=None):
     data = ORIGINALS[disc].read_bytes()
     if sha(data) != ELF_HASH:
         raise ValueError(f"Original ELF changed: {ORIGINALS[disc]}")
+    if sha((METADATA / "OV01.OVL").read_bytes()) != OV01_HASH:
+        raise ValueError("Original OV01 changed; revalidate the enemy HUD caller and buffer")
     overlay = (folder(disc) / "OV02.OVL").read_bytes()
     build_overlay(overlay, data, data)
     return data, overlay
@@ -1131,7 +1564,63 @@ def write_result(path, data):
     return True
 
 
-def run(command, disc=None, text_path=None):
+def validate_output_paths(outputs):
+    for path, _data in outputs:
+        if path.is_symlink() or (path.exists() and not path.is_file()):
+            raise ValueError(f"Output is not a regular file; nothing written: {path}")
+        pending = path.with_name(path.name + ".pending")
+        if pending.exists() or pending.is_symlink():
+            raise ValueError(f"Previous incomplete write; nothing written. Inspect: {pending}")
+
+
+def apply_iso_metadata(iso_root, built, overlay, menu):
+    """Deliver the validated build to the explicit ISO staging root, not its inputs."""
+    try:
+        root = iso_root.resolve(strict=True)
+        outputs = [(root / f"disc{disc}metadata" / name, data)
+                   for disc, elf in ELF_NAMES.items()
+                   for name, data in ((elf, built), ("OV02.OVL", overlay))]
+        outputs.append((root / "xenosaga0_UNPACKED" / "yosikawa" / "MainMenu.txd", menu))
+        for parent in {path.parent for path, _data in outputs}:
+            if not parent.is_dir() or parent.resolve(strict=True) != parent:
+                raise ValueError(f"ISO staging folder missing or redirected: {parent}")
+        validate_output_paths(outputs)
+        previous = {path: path.read_bytes() if path.exists() else None for path, _data in outputs}
+    except (OSError, ValueError) as error:
+        print(f"[ISO FALLBACK] {error}")
+        return False
+
+    written = []
+    try:
+        for path, data in outputs:
+            if path.is_symlink() or (path.read_bytes() if path.exists() else None) != previous[path]:
+                raise OSError(f"ISO staging target changed during delivery: {path}")
+            if write_result(path, data):
+                written.append((path, data))
+    except OSError as error:
+        failed = []
+        for path, data in reversed(written):
+            try:
+                if path.is_symlink() or path.read_bytes() != data:
+                    raise OSError("Target was modified during delivery")
+                if previous[path] is None:
+                    path.unlink()  # This delivery created the file.
+                else:
+                    write_result(path, previous[path])
+            except OSError as restore_error:
+                failed.append(f"{path}: {restore_error}")
+        print(f"[ISO FALLBACK] {error}")
+        if failed:
+            raise OSError("ISO rollback incomplete; do not build the ISO: " + "; ".join(failed)) from error
+        return False
+
+    changed = {path for path, _data in written}
+    for path, _data in outputs:
+        print(f"[ISO {'APPLIED' if path in changed else 'UNCHANGED'}] {path}")
+    return True
+
+
+def run(command, disc=None, text_path=None, iso_root=None):
     source, ov02 = load_sources(disc)
     target = folder(disc) / "SLPS_strings.txt" if text_path is None else Path(text_path)
     if command == "extract":
@@ -1152,10 +1641,15 @@ def run(command, disc=None, text_path=None):
     for old, new in relocation_moves(built):
         mode = "POOL" if any(a <= new < b for a, b in RELOCATION_POOLS) else "NEAR"
         print(f"[MOVE/{mode}] {old:08X} -> {new:08X}; width/draw reference updated")
+    item_start, _ = item_message_range(built, SHORT_ITEM)
+    if item_start == SHORT_ITEM_OVERFLOW:
+        print(f"[MOVE/ITEM] {SHORT_ITEM:08X} -> {item_start:08X}; count/copy references updated")
     print(f"[CHECK] {len(changes)} changed; ELF size unchanged; OV02 copies agree")
     print("[PATCH] Spacing/icon boundaries, menu alignment and slot numbering included")
+    print("[PATCH] Enemy HUD names: large ASCII, narrow spacing, horizontal scale 80%")
     print("[PATCH] Item count positions and short-fragment references match the TXT")
     print("[PATCH] Campaign number write positions match the TXT")
+    print("[PATCH] Segment File and G2: extended labels; Segment File proportional text")
     print("[PATCH] Memory-card first line: XenosagaEPII-##; location and save ID unchanged")
     print(f"[MENU] {len(menu)} bytes; paired MainMenu.txd must be applied with the ELF")
     if command == "verify":
@@ -1168,17 +1662,20 @@ def run(command, disc=None, text_path=None):
     if overlay != ov02 or overlay_output.exists() or overlay_output.is_symlink():
         # A reverted translation must not leave an older translated OV02 result.
         outputs.append((overlay_output, overlay))
-    # Validate every destination before writing any output. Original paths are
-    # fixed inputs and are never accepted as output destinations.
-    for path, _data in outputs:
-        if path.is_symlink() or (path.exists() and not path.is_file()):
-            raise ValueError(f"Output is not a regular file; nothing written: {path}")
-        pending = path.with_name(path.name + ".pending")
-        if pending.exists() or pending.is_symlink():
-            raise ValueError(f"Previous incomplete write; nothing written. Inspect: {pending}")
+    deployment_error = None
+    if iso_root is not None:
+        try:
+            if apply_iso_metadata(iso_root, built, overlay, menu):
+                print("[ISO] Local .new files were not updated.")
+                return
+        except OSError as error:
+            deployment_error = error
+    validate_output_paths(outputs)
     for path, data in outputs:
         changed = write_result(path, data)
         print(f"[{'SAVED' if changed else 'UNCHANGED'}] {path}")
+    if deployment_error is not None:
+        raise deployment_error
 
 
 def main():
@@ -1187,9 +1684,13 @@ def main():
     parser.add_argument("--disc", type=int, choices=(1, 2),
                         help="Optional single-disc output; default writes both ELF names")
     parser.add_argument("--text", type=Path)
+    parser.add_argument("--apply-iso-metadata", type=Path, metavar="XENOSAGA2",
+                        help="Deliver both disc executables/OV02 and shared MainMenu to the ISO workspace")
     args = parser.parse_args()
+    if args.apply_iso_metadata is not None and (args.command != "rebuild" or args.disc is not None):
+        parser.error("--apply-iso-metadata requires rebuild for both discs")
     try:
-        run(args.command, args.disc, args.text)
+        run(args.command, args.disc, args.text, args.apply_iso_metadata)
     except (OSError, ValueError, KeyError, UnicodeError) as error:
         print(f"[ERROR] {error}", file=sys.stderr)
         return 1

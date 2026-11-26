@@ -34,7 +34,7 @@ $zoom13;카운터메저
 [JPN]
 $zoom14;$col7AF9FB;　目視できない防御シールドが張られ\n　　如何なるダメージも軽減される●$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　눈에 보이지 않는 방어 실드가 펼쳐져\n　　모든 대미지가 줄어든다●$colc0c0c0;
+$zoom14;$col7AF9FB;　눈에 보이지 않는 방어 실드가 펼쳐져\n　　어떤 대미지든 감소한다●$colc0c0c0;
 
 [0x8894]
 [JPN]
@@ -76,7 +76,7 @@ $zoom14;$col7AF9FB;　오테크 전송$colc0c0c0;
 [JPN]
 $zoom14;$colc0c0c0;ヴァンダーカム艦長は歯軋りしている
 [KOR]
-$zoom14;$colc0c0c0;반더컴 함장은 이를 갈고 있다
+$zoom14;$colc0c0c0;반다캄 함장은 이를 갈고 있다
 
 [0x8b0d]
 [JPN]
@@ -94,7 +94,7 @@ $zoom14;$col7AF9FB;　　주포 발사 준비$colc0c0c0;
 [JPN]
 $zoom14;$col7AF9FB;　　次弾発射準備$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　　다음 탄 발사 준비$colc0c0c0;
+$rx23;$ry8;$zoom14;$col7AF9FB;다음 탄 발사 준비$colc0c0c0;
 
 [0x8bf4]
 [JPN]
@@ -172,5 +172,5 @@ $zoom13;제3 주포 발사(B)
 [JPN]
 $zoom13;全主砲一斉掃射（Ｂ）
 [KOR]
-$zoom13;모든 주포 일제 소사(B)
+$zoom13;모든 주포 일제 발사(B)
 

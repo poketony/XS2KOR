@@ -4,7 +4,7 @@
 [JPN]
 $zoom13;センテンツァ（打・Ｌスロウ）
 [KOR]
-$zoom13;센텐차(타격·L 슬로)
+$zoom13;센텐차(타격・L 슬로)
 
 [0xe5f7]
 [JPN]
@@ -58,19 +58,19 @@ $zoom13;번개의 은총
 [JPN]
 $zoom14;$col7AF9FB;センテンツァに雷のエーテルが満ちた$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;센텐차에 번개 에테르가 충만해졌다$colc0c0c0;
+$zoom14;$col7AF9FB;센텐차에 번개 에테르가 가득 찼다$colc0c0c0;
 
 [0xe76a]
 [JPN]
 $zoom13;アンピュルシオン（突・Ｌウィーク）
 [KOR]
-$zoom13;앵퓔시옹(돌격·L 위크)
+$zoom13;앵퓔시옹(관통・L 위크)
 
 [0xe795]
 [JPN]
 $zoom13;エガリテランチャー（炎）
 [KOR]
-$zoom13;에갈리테 런처(불꽃)
+$zoom13;에갈리테 론처(불꽃)
 
 [0xe7b6]
 [JPN]

@@ -4,13 +4,13 @@
 [JPN]
 $zoom14;$colc0c0c0;ビッグウェーーーーブ！！
 [KOR]
-$zoom14;$colc0c0c0;빅 웨이~~~~브!!
+$zoom14;$colc0c0c0;빅 웨~~~~이브!!
 
 [0xdb2c]
 [JPN]
 $zoom14;$colc0c0c0;どこか不機嫌そうだ・・
 [KOR]
-$zoom14;$colc0c0c0;어쩐지 심기가 불편한 듯하다・・
+$zoom14;$colc0c0c0;어쩐지 심기가 불편한 듯하다・・・
 
 [0xdb56]
 [JPN]
@@ -22,7 +22,7 @@ $zoom13;너클 임팩트(타격)
 [JPN]
 $zoom13;エアーライディング（打・Ｌスタン）
 [KOR]
-$zoom13;에어 라이딩(타격·L 스턴)
+$zoom13;에어 라이딩(타격・L 스턴)
 
 [0xdba2]
 [JPN]

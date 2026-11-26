@@ -22,7 +22,7 @@ $zoom14;$colc0c0c0;　　찔러 넣은 손끝에서\n$col7AF9FB;　　　체액�
 [JPN]
 $zoom13;ミトロカエシ
 [KOR]
-$zoom13;미토로카에시
+$zoom13;연금술
 
 [0xea41]
 [JPN]
@@ -64,13 +64,13 @@ $zoom13;암드 바그 나우(타격)
 [JPN]
 $zoom13;ＥＳＷ　出力２０％（打・Ｌヘビー）
 [KOR]
-$zoom13;ESW 출력 20%(타격·L 헤비)
+$zoom13;ESW 출력 20%(타격・L 헤비)
 
 [0xec57]
 [JPN]
 $zoom13;ＥＳＷ　出力５０％（打・Ｌポイズン）
 [KOR]
-$zoom13;ESW 출력 50%(타격·L 포이즌)
+$zoom13;ESW 출력 50%(타격・L 포이즌)
 
 [0xec84]
 [JPN]
@@ -82,7 +82,7 @@ $zoom13;ESW 출력 100%(타격)
 [JPN]
 $zoom13;共食い（打・ＨＰ吸収）
 [KOR]
-$zoom13;동족 포식(타격·HP 흡수)
+$zoom13;동족 포식(타격・HP 흡수)
 
 [0xecc6]
 [JPN]

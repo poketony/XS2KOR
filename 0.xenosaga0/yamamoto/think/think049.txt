@@ -46,13 +46,13 @@ $zoom13;봉인의 옥좌(항체)
 [JPN]
 $zoom14;$colc0c0c0;　　　オルグイアの威圧により\n$col0fd0e0;　　　　ムーブができない！\n　ブーストカウントを吸収された！$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　　　오르기아의 위압으로\n$col0fd0e0;　　　　이동할 수 없다!\n　부스트 카운트를 흡수당했다!$colc0c0c0;
+$zoom14;$colc0c0c0;　　　오르구이아의 위압 때문에\n$col0fd0e0;　　　　이동할 수 없다!\n　부스트 카운트를 흡수당했다!$colc0c0c0;
 
 [0xfdc5]
 [JPN]
 $zoom14;$col0fd0e0;　オルグイアの瞳が$cola05050;蒼く$col0fd0e0;輝いた$colc0c0c0;
 [KOR]
-$zoom14;$col0fd0e0;　오르기아의 눈동자가 $cola05050;푸르게$col0fd0e0; 빛났다$colc0c0c0;
+$zoom14;$col0fd0e0;　오르구이아의 눈동자가 $cola05050;푸르게 $col0fd0e0;빛났다$colc0c0c0;
 
 [0xfe28]
 [JPN]
@@ -64,31 +64,31 @@ $zoom14;$col7AF9FB;　　독의 효과가 강해졌다$colc0c0c0;
 [JPN]
 $zoom14;$colc0c0c0;　オルグイアの瞳が$cola05050;蒼く$colc0c0c0;発光した
 [KOR]
-$zoom14;$colc0c0c0;　오르기아의 눈동자가 $cola05050;푸른$colc0c0c0; 빛을 냈다
+$zoom14;$colc0c0c0;　오르구이아의 눈동자가 $cola05050;푸른$colc0c0c0;빛을 냈다
 
 [0xfecb]
 [JPN]
 $zoom14;$colc0c0c0;　オルグイアの瞳が$col00c050;翠に$colc0c0c0;発光した
 [KOR]
-$zoom14;$colc0c0c0;　오르기아의 눈동자가 $col00c050;초록$colc0c0c0; 빛을 냈다
+$zoom14;$colc0c0c0;　오르구이아의 눈동자가 $col00c050;초록$colc0c0c0;빛을 냈다
 
 [0xff13]
 [JPN]
 $zoom13;ベイリンカイン（斬・Ｌポイズン）
 [KOR]
-$zoom13;베일린 카인(참격·L 포이즌)
+$zoom13;베일린 카인(참격・L 포이즌)
 
 [0xff4f]
 [JPN]
 $zoom13;ベイリンカイングロブス（斬・突・Ｌポイズン）
 [KOR]
-$zoom13;베일린 카인 글로부스(참격·돌격·L 포이즌)
+$zoom13;베일린 카인 글로부스(참격・관통・L 포이즌)
 
 [0xffaa]
 [JPN]
 $zoom13;グロブス（突）
 [KOR]
-$zoom13;글로부스(돌격)
+$zoom13;글로부스(관통)
 
 [0xffc1]
 [JPN]
@@ -124,13 +124,13 @@ $zoom13;메디카
 [JPN]
 $zoom13;暗殺の前夜（抗体＋毒効果ＵＰ）
 [KOR]
-$zoom13;암살의 전야(항체+독 효과 UP)
+$zoom13;암살의 전야(항체+독 효과 업)
 
 [0x10070]
 [JPN]
 $zoom14;$colc0c0c0;　　　　第二ウィルスが発動\n$col7AF9FB;　　マネスのステータスが低下した$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　　　　제2 바이러스 발동\n$col7AF9FB;　　마네스의 스테이터스가 저하됐다$colc0c0c0;
+$rx71;$ry8;$zoom14;$colc0c0c0;제2 바이러스 발동\n$rx23;$ry8;$col7AF9FB;마네스의 스테이터스가 저하됐다$colc0c0c0;
 
 [0x100d6]
 [JPN]
@@ -142,7 +142,7 @@ $zoom13;마네스 억제 제2 바이러스
 [JPN]
 $zoom14;$colc0c0c0;　オルグイアの口元が緩んだ
 [KOR]
-$zoom14;$colc0c0c0;　오르기아의 입가에 미소가 번졌다
+$zoom14;$colc0c0c0;　오르구이아의 입가에 미소가 번졌다
 
 [0x10147]
 [JPN]
@@ -154,19 +154,19 @@ $zoom13;죽음의 입맞춤
 [JPN]
 $zoom13;ヴィーグリード（斬・冷・Ｌウィーク）
 [KOR]
-$zoom13;비그리드(참격·냉기·L 위크)
+$zoom13;비그리드(참격・냉기・L 위크)
 
 [0x10198]
 [JPN]
 $zoom13;ヴァルハラ（斬・冷）
 [KOR]
-$zoom13;발할라(참격·냉기)
+$zoom13;발할라(참격・냉기)
 
 [0x101c8]
 [JPN]
 $zoom13;エインヘリアル（斬・冷）
 [KOR]
-$zoom13;에인헤랴르(참격·냉기)
+$zoom13;에인헤랴르(참격・냉기)
 
 [0x101fc]
 [JPN]

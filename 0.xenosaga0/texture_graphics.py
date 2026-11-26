@@ -12,7 +12,7 @@ import struct
 import sys
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageFilter
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -81,6 +81,28 @@ MAP_MATERIALS = {
     'E2_UZU01.txy': ('uzu06_kanban', 56),
     'E2_UZU06.txy': ('uzu06_kanban', 81),
     'E2_KUK11.txy': ('kanban01_new', 184),
+}
+
+# Native sprite pairs: normal origin, glow origin, shared full sprite size.
+# The editable crops stay unchanged; glow receives the same local glyph position.
+MENU_GLOWS = {
+    'font_character_select': ('font.xtx', 0, 376, 89, 432, 111, 35),
+    'obj_item': ('obj01.xtx', 0, 279, 0, 244, 66, 35),
+    'obj_special_item': ('obj01.xtx', 66, 279, 66, 244, 91, 35),
+    'obj_ether': ('obj01.xtx', 0, 349, 157, 279, 68, 35),
+    'obj_skill': ('obj01.xtx', 68, 349, 210, 454, 56, 35),
+    'obj_tutorial': ('obj01.xtx', 295, 384, 113, 454, 97, 35),
+    'obj_solo': ('obj01.xtx', 124, 349, 124, 314, 58, 35),
+    'obj_duo': ('obj01.xtx', 182, 349, 182, 314, 58, 35),
+    'obj_equipped_skill': ('obj01.xtx', 0, 419, 0, 384, 82, 35),
+    'obj_ether_skill': ('obj01.xtx', 82, 419, 82, 384, 104, 35),
+    'obj_learned_skill': ('obj01.xtx', 383, 349, 383, 314, 82, 35),
+    'obj_class': ('obj01.xtx', 240, 349, 240, 314, 64, 35),
+    'obj_battle_formation': ('obj01.xtx', 304, 349, 304, 314, 79, 35),
+    'obj_leader_change': ('obj01.xtx', 186, 419, 186, 384, 109, 35),
+    'obj_normal_attack': ('obj01.xtx', 330, 279, 259, 279, 71, 35),
+    'obj_special_attack': ('obj01.xtx', 401, 279, 266, 454, 59, 35),
+    'obj_accessory': ('obj01.xtx', 0, 314, 0, 454, 113, 35),
 }
 
 
@@ -270,6 +292,39 @@ def quantize(r, pixels):
     return out
 
 
+def glow_indices(core):
+    # Original glow indices use 0..96, not the normal labels' 16-level ramp.
+    # Calibrated on all 17 native pairs; leave untouched glows byte-identical.
+    mask = Image.fromarray(core*17)
+    blurred = np.array(mask.filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.GaussianBlur(1.5)))
+    return np.minimum(96, (blurred.astype(np.uint32)*120+127)//255).astype(np.uint8)
+
+
+def menu_glow_edits(originals, regions, edits):
+    updates = []
+    by_key = {r.key: r for r in regions}
+    for key, (source, nx, ny, gx, gy, w, h) in MENU_GLOWS.items():
+        if key not in edits or key not in by_key or source not in originals:
+            continue
+        region = by_key[key]
+        indices = quantize(region, edits[key])
+        if np.array_equal(indices, region.indices):
+            continue
+        _, x, y, cw, ch = next(rect for rect in MENU_RECTS[source] if rect[0] == key)
+        if region.source != source or not (nx <= x and ny <= y and x+cw <= nx+w and y+ch <= ny+h):
+            raise ValueError(f'{key}: glow/normal sprite mismatch')
+        yy, xx = np.indices((h, w))
+        core_offsets = 80+upload8(xx+nx, yy+ny, 512)
+        glow_offsets = 80+upload8(xx+gx, yy+gy, 512)
+        raw = np.frombuffer(originals[source], np.uint8)
+        core = raw[core_offsets].copy()
+        if core.max() > 15 or raw[glow_offsets].max() > 96:
+            raise ValueError(f'{key}: unexpected normal/glow index range')
+        core[y-ny:y-ny+ch, x-nx:x-nx+cw] = indices
+        updates.append((key, source, glow_offsets, glow_indices(core)))
+    return updates
+
+
 def build(originals, regions, edits):
     output = {name: np.frombuffer(raw, np.uint8).copy() for name, raw in originals.items()}
     masks = {name: np.zeros(len(raw), np.uint8) for name, raw in originals.items()}
@@ -290,6 +345,13 @@ def build(originals, regions, edits):
         actual = ((target[r.offsets] >> r.shifts) & r.mask).astype(np.uint8)
         if not np.array_equal(actual, indices):
             raise ValueError(f'{r.key}: encoded pixel verification failed')
+    for key, source, offsets, indices in menu_glow_edits(originals, regions, edits):
+        if np.any(masks[source][offsets]):
+            raise ValueError(f'{key}: glow overlaps another edit region')
+        masks[source][offsets] = 255
+        output[source][offsets] = indices
+        if not np.array_equal(output[source][offsets], indices):
+            raise ValueError(f'{key}: encoded glow verification failed')
     for name, target in output.items():
         delta = target ^ np.frombuffer(originals[name], np.uint8)
         if np.any(delta & ~masks[name]):
@@ -353,7 +415,9 @@ def rebuild(group, originals, regions, examples):
         return
     dest.mkdir(exist_ok=True)
     report = {'format': 1, 'group': group, 'originals': SOURCES[group], 'inputs': inputs,
-              'edited_images': sorted(edits), 'outputs': {name: sha(results[name]) for name in names}}
+              'edited_images': sorted(edits),
+              'derived_glows': [row[0] for row in menu_glow_edits(originals, regions, edits)],
+              'outputs': {name: sha(results[name]) for name in names}}
     # Preflight/encode every input before staging any output; originals are never writable targets.
     for path, raw in pending:
         with path.with_suffix(path.suffix+'.pending').open('xb') as stream:

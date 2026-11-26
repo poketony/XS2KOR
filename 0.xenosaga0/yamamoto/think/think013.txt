@@ -34,29 +34,29 @@
 [JPN]
 $col7AF9FB;$zoom15;　ノーマルブースト補給＋１
 [KOR]
-$col7AF9FB;$zoom15;　노멀 부스트 보급 +1
+$col7AF9FB;$zoom15;　노멀 부스트 보급+1
 
 [0xccf3]
 [JPN]
 $zoom13;１２．７ｍｍ機関銃（突）
 [KOR]
-$zoom13;12.7mm 기관총(돌격)
+$zoom13;12.7mm 기관총(관통)
 
 [0xcd14]
 [JPN]
 $zoom13;０距離連射（打・突）
 [KOR]
-$zoom13;영거리 연사(타격·돌격)
+$zoom13;영거리 연사(타격・관통)
 
 [0xcd31]
 [JPN]
 $zoom13;オート連射（突）
 [KOR]
-$zoom13;오토 연사(돌격)
+$zoom13;오토 연사(관통)
 
 [0xcd4a]
 [JPN]
 $zoom13;オートミサイル（打・炎）
 [KOR]
-$zoom13;오토 미사일(타격·불꽃)
+$zoom13;오토 미사일(타격・불꽃)
 

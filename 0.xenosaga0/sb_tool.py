@@ -417,6 +417,8 @@ def prepare_import(sb_path, txt_path, catalog):
         raise ValueError(f'치환표가 변경되었습니다. 재검증이 필요합니다: {path.parent / JSON_FILE}')
     table = json.loads(table_bytes.decode('utf-8-sig'))['replace-table']
     built, stats = build(data, Path(txt_path).read_text(encoding='utf-8-sig'), table)
+    if path.parent == ROOT / 'yamamoto' / 'think':
+        built = apply_think_popup_layout(path, built)
     targets = [path]
     for relative in record['copies']:
         copy = asset_path(relative)
@@ -429,6 +431,21 @@ def prepare_import(sb_path, txt_path, catalog):
     # Refresh old outputs even if a translation was reverted to the original.
     needed = built != data or any(p.exists() for p in outputs)
     return ({p: built for p in outputs} if needed else {}), stats
+
+
+def apply_think_popup_layout(path, built):
+    changes = json.loads((path.parent / 'popup_layout.json').read_text(encoding='utf-8')).get(path.name, ())
+    if not changes:
+        return built
+    hdr = parse_header(built)
+    result = bytearray(built)
+    for position, original, adjusted in changes:
+        off = int(position, 16)
+        if (off % 2 or not hdr['code_start'] <= off <= hdr['secmeta_start'] - 6
+                or struct.unpack_from('<HI', built, off) != (4, original) or not 0 <= adjusted <= 512):
+            raise ValueError(f'{path.name}: 팝업 크기 명령 검증 실패: {position}')
+        struct.pack_into('<I', result, off + 2, adjusted)
+    return bytes(result)
 
 
 def main(argv=None):

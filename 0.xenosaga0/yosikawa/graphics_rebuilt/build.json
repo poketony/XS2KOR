@@ -88,9 +88,28 @@
     "obj_special_item",
     "obj_tutorial"
   ],
+  "derived_glows": [
+    "font_character_select",
+    "obj_item",
+    "obj_special_item",
+    "obj_ether",
+    "obj_skill",
+    "obj_tutorial",
+    "obj_solo",
+    "obj_duo",
+    "obj_equipped_skill",
+    "obj_ether_skill",
+    "obj_learned_skill",
+    "obj_class",
+    "obj_battle_formation",
+    "obj_leader_change",
+    "obj_normal_attack",
+    "obj_special_attack",
+    "obj_accessory"
+  ],
   "outputs": {
     "ctrl01.xtx": "1d46983535a0ff69197be8311907fff72ad64ae135cba6ea493bcfcfda1a633b",
-    "font.xtx": "d9359e5338f981ddeca9ce30f4298f01075e27a00bb57d66e82b6d0e9d32a7e2",
-    "obj01.xtx": "7848cebc07611696c4514255c3eebfbfbf8a183d2ae7b5d86f44a33637151b9a"
+    "font.xtx": "00e993299d24402de5e9a9fe6fc89035916a41e263ab3dbff681ca000c05acd3",
+    "obj01.xtx": "a48ea18c571e9a57d0be7e631a899a4cfe9f25ad16e21d837271622688af79c0"
   }
 }

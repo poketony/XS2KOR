@@ -34,13 +34,13 @@ $zoom13;파이어 브레스(불꽃)
 [JPN]
 $zoom13;邪視（Ｈストップ）
 [KOR]
-$zoom13;사시(H 스톱)
+$zoom13;사악한 시선(H 스톱)
 
 [0xbf95]
 [JPN]
 $zoom13;邪眼（Ｌスタン）
 [KOR]
-$zoom13;사안(L 스턴)
+$zoom13;사악한 눈(L 스턴)
 
 [0xbfae]
 [JPN]

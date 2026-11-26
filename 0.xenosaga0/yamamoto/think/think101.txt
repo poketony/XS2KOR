@@ -10,7 +10,7 @@ $zoom14;$colc0c0c0;　　이제 겨우 25마리인가・・・\n　　잔치는 
 [JPN]
 $zoom14;$colc0c0c0;　　　　５０匹突破！\n$col7AF9FB;　百匹宴は始まったばかりだ！$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　　　　50마리 돌파!\n$col7AF9FB;　백 마리 잔치는 이제 시작이다!$colc0c0c0;
+$zoom14;$colc0c0c0;　　　　50마리 돌파!\n$col7AF9FB;　100마리 잔치는 이제 시작이다!$colc0c0c0;
 
 [0xd95d]
 [JPN]
@@ -22,13 +22,13 @@ $zoom14;$col7AF9FB;　　　75마리 돌파!\n　　잔치가 한창이로군!!$
 [JPN]
 $zoom14;$col7AF9FB;　　　　　９５匹突破！！！$colc0c0c0;\n良くやった！　ん？疲労してるな？\nこれは俺からの褒美だ！受け取れぇー！$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　　　　　95마리 돌파!!!$colc0c0c0;\n잘했다! 응? 지친 것 같군?\n내가 주는 상이다! 받아라~!$colc0c0c0;
+$zoom14;$col7AF9FB;　　　　　95마리 돌파!!!$colc0c0c0;\n잘했다! 음? 지친 것 같군.\n내가 주는 상이다! 받아라~!$colc0c0c0;
 
 [0xda32]
 [JPN]
 $zoom13;誓いの握手（気・打）
 [KOR]
-$zoom13;맹세의 악수(기·타격)
+$zoom13;맹세의 악수(기・타격)
 
 [0xda4f]
 [JPN]

@@ -1,0 +1,236 @@
+{
+  "source": "C:\\Users\\JO\\XS2KOR\\0.xenosaga0\\yajima\\synopsis.bin",
+  "before": "5e6b1cca56a982c714a857eec5991f26389e35f67461558727db9568b9d1a4b1",
+  "after": "70a96823e6d684e4a9293566a155044a5404501fee634a376d76819f45c5ffc3",
+  "policy": "Fixed slots; preserve tables, XTX headers, padding and unedited members",
+  "changes": [
+    {
+      "index": 1,
+      "type": "XTX",
+      "edited_pixels": 1765,
+      "changed_bytes": 6436,
+      "input_png": "images/start_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 2,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 57125,
+      "slot_bytes": 58688,
+      "mean_absolute_error": 2.4991658528645835,
+      "input_png": "images/01_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 3,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 50685,
+      "slot_bytes": 51072,
+      "mean_absolute_error": 1.9782671247209822,
+      "input_png": "images/02_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 4,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 43491,
+      "slot_bytes": 45696,
+      "mean_absolute_error": 1.684080578031994,
+      "input_png": "images/03_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 5,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 47324,
+      "slot_bytes": 49920,
+      "mean_absolute_error": 1.5945158458891369,
+      "input_png": "images/04_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 6,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 52342,
+      "slot_bytes": 52864,
+      "mean_absolute_error": 1.8064211890811013,
+      "input_png": "images/05_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 7,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 51948,
+      "slot_bytes": 53952,
+      "mean_absolute_error": 1.8278852190290178,
+      "input_png": "images/06_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 8,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 42022,
+      "slot_bytes": 45376,
+      "mean_absolute_error": 1.5538969494047619,
+      "input_png": "images/07_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 9,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 51641,
+      "slot_bytes": 52864,
+      "mean_absolute_error": 1.8014308384486608,
+      "input_png": "images/08_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 10,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 49463,
+      "slot_bytes": 52032,
+      "mean_absolute_error": 1.9333307175409227,
+      "input_png": "images/09_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 11,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 53147,
+      "slot_bytes": 55232,
+      "mean_absolute_error": 2.210722423735119,
+      "input_png": "images/10_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 12,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 45280,
+      "slot_bytes": 47488,
+      "mean_absolute_error": 1.6952398390997023,
+      "input_png": "images/11_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 13,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 56811,
+      "slot_bytes": 59072,
+      "mean_absolute_error": 1.9599609375,
+      "input_png": "images/12_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 14,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 45465,
+      "slot_bytes": 48256,
+      "mean_absolute_error": 1.602873302641369,
+      "input_png": "images/13_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 15,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 57029,
+      "slot_bytes": 61952,
+      "mean_absolute_error": 2.4565182640438987,
+      "input_png": "images/14_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 16,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 46723,
+      "slot_bytes": 48000,
+      "mean_absolute_error": 1.7132161458333333,
+      "input_png": "images/15_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 17,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 44989,
+      "slot_bytes": 49664,
+      "mean_absolute_error": 1.5458126976376487,
+      "input_png": "images/16_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 18,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 51464,
+      "slot_bytes": 53120,
+      "mean_absolute_error": 1.8592718215215773,
+      "input_png": "images/17_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 19,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 43288,
+      "slot_bytes": 47616,
+      "mean_absolute_error": 1.5754481724330358,
+      "input_png": "images/18_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 20,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 41856,
+      "slot_bytes": 46784,
+      "mean_absolute_error": 1.9467889694940477,
+      "input_png": "images/19_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 21,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 51361,
+      "slot_bytes": 54336,
+      "mean_absolute_error": 1.8849603562127977,
+      "input_png": "images/20_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 22,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 48065,
+      "slot_bytes": 50432,
+      "mean_absolute_error": 1.8490484328497023,
+      "input_png": "images/21_KOR.png",
+      "kor_override": true
+    },
+    {
+      "index": 23,
+      "type": "JPEG",
+      "quality": "source",
+      "jpeg_bytes": 50697,
+      "slot_bytes": 55296,
+      "mean_absolute_error": 2.1853695824032737,
+      "input_png": "images/22_KOR.png",
+      "kor_override": true
+    }
+  ]
+}

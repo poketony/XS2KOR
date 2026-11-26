@@ -34,13 +34,13 @@
 [JPN]
 $zoom13;５．５６ｍｍＵ−ＴＩＣ弾（突）
 [KOR]
-$zoom13;5.56mm U-TIC탄(돌격)
+$zoom13;5.56mm U-TIC탄(관통)
 
 [0xd9fc]
 [JPN]
 $zoom13;ハイアムズＭ８７Ｒ（突）
 [KOR]
-$zoom13;하이암즈 M87R(돌격)
+$zoom13;하이암즈 M87R(관통)
 
 [0xda1d]
 [JPN]
@@ -124,13 +124,13 @@ $zoom13;파이어 브레스(불꽃)
 [JPN]
 $zoom13;邪視（Ｈストップ）
 [KOR]
-$zoom13;사시(H 스톱)
+$zoom13;사악한 시선(H 스톱)
 
 [0xdbcf]
 [JPN]
 $zoom13;邪眼（Ｌスタン）
 [KOR]
-$zoom13;사안(L 스턴)
+$zoom13;사악한 눈(L 스턴)
 
 [0xdbe8]
 [JPN]
