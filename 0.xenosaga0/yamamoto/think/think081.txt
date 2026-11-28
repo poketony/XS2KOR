@@ -4,7 +4,7 @@
 [JPN]
 $zoom14;$col7AF9FB;　　記憶の車輪が動き出した！$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　　기억의 수레바퀴가 움직이기 시작했다!$colc0c0c0;
+$zoom14;$col7AF9FB;　기억의 수레바퀴가 움직이기 시작했다!$colc0c0c0;
 
 [0xfd07]
 [JPN]
@@ -22,7 +22,7 @@ $zoom14;$colc0c0c0;　「하얀 옷」이 깨어났다!
 [JPN]
 $zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　ケイオスの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　케이오스의 영혼을\n$colc0c0c0;　　　　비추었다$colc0c0c0;
+$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　케이오스의 영혼$colc0c0c0;을\n　　　　　　비추었다$colc0c0c0;
 
 [0xfdc1]
 [JPN]
@@ -34,37 +34,37 @@ $zoom13;과달루페의 기억
 [JPN]
 $zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　ＫＯＳ−ＭＯＳの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　KOS-MOS의 영혼을\n$colc0c0c0;　　　　비추었다$colc0c0c0;
+$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　 KOS-MOS의 영혼$colc0c0c0;을\n　　　　　　비추었다$colc0c0c0;
 
 [0xfe59]
 [JPN]
 $zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　シオンの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　시온의 영혼을\n$colc0c0c0;　　　　비추었다$colc0c0c0;
+$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　　시온의 영혼$colc0c0c0;을\n　　　　　　비추었다$colc0c0c0;
 
 [0xfed2]
 [JPN]
 $zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　　ジンの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　　진의 영혼을\n$colc0c0c0;　　　　비추었다$colc0c0c0;
+$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　　 진의 영혼$colc0c0c0;을\n　　　　　　비추었다$colc0c0c0;
 
 [0xff4b]
 [JPN]
 $zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　ジギーの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　지기의 영혼을\n$colc0c0c0;　　　　비추었다$colc0c0c0;
+$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　　지기의 영혼$colc0c0c0;을\n　　　　　　비추었다$colc0c0c0;
 
 [0xffc4]
 [JPN]
 $zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　　モモの魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　　모모의 영혼을\n$colc0c0c0;　　　　비추었다$colc0c0c0;
+$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　　모모의 영혼$colc0c0c0;을\n　　　　　　비추었다$colc0c0c0;
 
 [0x1003d]
 [JPN]
 $zoom14;$colc0c0c0;　真実の鏡からくもりが消え\n$col7AF9FB;　　　　Ｊｒ．の魂\n$colc0c0c0;　　　　を映し出した$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　Jr.의 영혼을\n$colc0c0c0;　　　　비추었다$colc0c0c0;
+$zoom14;$colc0c0c0;　진실의 거울에서 흐림이 걷히고\n$col7AF9FB;　　　　　Jr.의 영혼$colc0c0c0;을\n　　　　　　비추었다$colc0c0c0;
 
 [0x100b6]
 [JPN]
@@ -76,7 +76,7 @@ $zoom14;$col7AF9FB;　진실의 거울이 영혼을 모조리 빨아들였다!$c
 [JPN]
 $zoom14;$colc0c0c0;　　真実の鏡はくもり始めた$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　　진실의 거울이 흐려지기 시작했다$colc0c0c0;
+$zoom14;$colc0c0c0;　 진실의 거울이 흐려지기 시작했다$colc0c0c0;
 
 [0x1012c]
 [JPN]
@@ -88,7 +88,7 @@ $zoom14;$col7AF9FB;　하얀 옷은 치유의 땅을 바라보았다$colc0c0c0;
 [JPN]
 $zoom14;$colc0c0c0;　「情熱の第一声」が目覚めた！\n$col7AF9FB;　　女性への欲望が渦巻いた$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　「정열의 첫마디」가 깨어났다!\n$col7AF9FB;　　여성을 향한 욕망이 소용돌이쳤다$colc0c0c0;
+$zoom14;$colc0c0c0;　 「정열의 첫마디」가 깨어났다!\n$col7AF9FB;　 여성을 향한 욕망이 소용돌이쳤다$colc0c0c0;
 
 [0x101cd]
 [JPN]
@@ -106,7 +106,7 @@ $zoom14;$col7AF9FB;　다투는 자에게는 관심 없다!$colc0c0c0;
 [JPN]
 $zoom14;$colc0c0c0;　「争いへの扇動」が目覚めた！\n$col7AF9FB;　男性の闘争本能を目覚めさせた！
 [KOR]
-$zoom14;$colc0c0c0;　「분쟁의 선동」이 깨어났다!\n$col7AF9FB;　남성의 투쟁 본능을 깨웠다!
+$zoom14;$colc0c0c0;　 「분쟁의 선동」이 깨어났다!\n$col7AF9FB;　  남성의 투쟁 본능을 깨웠다!
 
 [0x10298]
 [JPN]

@@ -106,13 +106,13 @@ $zoom14;$colc0c0c0;　리하르트는 광란에 빠져 있다!$colc0c0c0;
 [JPN]
 $zoom14;$col7AF9FB;　　防御属性が戻った$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　　방어 속성이 돌아왔다$colc0c0c0;
+$zoom14;$col7AF9FB;　방어 속성이 돌아왔다$colc0c0c0;
 
 [0x8d10]
 [JPN]
 $zoom14;$col7AF9FB;　　防御属性が変化した$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　　방어 속성이 바뀌었다$colc0c0c0;
+$zoom14;$col7AF9FB;　 방어 속성이 변화했다$colc0c0c0;
 
 [0x8d45]
 [JPN]

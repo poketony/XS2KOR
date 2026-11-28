@@ -58,13 +58,13 @@ $zoom13;스턴 그레네이드(L 블랙)
 [JPN]
 $col7AF9FB;$zoom17;　恐れるな！クズども！
 [KOR]
-$col7AF9FB;$zoom17;　겁먹지 마라 쓰레기 놈들!
+$col7AF9FB;$zoom17; 겁먹지 마라 쓰레기 놈들!
 
 [0xcd63]
 [JPN]
 $col7AF9FB;$zoom17;　我が部隊の力！教えてやれ！
 [KOR]
-$col7AF9FB;$zoom17;　우리 부대의 힘을 똑똑히 알려 줘라!
+$col7AF9FB;$zoom17; 우리 부대의 힘을 똑똑히 알려 줘라!
 
 [0xcd93]
 [JPN]

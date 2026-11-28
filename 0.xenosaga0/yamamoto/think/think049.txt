@@ -46,7 +46,7 @@ $zoom13;봉인의 옥좌(항체)
 [JPN]
 $zoom14;$colc0c0c0;　　　オルグイアの威圧により\n$col0fd0e0;　　　　ムーブができない！\n　ブーストカウントを吸収された！$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　　　오르구이아의 위압 때문에\n$col0fd0e0;　　　　이동할 수 없다!\n　부스트 카운트를 흡수당했다!$colc0c0c0;
+$zoom14;$colc0c0c0;　　 오르구이아의 위압 때문에\n$col0fd0e0;　　　　 이동할 수 없다!\n　 부스트 카운트를 흡수당했다!$colc0c0c0;
 
 [0xfdc5]
 [JPN]
@@ -58,19 +58,19 @@ $zoom14;$col0fd0e0;　오르구이아의 눈동자가 $cola05050;푸르게 $col0
 [JPN]
 $zoom14;$col7AF9FB;　　毒の効果がアップした$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　　독의 효과가 강해졌다$colc0c0c0;
+$zoom14;$col7AF9FB;　　 독의 효과가 강해졌다$colc0c0c0;
 
 [0xfe83]
 [JPN]
 $zoom14;$colc0c0c0;　オルグイアの瞳が$cola05050;蒼く$colc0c0c0;発光した
 [KOR]
-$zoom14;$colc0c0c0;　오르구이아의 눈동자가 $cola05050;푸른$colc0c0c0;빛을 냈다
+$zoom14;$colc0c0c0;　오르구이아의 눈동자가 $cola05050;푸른빛$colc0c0c0;을 냈다
 
 [0xfecb]
 [JPN]
 $zoom14;$colc0c0c0;　オルグイアの瞳が$col00c050;翠に$colc0c0c0;発光した
 [KOR]
-$zoom14;$colc0c0c0;　오르구이아의 눈동자가 $col00c050;초록$colc0c0c0;빛을 냈다
+$zoom14;$colc0c0c0;　오르구이아의 눈동자가 $col00c050;초록빛$colc0c0c0;을 냈다
 
 [0xff13]
 [JPN]
@@ -130,7 +130,7 @@ $zoom13;암살의 전야(항체+독 효과 업)
 [JPN]
 $zoom14;$colc0c0c0;　　　　第二ウィルスが発動\n$col7AF9FB;　　マネスのステータスが低下した$colc0c0c0;
 [KOR]
-$rx71;$ry8;$zoom14;$colc0c0c0;제2 바이러스 발동\n$rx23;$ry8;$col7AF9FB;마네스의 스테이터스가 저하됐다$colc0c0c0;
+$zoom14;$colc0c0c0;　　　　 제2 바이러스 발동\n$col7AF9FB;　 마네스의 스테이터스가 저하됐다$colc0c0c0;
 
 [0x100d6]
 [JPN]
@@ -190,7 +190,7 @@ $zoom13;피의 계약
 [JPN]
 $zoom14;$colc0c0c0;　　自分のＨＰを犠牲にして\n$col7AF9FB;　　物理攻撃力を上昇させた$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　　자신의 HP를 희생하여\n$col7AF9FB;　　물리 공격력을 높였다$colc0c0c0;
+$zoom14;$colc0c0c0;　　자신의 HP를 희생하여\n$col7AF9FB;　　 물리 공격력을 높였다$colc0c0c0;
 
 [0x102c7]
 [JPN]
@@ -202,5 +202,5 @@ $zoom13;살의 계약
 [JPN]
 $zoom14;$colc0c0c0;　　自分のＨＰを犠牲にして\n$col7AF9FB;　ブーストカウントを上昇させた$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　　자신의 HP를 희생하여\n$col7AF9FB;　부스트 카운트를 높였다$colc0c0c0;
+$zoom14;$colc0c0c0;　　자신의 HP를 희생하여\n$col7AF9FB;　　부스트 카운트를 높였다$colc0c0c0;
 

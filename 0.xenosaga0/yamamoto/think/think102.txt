@@ -4,7 +4,7 @@
 [JPN]
 $zoom14;$colc0c0c0;　いい〜ねぇ〜、あんたら！\n　　　気に入ったぜ〜！●
 [KOR]
-$zoom14;$colc0c0c0;　좋은데~ 너희들!\n　　　마음에 들었어~!●
+$zoom14;$colc0c0c0;　　　좋은데~ 너희들!\n　　　마음에 들었어~!●
 
 [0xf630]
 [JPN]
@@ -46,13 +46,13 @@ $zoom13;리로드 ≫ 크로이츠
 [JPN]
 $zoom14;$col7AF9FB;　ブロックが外れた！$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　블록이 풀렸다!$colc0c0c0;
+$zoom14;$col7AF9FB;　　블록이 풀렸다!$colc0c0c0;
 
 [0xf806]
 [JPN]
 $zoom14;$col7AF9FB;　　滅亡への扉が開かれた！
 [KOR]
-$zoom14;$col7AF9FB;　　멸망으로 향하는 문이 열렸다!
+$zoom14;$col7AF9FB;　 멸망으로 향하는 문이 열렸다!
 
 [0xf834]
 [JPN]
@@ -88,7 +88,7 @@ $zoom13;라그나로크(불꽃)
 [JPN]
 $zoom14;$colc0c0c0;　　避けがたい運命の時が訪れた
 [KOR]
-$zoom14;$colc0c0c0;　　피할 수 없는 운명의 시간이 찾아왔다
+$zoom14;$colc0c0c0;　 피할 수 없는 운명의 시간이 찾아왔다
 
 [0xf90d]
 [JPN]
@@ -130,7 +130,7 @@ $zoom13;부스트 원
 [JPN]
 $zoom14;$col7AF9FB;　一番レベルの高いターゲットの\n　　パラメーターを真似た！$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　가장 레벨이 높은 대상의\n　　파라미터를 흉내 냈다!$colc0c0c0;
+$zoom14;$col7AF9FB;　　가장 레벨이 높은 타깃의\n　　 파라미터를 흉내 냈다!$colc0c0c0;
 
 [0xfa20]
 [JPN]

@@ -4,7 +4,7 @@
 [JPN]
 $zoom14;$colc0c0c0;ビッグウェーーーーブ！！
 [KOR]
-$zoom14;$colc0c0c0;빅 웨~~~~이브!!
+$zoom14;$colc0c0c0;　빅 웨~~~~이브!!
 
 [0xd5f8]
 [JPN]

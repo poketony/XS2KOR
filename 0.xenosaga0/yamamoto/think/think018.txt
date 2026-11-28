@@ -70,7 +70,7 @@ $zoom13;세일럼의 눈물(L 슬로)
 [JPN]
 $col7AF9FB;$zoom15;　オーバーロード（筋力低下）
 [KOR]
-$col7AF9FB;$zoom15;　오버로드(근력 저하)
+$col7AF9FB;$zoom15;　　 오버로드(근력 저하)
 
 [0xd300]
 [JPN]

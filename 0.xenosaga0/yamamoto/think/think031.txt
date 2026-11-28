@@ -4,7 +4,7 @@
 [JPN]
 $zoom14;$colc0c0c0;　　Ｊｒ．達の脳裏にサクラの意識が流れた\n$col7AF9FB;ＢＣゾーンを攻撃した後にブーストで繋いで。。。●$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　　Jr. 일행의 뇌리에 사쿠라의 의식이 전해졌다\n$col7AF9FB;BC존을 공격한 다음 부스트로 이어서・・・●$colc0c0c0;
+$zoom14;$colc0c0c0; Jr. 일행의 뇌리에 사쿠라의 의식이 흘러들었다\n$col7AF9FB;　  BC존을 공격한 다음 부스트로 이어서・・・●$colc0c0c0;
 
 [0xeb7a]
 [JPN]
@@ -16,7 +16,7 @@ $zoom14;$colc0c0c0;　　사쿠라의 의식이 끊겼다$colc0c0c0;
 [JPN]
 $zoom14;$colc0c0c0;　Ｊｒ．達の脳裏にサクラの意識が流れた\n$col7AF9FB;ＢＣゾーンを攻撃した後にブーストで繋いで\nＣＢをヒットさせればブレイクが発生するわ●$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　Jr. 일행의 뇌리에 사쿠라의 의식이 전해졌다\n$col7AF9FB;BC존을 공격한 다음 부스트로 이어서\nCB를 맞히면 브레이크가 일어나●$colc0c0c0;
+$zoom14;$colc0c0c0;Jr. 일행의 뇌리에 사쿠라의 의식이 흘러들었다\n$col7AF9FB;　　 BC존을 공격한 다음 부스트로 이어서\n　　　 CB를 맞히면 브레이크가 일어나●$colc0c0c0;
 
 [0xec59]
 [JPN]
@@ -82,19 +82,19 @@ $zoom13;사념의 충격파(기)
 [JPN]
 $zoom14;$colc0c0c0;　　　貫いた右手には\n$col7AF9FB;　紅い血$colc0c0c0;が染み付いていた
 [KOR]
-$zoom14;$colc0c0c0;　　　꿰뚫은 오른손에는\n$col7AF9FB;　붉은 피$colc0c0c0;가 묻어 있었다
+$zoom14;$colc0c0c0;　　 꿰뚫은 오른손에는\n$col7AF9FB;　 붉은 피$colc0c0c0;가 묻어 있었다
 
 [0xef00]
 [JPN]
 $zoom14;$colc0c0c0;　　　貫いた右手には\n$col7AF9FB;　紅い血液$colc0c0c0;が染み付いていた
 [KOR]
-$zoom14;$colc0c0c0;　　　꿰뚫은 오른손에는\n$col7AF9FB;　붉은 혈액$colc0c0c0;이 묻어 있었다
+$zoom14;$colc0c0c0;　　　꿰뚫은 오른손에는\n$col7AF9FB;　 붉은 혈액$colc0c0c0;이 묻어 있었다
 
 [0xef5a]
 [JPN]
 $zoom14;$colc0c0c0;　　　　貫いた右手には\n$col7AF9FB;　どす黒い血$colc0c0c0;が染み付いていた
 [KOR]
-$zoom14;$colc0c0c0;　　　　꿰뚫은 오른손에는\n$col7AF9FB;　검붉은 피$colc0c0c0;가 묻어 있었다
+$zoom14;$colc0c0c0;　　　 꿰뚫은 오른손에는\n$col7AF9FB;　　검붉은 피$colc0c0c0;가 묻어 있었다
 
 [0xefb8]
 [JPN]

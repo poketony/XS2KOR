@@ -4,7 +4,7 @@
 [JPN]
 $zoom14;$colc0c0c0;ビッグウェーーーーブ！！
 [KOR]
-$zoom14;$colc0c0c0;빅 웨~~~~이브!!
+$zoom14;$colc0c0c0;　빅 웨~~~~이브!!
 
 [0xf068]
 [JPN]
@@ -94,7 +94,7 @@ $zoom13;메디카
 [JPN]
 $zoom14;$colc0c0c0;　　三戦立ちの構えを崩した！
 [KOR]
-$zoom14;$colc0c0c0;　　삼전서기 자세가 무너졌다!
+$zoom14;$colc0c0c0;　 삼전서기 자세가 무너졌다!
 
 [0xf275]
 [JPN]
@@ -118,7 +118,7 @@ $zoom13;삼전서기
 [JPN]
 $zoom14;$colc0c0c0;　　　　三戦立ちの構え！\n　カウンタースタイルになった
 [KOR]
-$zoom14;$colc0c0c0;　　　　삼전서기 자세!\n　카운터 스타일로 바뀌었다
+$zoom14;$colc0c0c0;　　　　삼전서기 자세!\n　 카운터 스타일로 바뀌었다
 
 [0xf30e]
 [JPN]

@@ -4,7 +4,7 @@
 [JPN]
 $zoom14;$colc0c0c0;カウンターブーストシステム異常発生
 [KOR]
-$zoom14;$colc0c0c0;카운터 부스트 시스템 이상 발생
+$zoom14;$colc0c0c0;　카운터 부스트 시스템 이상 발생
 
 [0x6b06]
 [JPN]
@@ -16,7 +16,7 @@ $zoom14;$colc0c0c0;카운터 부스트 시스템 이상!
 [JPN]
 $zoom14;$colc0c0c0;　インベルシオンから泡が噴出した！\n$col7AF9FB;ーカウンターブーストシステム故障ー$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　인베르시온에서 거품이 뿜어져 나왔다!\n$col7AF9FB;ー카운터 부스트 시스템 고장ー$colc0c0c0;
+$zoom14;$colc0c0c0; 인베르시온에서 거품이 뿜어져 나왔다!\n$col7AF9FB;　   ー카운터 부스트 시스템 고장ー$colc0c0c0;
 
 [0x6baa]
 [JPN]
@@ -28,7 +28,7 @@ $zoom14;$colc0c0c0;카운터 부스트 시스템 고장!$colc0c0c0;
 [JPN]
 $zoom14;$colc0c0c0;　カウンターブーストシステム\n$col7AF9FB;　　　　自動修復開始！$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　카운터 부스트 시스템\n$col7AF9FB;　　　　자동 복구 개시!$colc0c0c0;
+$zoom14;$colc0c0c0;　　 카운터 부스트 시스템\n$col7AF9FB;　　　　자동 복구 개시!$colc0c0c0;
 
 [0x6c49]
 [JPN]
@@ -40,19 +40,19 @@ $zoom14;$colc0c0c0;적의 전투 능력을 분석 중・・・$colc0c0c0;
 [JPN]
 $zoom14;$colc0c0c0;・・・分析終了\n$col7AF9FB;カウンターブースト起動プラグイン\n　　　　　ＥーＣ　セット$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;・・・분석 완료\n$col7AF9FB;카운터 부스트 기동 플러그인\n　　　　　E-C 설정$colc0c0c0;
+$zoom14;$colc0c0c0;・・・분석 완료\n$col7AF9FB;　 카운터 부스트 기동 플러그인\n　　　　　  E-C 설정$colc0c0c0;
 
 [0x6cf6]
 [JPN]
 $zoom14;$colc0c0c0;・・・分析終了\n$col7AF9FB;カウンターブースト起動プラグイン\n　　　　　ＢーＣ　セット$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;・・・분석 완료\n$col7AF9FB;카운터 부스트 기동 플러그인\n　　　　　B-C 설정$colc0c0c0;
+$zoom14;$colc0c0c0;・・・분석 완료\n$col7AF9FB;　 카운터 부스트 기동 플러그인\n　　　　　  B-C 설정$colc0c0c0;
 
 [0x6d6a]
 [JPN]
 $zoom14;$colc0c0c0;・・・分析終了\n$col7AF9FB;カウンターブースト起動プラグイン\n　　　　　ＨーＰ　セット$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;・・・분석 완료\n$col7AF9FB;카운터 부스트 기동 플러그인\n　　　　　H-P 설정$colc0c0c0;
+$zoom14;$colc0c0c0;・・・분석 완료\n$col7AF9FB;　 카운터 부스트 기동 플러그인\n　　　　　  H-P 설정$colc0c0c0;
 
 [0x6dde]
 [JPN]

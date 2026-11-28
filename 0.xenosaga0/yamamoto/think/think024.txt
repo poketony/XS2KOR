@@ -16,7 +16,7 @@ $zoom13;암드 바그 나우
 [JPN]
 $zoom14;$colc0c0c0;　　突き刺した指先から\n$col7AF9FB;　　　体液を吸収した$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　　찔러 넣은 손끝에서\n$col7AF9FB;　　　체액을 흡수했다$colc0c0c0;
+$zoom14;$colc0c0c0;　　찔러 넣은 손끝에서\n$col7AF9FB;　　 체액을 흡수했다$colc0c0c0;
 
 [0xea2c]
 [JPN]
@@ -34,25 +34,25 @@ $zoom14;$colc0c0c0;레벨 4의 초음파가 울려 퍼졌다!
 [JPN]
 $zoom14;$colc0c0c0;　　　システム修復率４０％\n$col7AF9FB;　体内の細胞プログラムが結合した$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　　　시스템 복구율 40%\n$col7AF9FB;　체내 세포 프로그램이 결합했다$colc0c0c0;
+$zoom14;$colc0c0c0;　　　 시스템 복구율 40%\n$col7AF9FB;　체내 세포 프로그램이 결합했다$colc0c0c0;
 
 [0xead9]
 [JPN]
 $zoom14;$colc0c0c0;　　　システム修復率７０％\n$col7AF9FB;　体内の神経プログラムが結合した$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　　　시스템 복구율 70%\n$col7AF9FB;　체내 신경 프로그램이 결합했다$colc0c0c0;
+$zoom14;$colc0c0c0;　　　 시스템 복구율 70%\n$col7AF9FB;　체내 신경 프로그램이 결합했다$colc0c0c0;
 
 [0xeb3f]
 [JPN]
 $zoom14;$colc0c0c0;　　　システム修復率１００％\n$col7AF9FB;　　　完全なる力を取り戻した$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　　　시스템 복구율 100%\n$col7AF9FB;　　　완전한 힘을 되찾았다$colc0c0c0;
+$zoom14;$colc0c0c0;　　　시스템 복구율 100%\n$col7AF9FB;　　　 완전한 힘을 되찾았다$colc0c0c0;
 
 [0xeba3]
 [JPN]
 $zoom14;$colc0c0c0;　アンリミテッドプログラム始動\n$col7AF9FB;　すべての能力が限界を越えた！$colc0c0c0;
 [KOR]
-$zoom14;$colc0c0c0;　언리미티드 프로그램 가동\n$col7AF9FB;　모든 능력이 한계를 넘어섰다!$colc0c0c0;
+$zoom14;$colc0c0c0;　　언리미티드 프로그램 가동\n$col7AF9FB;　모든 능력이 한계를 넘어섰다!$colc0c0c0;
 
 [0xec0b]
 [JPN]

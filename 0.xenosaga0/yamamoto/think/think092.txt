@@ -4,7 +4,7 @@
 [JPN]
 $zoom14;$colc0c0c0;ビッグウェーーーーブ！！
 [KOR]
-$zoom14;$colc0c0c0;빅 웨~~~~이브!!
+$zoom14;$colc0c0c0;　빅 웨~~~~이브!!
 
 [0x10a78]
 [JPN]
@@ -94,7 +94,7 @@ $zoom13;메디카
 [JPN]
 $zoom14;$colc0c0c0;　　三戦立ちの構えを崩した！
 [KOR]
-$zoom14;$colc0c0c0;　　삼전서기 자세가 무너졌다!
+$zoom14;$colc0c0c0;　 삼전서기 자세가 무너졌다!
 
 [0x10c85]
 [JPN]
@@ -118,7 +118,7 @@ $zoom13;삼전서기
 [JPN]
 $zoom14;$colc0c0c0;　　　　三戦立ちの構え！\n　カウンタースタイルになった
 [KOR]
-$zoom14;$colc0c0c0;　　　　삼전서기 자세!\n　카운터 스타일로 바뀌었다
+$zoom14;$colc0c0c0;　　　　삼전서기 자세!\n　 카운터 스타일로 바뀌었다
 
 [0x10d1e]
 [JPN]
@@ -166,19 +166,19 @@ $zoom14;$colc0c0c0;「・・・오이・・・애」
 [JPN]
 $zoom14;$colc0c0c0;「・ロイ・おいに・イ」
 [KOR]
-$zoom14;$colc0c0c0;「・로이・내앰・새」
+$zoom14;$colc0c0c0;　「・로이・내앰・새」
 
 [0x10e05]
 [JPN]
 $zoom14;$colc0c0c0;「ロイの・匂いが・する・」\n$col7AF9FB;　ブレイクブロックが外れた！
 [KOR]
-$zoom14;$colc0c0c0;「로이의・냄새가・나・」\n$col7AF9FB;　브레이크 블록이 풀렸다!
+$zoom14;$colc0c0c0;　「로이의・냄새가・나・」\n$col7AF9FB;　 브레이크 블록이 풀렸다!
 
 [0x10e5c]
 [JPN]
 $zoom14;$colc0c0c0;「・・意識が・俺が・消える・・」\n$col7AF9FB;　　デュリアソウルの意識が消え\n　　完全なグノーシスと化した！
 [KOR]
-$zoom14;$colc0c0c0;「・・의식이・내가・사라져・・」\n$col7AF9FB;　　듀리아 소울의 의식이 사라져\n　　완전한 그노시스로 변했다!
+$zoom14;$colc0c0c0;「의식이・・・ 내가 사라져・・・」\n$col7AF9FB;　　듀리아 소울의 의식이 사라져\n　　 완전한 그노시스로 변했다!
 
 [0x10edb]
 [JPN]
@@ -238,7 +238,7 @@ $zoom13;발광
 [JPN]
 $zoom14;$col7AF9FB;　室内にメタンガスが充満した$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　실내에 메탄가스가 가득 찼다$colc0c0c0;
+$zoom14;$col7AF9FB; 실내에 메탄가스가 가득 찼다$colc0c0c0;
 
 [0x11099]
 [JPN]

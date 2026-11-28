@@ -22,7 +22,7 @@
 [JPN]
 $zoom14;$col7AF9FB;　パワー充填中$colc0c0c0;
 [KOR]
-$zoom14;$col7AF9FB;　파워 충전 중$colc0c0c0;
+$zoom14;$col7AF9FB;　 파워 충전 중$colc0c0c0;
 
 [0x6138]
 [JPN]

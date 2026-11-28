@@ -34,7 +34,7 @@
 [JPN]
 $col7AF9FB;$zoom15;　ノーマルブースト補給＋１
 [KOR]
-$col7AF9FB;$zoom15;　노멀 부스트 보급+1
+$col7AF9FB;$zoom15;　　노멀 부스트 보급+1
 
 [0xccf3]
 [JPN]

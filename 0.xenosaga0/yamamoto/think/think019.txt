@@ -100,7 +100,7 @@ $zoom13;제1 뿔피리(타격)
 [JPN]
 $col7AF9FB;$zoom15;　全味方の攻撃能力をアップ！
 [KOR]
-$col7AF9FB;$zoom15;　아군 전체의 공격 능력 업!
+$col7AF9FB;$zoom15;　 아군 전체의 공격 능력 업!
 
 [0xd832]
 [JPN]
